@@ -1,0 +1,21 @@
+# align-equal-compiled "ark:gunzip -c telugu_exp/mono/fsts.4.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_10kshort_nodup/split20/4/utt2spk scp:telugu_data/train_10kshort_nodup/split20/4/cmvn.scp scp:telugu_data/train_10kshort_nodup/split20/4/feats.scp ark:- | add-deltas  ark:- ark:- |" ark,t:- | gmm-acc-stats-ali --binary=true telugu_exp/mono/0.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_10kshort_nodup/split20/4/utt2spk scp:telugu_data/train_10kshort_nodup/split20/4/cmvn.scp scp:telugu_data/train_10kshort_nodup/split20/4/feats.scp ark:- | add-deltas  ark:- ark:- |" ark:- telugu_exp/mono/0.4.acc 
+# Started at Mon Jun 13 17:55:23 UTC 2022
+#
+gmm-acc-stats-ali --binary=true telugu_exp/mono/0.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_10kshort_nodup/split20/4/utt2spk scp:telugu_data/train_10kshort_nodup/split20/4/cmvn.scp scp:telugu_data/train_10kshort_nodup/split20/4/feats.scp ark:- | add-deltas  ark:- ark:- |' ark:- telugu_exp/mono/0.4.acc 
+align-equal-compiled 'ark:gunzip -c telugu_exp/mono/fsts.4.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_10kshort_nodup/split20/4/utt2spk scp:telugu_data/train_10kshort_nodup/split20/4/cmvn.scp scp:telugu_data/train_10kshort_nodup/split20/4/feats.scp ark:- | add-deltas  ark:- ark:- |' ark,t:- 
+add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:telugu_data/train_10kshort_nodup/split20/4/utt2spk scp:telugu_data/train_10kshort_nodup/split20/4/cmvn.scp scp:telugu_data/train_10kshort_nodup/split20/4/feats.scp ark:- 
+add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:telugu_data/train_10kshort_nodup/split20/4/utt2spk scp:telugu_data/train_10kshort_nodup/split20/4/cmvn.scp scp:telugu_data/train_10kshort_nodup/split20/4/feats.scp ark:- 
+LOG (gmm-acc-stats-ali[5.5.1009~1-e4940]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance TE0447-TE0448_1-A.182 avg. like is -100.991 over 73 frames.
+LOG (apply-cmvn[5.5.1009~1-e4940]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 241 utterances, errors on 0
+LOG (align-equal-compiled[5.5.1009~1-e4940]:main():align-equal-compiled.cc:107) Success: done 241 utterances.
+LOG (gmm-acc-stats-ali[5.5.1009~1-e4940]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance TE0451-TE0452_2-A.270 avg. like is -109.997 over 87 frames.
+LOG (gmm-acc-stats-ali[5.5.1009~1-e4940]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance TE0454-TE0456_2-A.050 avg. like is -105.203 over 54 frames.
+LOG (gmm-acc-stats-ali[5.5.1009~1-e4940]:main():gmm-acc-stats-ali.cc:105) Processed 200 utterances; for utterance TE0457-TE0458_2-A.096 avg. like is -105.384 over 71 frames.
+LOG (apply-cmvn[5.5.1009~1-e4940]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 241 utterances, errors on 0
+LOG (gmm-acc-stats-ali[5.5.1009~1-e4940]:main():gmm-acc-stats-ali.cc:112) Done 241 files, 0 with errors.
+LOG (gmm-acc-stats-ali[5.5.1009~1-e4940]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -104.866 over 20564 frames.
+LOG (gmm-acc-stats-ali[5.5.1009~1-e4940]:main():gmm-acc-stats-ali.cc:123) Written accs.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Mon Jun 13 17:55:24 UTC 2022, elapsed time 1 seconds
