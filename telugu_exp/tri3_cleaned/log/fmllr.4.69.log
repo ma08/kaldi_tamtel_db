@@ -1,0 +1,911 @@
+# ali-to-post "ark:gunzip -c telugu_exp/tri3_cleaned/ali.69.gz|" ark:- | weight-silence-post 0.0 1:2:3:4:5:6:7:8:9:10 telugu_exp/tri3_cleaned/4.mdl ark:- ark:- | gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:telugu_data/train_cleaned/split100/69/spk2utt telugu_exp/tri3_cleaned/4.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_cleaned/split100/69/utt2spk scp:telugu_data/train_cleaned/split100/69/cmvn.scp scp:telugu_data/train_cleaned/split100/69/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats telugu_exp/tri3_ali_cleaned/final.mat ark:- ark:- | transform-feats --utt2spk=ark:telugu_data/train_cleaned/split100/69/utt2spk ark:telugu_exp/tri3_cleaned/trans.69 ark:- ark:- |" ark:- ark:telugu_exp/tri3_cleaned/tmp_trans.69 
+# Started at Tue Jun 14 10:51:03 UTC 2022
+#
+ali-to-post 'ark:gunzip -c telugu_exp/tri3_cleaned/ali.69.gz|' ark:- 
+gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:telugu_data/train_cleaned/split100/69/spk2utt telugu_exp/tri3_cleaned/4.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_cleaned/split100/69/utt2spk scp:telugu_data/train_cleaned/split100/69/cmvn.scp scp:telugu_data/train_cleaned/split100/69/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats telugu_exp/tri3_ali_cleaned/final.mat ark:- ark:- | transform-feats --utt2spk=ark:telugu_data/train_cleaned/split100/69/utt2spk ark:telugu_exp/tri3_cleaned/trans.69 ark:- ark:- |' ark:- ark:telugu_exp/tri3_cleaned/tmp_trans.69 
+weight-silence-post 0.0 1:2:3:4:5:6:7:8:9:10 telugu_exp/tri3_cleaned/4.mdl ark:- ark:- 
+transform-feats --utt2spk=ark:telugu_data/train_cleaned/split100/69/utt2spk ark:telugu_exp/tri3_cleaned/trans.69 ark:- ark:- 
+apply-cmvn --utt2spk=ark:telugu_data/train_cleaned/split100/69/utt2spk scp:telugu_data/train_cleaned/split100/69/cmvn.scp scp:telugu_data/train_cleaned/split100/69/feats.scp ark:- 
+splice-feats ark:- ark:- 
+transform-feats telugu_exp/tri3_ali_cleaned/final.mat ark:- ark:- 
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 147
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-A.046, auxf-impr from fMLLR is 0, over 147 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 169
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-A.067, auxf-impr from fMLLR is 0, over 169 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 266
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-A.068, auxf-impr from fMLLR is 0, over 266 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 404
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-A.073, auxf-impr from fMLLR is 0, over 404 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 92
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-A.076, auxf-impr from fMLLR is 0, over 92 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 185
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-A.085, auxf-impr from fMLLR is 0, over 185 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 74
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.002, auxf-impr from fMLLR is 0, over 74 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 191
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.025, auxf-impr from fMLLR is 0, over 191 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 473
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.036, auxf-impr from fMLLR is 0, over 473 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 443
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.037, auxf-impr from fMLLR is 0, over 443 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 268
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.044, auxf-impr from fMLLR is 0, over 268 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 89
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.056, auxf-impr from fMLLR is 0, over 89 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 73
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.061, auxf-impr from fMLLR is 0, over 73 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 367
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.062, auxf-impr from fMLLR is 0, over 367 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 350
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.065, auxf-impr from fMLLR is 0, over 350 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 260
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.070, auxf-impr from fMLLR is 0, over 260 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 186
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.073, auxf-impr from fMLLR is 0, over 186 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 68
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.074, auxf-impr from fMLLR is 0, over 68 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 242
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.083, auxf-impr from fMLLR is 0, over 242 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 81
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.093, auxf-impr from fMLLR is 0, over 81 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 109
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.095, auxf-impr from fMLLR is 0, over 109 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 307
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.104, auxf-impr from fMLLR is 0, over 307 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 279
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.110, auxf-impr from fMLLR is 0, over 279 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 62
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.125, auxf-impr from fMLLR is 0, over 62 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 67
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.132, auxf-impr from fMLLR is 0, over 67 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 361
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.144, auxf-impr from fMLLR is 0, over 361 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 22
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.191, auxf-impr from fMLLR is 0, over 22 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 461
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.194, auxf-impr from fMLLR is 0, over 461 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 182
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.206, auxf-impr from fMLLR is 0, over 182 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 99
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.207, auxf-impr from fMLLR is 0, over 99 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 106
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_1-B.232, auxf-impr from fMLLR is 0, over 106 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 43
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.003, auxf-impr from fMLLR is 0, over 43 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 107
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.018, auxf-impr from fMLLR is 0, over 107 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 74
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.020, auxf-impr from fMLLR is 0, over 74 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 355
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.023, auxf-impr from fMLLR is 0, over 355 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 121
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.031, auxf-impr from fMLLR is 0, over 121 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 59
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.032, auxf-impr from fMLLR is 0, over 59 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 438
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.041, auxf-impr from fMLLR is 0, over 438 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 191
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.043, auxf-impr from fMLLR is 0, over 191 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 154
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.050, auxf-impr from fMLLR is 0, over 154 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 237
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.057, auxf-impr from fMLLR is 0, over 237 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 273
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.066, auxf-impr from fMLLR is 0, over 273 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 44
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.069, auxf-impr from fMLLR is 0, over 44 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 392
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.078, auxf-impr from fMLLR is 0, over 392 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 349
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-A.086, auxf-impr from fMLLR is 0, over 349 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 229
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.009, auxf-impr from fMLLR is 0, over 229 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 53
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.013, auxf-impr from fMLLR is 0, over 53 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 78
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.019, auxf-impr from fMLLR is 0, over 78 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 339
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.026, auxf-impr from fMLLR is 0, over 339 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 87
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.084, auxf-impr from fMLLR is 0, over 87 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 304
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.094, auxf-impr from fMLLR is 0, over 304 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 145
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.096, auxf-impr from fMLLR is 0, over 145 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 55
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.097, auxf-impr from fMLLR is 0, over 55 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 258
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.101, auxf-impr from fMLLR is 0, over 258 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 145
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.108, auxf-impr from fMLLR is 0, over 145 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 195
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.109, auxf-impr from fMLLR is 0, over 195 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 84
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.115, auxf-impr from fMLLR is 0, over 84 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 89
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.122, auxf-impr from fMLLR is 0, over 89 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 316
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.130, auxf-impr from fMLLR is 0, over 316 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 125
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.132, auxf-impr from fMLLR is 0, over 125 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 416
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.145, auxf-impr from fMLLR is 0, over 416 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.064326 per frame over 507 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.159, auxf-impr from fMLLR is 0.064326, over 507 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 209
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.183, auxf-impr from fMLLR is 0, over 209 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 114
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.185, auxf-impr from fMLLR is 0, over 114 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 237
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.202, auxf-impr from fMLLR is 0, over 237 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 159
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.206, auxf-impr from fMLLR is 0, over 159 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 424
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.213, auxf-impr from fMLLR is 0, over 424 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 209
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0695-TE0696_2-B.234, auxf-impr from fMLLR is 0, over 209 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 52
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-A.029, auxf-impr from fMLLR is 0, over 52 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 129
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-A.059, auxf-impr from fMLLR is 0, over 129 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 54
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-A.091, auxf-impr from fMLLR is 0, over 54 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 62
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-A.102, auxf-impr from fMLLR is 0, over 62 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 85
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-A.161, auxf-impr from fMLLR is 0, over 85 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 63
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-A.165, auxf-impr from fMLLR is 0, over 63 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 49
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-A.193, auxf-impr from fMLLR is 0, over 49 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 65
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-A.195, auxf-impr from fMLLR is 0, over 65 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 56
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-A.216, auxf-impr from fMLLR is 0, over 56 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 208
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.016, auxf-impr from fMLLR is 0, over 208 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 213
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.027, auxf-impr from fMLLR is 0, over 213 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 67
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.028, auxf-impr from fMLLR is 0, over 67 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 158
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.034, auxf-impr from fMLLR is 0, over 158 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 313
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.040, auxf-impr from fMLLR is 0, over 313 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 45
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.043, auxf-impr from fMLLR is 0, over 45 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 230
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.049, auxf-impr from fMLLR is 0, over 230 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 164
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.102, auxf-impr from fMLLR is 0, over 164 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 170
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.151, auxf-impr from fMLLR is 0, over 170 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 109
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.160, auxf-impr from fMLLR is 0, over 109 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 255
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.173, auxf-impr from fMLLR is 0, over 255 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 57
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.175, auxf-impr from fMLLR is 0, over 57 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 151
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.183, auxf-impr from fMLLR is 0, over 151 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 274
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.188, auxf-impr from fMLLR is 0, over 274 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 208
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.208, auxf-impr from fMLLR is 0, over 208 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 91
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.218, auxf-impr from fMLLR is 0, over 91 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 55
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.305, auxf-impr from fMLLR is 0, over 55 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 131
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_1-B.319, auxf-impr from fMLLR is 0, over 131 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 45
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-A.039, auxf-impr from fMLLR is 0, over 45 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 222
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-A.056, auxf-impr from fMLLR is 0, over 222 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 126
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-A.079, auxf-impr from fMLLR is 0, over 126 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 78
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-A.091, auxf-impr from fMLLR is 0, over 78 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 56
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-A.163, auxf-impr from fMLLR is 0, over 56 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 58
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-A.168, auxf-impr from fMLLR is 0, over 58 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 184
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-A.176, auxf-impr from fMLLR is 0, over 184 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 84
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-A.194, auxf-impr from fMLLR is 0, over 84 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 252
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-A.222, auxf-impr from fMLLR is 0, over 252 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 110
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-A.236, auxf-impr from fMLLR is 0, over 110 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 65
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-A.355, auxf-impr from fMLLR is 0, over 65 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 76
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-A.362, auxf-impr from fMLLR is 0, over 76 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 171
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.018, auxf-impr from fMLLR is 0, over 171 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 145
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.021, auxf-impr from fMLLR is 0, over 145 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 49
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.067, auxf-impr from fMLLR is 0, over 49 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 337
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.088, auxf-impr from fMLLR is 0, over 337 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 317
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.092, auxf-impr from fMLLR is 0, over 317 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 155
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.136, auxf-impr from fMLLR is 0, over 155 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 99
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.138, auxf-impr from fMLLR is 0, over 99 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 138
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.141, auxf-impr from fMLLR is 0, over 138 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 80
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.184, auxf-impr from fMLLR is 0, over 80 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 170
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.185, auxf-impr from fMLLR is 0, over 170 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 356
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.204, auxf-impr from fMLLR is 0, over 356 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 126
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.209, auxf-impr from fMLLR is 0, over 126 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 333
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.227, auxf-impr from fMLLR is 0, over 333 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 101
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.232, auxf-impr from fMLLR is 0, over 101 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 469
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.261, auxf-impr from fMLLR is 0, over 469 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 129
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0698_2-B.263, auxf-impr from fMLLR is 0, over 129 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 34
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.014, auxf-impr from fMLLR is 0, over 34 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 75
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.091, auxf-impr from fMLLR is 0, over 75 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 59
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.095, auxf-impr from fMLLR is 0, over 59 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 73
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.107, auxf-impr from fMLLR is 0, over 73 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 36
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.116, auxf-impr from fMLLR is 0, over 36 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 184
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.126, auxf-impr from fMLLR is 0, over 184 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 245
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.141, auxf-impr from fMLLR is 0, over 245 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 96
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.177, auxf-impr from fMLLR is 0, over 96 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 61
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.205, auxf-impr from fMLLR is 0, over 61 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 43
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.281, auxf-impr from fMLLR is 0, over 43 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 56
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.322, auxf-impr from fMLLR is 0, over 56 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 126
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.333, auxf-impr from fMLLR is 0, over 126 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 70
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.334, auxf-impr from fMLLR is 0, over 70 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 153
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.371, auxf-impr from fMLLR is 0, over 153 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 102
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.376, auxf-impr from fMLLR is 0, over 102 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 50
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-A.408, auxf-impr from fMLLR is 0, over 50 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 256
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.044, auxf-impr from fMLLR is 0, over 256 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 36
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.056, auxf-impr from fMLLR is 0, over 36 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 132
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.070, auxf-impr from fMLLR is 0, over 132 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 44
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.081, auxf-impr from fMLLR is 0, over 44 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 52
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.090, auxf-impr from fMLLR is 0, over 52 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 138
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.100, auxf-impr from fMLLR is 0, over 138 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 66
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.104, auxf-impr from fMLLR is 0, over 66 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 41
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.116, auxf-impr from fMLLR is 0, over 41 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 74
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.123, auxf-impr from fMLLR is 0, over 74 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 46
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.131, auxf-impr from fMLLR is 0, over 46 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 194
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.136, auxf-impr from fMLLR is 0, over 194 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 61
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.190, auxf-impr from fMLLR is 0, over 61 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 67
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.214, auxf-impr from fMLLR is 0, over 67 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 86
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.216, auxf-impr from fMLLR is 0, over 86 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 59
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.241, auxf-impr from fMLLR is 0, over 59 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 54
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.264, auxf-impr from fMLLR is 0, over 54 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 82
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_1-B.267, auxf-impr from fMLLR is 0, over 82 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 82
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.011, auxf-impr from fMLLR is 0, over 82 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 111
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.015, auxf-impr from fMLLR is 0, over 111 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 137
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.040, auxf-impr from fMLLR is 0, over 137 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 54
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.056, auxf-impr from fMLLR is 0, over 54 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 43
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.059, auxf-impr from fMLLR is 0, over 43 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 36
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.089, auxf-impr from fMLLR is 0, over 36 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 45
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.139, auxf-impr from fMLLR is 0, over 45 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 98
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.145, auxf-impr from fMLLR is 0, over 98 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 146
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.155, auxf-impr from fMLLR is 0, over 146 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 83
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.174, auxf-impr from fMLLR is 0, over 83 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 45
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.177, auxf-impr from fMLLR is 0, over 45 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 42
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.182, auxf-impr from fMLLR is 0, over 42 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 47
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.187, auxf-impr from fMLLR is 0, over 47 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 45
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.206, auxf-impr from fMLLR is 0, over 45 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 85
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.208, auxf-impr from fMLLR is 0, over 85 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 139
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.233, auxf-impr from fMLLR is 0, over 139 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 153
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.245, auxf-impr from fMLLR is 0, over 153 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 72
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.283, auxf-impr from fMLLR is 0, over 72 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 81
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.311, auxf-impr from fMLLR is 0, over 81 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 160
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.323, auxf-impr from fMLLR is 0, over 160 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 86
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.343, auxf-impr from fMLLR is 0, over 86 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 61
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.362, auxf-impr from fMLLR is 0, over 61 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 81
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-A.380, auxf-impr from fMLLR is 0, over 81 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 218
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.001, auxf-impr from fMLLR is 0, over 218 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 259
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.003, auxf-impr from fMLLR is 0, over 259 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 188
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.005, auxf-impr from fMLLR is 0, over 188 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.006, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 75
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.008, auxf-impr from fMLLR is 0, over 75 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 447
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.009, auxf-impr from fMLLR is 0, over 447 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 439
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.013, auxf-impr from fMLLR is 0, over 439 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 76
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.048, auxf-impr from fMLLR is 0, over 76 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 104
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.074, auxf-impr from fMLLR is 0, over 104 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 155
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.082, auxf-impr from fMLLR is 0, over 155 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 128
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.094, auxf-impr from fMLLR is 0, over 128 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 76
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.100, auxf-impr from fMLLR is 0, over 76 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 97
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.108, auxf-impr from fMLLR is 0, over 97 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 431
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.134, auxf-impr from fMLLR is 0, over 431 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 226
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.146, auxf-impr from fMLLR is 0, over 226 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 177
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.148, auxf-impr from fMLLR is 0, over 177 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 145
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.152, auxf-impr from fMLLR is 0, over 145 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 54
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.168, auxf-impr from fMLLR is 0, over 54 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 48
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.170, auxf-impr from fMLLR is 0, over 48 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 46
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.172, auxf-impr from fMLLR is 0, over 46 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 326
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.174, auxf-impr from fMLLR is 0, over 326 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 201
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.187, auxf-impr from fMLLR is 0, over 201 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 174
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.209, auxf-impr from fMLLR is 0, over 174 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 245
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.219, auxf-impr from fMLLR is 0, over 245 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 53
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.231, auxf-impr from fMLLR is 0, over 53 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 212
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.236, auxf-impr from fMLLR is 0, over 212 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 139
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.244, auxf-impr from fMLLR is 0, over 139 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 154
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.245, auxf-impr from fMLLR is 0, over 154 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 260
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0697-TE0699_2-B.284, auxf-impr from fMLLR is 0, over 260 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 38
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.021, auxf-impr from fMLLR is 0, over 38 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 73
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.024, auxf-impr from fMLLR is 0, over 73 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 56
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.033, auxf-impr from fMLLR is 0, over 56 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 218
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.089, auxf-impr from fMLLR is 0, over 218 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 122
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.092, auxf-impr from fMLLR is 0, over 122 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 249
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.095, auxf-impr from fMLLR is 0, over 249 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 401
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.097, auxf-impr from fMLLR is 0, over 401 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.101, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 455
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.109, auxf-impr from fMLLR is 0, over 455 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 252
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.126, auxf-impr from fMLLR is 0, over 252 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 211
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.143, auxf-impr from fMLLR is 0, over 211 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 125
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.146, auxf-impr from fMLLR is 0, over 125 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 42
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.150, auxf-impr from fMLLR is 0, over 42 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 121
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.163, auxf-impr from fMLLR is 0, over 121 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 246
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.175, auxf-impr from fMLLR is 0, over 246 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 81
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.200, auxf-impr from fMLLR is 0, over 81 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 95
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.288, auxf-impr from fMLLR is 0, over 95 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 161
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.292, auxf-impr from fMLLR is 0, over 161 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 205
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.307, auxf-impr from fMLLR is 0, over 205 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 283
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.309, auxf-impr from fMLLR is 0, over 283 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 93
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.411, auxf-impr from fMLLR is 0, over 93 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 224
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.426, auxf-impr from fMLLR is 0, over 224 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 159
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.452, auxf-impr from fMLLR is 0, over 159 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 333
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.454, auxf-impr from fMLLR is 0, over 333 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 126
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-A.477, auxf-impr from fMLLR is 0, over 126 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 77
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.020, auxf-impr from fMLLR is 0, over 77 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 43
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.037, auxf-impr from fMLLR is 0, over 43 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 93
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.055, auxf-impr from fMLLR is 0, over 93 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 191
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.065, auxf-impr from fMLLR is 0, over 191 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 39
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.076, auxf-impr from fMLLR is 0, over 39 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 54
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.082, auxf-impr from fMLLR is 0, over 54 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 42
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.084, auxf-impr from fMLLR is 0, over 42 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 163
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.113, auxf-impr from fMLLR is 0, over 163 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 40
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.125, auxf-impr from fMLLR is 0, over 40 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 56
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.148, auxf-impr from fMLLR is 0, over 56 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 64
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.173, auxf-impr from fMLLR is 0, over 64 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 59
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.193, auxf-impr from fMLLR is 0, over 59 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 101
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.237, auxf-impr from fMLLR is 0, over 101 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 99
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_1-B.247, auxf-impr from fMLLR is 0, over 99 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 187
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.004, auxf-impr from fMLLR is 0, over 187 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 36
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.017, auxf-impr from fMLLR is 0, over 36 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 65
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.030, auxf-impr from fMLLR is 0, over 65 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 210
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.061, auxf-impr from fMLLR is 0, over 210 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 48
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.073, auxf-impr from fMLLR is 0, over 48 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 53
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.085, auxf-impr from fMLLR is 0, over 53 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 215
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.100, auxf-impr from fMLLR is 0, over 215 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 240
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.111, auxf-impr from fMLLR is 0, over 240 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 264
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.112, auxf-impr from fMLLR is 0, over 264 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 172
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.116, auxf-impr from fMLLR is 0, over 172 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 116
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.118, auxf-impr from fMLLR is 0, over 116 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 380
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.122, auxf-impr from fMLLR is 0, over 380 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 312
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.124, auxf-impr from fMLLR is 0, over 312 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 16
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.151, auxf-impr from fMLLR is 0, over 16 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 177
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.157, auxf-impr from fMLLR is 0, over 177 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 115
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.225, auxf-impr from fMLLR is 0, over 115 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 104
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.269, auxf-impr from fMLLR is 0, over 104 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 42
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.286, auxf-impr from fMLLR is 0, over 42 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 147
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.304, auxf-impr from fMLLR is 0, over 147 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 115
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.310, auxf-impr from fMLLR is 0, over 115 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 121
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.349, auxf-impr from fMLLR is 0, over 121 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 236
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.351, auxf-impr from fMLLR is 0, over 236 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 88
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.352, auxf-impr from fMLLR is 0, over 88 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 83
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-A.383, auxf-impr from fMLLR is 0, over 83 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 95
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.002, auxf-impr from fMLLR is 0, over 95 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 111
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.018, auxf-impr from fMLLR is 0, over 111 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 58
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.042, auxf-impr from fMLLR is 0, over 58 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 49
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.046, auxf-impr from fMLLR is 0, over 49 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 85
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.052, auxf-impr from fMLLR is 0, over 85 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 59
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.054, auxf-impr from fMLLR is 0, over 59 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 162
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.070, auxf-impr from fMLLR is 0, over 162 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 56
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.078, auxf-impr from fMLLR is 0, over 56 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 52
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.086, auxf-impr from fMLLR is 0, over 52 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 147
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.091, auxf-impr from fMLLR is 0, over 147 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 141
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.093, auxf-impr from fMLLR is 0, over 141 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 42
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.101, auxf-impr from fMLLR is 0, over 42 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 253
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.131, auxf-impr from fMLLR is 0, over 253 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 38
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.155, auxf-impr from fMLLR is 0, over 38 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 127
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0698-TE0700_2-B.190, auxf-impr from fMLLR is 0, over 127 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 108
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.032, auxf-impr from fMLLR is 0, over 108 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 188
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.071, auxf-impr from fMLLR is 0, over 188 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 139
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.079, auxf-impr from fMLLR is 0, over 139 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 250
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.081, auxf-impr from fMLLR is 0, over 250 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 64
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.083, auxf-impr from fMLLR is 0, over 64 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 438
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.122, auxf-impr from fMLLR is 0, over 438 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 236
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.128, auxf-impr from fMLLR is 0, over 236 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 170
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.131, auxf-impr from fMLLR is 0, over 170 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 115
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.133, auxf-impr from fMLLR is 0, over 115 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 330
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.135, auxf-impr from fMLLR is 0, over 330 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 293
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.157, auxf-impr from fMLLR is 0, over 293 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 73
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.163, auxf-impr from fMLLR is 0, over 73 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 138
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.165, auxf-impr from fMLLR is 0, over 138 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 123
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.168, auxf-impr from fMLLR is 0, over 123 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 33
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.176, auxf-impr from fMLLR is 0, over 33 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 95
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.178, auxf-impr from fMLLR is 0, over 95 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 44
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.180, auxf-impr from fMLLR is 0, over 44 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 298
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.183, auxf-impr from fMLLR is 0, over 298 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 111
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.191, auxf-impr from fMLLR is 0, over 111 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 144
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.192, auxf-impr from fMLLR is 0, over 144 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.194, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 106
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.202, auxf-impr from fMLLR is 0, over 106 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 63
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.204, auxf-impr from fMLLR is 0, over 63 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 51
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.215, auxf-impr from fMLLR is 0, over 51 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 147
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.217, auxf-impr from fMLLR is 0, over 147 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 242
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.218, auxf-impr from fMLLR is 0, over 242 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 124
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.220, auxf-impr from fMLLR is 0, over 124 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 323
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.228, auxf-impr from fMLLR is 0, over 323 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 179
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.236, auxf-impr from fMLLR is 0, over 179 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 254
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.239, auxf-impr from fMLLR is 0, over 254 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 38
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.240, auxf-impr from fMLLR is 0, over 38 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 131
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.244, auxf-impr from fMLLR is 0, over 131 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 80
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.249, auxf-impr from fMLLR is 0, over 80 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 41
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.251, auxf-impr from fMLLR is 0, over 41 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 161
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.257, auxf-impr from fMLLR is 0, over 161 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 121
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.266, auxf-impr from fMLLR is 0, over 121 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 51
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.281, auxf-impr from fMLLR is 0, over 51 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 210
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.291, auxf-impr from fMLLR is 0, over 210 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 156
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.295, auxf-impr from fMLLR is 0, over 156 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 87
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.299, auxf-impr from fMLLR is 0, over 87 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 404
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.306, auxf-impr from fMLLR is 0, over 404 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 98
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.318, auxf-impr from fMLLR is 0, over 98 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 266
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.323, auxf-impr from fMLLR is 0, over 266 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 211
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.326, auxf-impr from fMLLR is 0, over 211 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 108
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.334, auxf-impr from fMLLR is 0, over 108 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 178
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.350, auxf-impr from fMLLR is 0, over 178 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 172
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.356, auxf-impr from fMLLR is 0, over 172 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 66
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.364, auxf-impr from fMLLR is 0, over 66 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 223
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.369, auxf-impr from fMLLR is 0, over 223 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 115
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.391, auxf-impr from fMLLR is 0, over 115 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 97
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-A.397, auxf-impr from fMLLR is 0, over 97 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 130
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.006, auxf-impr from fMLLR is 0, over 130 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 268
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.008, auxf-impr from fMLLR is 0, over 268 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 85
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.014, auxf-impr from fMLLR is 0, over 85 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 117
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.045, auxf-impr from fMLLR is 0, over 117 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 84
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.052, auxf-impr from fMLLR is 0, over 84 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 100
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.054, auxf-impr from fMLLR is 0, over 100 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 47
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.067, auxf-impr from fMLLR is 0, over 47 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 206
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.069, auxf-impr from fMLLR is 0, over 206 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 70
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.073, auxf-impr from fMLLR is 0, over 70 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 157
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.099, auxf-impr from fMLLR is 0, over 157 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 79
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.115, auxf-impr from fMLLR is 0, over 79 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 70
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.122, auxf-impr from fMLLR is 0, over 70 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 46
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.129, auxf-impr from fMLLR is 0, over 46 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 141
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.140, auxf-impr from fMLLR is 0, over 141 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 81
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.143, auxf-impr from fMLLR is 0, over 81 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 210
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.151, auxf-impr from fMLLR is 0, over 210 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 219
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.166, auxf-impr from fMLLR is 0, over 219 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 110
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.171, auxf-impr from fMLLR is 0, over 110 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 139
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.173, auxf-impr from fMLLR is 0, over 139 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 65
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.182, auxf-impr from fMLLR is 0, over 65 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 145
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.197, auxf-impr from fMLLR is 0, over 145 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 131
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.199, auxf-impr from fMLLR is 0, over 131 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 87
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.216, auxf-impr from fMLLR is 0, over 87 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 98
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.223, auxf-impr from fMLLR is 0, over 98 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 54
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.228, auxf-impr from fMLLR is 0, over 54 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 180
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.276, auxf-impr from fMLLR is 0, over 180 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 176
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.280, auxf-impr from fMLLR is 0, over 176 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 40
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_1-B.293, auxf-impr from fMLLR is 0, over 40 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 181
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.021, auxf-impr from fMLLR is 0, over 181 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 107
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.066, auxf-impr from fMLLR is 0, over 107 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 43
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.072, auxf-impr from fMLLR is 0, over 43 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 98
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.074, auxf-impr from fMLLR is 0, over 98 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 113
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.078, auxf-impr from fMLLR is 0, over 113 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 290
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.079, auxf-impr from fMLLR is 0, over 290 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 158
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.080, auxf-impr from fMLLR is 0, over 158 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 68
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.088, auxf-impr from fMLLR is 0, over 68 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 110
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.090, auxf-impr from fMLLR is 0, over 110 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 228
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.128, auxf-impr from fMLLR is 0, over 228 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 177
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.152, auxf-impr from fMLLR is 0, over 177 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 181
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.165, auxf-impr from fMLLR is 0, over 181 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 150
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.170, auxf-impr from fMLLR is 0, over 150 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 40
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.172, auxf-impr from fMLLR is 0, over 40 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 152
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.174, auxf-impr from fMLLR is 0, over 152 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 45
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.179, auxf-impr from fMLLR is 0, over 45 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 141
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.186, auxf-impr from fMLLR is 0, over 141 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 66
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.217, auxf-impr from fMLLR is 0, over 66 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 294
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.239, auxf-impr from fMLLR is 0, over 294 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 147
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.248, auxf-impr from fMLLR is 0, over 147 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 139
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.296, auxf-impr from fMLLR is 0, over 139 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 162
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.313, auxf-impr from fMLLR is 0, over 162 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 132
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.315, auxf-impr from fMLLR is 0, over 132 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 349
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.329, auxf-impr from fMLLR is 0, over 349 frames.
+LOG (ali-to-post[5.5.1009~1-e4940]:main():ali-to-post.cc:73) Converted 445 alignments.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 211
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.345, auxf-impr from fMLLR is 0, over 211 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 50
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.352, auxf-impr from fMLLR is 0, over 50 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 73
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.354, auxf-impr from fMLLR is 0, over 73 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 91
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.356, auxf-impr from fMLLR is 0, over 91 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 69
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.360, auxf-impr from fMLLR is 0, over 69 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 136
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.396, auxf-impr from fMLLR is 0, over 136 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 111
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.404, auxf-impr from fMLLR is 0, over 111 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 140
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.429, auxf-impr from fMLLR is 0, over 140 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 254
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.431, auxf-impr from fMLLR is 0, over 254 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 148
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.448, auxf-impr from fMLLR is 0, over 148 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 160
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-A.458, auxf-impr from fMLLR is 0, over 160 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 145
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.020, auxf-impr from fMLLR is 0, over 145 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 108
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.024, auxf-impr from fMLLR is 0, over 108 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 90
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.030, auxf-impr from fMLLR is 0, over 90 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 152
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.054, auxf-impr from fMLLR is 0, over 152 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 269
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.058, auxf-impr from fMLLR is 0, over 269 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 37
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.076, auxf-impr from fMLLR is 0, over 37 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 49
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.084, auxf-impr from fMLLR is 0, over 49 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 72
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.096, auxf-impr from fMLLR is 0, over 72 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 43
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.104, auxf-impr from fMLLR is 0, over 43 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 66
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.123, auxf-impr from fMLLR is 0, over 66 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 80
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.125, auxf-impr from fMLLR is 0, over 80 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 51
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.132, auxf-impr from fMLLR is 0, over 51 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 200
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.140, auxf-impr from fMLLR is 0, over 200 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 71
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.144, auxf-impr from fMLLR is 0, over 71 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 138
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.148, auxf-impr from fMLLR is 0, over 138 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 57
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.150, auxf-impr from fMLLR is 0, over 57 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 61
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.158, auxf-impr from fMLLR is 0, over 61 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 149
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.160, auxf-impr from fMLLR is 0, over 149 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 97
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.164, auxf-impr from fMLLR is 0, over 97 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 95
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.170, auxf-impr from fMLLR is 0, over 95 frames.
+LOG (weight-silence-post[5.5.1009~1-e4940]:main():weight-silence-post.cc:95) Done 445 posteriors.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 84
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.178, auxf-impr from fMLLR is 0, over 84 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 67
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.190, auxf-impr from fMLLR is 0, over 67 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 308
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.192, auxf-impr from fMLLR is 0, over 308 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 226
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.194, auxf-impr from fMLLR is 0, over 226 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 96
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.196, auxf-impr from fMLLR is 0, over 96 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 84
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.202, auxf-impr from fMLLR is 0, over 84 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 40
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.218, auxf-impr from fMLLR is 0, over 40 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 68
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.229, auxf-impr from fMLLR is 0, over 68 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 89
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.232, auxf-impr from fMLLR is 0, over 89 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 93
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.251, auxf-impr from fMLLR is 0, over 93 frames.
+LOG (apply-cmvn[5.5.1009~1-e4940]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 445 utterances, errors on 0
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 150
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.255, auxf-impr from fMLLR is 0, over 150 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 58
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.261, auxf-impr from fMLLR is 0, over 58 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 128
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0699-TE0700_2-B.271, auxf-impr from fMLLR is 0, over 128 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 31
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0701-TE0702_1-A.062, auxf-impr from fMLLR is 0, over 31 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 99
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0701-TE0702_1-A.111, auxf-impr from fMLLR is 0, over 99 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 163
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0701-TE0702_1-A.166, auxf-impr from fMLLR is 0, over 163 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 113
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0701-TE0702_1-A.174, auxf-impr from fMLLR is 0, over 113 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 59
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0701-TE0702_1-A.186, auxf-impr from fMLLR is 0, over 59 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 109
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0701-TE0702_1-A.225, auxf-impr from fMLLR is 0, over 109 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 250
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0701-TE0702_1-B.098, auxf-impr from fMLLR is 0, over 250 frames.
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -98.9864 over 79104 frames.
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:161) Applied transform to 445 utterances; 0 had errors.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 121
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0701-TE0702_1-B.194, auxf-impr from fMLLR is 0, over 121 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 112
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0701-TE0702_1-B.241, auxf-impr from fMLLR is 0, over 112 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 126
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0701-TE0702_1-B.252, auxf-impr from fMLLR is 0, over 126 frames.
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:158) Overall average logdet is 0.0916406 over 79104 frames.
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:161) Applied transform to 445 utterances; 0 had errors.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 281
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0701-TE0702_1-B.255, auxf-impr from fMLLR is 0, over 281 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 61
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker TE0701-TE0702_1-B.368, auxf-impr from fMLLR is 0, over 61 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:188) Done 445 files, 0 with no posts, 0 with other errors.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:190) Overall fMLLR auxf impr per frame is 0.000503859 over 64727 frames.
+# Accounting: time=2 threads=1
+# Ended (code 0) at Tue Jun 14 10:51:05 UTC 2022, elapsed time 2 seconds

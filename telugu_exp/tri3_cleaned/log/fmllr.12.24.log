@@ -1,0 +1,835 @@
+# ali-to-post "ark:gunzip -c telugu_exp/tri3_cleaned/ali.24.gz|" ark:- | weight-silence-post 0.0 1:2:3:4:5:6:7:8:9:10 telugu_exp/tri3_cleaned/12.mdl ark:- ark:- | gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:telugu_data/train_cleaned/split100/24/spk2utt telugu_exp/tri3_cleaned/12.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_cleaned/split100/24/utt2spk scp:telugu_data/train_cleaned/split100/24/cmvn.scp scp:telugu_data/train_cleaned/split100/24/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats telugu_exp/tri3_ali_cleaned/final.mat ark:- ark:- | transform-feats --utt2spk=ark:telugu_data/train_cleaned/split100/24/utt2spk ark:telugu_exp/tri3_cleaned/trans.24 ark:- ark:- |" ark:- ark:telugu_exp/tri3_cleaned/tmp_trans.24 
+# Started at Tue Jun 14 10:54:44 UTC 2022
+#
+gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:telugu_data/train_cleaned/split100/24/spk2utt telugu_exp/tri3_cleaned/12.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_cleaned/split100/24/utt2spk scp:telugu_data/train_cleaned/split100/24/cmvn.scp scp:telugu_data/train_cleaned/split100/24/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats telugu_exp/tri3_ali_cleaned/final.mat ark:- ark:- | transform-feats --utt2spk=ark:telugu_data/train_cleaned/split100/24/utt2spk ark:telugu_exp/tri3_cleaned/trans.24 ark:- ark:- |' ark:- ark:telugu_exp/tri3_cleaned/tmp_trans.24 
+ali-to-post 'ark:gunzip -c telugu_exp/tri3_cleaned/ali.24.gz|' ark:- 
+weight-silence-post 0.0 1:2:3:4:5:6:7:8:9:10 telugu_exp/tri3_cleaned/12.mdl ark:- ark:- 
+apply-cmvn --utt2spk=ark:telugu_data/train_cleaned/split100/24/utt2spk scp:telugu_data/train_cleaned/split100/24/cmvn.scp scp:telugu_data/train_cleaned/split100/24/feats.scp ark:- 
+transform-feats telugu_exp/tri3_ali_cleaned/final.mat ark:- ark:- 
+splice-feats ark:- ark:- 
+transform-feats --utt2spk=ark:telugu_data/train_cleaned/split100/24/utt2spk ark:telugu_exp/tri3_cleaned/trans.24 ark:- ark:- 
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 318
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070127, auxf-impr from fMLLR is 0, over 318 frames.
+LOG (ali-to-post[5.5.1009~1-e4940]:main():ali-to-post.cc:73) Converted 401 alignments.
+LOG (weight-silence-post[5.5.1009~1-e4940]:main():weight-silence-post.cc:95) Done 401 posteriors.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance 001070139-1
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance 001070139-2
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 0
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070139, auxf-impr from fMLLR is -nan, over 0 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.959112 per frame over 637 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070142, auxf-impr from fMLLR is 0.959112, over 637 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 445
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070152, auxf-impr from fMLLR is 0, over 445 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.28052 per frame over 515 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070155, auxf-impr from fMLLR is 1.28052, over 515 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.895199 per frame over 595 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070158, auxf-impr from fMLLR is 0.895199, over 595 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.745596 per frame over 804 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070175, auxf-impr from fMLLR is 0.745596, over 804 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.05199 per frame over 626 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070176, auxf-impr from fMLLR is 1.05199, over 626 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 454
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070178, auxf-impr from fMLLR is 0, over 454 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.942193 per frame over 678 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070179, auxf-impr from fMLLR is 0.942193, over 678 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 449
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070182, auxf-impr from fMLLR is 0, over 449 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.26655 per frame over 526 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070184, auxf-impr from fMLLR is 1.26655, over 526 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.944023 per frame over 807 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070189, auxf-impr from fMLLR is 0.944023, over 807 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.889796 per frame over 675 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070195, auxf-impr from fMLLR is 0.889796, over 675 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.834911 per frame over 646 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070199, auxf-impr from fMLLR is 0.834911, over 646 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 412
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070203, auxf-impr from fMLLR is 0, over 412 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 301
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070207, auxf-impr from fMLLR is 0, over 301 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.16697 per frame over 520 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070214, auxf-impr from fMLLR is 1.16697, over 520 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.23563 per frame over 512 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070215, auxf-impr from fMLLR is 1.23563, over 512 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 467
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070216, auxf-impr from fMLLR is 0, over 467 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 500
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070217, auxf-impr from fMLLR is 0, over 500 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 407
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070223, auxf-impr from fMLLR is 0, over 407 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.578817 per frame over 880 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070227, auxf-impr from fMLLR is 0.578817, over 880 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 394
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070228, auxf-impr from fMLLR is 0, over 394 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 429
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070235, auxf-impr from fMLLR is 0, over 429 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 396
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070237, auxf-impr from fMLLR is 0, over 396 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 491
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070240, auxf-impr from fMLLR is 0, over 491 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 332
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070242, auxf-impr from fMLLR is 0, over 332 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 434
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070243, auxf-impr from fMLLR is 0, over 434 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 331
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070246, auxf-impr from fMLLR is 0, over 331 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 475
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070248, auxf-impr from fMLLR is 0, over 475 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 483
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070249, auxf-impr from fMLLR is 0, over 483 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.955093 per frame over 523 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070261, auxf-impr from fMLLR is 0.955093, over 523 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 466
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070262, auxf-impr from fMLLR is 0, over 466 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 405
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070264, auxf-impr from fMLLR is 0, over 405 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.936657 per frame over 506 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070266, auxf-impr from fMLLR is 0.936657, over 506 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 309
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070271, auxf-impr from fMLLR is 0, over 309 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.07863 per frame over 532 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070272, auxf-impr from fMLLR is 1.07863, over 532 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 376
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070274, auxf-impr from fMLLR is 0, over 376 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 444
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070279, auxf-impr from fMLLR is 0, over 444 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.84693 per frame over 599 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070284, auxf-impr from fMLLR is 0.84693, over 599 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 331
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070298, auxf-impr from fMLLR is 0, over 331 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 358
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070299, auxf-impr from fMLLR is 0, over 358 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.828741 per frame over 861 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070300, auxf-impr from fMLLR is 0.828741, over 861 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 421
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070301, auxf-impr from fMLLR is 0, over 421 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.977922 per frame over 622 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070310, auxf-impr from fMLLR is 0.977922, over 622 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 464
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070318, auxf-impr from fMLLR is 0, over 464 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 320
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070319, auxf-impr from fMLLR is 0, over 320 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 394
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070320, auxf-impr from fMLLR is 0, over 394 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 404
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070321, auxf-impr from fMLLR is 0, over 404 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 310
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070323, auxf-impr from fMLLR is 0, over 310 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 350
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070329, auxf-impr from fMLLR is 0, over 350 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.20329 per frame over 504 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070330, auxf-impr from fMLLR is 1.20329, over 504 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.998441 per frame over 642 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070340, auxf-impr from fMLLR is 0.998441, over 642 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 411
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070347, auxf-impr from fMLLR is 0, over 411 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 331
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070441, auxf-impr from fMLLR is 0, over 331 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 438
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070453, auxf-impr from fMLLR is 0, over 438 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 447
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070470, auxf-impr from fMLLR is 0, over 447 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.897286 per frame over 506 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001070489, auxf-impr from fMLLR is 0.897286, over 506 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 467
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310002, auxf-impr from fMLLR is 0, over 467 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 444
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310005, auxf-impr from fMLLR is 0, over 444 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 432
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310006, auxf-impr from fMLLR is 0, over 432 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.86426 per frame over 611 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310008, auxf-impr from fMLLR is 0.86426, over 611 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.676686 per frame over 764 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310010, auxf-impr from fMLLR is 0.676686, over 764 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 423
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310011, auxf-impr from fMLLR is 0, over 423 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 401
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310012, auxf-impr from fMLLR is 0, over 401 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 347
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310015, auxf-impr from fMLLR is 0, over 347 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 418
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310022, auxf-impr from fMLLR is 0, over 418 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 395
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310024, auxf-impr from fMLLR is 0, over 395 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 398
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310025, auxf-impr from fMLLR is 0, over 398 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 438
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310031, auxf-impr from fMLLR is 0, over 438 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 337
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310038, auxf-impr from fMLLR is 0, over 337 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 490
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310041, auxf-impr from fMLLR is 0, over 490 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.906349 per frame over 637 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310043, auxf-impr from fMLLR is 0.906349, over 637 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 413
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310046, auxf-impr from fMLLR is 0, over 413 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 315
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310047, auxf-impr from fMLLR is 0, over 315 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 480
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310056, auxf-impr from fMLLR is 0, over 480 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 331
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310059, auxf-impr from fMLLR is 0, over 331 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 450
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310060, auxf-impr from fMLLR is 0, over 450 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 429
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310072, auxf-impr from fMLLR is 0, over 429 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 453
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310074, auxf-impr from fMLLR is 0, over 453 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.887225 per frame over 539 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310080, auxf-impr from fMLLR is 0.887225, over 539 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 479
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310100, auxf-impr from fMLLR is 0, over 479 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.941266 per frame over 660 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310102, auxf-impr from fMLLR is 0.941266, over 660 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 454
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310103, auxf-impr from fMLLR is 0, over 454 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 422
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310105, auxf-impr from fMLLR is 0, over 422 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 314
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310112, auxf-impr from fMLLR is 0, over 314 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.883073 per frame over 664 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310118, auxf-impr from fMLLR is 0.883073, over 664 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.788522 per frame over 609 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310119, auxf-impr from fMLLR is 0.788522, over 609 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.896303 per frame over 519 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310129, auxf-impr from fMLLR is 0.896303, over 519 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.770184 per frame over 606 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310132, auxf-impr from fMLLR is 0.770184, over 606 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 446
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310134, auxf-impr from fMLLR is 0, over 446 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.833799 per frame over 665 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310135, auxf-impr from fMLLR is 0.833799, over 665 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 420
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310136, auxf-impr from fMLLR is 0, over 420 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 337
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310138, auxf-impr from fMLLR is 0, over 337 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 354
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310140, auxf-impr from fMLLR is 0, over 354 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.941546 per frame over 540 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310142, auxf-impr from fMLLR is 0.941545, over 540 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 492
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310146, auxf-impr from fMLLR is 0, over 492 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 438
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310150, auxf-impr from fMLLR is 0, over 438 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 467
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310156, auxf-impr from fMLLR is 0, over 467 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 302
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310158, auxf-impr from fMLLR is 0, over 302 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 471
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310162, auxf-impr from fMLLR is 0, over 471 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 368
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310165, auxf-impr from fMLLR is 0, over 368 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.871202 per frame over 647 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310166, auxf-impr from fMLLR is 0.871202, over 647 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 453
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310167, auxf-impr from fMLLR is 0, over 453 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 486
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310170, auxf-impr from fMLLR is 0, over 486 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 472
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310173, auxf-impr from fMLLR is 0, over 472 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 341
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310178, auxf-impr from fMLLR is 0, over 341 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 398
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310182, auxf-impr from fMLLR is 0, over 398 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 450
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310183, auxf-impr from fMLLR is 0, over 450 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.810592 per frame over 651 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310190, auxf-impr from fMLLR is 0.810592, over 651 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.901524 per frame over 513 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310193, auxf-impr from fMLLR is 0.901524, over 513 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 412
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310194, auxf-impr from fMLLR is 0, over 412 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.940629 per frame over 645 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310198, auxf-impr from fMLLR is 0.940629, over 645 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 491
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310199, auxf-impr from fMLLR is 0, over 491 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 462
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310201, auxf-impr from fMLLR is 0, over 462 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.608482 per frame over 793 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310202, auxf-impr from fMLLR is 0.608482, over 793 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.804783 per frame over 647 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310203, auxf-impr from fMLLR is 0.804783, over 647 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.21547 per frame over 530 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310204, auxf-impr from fMLLR is 1.21547, over 530 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.00805 per frame over 521 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310205, auxf-impr from fMLLR is 1.00805, over 521 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.03637 per frame over 585 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310207, auxf-impr from fMLLR is 1.03637, over 585 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 383
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310209, auxf-impr from fMLLR is 0, over 383 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.825252 per frame over 737 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310211, auxf-impr from fMLLR is 0.825252, over 737 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 402
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310212, auxf-impr from fMLLR is 0, over 402 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 412
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310213, auxf-impr from fMLLR is 0, over 412 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 348
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310216, auxf-impr from fMLLR is 0, over 348 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.777267 per frame over 687 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310221, auxf-impr from fMLLR is 0.777267, over 687 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 488
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310222, auxf-impr from fMLLR is 0, over 488 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.814528 per frame over 587 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310227, auxf-impr from fMLLR is 0.814528, over 587 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance 001310228-1
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 0
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310228, auxf-impr from fMLLR is -nan, over 0 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.760786 per frame over 744 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310231, auxf-impr from fMLLR is 0.760786, over 744 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 417
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310232, auxf-impr from fMLLR is 0, over 417 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.00503 per frame over 564 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310233, auxf-impr from fMLLR is 1.00503, over 564 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 482
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310236, auxf-impr from fMLLR is 0, over 482 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 356
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310238, auxf-impr from fMLLR is 0, over 356 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 297
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310239, auxf-impr from fMLLR is 0, over 297 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.954742 per frame over 555 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310243, auxf-impr from fMLLR is 0.954742, over 555 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 325
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310244, auxf-impr from fMLLR is 0, over 325 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.662572 per frame over 737 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310246, auxf-impr from fMLLR is 0.662573, over 737 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 496
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310247, auxf-impr from fMLLR is 0, over 496 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 389
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310248, auxf-impr from fMLLR is 0, over 389 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 333
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310250, auxf-impr from fMLLR is 0, over 333 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 334
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310252, auxf-impr from fMLLR is 0, over 334 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 474
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310253, auxf-impr from fMLLR is 0, over 474 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.774154 per frame over 684 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310254, auxf-impr from fMLLR is 0.774154, over 684 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.939266 per frame over 598 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310255, auxf-impr from fMLLR is 0.939266, over 598 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.934674 per frame over 561 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310256, auxf-impr from fMLLR is 0.934674, over 561 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 424
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310257, auxf-impr from fMLLR is 0, over 424 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 345
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310258, auxf-impr from fMLLR is 0, over 345 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance 001310261-1
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 0
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310261, auxf-impr from fMLLR is -nan, over 0 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.935798 per frame over 505 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310262, auxf-impr from fMLLR is 0.935798, over 505 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 485
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310263, auxf-impr from fMLLR is 0, over 485 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.831022 per frame over 650 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310266, auxf-impr from fMLLR is 0.831022, over 650 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.01441 per frame over 556 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310268, auxf-impr from fMLLR is 1.01441, over 556 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance 001310271-1
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance 001310271-2
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 0
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310271, auxf-impr from fMLLR is -nan, over 0 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.939429 per frame over 563 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310273, auxf-impr from fMLLR is 0.939429, over 563 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.929374 per frame over 536 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310274, auxf-impr from fMLLR is 0.929374, over 536 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 319
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310275, auxf-impr from fMLLR is 0, over 319 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 340
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310276, auxf-impr from fMLLR is 0, over 340 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.803822 per frame over 575 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310277, auxf-impr from fMLLR is 0.803822, over 575 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.883226 per frame over 590 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310280, auxf-impr from fMLLR is 0.883226, over 590 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.885839 per frame over 840 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310281, auxf-impr from fMLLR is 0.885839, over 840 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 329
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310282, auxf-impr from fMLLR is 0, over 329 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.930412 per frame over 591 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310283, auxf-impr from fMLLR is 0.930412, over 591 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.703796 per frame over 731 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310284, auxf-impr from fMLLR is 0.703796, over 731 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.679689 per frame over 762 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310285, auxf-impr from fMLLR is 0.679689, over 762 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 351
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310287, auxf-impr from fMLLR is 0, over 351 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.947429 per frame over 626 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310288, auxf-impr from fMLLR is 0.947429, over 626 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 412
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310289, auxf-impr from fMLLR is 0, over 412 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 360
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310290, auxf-impr from fMLLR is 0, over 360 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 364
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310292, auxf-impr from fMLLR is 0, over 364 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 368
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310293, auxf-impr from fMLLR is 0, over 368 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.749854 per frame over 609 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310297, auxf-impr from fMLLR is 0.749855, over 609 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 343
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310298, auxf-impr from fMLLR is 0, over 343 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 403
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310299, auxf-impr from fMLLR is 0, over 403 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 295
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310300, auxf-impr from fMLLR is 0, over 295 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 373
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310303, auxf-impr from fMLLR is 0, over 373 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.901532 per frame over 535 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310307, auxf-impr from fMLLR is 0.901532, over 535 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 331
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310308, auxf-impr from fMLLR is 0, over 331 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 425
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310309, auxf-impr from fMLLR is 0, over 425 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.650793 per frame over 692 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310311, auxf-impr from fMLLR is 0.650793, over 692 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.04086 per frame over 584 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310314, auxf-impr from fMLLR is 1.04086, over 584 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 465
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310317, auxf-impr from fMLLR is 0, over 465 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 357
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310319, auxf-impr from fMLLR is 0, over 357 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 312
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310322, auxf-impr from fMLLR is 0, over 312 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 461
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310323, auxf-impr from fMLLR is 0, over 461 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.873782 per frame over 575 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310334, auxf-impr from fMLLR is 0.873782, over 575 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 496
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310335, auxf-impr from fMLLR is 0, over 496 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 308
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310336, auxf-impr from fMLLR is 0, over 308 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 345
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310342, auxf-impr from fMLLR is 0, over 345 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 497
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310345, auxf-impr from fMLLR is 0, over 497 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 435
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310346, auxf-impr from fMLLR is 0, over 435 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 405
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310347, auxf-impr from fMLLR is 0, over 405 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 302
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310348, auxf-impr from fMLLR is 0, over 302 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 444
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310352, auxf-impr from fMLLR is 0, over 444 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.888908 per frame over 582 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310354, auxf-impr from fMLLR is 0.888908, over 582 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.906176 per frame over 556 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310358, auxf-impr from fMLLR is 0.906176, over 556 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.993173 per frame over 516 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310359, auxf-impr from fMLLR is 0.993173, over 516 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 349
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310361, auxf-impr from fMLLR is 0, over 349 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.847352 per frame over 682 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310363, auxf-impr from fMLLR is 0.847352, over 682 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 451
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310367, auxf-impr from fMLLR is 0, over 451 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 453
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310387, auxf-impr from fMLLR is 0, over 453 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 380
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310391, auxf-impr from fMLLR is 0, over 380 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 452
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310395, auxf-impr from fMLLR is 0, over 452 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 332
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310396, auxf-impr from fMLLR is 0, over 332 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.09496 per frame over 601 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310400, auxf-impr from fMLLR is 1.09496, over 601 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 484
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310405, auxf-impr from fMLLR is 0, over 484 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.873667 per frame over 615 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310411, auxf-impr from fMLLR is 0.873667, over 615 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.627374 per frame over 946 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310415, auxf-impr from fMLLR is 0.627374, over 946 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 392
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310418, auxf-impr from fMLLR is 0, over 392 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.738752 per frame over 722 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310424, auxf-impr from fMLLR is 0.738752, over 722 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.868917 per frame over 781 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310425, auxf-impr from fMLLR is 0.868917, over 781 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 486
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310430, auxf-impr from fMLLR is 0, over 486 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.896582 per frame over 578 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310433, auxf-impr from fMLLR is 0.896582, over 578 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.27089 per frame over 549 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310438, auxf-impr from fMLLR is 1.27089, over 549 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.23974 per frame over 516 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310440, auxf-impr from fMLLR is 1.23974, over 516 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.96475 per frame over 579 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310445, auxf-impr from fMLLR is 0.96475, over 579 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 244
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310447, auxf-impr from fMLLR is 0, over 244 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 414
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310449, auxf-impr from fMLLR is 0, over 414 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 393
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310453, auxf-impr from fMLLR is 0, over 393 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.932923 per frame over 624 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310454, auxf-impr from fMLLR is 0.932923, over 624 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.844691 per frame over 694 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310457, auxf-impr from fMLLR is 0.844691, over 694 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 490
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310462, auxf-impr from fMLLR is 0, over 490 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 436
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310463, auxf-impr from fMLLR is 0, over 436 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.94371 per frame over 651 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310465, auxf-impr from fMLLR is 0.94371, over 651 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.937917 per frame over 617 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310467, auxf-impr from fMLLR is 0.937917, over 617 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 366
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310473, auxf-impr from fMLLR is 0, over 366 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.07713 per frame over 504 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310475, auxf-impr from fMLLR is 1.07713, over 504 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.957905 per frame over 624 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310476, auxf-impr from fMLLR is 0.957905, over 624 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 482
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310481, auxf-impr from fMLLR is 0, over 482 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 381
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310488, auxf-impr from fMLLR is 0, over 381 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 435
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310493, auxf-impr from fMLLR is 0, over 435 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 417
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310496, auxf-impr from fMLLR is 0, over 417 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.892353 per frame over 752 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001310498, auxf-impr from fMLLR is 0.892353, over 752 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.576538 per frame over 974 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350001, auxf-impr from fMLLR is 0.576538, over 974 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.19757 per frame over 599 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350002, auxf-impr from fMLLR is 1.19757, over 599 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 379
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350005, auxf-impr from fMLLR is 0, over 379 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.771633 per frame over 764 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350006, auxf-impr from fMLLR is 0.771633, over 764 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 473
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350007, auxf-impr from fMLLR is 0, over 473 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.729696 per frame over 801 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350010, auxf-impr from fMLLR is 0.729696, over 801 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.02304 per frame over 558 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350016, auxf-impr from fMLLR is 1.02304, over 558 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 471
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350017, auxf-impr from fMLLR is 0, over 471 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.895399 per frame over 689 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350018, auxf-impr from fMLLR is 0.895399, over 689 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 398
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350021, auxf-impr from fMLLR is 0, over 398 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 11.0922 per frame over 502 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350023, auxf-impr from fMLLR is 11.0922, over 502 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.732107 per frame over 846 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350024, auxf-impr from fMLLR is 0.732107, over 846 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.937541 per frame over 536 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350026, auxf-impr from fMLLR is 0.937541, over 536 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 404
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350035, auxf-impr from fMLLR is 0, over 404 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.800257 per frame over 746 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350036, auxf-impr from fMLLR is 0.800257, over 746 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.733346 per frame over 628 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350037, auxf-impr from fMLLR is 0.733346, over 628 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.769342 per frame over 905 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350038, auxf-impr from fMLLR is 0.769342, over 905 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.29518 per frame over 535 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350039, auxf-impr from fMLLR is 1.29518, over 535 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.946713 per frame over 661 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350042, auxf-impr from fMLLR is 0.946713, over 661 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.931106 per frame over 691 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350044, auxf-impr from fMLLR is 0.931106, over 691 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.838608 per frame over 572 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350046, auxf-impr from fMLLR is 0.838608, over 572 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.898545 per frame over 568 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350047, auxf-impr from fMLLR is 0.898545, over 568 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.962052 per frame over 584 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350048, auxf-impr from fMLLR is 0.962052, over 584 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.919138 per frame over 745 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350052, auxf-impr from fMLLR is 0.919138, over 745 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.973353 per frame over 635 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350054, auxf-impr from fMLLR is 0.973353, over 635 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.81267 per frame over 768 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350055, auxf-impr from fMLLR is 0.81267, over 768 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.04632 per frame over 733 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350060, auxf-impr from fMLLR is 1.04632, over 733 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.18598 per frame over 531 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350062, auxf-impr from fMLLR is 1.18598, over 531 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 447
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350066, auxf-impr from fMLLR is 0, over 447 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.831563 per frame over 820 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350069, auxf-impr from fMLLR is 0.831563, over 820 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.989262 per frame over 725 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350071, auxf-impr from fMLLR is 0.989262, over 725 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.22149 per frame over 659 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350073, auxf-impr from fMLLR is 1.22149, over 659 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 476
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350074, auxf-impr from fMLLR is 0, over 476 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 471
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350077, auxf-impr from fMLLR is 0, over 471 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.859812 per frame over 703 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350082, auxf-impr from fMLLR is 0.859812, over 703 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 328
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350083, auxf-impr from fMLLR is 0, over 328 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.867225 per frame over 628 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350085, auxf-impr from fMLLR is 0.867225, over 628 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.686338 per frame over 936 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350087, auxf-impr from fMLLR is 0.686338, over 936 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.25122 per frame over 536 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350089, auxf-impr from fMLLR is 1.25122, over 536 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 315
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350090, auxf-impr from fMLLR is 0, over 315 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance 001350092-1
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance 001350092-2
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 0
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350092, auxf-impr from fMLLR is -nan, over 0 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.827638 per frame over 555 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350096, auxf-impr from fMLLR is 0.827638, over 555 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.612334 per frame over 1084 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350100, auxf-impr from fMLLR is 0.612334, over 1084 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.938524 per frame over 582 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350202, auxf-impr from fMLLR is 0.938524, over 582 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.880751 per frame over 602 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350204, auxf-impr from fMLLR is 0.880751, over 602 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.698073 per frame over 728 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350210, auxf-impr from fMLLR is 0.698073, over 728 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.704022 per frame over 704 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350212, auxf-impr from fMLLR is 0.704022, over 704 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.962647 per frame over 538 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350214, auxf-impr from fMLLR is 0.962647, over 538 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 272
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350215, auxf-impr from fMLLR is 0, over 272 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 404
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350230, auxf-impr from fMLLR is 0, over 404 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 379
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350231, auxf-impr from fMLLR is 0, over 379 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.02589 per frame over 547 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350239, auxf-impr from fMLLR is 1.02589, over 547 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.868791 per frame over 656 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350243, auxf-impr from fMLLR is 0.868791, over 656 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.822964 per frame over 680 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350247, auxf-impr from fMLLR is 0.822964, over 680 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.85311 per frame over 622 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350250, auxf-impr from fMLLR is 0.85311, over 622 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 271
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350252, auxf-impr from fMLLR is 0, over 271 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 418
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350254, auxf-impr from fMLLR is 0, over 418 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 454
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350257, auxf-impr from fMLLR is 0, over 454 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.780641 per frame over 801 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350264, auxf-impr from fMLLR is 0.780641, over 801 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 277
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350266, auxf-impr from fMLLR is 0, over 277 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.821301 per frame over 707 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350272, auxf-impr from fMLLR is 0.821302, over 707 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 461
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350273, auxf-impr from fMLLR is 0, over 461 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.835486 per frame over 655 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350282, auxf-impr from fMLLR is 0.835486, over 655 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 480
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350283, auxf-impr from fMLLR is 0, over 480 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 401
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350284, auxf-impr from fMLLR is 0, over 401 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 468
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350285, auxf-impr from fMLLR is 0, over 468 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 437
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350286, auxf-impr from fMLLR is 0, over 437 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 461
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350291, auxf-impr from fMLLR is 0, over 461 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 405
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350293, auxf-impr from fMLLR is 0, over 405 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.983234 per frame over 557 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350294, auxf-impr from fMLLR is 0.983234, over 557 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.863605 per frame over 697 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350298, auxf-impr from fMLLR is 0.863605, over 697 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 457
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350300, auxf-impr from fMLLR is 0, over 457 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.12309 per frame over 518 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350301, auxf-impr from fMLLR is 1.12309, over 518 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 475
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350307, auxf-impr from fMLLR is 0, over 475 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.01374 per frame over 573 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350312, auxf-impr from fMLLR is 1.01374, over 573 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.946602 per frame over 552 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350313, auxf-impr from fMLLR is 0.946602, over 552 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 444
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350316, auxf-impr from fMLLR is 0, over 444 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 413
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350317, auxf-impr from fMLLR is 0, over 413 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 434
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350318, auxf-impr from fMLLR is 0, over 434 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 438
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350320, auxf-impr from fMLLR is 0, over 438 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.06202 per frame over 612 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350324, auxf-impr from fMLLR is 1.06202, over 612 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 401
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350329, auxf-impr from fMLLR is 0, over 401 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.810617 per frame over 771 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350331, auxf-impr from fMLLR is 0.810618, over 771 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 487
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350337, auxf-impr from fMLLR is 0, over 487 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 433
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350340, auxf-impr from fMLLR is 0, over 433 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.884923 per frame over 591 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350342, auxf-impr from fMLLR is 0.884923, over 591 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.06025 per frame over 577 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350344, auxf-impr from fMLLR is 1.06025, over 577 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.997156 per frame over 554 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350345, auxf-impr from fMLLR is 0.997156, over 554 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.716029 per frame over 1000 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350351, auxf-impr from fMLLR is 0.716029, over 1000 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 2.08821 per frame over 537 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350355, auxf-impr from fMLLR is 2.08821, over 537 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 491
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350356, auxf-impr from fMLLR is 0, over 491 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.06253 per frame over 671 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350358, auxf-impr from fMLLR is 1.06253, over 671 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 435
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350359, auxf-impr from fMLLR is 0, over 435 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 352
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350369, auxf-impr from fMLLR is 0, over 352 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 495
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350372, auxf-impr from fMLLR is 0, over 495 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.751632 per frame over 1016 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350373, auxf-impr from fMLLR is 0.751632, over 1016 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 12.0033 per frame over 503 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350375, auxf-impr from fMLLR is 12.0033, over 503 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.985618 per frame over 536 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350376, auxf-impr from fMLLR is 0.985618, over 536 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.627303 per frame over 1118 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350383, auxf-impr from fMLLR is 0.627303, over 1118 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.01041 per frame over 546 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350385, auxf-impr from fMLLR is 1.01041, over 546 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.593773 per frame over 1340 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350386, auxf-impr from fMLLR is 0.593773, over 1340 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.796801 per frame over 639 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350388, auxf-impr from fMLLR is 0.796801, over 639 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.873951 per frame over 686 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350389, auxf-impr from fMLLR is 0.873951, over 686 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.980453 per frame over 674 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350393, auxf-impr from fMLLR is 0.980453, over 674 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 454
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350397, auxf-impr from fMLLR is 0, over 454 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 444
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350403, auxf-impr from fMLLR is 0, over 444 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 386
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350414, auxf-impr from fMLLR is 0, over 386 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 485
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350420, auxf-impr from fMLLR is 0, over 485 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 416
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350427, auxf-impr from fMLLR is 0, over 416 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.904135 per frame over 667 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350430, auxf-impr from fMLLR is 0.904135, over 667 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.93106 per frame over 647 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350431, auxf-impr from fMLLR is 0.93106, over 647 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 368
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350434, auxf-impr from fMLLR is 0, over 368 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.735175 per frame over 686 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350435, auxf-impr from fMLLR is 0.735175, over 686 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.900984 per frame over 559 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350439, auxf-impr from fMLLR is 0.900984, over 559 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 432
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350444, auxf-impr from fMLLR is 0, over 432 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.849328 per frame over 644 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350446, auxf-impr from fMLLR is 0.849328, over 644 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.951514 per frame over 569 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350448, auxf-impr from fMLLR is 0.951514, over 569 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.01449 per frame over 531 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350449, auxf-impr from fMLLR is 1.01449, over 531 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 343
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350452, auxf-impr from fMLLR is 0, over 343 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.628983 per frame over 919 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350455, auxf-impr from fMLLR is 0.628983, over 919 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 342
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350457, auxf-impr from fMLLR is 0, over 342 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 424
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350463, auxf-impr from fMLLR is 0, over 424 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 300
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350466, auxf-impr from fMLLR is 0, over 300 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 436
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350488, auxf-impr from fMLLR is 0, over 436 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.975289 per frame over 616 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350495, auxf-impr from fMLLR is 0.975289, over 616 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 414
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001350500, auxf-impr from fMLLR is 0, over 414 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 280
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360005, auxf-impr from fMLLR is 0, over 280 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 435
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360010, auxf-impr from fMLLR is 0, over 435 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 461
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360018, auxf-impr from fMLLR is 0, over 461 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 479
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360020, auxf-impr from fMLLR is 0, over 479 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.07936 per frame over 570 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360036, auxf-impr from fMLLR is 1.07936, over 570 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 336
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360042, auxf-impr from fMLLR is 0, over 336 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 327
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360043, auxf-impr from fMLLR is 0, over 327 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 391
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360056, auxf-impr from fMLLR is 0, over 391 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 438
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360059, auxf-impr from fMLLR is 0, over 438 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 287
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360065, auxf-impr from fMLLR is 0, over 287 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 475
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360067, auxf-impr from fMLLR is 0, over 475 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 350
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360068, auxf-impr from fMLLR is 0, over 350 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 451
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360070, auxf-impr from fMLLR is 0, over 451 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 396
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360074, auxf-impr from fMLLR is 0, over 396 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 253
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360078, auxf-impr from fMLLR is 0, over 253 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 454
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360080, auxf-impr from fMLLR is 0, over 454 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.845977 per frame over 608 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360081, auxf-impr from fMLLR is 0.845977, over 608 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.922417 per frame over 541 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360082, auxf-impr from fMLLR is 0.922417, over 541 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.968652 per frame over 584 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360083, auxf-impr from fMLLR is 0.968652, over 584 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 485
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360084, auxf-impr from fMLLR is 0, over 485 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 347
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360091, auxf-impr from fMLLR is 0, over 347 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 478
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360092, auxf-impr from fMLLR is 0, over 478 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.00442 per frame over 564 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360101, auxf-impr from fMLLR is 1.00442, over 564 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 357
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360103, auxf-impr from fMLLR is 0, over 357 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 373
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360104, auxf-impr from fMLLR is 0, over 373 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 444
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360107, auxf-impr from fMLLR is 0, over 444 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 367
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360112, auxf-impr from fMLLR is 0, over 367 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.886103 per frame over 543 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360113, auxf-impr from fMLLR is 0.886103, over 543 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.940232 per frame over 714 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360123, auxf-impr from fMLLR is 0.940232, over 714 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 369
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360131, auxf-impr from fMLLR is 0, over 369 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.832617 per frame over 754 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360137, auxf-impr from fMLLR is 0.832617, over 754 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.13416 per frame over 513 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360138, auxf-impr from fMLLR is 1.13416, over 513 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.00839 per frame over 572 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360139, auxf-impr from fMLLR is 1.00839, over 572 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.861013 per frame over 687 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360140, auxf-impr from fMLLR is 0.861013, over 687 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 482
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360144, auxf-impr from fMLLR is 0, over 482 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 388
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360150, auxf-impr from fMLLR is 0, over 388 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.7629 per frame over 588 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360151, auxf-impr from fMLLR is 0.7629, over 588 frames.
+LOG (apply-cmvn[5.5.1009~1-e4940]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 409 utterances, errors on 0
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 1.0829 per frame over 505 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360154, auxf-impr from fMLLR is 1.0829, over 505 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 344
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360167, auxf-impr from fMLLR is 0, over 344 frames.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 231
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360175, auxf-impr from fMLLR is 0, over 231 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 9.57858 per frame over 502 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360180, auxf-impr from fMLLR is 9.57858, over 502 frames.
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -98.9864 over 248944 frames.
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:161) Applied transform to 409 utterances; 0 had errors.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.706492 per frame over 884 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360185, auxf-impr from fMLLR is 0.706492, over 884 frames.
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:158) Overall average logdet is 7.06691 over 248944 frames.
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:161) Applied transform to 409 utterances; 0 had errors.
+WARNING (gmm-est-fmllr[5.5.1009~1-e4940]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 413
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:143) For speaker 001360187, auxf-impr from fMLLR is 0, over 413 frames.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:188) Done 401 files, 8 with no posts, 0 with other errors.
+LOG (gmm-est-fmllr[5.5.1009~1-e4940]:main():gmm-est-fmllr.cc:190) Overall fMLLR auxf impr per frame is 0.578849 over 204593 frames.
+# Accounting: time=23 threads=1
+# Ended (code 0) at Tue Jun 14 10:55:07 UTC 2022, elapsed time 23 seconds
