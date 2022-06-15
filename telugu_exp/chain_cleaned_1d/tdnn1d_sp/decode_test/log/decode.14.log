@@ -1,0 +1,728 @@
+# nnet3-latgen-faster-parallel --num-threads=4 --online-ivectors=scp:telugu_exp/nnet3_cleaned_1d/ivectors_test_hires/ivector_online.scp --online-ivector-period=10 --frame-subsampling-factor=3 --frames-per-chunk=50 --extra-left-context=0 --extra-right-context=0 --extra-left-context-initial=-1 --extra-right-context-final=-1 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=1.0 --allow-partial=true --word-symbol-table=telugu_exp/chain_cleaned_1d/tdnn1d_sp/graph/words.txt telugu_exp/chain_cleaned_1d/tdnn1d_sp/final.mdl telugu_exp/chain_cleaned_1d/tdnn1d_sp/graph/HCLG.fst "ark,s,cs:apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/test_hires/split15/14/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/global_cmvn.stats scp:telugu_data/test_hires/split15/14/feats.scp ark:- |" "ark:|lattice-scale --acoustic-scale=10.0 ark:- ark:- | gzip -c >telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_test/lat.14.gz" 
+# Started at Wed Jun 15 16:45:22 UTC 2022
+#
+nnet3-latgen-faster-parallel --num-threads=4 --online-ivectors=scp:telugu_exp/nnet3_cleaned_1d/ivectors_test_hires/ivector_online.scp --online-ivector-period=10 --frame-subsampling-factor=3 --frames-per-chunk=50 --extra-left-context=0 --extra-right-context=0 --extra-left-context-initial=-1 --extra-right-context-final=-1 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=1.0 --allow-partial=true --word-symbol-table=telugu_exp/chain_cleaned_1d/tdnn1d_sp/graph/words.txt telugu_exp/chain_cleaned_1d/tdnn1d_sp/final.mdl telugu_exp/chain_cleaned_1d/tdnn1d_sp/graph/HCLG.fst 'ark,s,cs:apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/test_hires/split15/14/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/global_cmvn.stats scp:telugu_data/test_hires/split15/14/feats.scp ark:- |' 'ark:|lattice-scale --acoustic-scale=10.0 ark:- ark:- | gzip -c >telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_test/lat.14.gz' 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 1 orphan nodes.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 2 orphan components.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:Collapse():nnet-utils.cc:1488) Added 1 components, removed 2
+lattice-scale --acoustic-scale=10.0 ark:- ark:- 
+apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/test_hires/split15/14/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/global_cmvn.stats scp:telugu_data/test_hires/split15/14/feats.scp ark:- 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:CheckAndFixConfigs():nnet-am-decodable-simple.cc:294) Increasing --frames-per-chunk from 50 to 51 to make it a multiple of --frame-subsampling-factor=3
+002270202 జగన్ ఉదయం పూట యోగా చేసినట్లు ఆ తర్వాత వెంటనే <unk> కోరినట్లు ఆయన తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270202 is 2.12934 over 171 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.377 seconds taken in nnet3 compilation total (breakdown: 0.261 compilation, 0.0874 optimization, 0 shortcut expansion, 0.00182 checking, 6.2e-06 computing indexes, 0.0264 misc.) + 0 I/O.
+002270203 ప్రియుడు <unk> రైలు కింద పడి మృతి చెందగా చావుబతుకుల మధ్య కొట్టుమిట్టాడుతోంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270203 is 2.51491 over 159 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.459 seconds taken in nnet3 compilation total (breakdown: 0.33 compilation, 0.0678 optimization, 0 shortcut expansion, 0.00209 checking, 5.96e-06 computing indexes, 0.0589 misc.) + 0 I/O.
+002270222 గవర్నర్ పదవిని తాను ఆశించిన అదృష్టం <unk> పొందే రాలేదని చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270222 is 2.10891 over 116 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.554 seconds taken in nnet3 compilation total (breakdown: 0.414 compilation, 0.104 optimization, 0 shortcut expansion, 0.00193 checking, 2.81e-05 computing indexes, 0.0347 misc.) + 0 I/O.
+002270223 యుద్ధం బాగా పొడిగా తాము ఓడిపోయామని రాజు పక్క అన్నాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270223 is 1.92976 over 120 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.428 seconds taken in nnet3 compilation total (breakdown: 0.275 compilation, 0.116 optimization, 0 shortcut expansion, 0.00212 checking, 5.25e-06 computing indexes, 0.0348 misc.) + 0 I/O.
+002270228 ఈ క్రమంలో ఇరు వర్గాల మధ్య జరిగిన కాల్పుల్లో ఆరుగురు బానిసలు <unk> అధికారులు హతమార్చారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270228 is 2.39792 over 175 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.492 seconds taken in nnet3 compilation total (breakdown: 0.298 compilation, 0.113 optimization, 0 shortcut expansion, 0.00181 checking, 5.01e-06 computing indexes, 0.0791 misc.) + 0 I/O.
+002270268 నాయకత్వం ఆడటం తనకు ఆనందంగా ఉందని ఆయన ఓ ప్రశ్నకు సమాధానం చెప్పాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270268 is 2.33898 over 139 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.438 seconds taken in nnet3 compilation total (breakdown: 0.309 compilation, 0.0682 optimization, 0 shortcut expansion, 0.0343 checking, 8.11e-06 computing indexes, 0.0268 misc.) + 0 I/O.
+002270271 చంద్రబాబు అధికారంలో రాకముందు <unk> సమస్యలు షేర్ విలువ రూ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270271 is 2.21712 over 125 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.487 seconds taken in nnet3 compilation total (breakdown: 0.359 compilation, 0.0674 optimization, 0 shortcut expansion, 0.00218 checking, 5.72e-06 computing indexes, 0.0589 misc.) + 0 I/O.
+002270317 రెండు రోజుల పర్యటన నిమిత్తం సోమవారం రాత్రి ఢిల్లీకి బయలుదేరిన నరేంద్రమోడీ భేటీ అయ్యారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270317 is 2.60403 over 167 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.48 seconds taken in nnet3 compilation total (breakdown: 0.317 compilation, 0.109 optimization, 0 shortcut expansion, 0.0262 checking, 6.91e-06 computing indexes, 0.0272 misc.) + 0 I/O.
+002270325 ఇప్పుడు సగటు అభిమాని మదిలో ఉన్న ప్రశ్న ఇది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270325 is 2.83204 over 100 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.488 seconds taken in nnet3 compilation total (breakdown: 0.341 compilation, 0.114 optimization, 0 shortcut expansion, 0.00214 checking, 1.6e-05 computing indexes, 0.0313 misc.) + 0 I/O.
+002270330 రాష్ట్ర విభజన రాష్ట్రాలు కేంద్ర ప్రభుత్వం సాయం చేయాలని కోరారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270330 is 2.67428 over 118 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.51 seconds taken in nnet3 compilation total (breakdown: 0.352 compilation, 0.0972 optimization, 0 shortcut expansion, 0.0583 checking, 8.11e-06 computing indexes, 0.00316 misc.) + 0 I/O.
+002270331 ఈ సందర్భంగా సభలో సర్కారం విలేకరులతో ఆయన మాట్లాడారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270331 is 2.66995 over 102 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.278 seconds taken in nnet3 compilation total (breakdown: 0.157 compilation, 0.118 optimization, 0 shortcut expansion, 0.000981 checking, 3.1e-06 computing indexes, 0.00139 misc.) + 0 I/O.
+002270339 దీనిపై ఆధారపడిన రైతులు కూడా అనేక మంది జీవనోపాధి తెలుపుతున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270339 is 2.54922 over 132 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.471 seconds taken in nnet3 compilation total (breakdown: 0.341 compilation, 0.125 optimization, 0 shortcut expansion, 0.00197 checking, 7.87e-06 computing indexes, 0.00281 misc.) + 0 I/O.
+002270343 ఆయన చంద్రబాబు హయాంలో మంత్రిగా కూడా పని చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270343 is 2.83508 over 92 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.42 seconds taken in nnet3 compilation total (breakdown: 0.288 compilation, 0.104 optimization, 0 shortcut expansion, 0.00176 checking, 6.2e-06 computing indexes, 0.0265 misc.) + 0 I/O.
+002270351 చిన్న కొడుకు మణికంట ప్రాంతాల్లో బయటునప్పటికీ తండ్రి కొడుకుల మాత్రం మరణించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270351 is 2.45617 over 145 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.496 seconds taken in nnet3 compilation total (breakdown: 0.35 compilation, 0.0849 optimization, 0 shortcut expansion, 0.0262 checking, 5.72e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+002270355 అయితే ఆదివారం మధ్యాహ్నం <unk> ఇంట్లో పైకప్పును చీరతో ఉరివేసుకుని ఆత్మహత్య చేసుకుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270355 is 2.55784 over 183 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.441 seconds taken in nnet3 compilation total (breakdown: 0.287 compilation, 0.122 optimization, 0 shortcut expansion, 0.0019 checking, 6.91e-06 computing indexes, 0.031 misc.) + 0 I/O.
+002270412 ఆ తర్వాత నిత్యం <unk> నిత్యానంద <unk> చూసుకుంటూ ఉండలేకపోయింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270412 is 2.36468 over 133 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.376 seconds taken in nnet3 compilation total (breakdown: 0.271 compilation, 0.101 optimization, 0 shortcut expansion, 0.00186 checking, 8.11e-06 computing indexes, 0.00316 misc.) + 0 I/O.
+002270482 తొలుత నెమ్మదిగా ఆడిన భారత్ ఆ తర్వాత పుంజుకుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270482 is 2.31513 over 141 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.389 seconds taken in nnet3 compilation total (breakdown: 0.269 compilation, 0.0835 optimization, 0 shortcut expansion, 0.0339 checking, 5.96e-06 computing indexes, 0.0025 misc.) + 0 I/O.
+002270499 ఇవి అకస్మాత్తుగా వెలిసిన ఏమీ కాదని ముందస్తు ప్రణాళిక ప్రకారమే వేయాలని అంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002270499 is 2.35023 over 167 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.445 seconds taken in nnet3 compilation total (breakdown: 0.304 compilation, 0.0881 optimization, 0 shortcut expansion, 0.026 checking, 5.96e-06 computing indexes, 0.0271 misc.) + 0 I/O.
+002280019 భారత అంతరిక్ష పరిశోధనలకు ప్రపంచం దృష్టిని ఆకర్షించింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280019 is 2.58979 over 127 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.463 seconds taken in nnet3 compilation total (breakdown: 0.317 compilation, 0.0887 optimization, 0 shortcut expansion, 0.0301 checking, 5.96e-06 computing indexes, 0.0269 misc.) + 0 I/O.
+002280075 ఆయన రాకను వ్యతిరేకించిన కొంత విద్యార్థుల ఆందోళన ప్రారంభించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280075 is 2.48845 over 148 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.482 seconds taken in nnet3 compilation total (breakdown: 0.36 compilation, 0.117 optimization, 0 shortcut expansion, 0.00192 checking, 8.11e-06 computing indexes, 0.00285 misc.) + 0 I/O.
+002280095 అతనితో కలిసి గదిలో ఉంటున్న స్నేహితుడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280095 is 2.63465 over 144 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.479 seconds taken in nnet3 compilation total (breakdown: 0.338 compilation, 0.1 optimization, 0 shortcut expansion, 0.038 checking, 6.2e-06 computing indexes, 0.00268 misc.) + 0 I/O.
+002280098 మూడు నెలల నుంచి చర్చలు జరుపు తున్నప్పటికీ కేంద్రం స్పందించలేదన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280098 is 2.5167 over 142 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.428 seconds taken in nnet3 compilation total (breakdown: 0.299 compilation, 0.0716 optimization, 0 shortcut expansion, 0.0299 checking, 6.2e-06 computing indexes, 0.0275 misc.) + 0 I/O.
+002280206 తదుపరి విచారణను మూడు వారాలపాటు వాయిదా వేసింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280206 is 2.75909 over 126 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.394 seconds taken in nnet3 compilation total (breakdown: 0.266 compilation, 0.0676 optimization, 0 shortcut expansion, 0.0299 checking, 5.72e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+002280218 ముఖ్యమంత్రి చంద్రబాబు ఆర్థికమంత్రి యనమల రామకృష్ణ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280218 is 3.09189 over 125 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.47 seconds taken in nnet3 compilation total (breakdown: 0.325 compilation, 0.108 optimization, 0 shortcut expansion, 0.0341 checking, 5.01e-06 computing indexes, 0.00237 misc.) + 0 I/O.
+002280220 గాజువాక ప్రాంతానికి తాళాలు వేసి ఉన్న ఇంటిని 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280220 is 2.57531 over 124 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.433 seconds taken in nnet3 compilation total (breakdown: 0.311 compilation, 0.117 optimization, 0 shortcut expansion, 0.00191 checking, 6.91e-06 computing indexes, 0.00246 misc.) + 0 I/O.
+002280224 కరువు సహాయం చేయడానికి కేంద్రం నిర్లక్ష్యం వహిస్తుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280224 is 2.6677 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.233 seconds taken in nnet3 compilation total (breakdown: 0.168 compilation, 0.0622 optimization, 0 shortcut expansion, 0.000934 checking, 2.86e-06 computing indexes, 0.0015 misc.) + 0 I/O.
+002280232 ఎటూ తేల్చుకోలేని ఆ విద్యార్థి స్థానికులకు ఓదార్పు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280232 is 2.37399 over 131 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.478 seconds taken in nnet3 compilation total (breakdown: 0.357 compilation, 0.116 optimization, 0 shortcut expansion, 0.00181 checking, 6.68e-06 computing indexes, 0.00275 misc.) + 0 I/O.
+002280254 కేవలం కృష్ణానది ఒడ్డున పర్యటన 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280254 is 2.77028 over 140 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.468 seconds taken in nnet3 compilation total (breakdown: 0.338 compilation, 0.0971 optimization, 0 shortcut expansion, 0.00212 checking, 4.77e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+002280255 అయితే ఉగాది వేడుకలను ఎక్కడ నిర్వహించాలనే విషయాన్ని మాత్రం ఆయన వెల్లడించలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280255 is 2.69284 over 153 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.232 seconds taken in nnet3 compilation total (breakdown: 0.164 compilation, 0.0337 optimization, 0 shortcut expansion, 0.033 checking, 2.15e-06 computing indexes, 0.00137 misc.) + 0 I/O.
+002280263 కవిత పెట్టిన నిజామాబాద్ నవీపేట మండలం పొంతగల్ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280263 is 2.46409 over 139 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.412 seconds taken in nnet3 compilation total (breakdown: 0.256 compilation, 0.0636 optimization, 0 shortcut expansion, 0.0581 checking, 4.77e-06 computing indexes, 0.035 misc.) + 0 I/O.
+002280280 ఏ తప్పు చేయని తమను వెంటాడి వేధిస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280280 is 2.48866 over 112 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.428 seconds taken in nnet3 compilation total (breakdown: 0.307 compilation, 0.0875 optimization, 0 shortcut expansion, 0.00197 checking, 5.96e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+002280283 బరాక్ ఒబామాను ప్రజలపైన రసాయన దాడులు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280283 is 2.4947 over 113 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.462 seconds taken in nnet3 compilation total (breakdown: 0.308 compilation, 0.0925 optimization, 0 shortcut expansion, 0.00184 checking, 6.2e-06 computing indexes, 0.0594 misc.) + 0 I/O.
+002280320 ఎవరికీ అనుమానం రాకుండా పాపను కాశీ పాటించి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280320 is 2.71102 over 121 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.374 seconds taken in nnet3 compilation total (breakdown: 0.274 compilation, 0.0956 optimization, 0 shortcut expansion, 0.00185 checking, 5.01e-06 computing indexes, 0.00238 misc.) + 0 I/O.
+002280352 పైగా మొదటి నుంచి తెలంగాణకు రాజధానిగా ఉన్న <unk> వచ్చింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280352 is 2.75872 over 128 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.433 seconds taken in nnet3 compilation total (breakdown: 0.271 compilation, 0.0725 optimization, 0 shortcut expansion, 0.0343 checking, 7.87e-06 computing indexes, 0.055 misc.) + 0 I/O.
+002280383 ఈ ఘనత వహించిన తొలి భారత క్రీడాకారిణిగా చరిత్ర సృష్టించింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280383 is 2.56522 over 143 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.44 seconds taken in nnet3 compilation total (breakdown: 0.303 compilation, 0.121 optimization, 0 shortcut expansion, 0.00198 checking, 6.91e-06 computing indexes, 0.0146 misc.) + 0 I/O.
+002280399 తప్పించుకోవడానికి లేదంటూ ఈ ఓటమికి తాను పూర్తి బాధ్యత తీసుకుంటానని చెప్పాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280399 is 2.54697 over 166 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.519 seconds taken in nnet3 compilation total (breakdown: 0.379 compilation, 0.136 optimization, 0 shortcut expansion, 0.00183 checking, 5.96e-06 computing indexes, 0.00267 misc.) + 0 I/O.
+002280458 రైతులకు ఇష్టం లేకుండా భూములు లాక్కొని రాజధాని నిర్మిస్తే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280458 is 2.39948 over 149 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.468 seconds taken in nnet3 compilation total (breakdown: 0.298 compilation, 0.1 optimization, 0 shortcut expansion, 0.0339 checking, 5.96e-06 computing indexes, 0.0355 misc.) + 0 I/O.
+002280459 సరదాగా ఇరువురి మధ్య మాటల తూటాలు <unk> పెడితే బాగుండు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 002280459 is 2.20303 over 169 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.517 seconds taken in nnet3 compilation total (breakdown: 0.358 compilation, 0.0684 optimization, 0 shortcut expansion, 0.0302 checking, 6.91e-06 computing indexes, 0.06 misc.) + 0 I/O.
+tef_01033_00590228894 దౌలతాబాద్ పేరుతో ఒకటి కంటే ఎక్కువ పేజీలు ఉన్నందువలన ఈ పేజీ అవసరం ఏర్పడింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01033_00590228894 is 2.85459 over 247 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.422 seconds taken in nnet3 compilation total (breakdown: 0.288 compilation, 0.0932 optimization, 0 shortcut expansion, 0.0102 checking, 1.41e-05 computing indexes, 0.031 misc.) + 0 I/O.
+tef_01033_01064981889 గుంటూరులో శివుడి పానుపట్టం ఎత్తుగా ఉంటుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01033_01064981889 is 2.81789 over 148 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.4 seconds taken in nnet3 compilation total (breakdown: 0.275 compilation, 0.0435 optimization, 0 shortcut expansion, 0.0301 checking, 5.25e-06 computing indexes, 0.0514 misc.) + 0 I/O.
+tef_01033_01189730854 బషీరాబాద్ రాజకీయ చైతన్యంగా ఎదిగిన గ్రామం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01033_01189730854 is 3.14471 over 156 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.4 seconds taken in nnet3 compilation total (breakdown: 0.247 compilation, 0.0967 optimization, 0 shortcut expansion, 0.0299 checking, 6.2e-06 computing indexes, 0.0269 misc.) + 0 I/O.
+tef_01033_01895416356 దోమ ఆంధ్ర ప్రదేశ్ రాష్ట్రములోని రంగారెడ్డి జిల్లాకు చెందిన ఒక మండలము 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01033_01895416356 is 3.24083 over 179 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.397 seconds taken in nnet3 compilation total (breakdown: 0.289 compilation, 0.0919 optimization, 0 shortcut expansion, 0.00188 checking, 6.2e-06 computing indexes, 0.0149 misc.) + 0 I/O.
+tef_01033_01895431110 దీని కేంద్రం ఢిల్లీలో ఉన్నది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01033_01895431110 is 2.98378 over 99 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.504 seconds taken in nnet3 compilation total (breakdown: 0.375 compilation, 0.124 optimization, 0 shortcut expansion, 0.002 checking, 5.96e-06 computing indexes, 0.00306 misc.) + 0 I/O.
+tef_01908_00066446272 గొంతుకపోక గొంతునబడి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_00066446272 is 3.25458 over 108 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.321 compilation, 0.096 optimization, 0 shortcut expansion, 0.0019 checking, 6.91e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+tef_01908_00108679767 అమెరికన్ ఆస్టియోపాథిక్ అసోసియేషన్ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_00108679767 is 2.71705 over 136 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.216 seconds taken in nnet3 compilation total (breakdown: 0.159 compilation, 0.0545 optimization, 0 shortcut expansion, 0.000916 checking, 2.86e-06 computing indexes, 0.00161 misc.) + 0 I/O.
+tef_01908_00214467241 కూడా చూడండి న్యూస్ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_00214467241 is 2.96414 over 122 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.385 seconds taken in nnet3 compilation total (breakdown: 0.258 compilation, 0.0995 optimization, 0 shortcut expansion, 0.0259 checking, 7.63e-06 computing indexes, 0.00221 misc.) + 0 I/O.
+tef_01908_00228606924 అని కబురు చేసేవారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_00228606924 is 2.97786 over 76 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.393 seconds taken in nnet3 compilation total (breakdown: 0.261 compilation, 0.0715 optimization, 0 shortcut expansion, 0.0259 checking, 9.06e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+tef_01908_00334812206 వేరుశనగ రసాయనిక ఎరువులు వేసి విత్తుట 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_00334812206 is 2.9901 over 133 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.493 seconds taken in nnet3 compilation total (breakdown: 0.356 compilation, 0.1 optimization, 0 shortcut expansion, 0.0019 checking, 6.91e-06 computing indexes, 0.0351 misc.) + 0 I/O.
+tef_01908_00679530336 పిన్ కోడ్ అయిదు వందల ఇరవై రెండు నాలుగు వందల ముప్పై అయిదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_00679530336 is 3.05517 over 148 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.557 seconds taken in nnet3 compilation total (breakdown: 0.412 compilation, 0.141 optimization, 0 shortcut expansion, 0.00203 checking, 6.91e-06 computing indexes, 0.00262 misc.) + 0 I/O.
+tef_01908_01019765803 అడుగున స్త్రీ పుష్పములు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_01019765803 is 2.84118 over 139 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.464 seconds taken in nnet3 compilation total (breakdown: 0.274 compilation, 0.125 optimization, 0 shortcut expansion, 0.0342 checking, 5.01e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+tef_01908_01312743194 ఆగష్టు <unk> ఇరవై తొమ్మిది జాతీయ క్రీడా దినోత్సవము 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_01312743194 is 2.94249 over 156 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.411 seconds taken in nnet3 compilation total (breakdown: 0.255 compilation, 0.0879 optimization, 0 shortcut expansion, 0.03 checking, 6.91e-06 computing indexes, 0.0386 misc.) + 0 I/O.
+tef_01908_01329936787 ఆయనకు ఒక సోదరి మరియు ముగ్గురు సోదరులు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_01329936787 is 3.13088 over 145 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.432 seconds taken in nnet3 compilation total (breakdown: 0.291 compilation, 0.136 optimization, 0 shortcut expansion, 0.00188 checking, 6.91e-06 computing indexes, 0.00242 misc.) + 0 I/O.
+tef_01908_01373932085 కొన్ని జంతువులు తోకతో సంకేతాలనిస్తాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_01373932085 is 3.0964 over 139 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.441 seconds taken in nnet3 compilation total (breakdown: 0.308 compilation, 0.0754 optimization, 0 shortcut expansion, 0.00214 checking, 5.96e-06 computing indexes, 0.055 misc.) + 0 I/O.
+tef_01908_01649787039 మాకు ఇక్కడ హాయిగా సుఖముగా ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_01649787039 is 2.95713 over 133 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.548 seconds taken in nnet3 compilation total (breakdown: 0.353 compilation, 0.0729 optimization, 0 shortcut expansion, 0.0301 checking, 8.11e-06 computing indexes, 0.0922 misc.) + 0 I/O.
+tef_01908_01739719921 స్వర్గలోకమును చేరడానికి నిచ్చెన వంటిది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_01739719921 is 2.97434 over 145 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.474 seconds taken in nnet3 compilation total (breakdown: 0.294 compilation, 0.119 optimization, 0 shortcut expansion, 0.0303 checking, 8.11e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+tef_01908_01972651436 జీవితం నిస్సారంగా మారిపోతుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_01908_01972651436 is 2.92695 over 108 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.494 seconds taken in nnet3 compilation total (breakdown: 0.349 compilation, 0.141 optimization, 0 shortcut expansion, 0.00194 checking, 6.91e-06 computing indexes, 0.0026 misc.) + 0 I/O.
+tef_02828_00044289907 ప్రధాన పంటలు మామిడి మరియు బెల్లం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_02828_00044289907 is 3.16649 over 136 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.251 seconds taken in nnet3 compilation total (breakdown: 0.187 compilation, 0.0623 optimization, 0 shortcut expansion, 0.000887 checking, 4.05e-06 computing indexes, 0.0014 misc.) + 0 I/O.
+tef_02828_00136111560 భారతదేశంలో ఇలాంటి నిర్మాణాలు అయిదున్నవి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_02828_00136111560 is 3.5021 over 148 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.528 seconds taken in nnet3 compilation total (breakdown: 0.366 compilation, 0.0968 optimization, 0 shortcut expansion, 0.03 checking, 4.77e-06 computing indexes, 0.0352 misc.) + 0 I/O.
+tef_02828_00243786057 దుర్మార్గుల రక్తంతో భూమి తడుస్తుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_02828_00243786057 is 3.02938 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.269 seconds taken in nnet3 compilation total (breakdown: 0.172 compilation, 0.0341 optimization, 0 shortcut expansion, 0.0291 checking, 4.05e-06 computing indexes, 0.0337 misc.) + 0 I/O.
+tef_02828_01591137227 దానస్వభావము కలిగి ఉంటారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_02828_01591137227 is 3.44215 over 111 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.497 seconds taken in nnet3 compilation total (breakdown: 0.359 compilation, 0.104 optimization, 0 shortcut expansion, 0.0303 checking, 5.96e-06 computing indexes, 0.00289 misc.) + 0 I/O.
+tef_02828_02009463729 లాగిన్ అయిన తర్వాత ఎన్నో ప్రయోగాలు చేసుకోవచ్చు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_02828_02009463729 is 3.18241 over 165 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.481 seconds taken in nnet3 compilation total (breakdown: 0.347 compilation, 0.0964 optimization, 0 shortcut expansion, 0.0341 checking, 6.68e-06 computing indexes, 0.00266 misc.) + 0 I/O.
+tef_03689_00149005060 మండలంలో ఇది అతి చిన్న గ్రామాల్లో ఒకటి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03689_00149005060 is 3.02036 over 185 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.5 seconds taken in nnet3 compilation total (breakdown: 0.342 compilation, 0.096 optimization, 0 shortcut expansion, 0.0301 checking, 6.68e-06 computing indexes, 0.0312 misc.) + 0 I/O.
+tef_03689_00237028410 అవి భారతీయ సినిమా ప్రాజెక్టులు మరియు తెలుగు భాష ప్రాజెక్టు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03689_00237028410 is 2.89379 over 227 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.4 seconds taken in nnet3 compilation total (breakdown: 0.265 compilation, 0.0977 optimization, 0 shortcut expansion, 0.034 checking, 6.91e-06 computing indexes, 0.00319 misc.) + 0 I/O.
+tef_03689_00325245482 ఈనాడు ఆదివారం ఇరవై ఒకటి ఏప్రిల్ రెండు వేల పదమూడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03689_00325245482 is 3.16622 over 222 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.362 seconds taken in nnet3 compilation total (breakdown: 0.242 compilation, 0.0635 optimization, 0 shortcut expansion, 0.0302 checking, 5.96e-06 computing indexes, 0.0267 misc.) + 0 I/O.
+tef_03689_00365673012 రైలు వేగం గంటకు సరాసరిన ముప్పై నాలుగు కిలో మీటర్లు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03689_00365673012 is 3.19439 over 216 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.436 seconds taken in nnet3 compilation total (breakdown: 0.32 compilation, 0.112 optimization, 0 shortcut expansion, 0.0019 checking, 5.01e-06 computing indexes, 0.0029 misc.) + 0 I/O.
+tef_03689_00651314379 నేను సోనీ తిరిగి ఏం నా పునరుద్ధరణ కోసం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03689_00651314379 is 3.09608 over 210 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.483 seconds taken in nnet3 compilation total (breakdown: 0.345 compilation, 0.133 optimization, 0 shortcut expansion, 0.00191 checking, 6.91e-06 computing indexes, 0.00244 misc.) + 0 I/O.
+tef_03689_01492179265 రంగారెడ్డి జిల్లా కందుకూరు మండలానికి చెందిన గ్రామము 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03689_01492179265 is 3.41564 over 190 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.419 seconds taken in nnet3 compilation total (breakdown: 0.263 compilation, 0.0956 optimization, 0 shortcut expansion, 0.03 checking, 6.2e-06 computing indexes, 0.0305 misc.) + 0 I/O.
+tef_03689_01552564351 తగు మాత్రం పండించుకునే వారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03689_01552564351 is 3.0393 over 153 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.252 seconds taken in nnet3 compilation total (breakdown: 0.191 compilation, 0.034 optimization, 0 shortcut expansion, 0.025 checking, 2.15e-06 computing indexes, 0.00159 misc.) + 0 I/O.
+tef_03689_01630400746 మా ఊరి సామ్రాజ్యానికి కళింగ రాజ్యానికి మధ్య జరిగింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03689_01630400746 is 3.00444 over 204 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.22 seconds taken in nnet3 compilation total (breakdown: 0.167 compilation, 0.0298 optimization, 0 shortcut expansion, 0.000842 checking, 3.1e-06 computing indexes, 0.0218 misc.) + 0 I/O.
+tef_03910_00253425913 ఘంటసాల ఆంధ్రప్రదేశ్ రాష్ట్రంలోని కృష్ణా జిల్లాకు చెందిన ఒక మండలము 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03910_00253425913 is 2.99887 over 236 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.485 seconds taken in nnet3 compilation total (breakdown: 0.332 compilation, 0.116 optimization, 0 shortcut expansion, 0.0339 checking, 7.15e-06 computing indexes, 0.00313 misc.) + 0 I/O.
+tef_03910_00474541452 గర్భగుడి మాత్రమే ఆ కాలానికి చెందినది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03910_00474541452 is 3.09749 over 162 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.49 seconds taken in nnet3 compilation total (breakdown: 0.344 compilation, 0.141 optimization, 0 shortcut expansion, 0.00199 checking, 6.91e-06 computing indexes, 0.00272 misc.) + 0 I/O.
+tef_03910_00707329694 చూపుకి అతి బీదరాలులా కనిపిస్తుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03910_00707329694 is 2.67792 over 148 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.483 seconds taken in nnet3 compilation total (breakdown: 0.318 compilation, 0.1 optimization, 0 shortcut expansion, 0.03 checking, 5.96e-06 computing indexes, 0.035 misc.) + 0 I/O.
+tef_03910_00788841995 మొదట్లో సంకేతాల జాడే కనిపించలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03910_00788841995 is 2.961 over 156 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.411 seconds taken in nnet3 compilation total (breakdown: 0.262 compilation, 0.0685 optimization, 0 shortcut expansion, 0.03 checking, 6.2e-06 computing indexes, 0.0509 misc.) + 0 I/O.
+tef_03910_00894992424 దేవ గురువు దక్షిణ భారతదేశం అనువాదం దాదాపు పూర్తి చేశాను 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03910_00894992424 is 2.65807 over 179 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.468 seconds taken in nnet3 compilation total (breakdown: 0.32 compilation, 0.144 optimization, 0 shortcut expansion, 0.0018 checking, 6.2e-06 computing indexes, 0.0025 misc.) + 0 I/O.
+tef_03910_01368326257 పిన్ కోడ్ అయిదు లక్షలు అయిదు వెలు నాలుగు వందలు అరవై ఏడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03910_01368326257 is 2.93411 over 219 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.531 seconds taken in nnet3 compilation total (breakdown: 0.365 compilation, 0.109 optimization, 0 shortcut expansion, 0.00191 checking, 5.96e-06 computing indexes, 0.0555 misc.) + 0 I/O.
+tef_03910_01674714796 ఈ షేడ్ హౌస్ నిర్మాణానికుపయోగించే ఎమ్ఎస్ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03910_01674714796 is 2.90316 over 159 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.43 seconds taken in nnet3 compilation total (breakdown: 0.285 compilation, 0.0836 optimization, 0 shortcut expansion, 0.00187 checking, 5.25e-06 computing indexes, 0.059 misc.) + 0 I/O.
+tef_03910_01795362656 నా అభిప్రాయము కంటే కొత్త వారి అభిప్రాయము తీసుకుంటే బాగుంటుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03910_01795362656 is 2.67877 over 202 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.503 seconds taken in nnet3 compilation total (breakdown: 0.388 compilation, 0.0815 optimization, 0 shortcut expansion, 0.00226 checking, 5.72e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+tef_03910_01968152303 అతడిదైన పాలనా విధానాన్ని ప్రవేశపెట్టాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_03910_01968152303 is 3.09765 over 185 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.476 seconds taken in nnet3 compilation total (breakdown: 0.319 compilation, 0.0676 optimization, 0 shortcut expansion, 0.0542 checking, 5.72e-06 computing indexes, 0.0354 misc.) + 0 I/O.
+tef_04213_00221777524 ఈ రైలు వారానికి ఒక రోజు నడుస్తుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04213_00221777524 is 2.86961 over 102 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.273 seconds taken in nnet3 compilation total (breakdown: 0.172 compilation, 0.0384 optimization, 0 shortcut expansion, 0.0292 checking, 3.1e-06 computing indexes, 0.0338 misc.) + 0 I/O.
+tef_04213_00999328097 ఈ కొండపై నుండి దాదాపు విజయవాడ మొత్తం కనిపిస్తుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04213_00999328097 is 3.56771 over 170 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.268 seconds taken in nnet3 compilation total (breakdown: 0.195 compilation, 0.0709 optimization, 0 shortcut expansion, 0.00101 checking, 3.1e-06 computing indexes, 0.00129 misc.) + 0 I/O.
+tef_04213_01598208852 ఒక్కోసారి భారీ వర్షాలు కూడా సంభవిస్తాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04213_01598208852 is 3.30426 over 125 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.442 seconds taken in nnet3 compilation total (breakdown: 0.296 compilation, 0.0606 optimization, 0 shortcut expansion, 0.0544 checking, 5.96e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+tef_04213_01638313310 ఈయన తెలుగు భాషలో మొట్టమొదటి నవల రచయిత 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04213_01638313310 is 3.51045 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.227 seconds taken in nnet3 compilation total (breakdown: 0.158 compilation, 0.0665 optimization, 0 shortcut expansion, 0.000874 checking, 3.1e-06 computing indexes, 0.00144 misc.) + 0 I/O.
+tef_04213_01673695297 శుకుడు తండ్రికి నమస్కరించి బయలుదేరాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04213_01673695297 is 3.04319 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.293 seconds taken in nnet3 compilation total (breakdown: 0.176 compilation, 0.0582 optimization, 0 shortcut expansion, 0.0293 checking, 3.81e-06 computing indexes, 0.0301 misc.) + 0 I/O.
+tef_04213_01919211027 కవిత్వం కూడా రాశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04213_01919211027 is 2.82565 over 113 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.484 seconds taken in nnet3 compilation total (breakdown: 0.325 compilation, 0.126 optimization, 0 shortcut expansion, 0.00208 checking, 6.91e-06 computing indexes, 0.0312 misc.) + 0 I/O.
+tef_04261_00337880731 ప్రస్తుతం ఈ మంచెలు చూడడానికి కూడా లేవు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_00337880731 is 3.3229 over 122 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.427 seconds taken in nnet3 compilation total (breakdown: 0.271 compilation, 0.152 optimization, 0 shortcut expansion, 0.00185 checking, 1.26e-05 computing indexes, 0.0024 misc.) + 0 I/O.
+tef_04261_00403026182 కీలము కొన ఐదుగా చీలి నిడివిగా ఉండును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_00403026182 is 3.4964 over 128 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.481 seconds taken in nnet3 compilation total (breakdown: 0.337 compilation, 0.0678 optimization, 0 shortcut expansion, 0.0462 checking, 7.15e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+tef_04261_00521990088 ఇవి ఆకుల కంటె పొడుగగా నున్నవి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_00521990088 is 3.40142 over 85 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.235 seconds taken in nnet3 compilation total (breakdown: 0.163 compilation, 0.07 optimization, 0 shortcut expansion, 0.000897 checking, 2.86e-06 computing indexes, 0.00127 misc.) + 0 I/O.
+tef_04261_00529270488 మధ్యాహ్న భోజనం లాంటిది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_00529270488 is 3.56253 over 79 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.474 seconds taken in nnet3 compilation total (breakdown: 0.338 compilation, 0.132 optimization, 0 shortcut expansion, 0.00184 checking, 5.96e-06 computing indexes, 0.00264 misc.) + 0 I/O.
+tef_04261_00736356278 ఇలా ఆమె ఇంటికి మరింత దూరం అయింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_00736356278 is 3.45008 over 96 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.478 seconds taken in nnet3 compilation total (breakdown: 0.342 compilation, 0.132 optimization, 0 shortcut expansion, 0.00184 checking, 6.68e-06 computing indexes, 0.00263 misc.) + 0 I/O.
+tef_04261_00794914682 వేరుశనగ రసాయనిక ఎరువులు వేసి విత్తుట 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_00794914682 is 3.29263 over 108 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.469 seconds taken in nnet3 compilation total (breakdown: 0.323 compilation, 0.141 optimization, 0 shortcut expansion, 0.00202 checking, 5.96e-06 computing indexes, 0.00244 misc.) + 0 I/O.
+tef_04261_01025870216 ఆ మొక్కలని మన దేశం తీసుకు వచ్చారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_01025870216 is 3.14601 over 113 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.439 seconds taken in nnet3 compilation total (breakdown: 0.322 compilation, 0.0879 optimization, 0 shortcut expansion, 0.0258 checking, 8.82e-06 computing indexes, 0.00294 misc.) + 0 I/O.
+tef_04261_01267121345 బనర్సి గాకేశ్తో ముకర్జీ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_01267121345 is 2.79727 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.431 seconds taken in nnet3 compilation total (breakdown: 0.303 compilation, 0.0921 optimization, 0 shortcut expansion, 0.034 checking, 5.96e-06 computing indexes, 0.0024 misc.) + 0 I/O.
+tef_04261_01443764858 ఇవన్నీ బరువు తగ్గేందుకు తోడ్పడేవే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_01443764858 is 3.32035 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.441 seconds taken in nnet3 compilation total (breakdown: 0.311 compilation, 0.126 optimization, 0 shortcut expansion, 0.00203 checking, 5.72e-06 computing indexes, 0.00245 misc.) + 0 I/O.
+tef_04261_01451046306 ఇదంతా చెలం గొడవ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_01451046306 is 3.37655 over 68 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.225 seconds taken in nnet3 compilation total (breakdown: 0.16 compilation, 0.0381 optimization, 0 shortcut expansion, 0.000935 checking, 3.1e-06 computing indexes, 0.0258 misc.) + 0 I/O.
+tef_04261_01618067946 నెమ్మదిగా కమర్షియల్ రంగం మొదలైంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_01618067946 is 3.19024 over 116 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.439 seconds taken in nnet3 compilation total (breakdown: 0.337 compilation, 0.0971 optimization, 0 shortcut expansion, 0.00188 checking, 5.72e-06 computing indexes, 0.00278 misc.) + 0 I/O.
+tef_04261_01794975930 మండల పరిషత్ ప్రాథమికోన్నత పాఠశాల 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_01794975930 is 3.4003 over 108 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.436 seconds taken in nnet3 compilation total (breakdown: 0.254 compilation, 0.0605 optimization, 0 shortcut expansion, 0.0622 checking, 5.25e-06 computing indexes, 0.0592 misc.) + 0 I/O.
+tef_04261_01843530519 ఈ నవలలో కథానాయకుని పాత్ర పేరు రాశాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_01843530519 is 3.27204 over 116 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.53 seconds taken in nnet3 compilation total (breakdown: 0.364 compilation, 0.0644 optimization, 0 shortcut expansion, 0.0583 checking, 1.69e-05 computing indexes, 0.0437 misc.) + 0 I/O.
+tef_04261_02067457252 వారు అసహాయశురులైన బాలుడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_02067457252 is 3.04681 over 113 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.448 seconds taken in nnet3 compilation total (breakdown: 0.298 compilation, 0.117 optimization, 0 shortcut expansion, 0.00177 checking, 5.96e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+tef_04261_02136067515 శిష్యసంతానమే వారి సంతానము 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04261_02136067515 is 2.99551 over 96 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.421 seconds taken in nnet3 compilation total (breakdown: 0.296 compilation, 0.0919 optimization, 0 shortcut expansion, 0.00172 checking, 5.01e-06 computing indexes, 0.0306 misc.) + 0 I/O.
+tef_04830_00213170165 వానర సైన్యం శ్రీకృష్ణుడు ఆంజనేయస్వామి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_00213170165 is 2.90388 over 108 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.414 seconds taken in nnet3 compilation total (breakdown: 0.294 compilation, 0.0918 optimization, 0 shortcut expansion, 0.00182 checking, 7.87e-06 computing indexes, 0.0266 misc.) + 0 I/O.
+tef_04830_00257884732 అమ్మవారి పేరు మాణిక్యాంబా దేవి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_00257884732 is 3.54022 over 88 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.368 seconds taken in nnet3 compilation total (breakdown: 0.273 compilation, 0.0622 optimization, 0 shortcut expansion, 0.00204 checking, 8.11e-06 computing indexes, 0.0304 misc.) + 0 I/O.
+tef_04830_00404728752 వక్రత భావ సంభంధమైనది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_00404728752 is 3.46011 over 94 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.421 seconds taken in nnet3 compilation total (breakdown: 0.291 compilation, 0.125 optimization, 0 shortcut expansion, 0.00203 checking, 5.96e-06 computing indexes, 0.00259 misc.) + 0 I/O.
+tef_04830_00488773746 గ్రహాల సంఖ్య మూడు వందల ఎనభై తొమ్మిది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_00488773746 is 3.39251 over 133 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.475 seconds taken in nnet3 compilation total (breakdown: 0.346 compilation, 0.125 optimization, 0 shortcut expansion, 0.00189 checking, 7.15e-06 computing indexes, 0.00271 misc.) + 0 I/O.
+tef_04830_00543058645 ఈ కమిటీ అందు ఇరవై ఒకటి రాష్ట్ర పార్టీలుంటాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_00543058645 is 3.2609 over 131 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.495 seconds taken in nnet3 compilation total (breakdown: 0.357 compilation, 0.101 optimization, 0 shortcut expansion, 0.0342 checking, 6.2e-06 computing indexes, 0.00303 misc.) + 0 I/O.
+tef_04830_00638464021 పిన్ కోడ్ అయిదు లక్షలు ఎనిమిది వెలు రెండు వందలు పది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_00638464021 is 3.70653 over 139 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.416 seconds taken in nnet3 compilation total (breakdown: 0.295 compilation, 0.0884 optimization, 0 shortcut expansion, 0.00177 checking, 7.15e-06 computing indexes, 0.0304 misc.) + 0 I/O.
+tef_04830_00732127831 ఇప్పటికీ వాటి అన్వేషణ సాగుతూనే ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_00732127831 is 3.47724 over 99 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.5 seconds taken in nnet3 compilation total (breakdown: 0.379 compilation, 0.092 optimization, 0 shortcut expansion, 0.0262 checking, 7.15e-06 computing indexes, 0.00291 misc.) + 0 I/O.
+tef_04830_00914011632 జనం నోళ్లలో నానలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_00914011632 is 3.26253 over 62 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.48 seconds taken in nnet3 compilation total (breakdown: 0.348 compilation, 0.0959 optimization, 0 shortcut expansion, 0.00191 checking, 4.77e-06 computing indexes, 0.0348 misc.) + 0 I/O.
+tef_04830_00940907237 లైట్ ఇంజనీర్ గానీ కదా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_00940907237 is 2.77758 over 99 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.502 seconds taken in nnet3 compilation total (breakdown: 0.325 compilation, 0.0679 optimization, 0 shortcut expansion, 0.0543 checking, 7.15e-06 computing indexes, 0.0553 misc.) + 0 I/O.
+tef_04830_00965131543 వారి శ్రేయోభివృద్ధులే నా ఆనందానికి మూలం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_00965131543 is 3.13986 over 125 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.415 seconds taken in nnet3 compilation total (breakdown: 0.294 compilation, 0.0646 optimization, 0 shortcut expansion, 0.0264 checking, 9.06e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+tef_04830_01338727388 ఇది బెల్గుడా ఉపవిభాగంలో ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_01338727388 is 3.34022 over 88 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.444 seconds taken in nnet3 compilation total (breakdown: 0.308 compilation, 0.1 optimization, 0 shortcut expansion, 0.034 checking, 6.2e-06 computing indexes, 0.00228 misc.) + 0 I/O.
+tef_04830_01369883908 ఆమెది కన్నీళ్లమయమైన బాల్యం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_01369883908 is 3.23101 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.405 seconds taken in nnet3 compilation total (breakdown: 0.276 compilation, 0.096 optimization, 0 shortcut expansion, 0.00216 checking, 1.5e-05 computing indexes, 0.0311 misc.) + 0 I/O.
+tef_04830_01555593948 వేదజననీ వేదములకు తల్లి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_01555593948 is 3.33066 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.407 seconds taken in nnet3 compilation total (breakdown: 0.286 compilation, 0.0881 optimization, 0 shortcut expansion, 0.0301 checking, 6.2e-06 computing indexes, 0.00247 misc.) + 0 I/O.
+tef_04830_01752220503 రాకెట్ స్వతహాగా అపాయకరమైనవి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_01752220503 is 3.30624 over 96 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.499 seconds taken in nnet3 compilation total (breakdown: 0.361 compilation, 0.1 optimization, 0 shortcut expansion, 0.00219 checking, 5.72e-06 computing indexes, 0.0353 misc.) + 0 I/O.
+tef_04830_01799575168 మిత్రుల సోదరుల సహాయ సహకారాలు అందడం కష్టం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_04830_01799575168 is 3.25737 over 167 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.462 seconds taken in nnet3 compilation total (breakdown: 0.328 compilation, 0.129 optimization, 0 shortcut expansion, 0.00183 checking, 5.96e-06 computing indexes, 0.00277 misc.) + 0 I/O.
+tef_05181_00077169535 ఈ వ్యాసం పశ్చిమ గోదావరి జిల్లాలో ఏలూరు సమీపంలోని గ్రామం గురించి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_00077169535 is 3.17532 over 190 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.384 seconds taken in nnet3 compilation total (breakdown: 0.251 compilation, 0.129 optimization, 0 shortcut expansion, 0.00197 checking, 5.96e-06 computing indexes, 0.00257 misc.) + 0 I/O.
+tef_05181_00122483058 పాంపీ కళ హాలీవుడ్ కళ వంటిది కాదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_00122483058 is 3.26517 over 125 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.406 seconds taken in nnet3 compilation total (breakdown: 0.277 compilation, 0.124 optimization, 0 shortcut expansion, 0.00195 checking, 2.91e-05 computing indexes, 0.00252 misc.) + 0 I/O.
+tef_05181_00813485394 అక్కడ మొదటి సంవత్సరం బిటెక్ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_00813485394 is 3.25714 over 91 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.454 seconds taken in nnet3 compilation total (breakdown: 0.325 compilation, 0.125 optimization, 0 shortcut expansion, 0.00185 checking, 6.91e-06 computing indexes, 0.00263 misc.) + 0 I/O.
+tef_05181_00827451923 రెడ్డి తెలుగు సినిమా దర్శకుడు మరియు నిర్మాత 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_00827451923 is 3.3646 over 116 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.511 seconds taken in nnet3 compilation total (breakdown: 0.349 compilation, 0.0968 optimization, 0 shortcut expansion, 0.0301 checking, 3.58e-05 computing indexes, 0.0354 misc.) + 0 I/O.
+tef_05181_01088745253 ఇవి తాపేశ్వరం మడత కాజాల వంటి కాజాలు కావు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_01088745253 is 3.15357 over 150 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.543 seconds taken in nnet3 compilation total (breakdown: 0.38 compilation, 0.0934 optimization, 0 shortcut expansion, 0.0345 checking, 6.91e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+tef_05181_01101826719 ఈ విభాగాలు పునః ప్రసారము అవుతాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_01101826719 is 3.2097 over 96 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.414 seconds taken in nnet3 compilation total (breakdown: 0.288 compilation, 0.121 optimization, 0 shortcut expansion, 0.00185 checking, 5.96e-06 computing indexes, 0.00306 misc.) + 0 I/O.
+tef_05181_01122568999 ఇంతటితో ఈ ప్రదర్శన పూర్తి అయినట్లే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_01122568999 is 3.00878 over 113 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.466 seconds taken in nnet3 compilation total (breakdown: 0.287 compilation, 0.0883 optimization, 0 shortcut expansion, 0.0582 checking, 3.81e-06 computing indexes, 0.0334 misc.) + 0 I/O.
+tef_05181_01175671009 దంపుడు పాటగా బాగా ప్రసిద్ధి చెందింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_01175671009 is 3.01366 over 153 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.224 seconds taken in nnet3 compilation total (breakdown: 0.155 compilation, 0.0663 optimization, 0 shortcut expansion, 0.000967 checking, 4.05e-06 computing indexes, 0.00146 misc.) + 0 I/O.
+tef_05181_01307224727 పండ్లు బాగా తీయగా ఉంటాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_01307224727 is 3.06419 over 88 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.5 seconds taken in nnet3 compilation total (breakdown: 0.356 compilation, 0.0794 optimization, 0 shortcut expansion, 0.00205 checking, 5.96e-06 computing indexes, 0.0627 misc.) + 0 I/O.
+tef_05181_01388687906 అందులో రెండు నంది అవార్డులు కూడా ఉన్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_01388687906 is 3.05846 over 111 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.42 seconds taken in nnet3 compilation total (breakdown: 0.243 compilation, 0.172 optimization, 0 shortcut expansion, 0.00193 checking, 6.68e-06 computing indexes, 0.00266 misc.) + 0 I/O.
+tef_05181_01417030642 ఇతను <unk> పాకిస్థాన్ పాకిస్థాన్ మరియు ఉత్తర భారత ప్రాంతాలను పాలించాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_01417030642 is 2.72729 over 196 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.4 seconds taken in nnet3 compilation total (breakdown: 0.255 compilation, 0.0635 optimization, 0 shortcut expansion, 0.054 checking, 6.91e-06 computing indexes, 0.0269 misc.) + 0 I/O.
+tef_05181_01695184380 పిన్ కోడ్ అయిదు వందలు ముప్పై నాలుగు వందలు ఇరవై ఆరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_01695184380 is 3.19369 over 133 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.454 seconds taken in nnet3 compilation total (breakdown: 0.297 compilation, 0.0959 optimization, 0 shortcut expansion, 0.03 checking, 1.19e-05 computing indexes, 0.0311 misc.) + 0 I/O.
+tef_05181_01707899556 పట్నంలో ఒక న్యాయ కళాశాల ఉన్నది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_01707899556 is 3.06295 over 125 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.39 seconds taken in nnet3 compilation total (breakdown: 0.266 compilation, 0.0954 optimization, 0 shortcut expansion, 0.00195 checking, 6.2e-06 computing indexes, 0.0264 misc.) + 0 I/O.
+tef_05181_01732237284 ఈ పేజీ ప్రయోగశాల లో ఓ శీర్షిక పెట్టి చూడండి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_01732237284 is 3.213 over 142 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.407 seconds taken in nnet3 compilation total (breakdown: 0.262 compilation, 0.064 optimization, 0 shortcut expansion, 0.0541 checking, 6.91e-06 computing indexes, 0.0268 misc.) + 0 I/O.
+tef_05181_02001068235 రాజుకు సాగరికకూ సమాగమం జరుగుతుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05181_02001068235 is 2.97055 over 133 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.517 seconds taken in nnet3 compilation total (breakdown: 0.397 compilation, 0.0919 optimization, 0 shortcut expansion, 0.026 checking, 6.2e-06 computing indexes, 0.00292 misc.) + 0 I/O.
+tef_05484_00174079425 వీటన్నిటి గురించి తరువాత నేర్చుకుందాం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05484_00174079425 is 3.29535 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.239 seconds taken in nnet3 compilation total (breakdown: 0.177 compilation, 0.0588 optimization, 0 shortcut expansion, 0.00107 checking, 2.86e-06 computing indexes, 0.00157 misc.) + 0 I/O.
+tef_05484_01029513697 తగు మాత్రం పండించుకునే వారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05484_01029513697 is 3.10683 over 116 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.448 seconds taken in nnet3 compilation total (breakdown: 0.326 compilation, 0.0639 optimization, 0 shortcut expansion, 0.00195 checking, 4.77e-06 computing indexes, 0.0553 misc.) + 0 I/O.
+tef_05484_01690234004 ఇది రఘునాథనాయకుని కుమారుని సభ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05484_01690234004 is 3.19153 over 128 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.464 seconds taken in nnet3 compilation total (breakdown: 0.302 compilation, 0.129 optimization, 0 shortcut expansion, 0.00215 checking, 6.91e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+tef_05484_01778390027 ఇది వంద సెంటీమీటర్ ల వరకు ఉండవచ్చును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05484_01778390027 is 3.17468 over 102 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.247 seconds taken in nnet3 compilation total (breakdown: 0.19 compilation, 0.0544 optimization, 0 shortcut expansion, 0.000863 checking, 1e-05 computing indexes, 0.00135 misc.) + 0 I/O.
+tef_05691_00406735563 ఖమ్మం మహాకవి పుట్టిన ప్రదేశం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_00406735563 is 2.91826 over 128 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.416 seconds taken in nnet3 compilation total (breakdown: 0.303 compilation, 0.0605 optimization, 0 shortcut expansion, 0.0502 checking, 6.91e-06 computing indexes, 0.00296 misc.) + 0 I/O.
+tef_05691_00478131016 రెండు బాధలున్న వాడితో చెప్పుకున్నట్టు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_00478131016 is 3.21969 over 156 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.381 seconds taken in nnet3 compilation total (breakdown: 0.22 compilation, 0.0718 optimization, 0 shortcut expansion, 0.0261 checking, 1.22e-05 computing indexes, 0.0628 misc.) + 0 I/O.
+tef_05691_00478142834 కానీ వాటి పైన మనసు పోలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_00478142834 is 3.01347 over 165 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.425 seconds taken in nnet3 compilation total (breakdown: 0.281 compilation, 0.115 optimization, 0 shortcut expansion, 0.0258 checking, 5.96e-06 computing indexes, 0.0028 misc.) + 0 I/O.
+tef_05691_00581121623 మొదటి నుంచీ బెజవాడ రాజరత్నం గాయని 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_00581121623 is 2.74231 over 142 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.418 seconds taken in nnet3 compilation total (breakdown: 0.281 compilation, 0.133 optimization, 0 shortcut expansion, 0.00186 checking, 6.2e-06 computing indexes, 0.00255 misc.) + 0 I/O.
+tef_05691_00605079650 ఇది లైసెన్సు కింద ఉచితంగా లభ్యమౌతుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_00605079650 is 2.63352 over 139 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.392 seconds taken in nnet3 compilation total (breakdown: 0.272 compilation, 0.116 optimization, 0 shortcut expansion, 0.00187 checking, 5.72e-06 computing indexes, 0.00244 misc.) + 0 I/O.
+tef_05691_00730073598 ఇక్కడ ఎలాంటి వసతులు లేవు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_00730073598 is 3.2532 over 88 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.401 seconds taken in nnet3 compilation total (breakdown: 0.264 compilation, 0.0722 optimization, 0 shortcut expansion, 0.0264 checking, 5.25e-06 computing indexes, 0.0388 misc.) + 0 I/O.
+tef_05691_00949003219 ఆ వ్యత్యాసాన్ని మనుషులు పాటించాలి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_00949003219 is 2.68367 over 153 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.232 seconds taken in nnet3 compilation total (breakdown: 0.167 compilation, 0.0622 optimization, 0 shortcut expansion, 0.000871 checking, 4.05e-06 computing indexes, 0.00132 misc.) + 0 I/O.
+tef_05691_01082306354 ద్రవరూపంలోని మలినాలు తేమ వంటివి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_01082306354 is 2.61955 over 165 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.45 seconds taken in nnet3 compilation total (breakdown: 0.336 compilation, 0.0842 optimization, 0 shortcut expansion, 0.00206 checking, 7.15e-06 computing indexes, 0.0274 misc.) + 0 I/O.
+tef_05691_01339244867 దీనిని ఒక బౌద్ధ స్థూపముగా గుర్తించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_01339244867 is 2.92318 over 145 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.401 seconds taken in nnet3 compilation total (breakdown: 0.28 compilation, 0.0642 optimization, 0 shortcut expansion, 0.0303 checking, 7.15e-06 computing indexes, 0.027 misc.) + 0 I/O.
+tef_05691_01736694505 గుణగునికి సంతానం లేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_01736694505 is 2.70498 over 113 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.505 seconds taken in nnet3 compilation total (breakdown: 0.322 compilation, 0.0683 optimization, 0 shortcut expansion, 0.0543 checking, 6.68e-06 computing indexes, 0.0596 misc.) + 0 I/O.
+tef_05691_01769847079 శ్రీ వీరాంజనేయ స్వామి ఆలయం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_01769847079 is 3.19387 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.39 seconds taken in nnet3 compilation total (breakdown: 0.273 compilation, 0.0642 optimization, 0 shortcut expansion, 0.00228 checking, 7.15e-06 computing indexes, 0.051 misc.) + 0 I/O.
+tef_05691_01974624135 పిన్ కోడ్ అయిదు వందలు ఇరవై మూడు రెండు వందలు అరవై ఒకటి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_01974624135 is 3.12649 over 219 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.37 seconds taken in nnet3 compilation total (breakdown: 0.27 compilation, 0.0596 optimization, 0 shortcut expansion, 0.00181 checking, 1.41e-05 computing indexes, 0.0392 misc.) + 0 I/O.
+tef_05691_02008973501 దీన్ని ప్రమాణాలు కెలోరీగ్రాసున్న 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05691_02008973501 is 2.75333 over 133 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.487 seconds taken in nnet3 compilation total (breakdown: 0.328 compilation, 0.126 optimization, 0 shortcut expansion, 0.00176 checking, 5.96e-06 computing indexes, 0.031 misc.) + 0 I/O.
+tef_05705_00037744219 అతని తల్లి కౌసల్య ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05705_00037744219 is 3.06322 over 108 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.424 seconds taken in nnet3 compilation total (breakdown: 0.274 compilation, 0.0606 optimization, 0 shortcut expansion, 0.0382 checking, 6.2e-06 computing indexes, 0.0514 misc.) + 0 I/O.
+tef_05705_01559942497 ఇది వరల్డ్ యూత్ డే అని తికమక పడరాదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05705_01559942497 is 3.12507 over 133 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.428 seconds taken in nnet3 compilation total (breakdown: 0.289 compilation, 0.0817 optimization, 0 shortcut expansion, 0.0304 checking, 6.91e-06 computing indexes, 0.0271 misc.) + 0 I/O.
+tef_05705_01806322851 భక్త కోటికి దర్శనమిస్తూ సాగిపోతుంటారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05705_01806322851 is 3.09831 over 162 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.43 seconds taken in nnet3 compilation total (breakdown: 0.277 compilation, 0.0922 optimization, 0 shortcut expansion, 0.0303 checking, 6.2e-06 computing indexes, 0.031 misc.) + 0 I/O.
+tef_05705_01823496311 ఇది ఒక యానిమేషన్ చిత్రం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05705_01823496311 is 3.1249 over 125 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.419 seconds taken in nnet3 compilation total (breakdown: 0.266 compilation, 0.068 optimization, 0 shortcut expansion, 0.0502 checking, 4.77e-06 computing indexes, 0.0351 misc.) + 0 I/O.
+tef_05705_01880520715 బ్రౌన్ నిఘంటువు ప్రకారం రుచి పదప్రయోగాలు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05705_01880520715 is 2.92156 over 150 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.47 seconds taken in nnet3 compilation total (breakdown: 0.312 compilation, 0.0964 optimization, 0 shortcut expansion, 0.03 checking, 7.15e-06 computing indexes, 0.0315 misc.) + 0 I/O.
+tef_05994_00057431187 ఎప్పుడూ బిజీగా ఉంటాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_00057431187 is 2.7905 over 125 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.38 seconds taken in nnet3 compilation total (breakdown: 0.277 compilation, 0.0994 optimization, 0 shortcut expansion, 0.00173 checking, 5.96e-06 computing indexes, 0.00233 misc.) + 0 I/O.
+tef_05994_00143664459 ఆ మహాదేవిని ఈశ్వరమ్మ అని పిలుచుకోవాలి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_00143664459 is 2.88179 over 182 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.458 seconds taken in nnet3 compilation total (breakdown: 0.337 compilation, 0.0882 optimization, 0 shortcut expansion, 0.00205 checking, 4.77e-06 computing indexes, 0.0313 misc.) + 0 I/O.
+tef_05994_00328313043 ఈ జగములన్నీ నాలో నివసిస్తాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_00328313043 is 2.83697 over 150 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.51 seconds taken in nnet3 compilation total (breakdown: 0.335 compilation, 0.122 optimization, 0 shortcut expansion, 0.00213 checking, 1.48e-05 computing indexes, 0.0516 misc.) + 0 I/O.
+tef_05994_00913006910 ఇందులో వంద రూపాయలు పెట్టుబడిగా పోతుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_00913006910 is 2.82975 over 204 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.265 seconds taken in nnet3 compilation total (breakdown: 0.2 compilation, 0.0338 optimization, 0 shortcut expansion, 0.00121 checking, 3.1e-06 computing indexes, 0.0298 misc.) + 0 I/O.
+tef_05994_01035983918 క్రమంగా భూస్వాములు రాజ్యపాలన చేపట్టారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_01035983918 is 2.86444 over 179 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.438 seconds taken in nnet3 compilation total (breakdown: 0.301 compilation, 0.104 optimization, 0 shortcut expansion, 0.0304 checking, 6.68e-06 computing indexes, 0.00265 misc.) + 0 I/O.
+tef_05994_01315430719 ఆమె మొదటి హవాయిలో పెరిగింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_01315430719 is 2.64536 over 162 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.412 seconds taken in nnet3 compilation total (breakdown: 0.309 compilation, 0.0983 optimization, 0 shortcut expansion, 0.00204 checking, 6.91e-06 computing indexes, 0.00261 misc.) + 0 I/O.
+tef_05994_01387435808 ఈ గ్రామంలో బెనివాల్స్ అధికంగా ఉన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_01387435808 is 2.78014 over 162 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.419 seconds taken in nnet3 compilation total (breakdown: 0.273 compilation, 0.113 optimization, 0 shortcut expansion, 0.0297 checking, 5.96e-06 computing indexes, 0.00271 misc.) + 0 I/O.
+tef_05994_01455767562 ఆమె ప్రసన్నురాలై యొక వ్యాకరణము నిచ్చెను 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_01455767562 is 2.69043 over 167 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.463 seconds taken in nnet3 compilation total (breakdown: 0.312 compilation, 0.0933 optimization, 0 shortcut expansion, 0.0304 checking, 7.15e-06 computing indexes, 0.0277 misc.) + 0 I/O.
+tef_05994_01542252028 ఈ నవలలో కథానాయకుని పాత్ర పేరు రాశాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_01542252028 is 2.75322 over 162 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.392 seconds taken in nnet3 compilation total (breakdown: 0.271 compilation, 0.116 optimization, 0 shortcut expansion, 0.00181 checking, 5.01e-06 computing indexes, 0.00251 misc.) + 0 I/O.
+tef_05994_01618279954 నటుడిగా సఫలత పొందలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_01618279954 is 2.9718 over 139 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.375 seconds taken in nnet3 compilation total (breakdown: 0.255 compilation, 0.0879 optimization, 0 shortcut expansion, 0.00178 checking, 0.028 computing indexes, 0.00248 misc.) + 0 I/O.
+tef_05994_01728613374 ఇంకా వందకు పైగా అనుసరణ రచనలు వచ్చాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_01728613374 is 3.03697 over 202 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.489 seconds taken in nnet3 compilation total (breakdown: 0.368 compilation, 0.0882 optimization, 0 shortcut expansion, 0.002 checking, 1e-05 computing indexes, 0.0315 misc.) + 0 I/O.
+tef_05994_01802715778 శివుడు తథాస్తు అని దీవిస్తాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_01802715778 is 2.53054 over 170 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.207 seconds taken in nnet3 compilation total (breakdown: 0.146 compilation, 0.0585 optimization, 0 shortcut expansion, 0.000909 checking, 3.1e-06 computing indexes, 0.00136 misc.) + 0 I/O.
+tef_05994_01931781580 పురాతనమైన విష్ణుదేవాలయం కలదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_01931781580 is 2.96291 over 182 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.447 seconds taken in nnet3 compilation total (breakdown: 0.309 compilation, 0.133 optimization, 0 shortcut expansion, 0.00176 checking, 6.91e-06 computing indexes, 0.00296 misc.) + 0 I/O.
+tef_05994_01989463910 ప్రాథమిక ఆరోగ్య ఉప కేంద్రం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_05994_01989463910 is 2.74451 over 153 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.252 seconds taken in nnet3 compilation total (breakdown: 0.171 compilation, 0.0782 optimization, 0 shortcut expansion, 0.000869 checking, 3.1e-06 computing indexes, 0.00153 misc.) + 0 I/O.
+tef_06008_00195427117 మరికొంత దూరంలో ఉన్న సుబ్రమణ్యస్వామి కొండపై కూడా ఉత్సవాలు ఘనంగా జరుగుతాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06008_00195427117 is 2.83878 over 281 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.408 seconds taken in nnet3 compilation total (breakdown: 0.295 compilation, 0.0881 optimization, 0 shortcut expansion, 0.022 checking, 7.15e-06 computing indexes, 0.00264 misc.) + 0 I/O.
+tef_06008_00235439080 ఒక చీట్లప్యాకిలో యాభై రెండు పేకముక్కలుంటాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06008_00235439080 is 3.02752 over 156 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.407 seconds taken in nnet3 compilation total (breakdown: 0.271 compilation, 0.0996 optimization, 0 shortcut expansion, 0.0341 checking, 5.01e-06 computing indexes, 0.00256 misc.) + 0 I/O.
+tef_06008_00302049226 ప్రధాన పంటలు మొక్కజొన్న చెరుకు మరియు పసుపు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06008_00302049226 is 2.71565 over 284 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.416 seconds taken in nnet3 compilation total (breakdown: 0.258 compilation, 0.0928 optimization, 0 shortcut expansion, 0.0302 checking, 7.15e-06 computing indexes, 0.0352 misc.) + 0 I/O.
+tef_06008_00815344893 ఆ కాండం విరిగడంతో వారు గట్టిగా అరిచారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06008_00815344893 is 2.72334 over 179 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.433 seconds taken in nnet3 compilation total (breakdown: 0.28 compilation, 0.0964 optimization, 0 shortcut expansion, 0.026 checking, 8.11e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+tef_06008_01606657611 పాదయాత్ర ఈ పోరాటంలో కలికితురాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06008_01606657611 is 2.76538 over 176 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.428 seconds taken in nnet3 compilation total (breakdown: 0.294 compilation, 0.129 optimization, 0 shortcut expansion, 0.00186 checking, 4.77e-06 computing indexes, 0.00275 misc.) + 0 I/O.
+tef_06008_01737425375 కనుక ఏపనికైనా నేర్పరితనం అవసరం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06008_01737425375 is 3.04329 over 145 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.329 compilation, 0.0878 optimization, 0 shortcut expansion, 0.0301 checking, 6.91e-06 computing indexes, 0.00274 misc.) + 0 I/O.
+tef_06566_00209566681 వీళ్ళు పొడవుగా ఉన్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06566_00209566681 is 2.7586 over 74 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.282 compilation, 0.0851 optimization, 0 shortcut expansion, 0.0264 checking, 6.2e-06 computing indexes, 0.0321 misc.) + 0 I/O.
+tef_06566_00659178421 ఈ నటనను మరో నటుడు అనుకరించలేడని అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06566_00659178421 is 3.15034 over 133 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.442 seconds taken in nnet3 compilation total (breakdown: 0.322 compilation, 0.0879 optimization, 0 shortcut expansion, 0.0301 checking, 6.2e-06 computing indexes, 0.0028 misc.) + 0 I/O.
+tef_06566_00930360227 గృహమృగము అనగా కుక్క 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06566_00930360227 is 2.96263 over 99 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.31 compilation, 0.0875 optimization, 0 shortcut expansion, 0.0017 checking, 5.72e-06 computing indexes, 0.0272 misc.) + 0 I/O.
+tef_06566_01029788621 సైమండ్స్ ఆడాల్సిన పరిస్థితి ఏర్పడింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06566_01029788621 is 3.03595 over 122 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.363 seconds taken in nnet3 compilation total (breakdown: 0.238 compilation, 0.121 optimization, 0 shortcut expansion, 0.00201 checking, 6.2e-06 computing indexes, 0.00247 misc.) + 0 I/O.
+tef_06566_01254820314 మరియు యూరోప్ యాత్ర చేపడతానని చెప్పింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06566_01254820314 is 2.97095 over 108 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.437 seconds taken in nnet3 compilation total (breakdown: 0.294 compilation, 0.11 optimization, 0 shortcut expansion, 0.0023 checking, 3.81e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+tef_06566_01386245463 గ్రామ విస్తీర్ణం తొమ్మిది వందల నలభై హెక్టారులు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06566_01386245463 is 3.14784 over 128 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.404 seconds taken in nnet3 compilation total (breakdown: 0.295 compilation, 0.105 optimization, 0 shortcut expansion, 0.00198 checking, 6.2e-06 computing indexes, 0.00255 misc.) + 0 I/O.
+tef_06566_01479491396 ఈ గ్రామమునకు గుంటూరు మంగళగిరి మరియు అమరావతి నుంచి బస్సు సౌకర్యం కలదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06566_01479491396 is 3.49065 over 187 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.249 seconds taken in nnet3 compilation total (breakdown: 0.155 compilation, 0.0668 optimization, 0 shortcut expansion, 0.000892 checking, 4.05e-06 computing indexes, 0.0258 misc.) + 0 I/O.
+tef_06566_02129312292 దగ్గరలో రాజమండ్రి రైలుస్టేషన్ ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06566_02129312292 is 3.22291 over 102 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.258 seconds taken in nnet3 compilation total (breakdown: 0.192 compilation, 0.0627 optimization, 0 shortcut expansion, 0.00126 checking, 4.05e-06 computing indexes, 0.00164 misc.) + 0 I/O.
+tef_06625_00493602021 కరివేపాకు ఆకును ఇంగ్లీషులో అని పిలుస్తారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06625_00493602021 is 2.86912 over 111 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.446 seconds taken in nnet3 compilation total (breakdown: 0.305 compilation, 0.064 optimization, 0 shortcut expansion, 0.0261 checking, 5.01e-06 computing indexes, 0.0514 misc.) + 0 I/O.
+tef_06625_00584080420 అయితే లేఖిని ఉందని మాత్రం తెలుసు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06625_00584080420 is 3.17156 over 108 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.38 seconds taken in nnet3 compilation total (breakdown: 0.243 compilation, 0.0601 optimization, 0 shortcut expansion, 0.0301 checking, 7.15e-06 computing indexes, 0.0473 misc.) + 0 I/O.
+tef_06625_00686818530 ఈ నేపథ్యంలో వెయ్యి ఏడు వందలు నలభై తొమ్మిదిలో షాహూజీ మరణించాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06625_00686818530 is 3.48783 over 159 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.406 seconds taken in nnet3 compilation total (breakdown: 0.293 compilation, 0.0883 optimization, 0 shortcut expansion, 0.0223 checking, 5.01e-06 computing indexes, 0.00254 misc.) + 0 I/O.
+tef_06625_01019860136 ప్రసాద్ <unk> పేరిట ఓ పేజీ ఇప్పటికే ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06625_01019860136 is 3.08434 over 94 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.376 seconds taken in nnet3 compilation total (breakdown: 0.247 compilation, 0.1 optimization, 0 shortcut expansion, 0.00198 checking, 6.91e-06 computing indexes, 0.0269 misc.) + 0 I/O.
+tef_06625_01030586027 హైదరాబాదులో ముస్లిం జనాభా ఎక్కువగా ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06625_01030586027 is 2.96174 over 113 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.414 seconds taken in nnet3 compilation total (breakdown: 0.3 compilation, 0.109 optimization, 0 shortcut expansion, 0.00189 checking, 4.05e-06 computing indexes, 0.00258 misc.) + 0 I/O.
+tef_06625_01070580937 వేగం నుండి గంటకు వంద డెబ్బై కిలో మీటర్లు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06625_01070580937 is 3.18692 over 133 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.424 seconds taken in nnet3 compilation total (breakdown: 0.339 compilation, 0.0802 optimization, 0 shortcut expansion, 0.00205 checking, 5.01e-06 computing indexes, 0.00274 misc.) + 0 I/O.
+tef_06625_01110668864 పురోహితునికి సాధారణమైన పేరు వశిష్ఠుడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06625_01110668864 is 3.27102 over 102 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.199 seconds taken in nnet3 compilation total (breakdown: 0.147 compilation, 0.0498 optimization, 0 shortcut expansion, 0.000866 checking, 1.91e-06 computing indexes, 0.00145 misc.) + 0 I/O.
+tef_06625_01213556725 విజయ సంవత్సరం ఒక తెలుగు సంవత్సరం పేరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06625_01213556725 is 3.10441 over 128 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.439 seconds taken in nnet3 compilation total (breakdown: 0.281 compilation, 0.105 optimization, 0 shortcut expansion, 0.0262 checking, 4.77e-06 computing indexes, 0.027 misc.) + 0 I/O.
+tef_06625_01303151230 జిల్లాకు బీజపూర్ కేంద్రంగా చేయబడింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06625_01303151230 is 3.12412 over 94 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.353 seconds taken in nnet3 compilation total (breakdown: 0.227 compilation, 0.121 optimization, 0 shortcut expansion, 0.00194 checking, 6.91e-06 computing indexes, 0.00255 misc.) + 0 I/O.
+tef_06625_01360794216 తద్వారా జరిగే పరిణామాలు చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06625_01360794216 is 3.00602 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.317 seconds taken in nnet3 compilation total (breakdown: 0.21 compilation, 0.0551 optimization, 0 shortcut expansion, 0.0501 checking, 4.05e-06 computing indexes, 0.00257 misc.) + 0 I/O.
+tef_06625_01521168372 మరియు హెలెన్ పోలాటాస్కో 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06625_01521168372 is 3.18643 over 74 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.411 seconds taken in nnet3 compilation total (breakdown: 0.221 compilation, 0.0646 optimization, 0 shortcut expansion, 0.0621 checking, 6.91e-06 computing indexes, 0.0634 misc.) + 0 I/O.
+tef_06869_00328015861 వాణి మీద మంచి తప్పు మోపినారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06869_00328015861 is 2.9165 over 122 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.337 seconds taken in nnet3 compilation total (breakdown: 0.233 compilation, 0.0762 optimization, 0 shortcut expansion, 0.0261 checking, 5.25e-06 computing indexes, 0.0023 misc.) + 0 I/O.
+tef_06869_00958026998 కృష్ణయ్య చేసిన ప్రయత్నం ఫలించలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06869_00958026998 is 3.4523 over 139 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.372 seconds taken in nnet3 compilation total (breakdown: 0.203 compilation, 0.0838 optimization, 0 shortcut expansion, 0.0381 checking, 7.15e-06 computing indexes, 0.047 misc.) + 0 I/O.
+tef_06869_01286215652 తాను చనిపోయితినా వేశ్యలందఱు పలవించెదరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06869_01286215652 is 3.10669 over 199 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.361 seconds taken in nnet3 compilation total (breakdown: 0.21 compilation, 0.065 optimization, 0 shortcut expansion, 0.0381 checking, 7.15e-06 computing indexes, 0.0476 misc.) + 0 I/O.
+tef_06869_01422972917 ఇతడు చివరన మహర్షి మరియు సుకన్యల పుత్రుడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06869_01422972917 is 3.17839 over 156 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.266 seconds taken in nnet3 compilation total (breakdown: 0.206 compilation, 0.011 optimization, 0 shortcut expansion, 0.00192 checking, 5.01e-06 computing indexes, 0.0465 misc.) + 0 I/O.
+tef_06869_01825498707 మీ కృషికి నా ప్రత్యేక అభినందనలు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06869_01825498707 is 3.14298 over 182 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.402 seconds taken in nnet3 compilation total (breakdown: 0.312 compilation, 0.0845 optimization, 0 shortcut expansion, 0.00186 checking, 7.87e-06 computing indexes, 0.00282 misc.) + 0 I/O.
+tef_06869_01872120100 ఇవి తినడం వల్ల రక్తపోటు తగ్గుతుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06869_01872120100 is 3.34229 over 139 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.33 seconds taken in nnet3 compilation total (breakdown: 0.218 compilation, 0.108 optimization, 0 shortcut expansion, 0.00183 checking, 5.96e-06 computing indexes, 0.0024 misc.) + 0 I/O.
+tef_06928_00701016230 ఇప్పుడు మీరు ఇలా సంతకం చేస్తే మీ కొత్త సంతకం కనబడుతుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06928_00701016230 is 3.0377 over 273 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.3 seconds taken in nnet3 compilation total (breakdown: 0.175 compilation, 0.0881 optimization, 0 shortcut expansion, 0.0262 checking, 3.81e-06 computing indexes, 0.0108 misc.) + 0 I/O.
+tef_06928_00862600646 తెలుగు ఉర్దూ హిందీ ఎక్కువగా మాట్లాడే భాష 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06928_00862600646 is 3.00766 over 236 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.297 seconds taken in nnet3 compilation total (breakdown: 0.229 compilation, 0.0638 optimization, 0 shortcut expansion, 0.00185 checking, 7.15e-06 computing indexes, 0.00269 misc.) + 0 I/O.
+tef_06928_02047243219 మన రాష్ట్రంలోని విజయవాడ ఒక మంచి ఉదాహరణ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_06928_02047243219 is 3.07656 over 196 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.339 seconds taken in nnet3 compilation total (breakdown: 0.227 compilation, 0.0881 optimization, 0 shortcut expansion, 0.0219 checking, 6.2e-06 computing indexes, 0.00279 misc.) + 0 I/O.
+tef_07789_00165091855 దీనిని పదకొండవ శతాబ్దంలో చోళులు నిర్మించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_07789_00165091855 is 2.89128 over 116 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.445 seconds taken in nnet3 compilation total (breakdown: 0.308 compilation, 0.0844 optimization, 0 shortcut expansion, 0.0261 checking, 4.77e-06 computing indexes, 0.0269 misc.) + 0 I/O.
+tef_07789_00401196248 అప్పట్లో ఇదో తమాషా ఆట 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_07789_00401196248 is 2.87649 over 79 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.392 seconds taken in nnet3 compilation total (breakdown: 0.275 compilation, 0.0846 optimization, 0 shortcut expansion, 0.00183 checking, 6.2e-06 computing indexes, 0.0306 misc.) + 0 I/O.
+tef_07789_00435623691 గృహాల సంఖ్య నాలుగు వందలు అయిదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_07789_00435623691 is 3.44224 over 99 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.398 seconds taken in nnet3 compilation total (breakdown: 0.286 compilation, 0.0636 optimization, 0 shortcut expansion, 0.0221 checking, 6.91e-06 computing indexes, 0.0271 misc.) + 0 I/O.
+tef_07789_00755308316 తోడు వరల్డ్ నెట్వర్క్ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_07789_00755308316 is 2.50713 over 74 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.294 seconds taken in nnet3 compilation total (breakdown: 0.197 compilation, 0.0924 optimization, 0 shortcut expansion, 0.00188 checking, 5.96e-06 computing indexes, 0.00227 misc.) + 0 I/O.
+tef_07789_00882090267 తూలికనెట్ ఒక అంతర్జాల పత్రిక 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_07789_00882090267 is 2.97378 over 111 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.338 seconds taken in nnet3 compilation total (breakdown: 0.215 compilation, 0.0951 optimization, 0 shortcut expansion, 0.0258 checking, 8.11e-06 computing indexes, 0.0027 misc.) + 0 I/O.
+tef_07789_01233590134 తినడానికి తప్ప పని చేయడని అర్థం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_07789_01233590134 is 3.2394 over 91 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.341 seconds taken in nnet3 compilation total (breakdown: 0.244 compilation, 0.0926 optimization, 0 shortcut expansion, 0.00193 checking, 5.96e-06 computing indexes, 0.00244 misc.) + 0 I/O.
+tef_07789_01308801127 తిరుపతి తిరుమల తిరుపతి దేవస్థానములు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_07789_01308801127 is 3.56633 over 133 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.43 seconds taken in nnet3 compilation total (breakdown: 0.253 compilation, 0.124 optimization, 0 shortcut expansion, 0.0261 checking, 6.2e-06 computing indexes, 0.027 misc.) + 0 I/O.
+tef_07789_01313051594 ప్రతీ టీములో ఆరు మంది ఆటగాళ్లు ఉండును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_07789_01313051594 is 2.85468 over 113 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.343 seconds taken in nnet3 compilation total (breakdown: 0.235 compilation, 0.0354 optimization, 0 shortcut expansion, 0.026 checking, 5.96e-06 computing indexes, 0.0471 misc.) + 0 I/O.
+tef_07789_01812823058 పిన్ కోడ్ అయిదు వందలు ముప్పై మూడు రెండు వందలు అరవై మూడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_07789_01812823058 is 3.59477 over 131 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.378 seconds taken in nnet3 compilation total (breakdown: 0.286 compilation, 0.0438 optimization, 0 shortcut expansion, 0.00181 checking, 1.29e-05 computing indexes, 0.0471 misc.) + 0 I/O.
+tef_07789_01826311657 వారిలో వీర్య సామర్థ్యం తగ్గిపోతోంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_07789_01826311657 is 3.06696 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.338 seconds taken in nnet3 compilation total (breakdown: 0.215 compilation, 0.12 optimization, 0 shortcut expansion, 0.0018 checking, 7.15e-06 computing indexes, 0.00223 misc.) + 0 I/O.
+tef_07789_02110428787 తమిళ సాహిత్య చరిత్రకారులు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_07789_02110428787 is 3.36854 over 79 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.413 seconds taken in nnet3 compilation total (breakdown: 0.271 compilation, 0.0439 optimization, 0 shortcut expansion, 0.0383 checking, 7.15e-06 computing indexes, 0.0593 misc.) + 0 I/O.
+tef_08318_00052366638 ఆ సైగను భీముడు గ్రహించాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_00052366638 is 3.06664 over 82 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.348 seconds taken in nnet3 compilation total (breakdown: 0.288 compilation, 0.0553 optimization, 0 shortcut expansion, 0.00202 checking, 5.96e-06 computing indexes, 0.00281 misc.) + 0 I/O.
+tef_08318_00106120857 భావోద్వేగాలు అదుపులో ఉంటాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_00106120857 is 3.08172 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.295 seconds taken in nnet3 compilation total (breakdown: 0.198 compilation, 0.0687 optimization, 0 shortcut expansion, 0.026 checking, 4.05e-06 computing indexes, 0.00254 misc.) + 0 I/O.
+tef_08318_00112478179 ఈ గ్రామము కల్లూరు పట్టణానికి నాలుగు కి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_00112478179 is 3.3147 over 136 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.143 seconds taken in nnet3 compilation total (breakdown: 0.0986 compilation, 0.0419 optimization, 0 shortcut expansion, 0.00087 checking, 4.05e-06 computing indexes, 0.00133 misc.) + 0 I/O.
+tef_08318_00114851562 ఈ లోకమంతా అజ్ఞానము చేత కప్పబడి ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_00114851562 is 3.37531 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.348 seconds taken in nnet3 compilation total (breakdown: 0.194 compilation, 0.126 optimization, 0 shortcut expansion, 0.00206 checking, 4.77e-06 computing indexes, 0.0268 misc.) + 0 I/O.
+tef_08318_00132378624 దీంతో ఎవరినీ కలిసేది కాదామె 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_00132378624 is 3.29535 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.219 seconds taken in nnet3 compilation total (breakdown: 0.161 compilation, 0.0552 optimization, 0 shortcut expansion, 0.00122 checking, 5.96e-06 computing indexes, 0.00142 misc.) + 0 I/O.
+tef_08318_00206956684 ఆంజనేయ దిశలో పర్వతాలు మరియు లోయలు ఉన్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_00206956684 is 2.79713 over 136 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.222 seconds taken in nnet3 compilation total (breakdown: 0.165 compilation, 0.0549 optimization, 0 shortcut expansion, 0.00122 checking, 2.86e-06 computing indexes, 0.00144 misc.) + 0 I/O.
+tef_08318_00338658233 భీముడు అలంబసుడితో యుద్ధం చేస్తున్నాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_00338658233 is 2.88365 over 150 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.361 seconds taken in nnet3 compilation total (breakdown: 0.29 compilation, 0.0566 optimization, 0 shortcut expansion, 0.00224 checking, 6.91e-06 computing indexes, 0.0114 misc.) + 0 I/O.
+tef_08318_00399959252 కానీ వాటిపైకి నా మనసు పోలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_00399959252 is 3.05533 over 111 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.353 seconds taken in nnet3 compilation total (breakdown: 0.247 compilation, 0.101 optimization, 0 shortcut expansion, 0.00203 checking, 5.96e-06 computing indexes, 0.00255 misc.) + 0 I/O.
+tef_08318_00408954009 గ్రామ విస్తీర్ణం వెయ్యి ముప్పై హెక్టారులు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_00408954009 is 3.2202 over 88 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.344 seconds taken in nnet3 compilation total (breakdown: 0.211 compilation, 0.0805 optimization, 0 shortcut expansion, 0.0261 checking, 8.11e-06 computing indexes, 0.0268 misc.) + 0 I/O.
+tef_08318_00836751872 చివరకు ఏడుగురిని ఎన్నిక చేసుకొన్నాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_00836751872 is 3.28219 over 88 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.362 seconds taken in nnet3 compilation total (breakdown: 0.206 compilation, 0.088 optimization, 0 shortcut expansion, 0.0339 checking, 5.01e-06 computing indexes, 0.0347 misc.) + 0 I/O.
+tef_08318_00886281050 వీటిలో పగలు కూడా జరిగే ఘట్టాలు మూడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_00886281050 is 3.2465 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.303 seconds taken in nnet3 compilation total (breakdown: 0.197 compilation, 0.0536 optimization, 0 shortcut expansion, 0.05 checking, 8.11e-06 computing indexes, 0.00242 misc.) + 0 I/O.
+tef_08318_00966115144 చిన్నపాటి ప్రభను ఏర్పాటు చేసినారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_00966115144 is 3.21732 over 111 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.308 seconds taken in nnet3 compilation total (breakdown: 0.243 compilation, 0.0395 optimization, 0 shortcut expansion, 0.022 checking, 5.96e-06 computing indexes, 0.003 misc.) + 0 I/O.
+tef_08318_01089285301 వారికి పొత్తికడుపు వద్ద కలిసి ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_01089285301 is 3.05749 over 91 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.347 seconds taken in nnet3 compilation total (breakdown: 0.257 compilation, 0.0856 optimization, 0 shortcut expansion, 0.0018 checking, 5.01e-06 computing indexes, 0.00236 misc.) + 0 I/O.
+tef_08318_01126074013 మల్లెల పాన్పు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_01126074013 is 2.70176 over 71 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.34 seconds taken in nnet3 compilation total (breakdown: 0.207 compilation, 0.08 optimization, 0 shortcut expansion, 0.0263 checking, 6.68e-06 computing indexes, 0.0269 misc.) + 0 I/O.
+tef_08318_01321558892 తరచూ రేడియో నాటకాల్లో కూడా పాల్గొనేవారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_01321558892 is 3.07125 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.174 seconds taken in nnet3 compilation total (breakdown: 0.11 compilation, 0.0378 optimization, 0 shortcut expansion, 0.000866 checking, 1.91e-06 computing indexes, 0.0255 misc.) + 0 I/O.
+tef_08318_01481026938 నీతికి పునాది మానవ స్వభావం లోనే వుంటుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_01481026938 is 2.96145 over 108 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.325 seconds taken in nnet3 compilation total (breakdown: 0.241 compilation, 0.0797 optimization, 0 shortcut expansion, 0.00197 checking, 5.01e-06 computing indexes, 0.00267 misc.) + 0 I/O.
+tef_08318_01523901072 సాలీనా దీని ఉత్పాదన ఇరవై టన్నులకి మించదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_01523901072 is 2.89922 over 145 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.301 seconds taken in nnet3 compilation total (breakdown: 0.163 compilation, 0.0364 optimization, 0 shortcut expansion, 0.0743 checking, 5.96e-06 computing indexes, 0.0271 misc.) + 0 I/O.
+tef_08318_01627528003 వశిష్టపుత్ర శాతకర్ణి <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_01627528003 is 2.71881 over 102 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.193 seconds taken in nnet3 compilation total (breakdown: 0.147 compilation, 0.0429 optimization, 0 shortcut expansion, 0.000942 checking, 3.1e-06 computing indexes, 0.00157 misc.) + 0 I/O.
+tef_08318_01709677971 సాధారణంగా ఇవి రెండూ గళ్లతో నిండివుంటాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_01709677971 is 3.09323 over 153 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.179 seconds taken in nnet3 compilation total (breakdown: 0.131 compilation, 0.0459 optimization, 0 shortcut expansion, 0.00107 checking, 2.86e-06 computing indexes, 0.00152 misc.) + 0 I/O.
+tef_08318_01970810666 సురేశ్ రెడ్డి విడుదల చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_01970810666 is 3.15115 over 94 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.322 seconds taken in nnet3 compilation total (breakdown: 0.237 compilation, 0.0806 optimization, 0 shortcut expansion, 0.00182 checking, 5.96e-06 computing indexes, 0.00275 misc.) + 0 I/O.
+tef_08318_02054719356 అప్పుడు జిల్లా కేంద్రగా అమరావతి ఉండేది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08318_02054719356 is 3.39929 over 96 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.35 seconds taken in nnet3 compilation total (breakdown: 0.262 compilation, 0.0712 optimization, 0 shortcut expansion, 0.0138 checking, 6.2e-06 computing indexes, 0.00272 misc.) + 0 I/O.
+LOG (apply-cmvn-online[5.5.1009~1-e4940]:main():apply-cmvn-online.cc:133) Applied online CMVN to 237 files, or 97142 frames.
+tef_08664_00225608572 మధ్యధరా ప్రాంతంచే చుట్టి వున్నది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08664_00225608572 is 2.95208 over 207 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.3 seconds taken in nnet3 compilation total (breakdown: 0.199 compilation, 0.0967 optimization, 0 shortcut expansion, 0.00206 checking, 6.2e-06 computing indexes, 0.00238 misc.) + 0 I/O.
+tef_08664_01072740553 మిగిలిన దేశమంతా కారపు బోండాలు తింటారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08664_01072740553 is 2.84128 over 193 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.402 seconds taken in nnet3 compilation total (breakdown: 0.276 compilation, 0.0605 optimization, 0 shortcut expansion, 0.00185 checking, 5.96e-06 computing indexes, 0.0631 misc.) + 0 I/O.
+tef_08664_01485081614 ఈ వినడానికి పదునయిదు నుండి ముప్పై నిమిషాలు పడుతుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08664_01485081614 is 2.86503 over 204 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.221 seconds taken in nnet3 compilation total (breakdown: 0.14 compilation, 0.0301 optimization, 0 shortcut expansion, 0.025 checking, 2.15e-06 computing indexes, 0.0259 misc.) + 0 I/O.
+tef_08712_01140479257 ఫ్లోరా ఆఫ్ న్యూజీల్యాండ్ భాగం గ్రాసెస్ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08712_01140479257 is 2.3628 over 173 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.363 seconds taken in nnet3 compilation total (breakdown: 0.247 compilation, 0.112 optimization, 0 shortcut expansion, 0.00181 checking, 5.72e-06 computing indexes, 0.00221 misc.) + 0 I/O.
+tef_08712_01271836874 సంవత్సరంలో నలభై ఆరు వర్షపాత దినాలు ఉంటాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08712_01271836874 is 2.85556 over 176 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.35 seconds taken in nnet3 compilation total (breakdown: 0.224 compilation, 0.121 optimization, 0 shortcut expansion, 0.00218 checking, 6.91e-06 computing indexes, 0.00264 misc.) + 0 I/O.
+tef_08712_01510864685 వేల్స్ ఈకలు ప్రిన్స్ అని పిలుస్తారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance tef_08712_01510864685 is 2.83186 over 131 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.357 seconds taken in nnet3 compilation total (breakdown: 0.253 compilation, 0.1 optimization, 0 shortcut expansion, 0.0019 checking, 6.91e-06 computing indexes, 0.00259 misc.) + 0 I/O.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:main():nnet3-latgen-faster-parallel.cc:264) Time taken 289.023s: real-time factor assuming 100 feature frames/sec is 1.18719
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:main():nnet3-latgen-faster-parallel.cc:268) Done 237 utterances, failed for 0
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:main():nnet3-latgen-faster-parallel.cc:270) Overall log-likelihood per frame is 2.96326 over 32460 frames.
+LOG (lattice-scale[5.5.1009~1-e4940]:main():lattice-scale.cc:107) Done 237 lattices.
+# Accounting: time=293 threads=1
+# Ended (code 0) at Wed Jun 15 16:50:15 UTC 2022, elapsed time 293 seconds

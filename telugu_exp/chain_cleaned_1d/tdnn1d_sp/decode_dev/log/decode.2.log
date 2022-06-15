@@ -1,0 +1,983 @@
+# nnet3-latgen-faster-parallel --num-threads=4 --online-ivectors=scp:telugu_exp/nnet3_cleaned_1d/ivectors_dev_hires/ivector_online.scp --online-ivector-period=10 --frame-subsampling-factor=3 --frames-per-chunk=50 --extra-left-context=0 --extra-right-context=0 --extra-left-context-initial=-1 --extra-right-context-final=-1 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=1.0 --allow-partial=true --word-symbol-table=telugu_exp/chain_cleaned_1d/tdnn1d_sp/graph/words.txt telugu_exp/chain_cleaned_1d/tdnn1d_sp/final.mdl telugu_exp/chain_cleaned_1d/tdnn1d_sp/graph/HCLG.fst "ark,s,cs:apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/dev_hires/split15/2/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/global_cmvn.stats scp:telugu_data/dev_hires/split15/2/feats.scp ark:- |" "ark:|lattice-scale --acoustic-scale=10.0 ark:- ark:- | gzip -c >telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_dev/lat.2.gz" 
+# Started at Wed Jun 15 16:35:06 UTC 2022
+#
+nnet3-latgen-faster-parallel --num-threads=4 --online-ivectors=scp:telugu_exp/nnet3_cleaned_1d/ivectors_dev_hires/ivector_online.scp --online-ivector-period=10 --frame-subsampling-factor=3 --frames-per-chunk=50 --extra-left-context=0 --extra-right-context=0 --extra-left-context-initial=-1 --extra-right-context-final=-1 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=1.0 --allow-partial=true --word-symbol-table=telugu_exp/chain_cleaned_1d/tdnn1d_sp/graph/words.txt telugu_exp/chain_cleaned_1d/tdnn1d_sp/final.mdl telugu_exp/chain_cleaned_1d/tdnn1d_sp/graph/HCLG.fst 'ark,s,cs:apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/dev_hires/split15/2/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/global_cmvn.stats scp:telugu_data/dev_hires/split15/2/feats.scp ark:- |' 'ark:|lattice-scale --acoustic-scale=10.0 ark:- ark:- | gzip -c >telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_dev/lat.2.gz' 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 1 orphan nodes.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 2 orphan components.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:Collapse():nnet-utils.cc:1488) Added 1 components, removed 2
+lattice-scale --acoustic-scale=10.0 ark:- ark:- 
+apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/dev_hires/split15/2/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/global_cmvn.stats scp:telugu_data/dev_hires/split15/2/feats.scp ark:- 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:CheckAndFixConfigs():nnet-am-decodable-simple.cc:294) Increasing --frames-per-chunk from 50 to 51 to make it a multiple of --frame-subsampling-factor=3
+000310269 దిగుబడి పెరగడం వలన రెండు వెళ్ళు లాభం వస్తుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000310269 is 2.93363 over 109 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.255 seconds taken in nnet3 compilation total (breakdown: 0.183 compilation, 0.0673 optimization, 0 shortcut expansion, 0.00194 checking, 4.77e-06 computing indexes, 0.00238 misc.) + 0 I/O.
+000310414 అయితే నైరుతి రుతుపవనాలు చురుగ్గా కదులుతున్నాయని వాతావరణ శాఖ అధికారులు చెబుతున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000310414 is 3.15823 over 171 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.257 seconds taken in nnet3 compilation total (breakdown: 0.185 compilation, 0.0679 optimization, 0 shortcut expansion, 0.00186 checking, 5.96e-06 computing indexes, 0.00215 misc.) + 0 I/O.
+000310422 ఇప్పుడు మళ్లీ అదే పరిస్థితి రావడంతో పవన్ వ్యాఖ్యలపై రసవత్తర చర్చ జోరుగా సాగుతోంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000310422 is 2.92555 over 176 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.377 seconds taken in nnet3 compilation total (breakdown: 0.263 compilation, 0.109 optimization, 0 shortcut expansion, 0.00193 checking, 1.53e-05 computing indexes, 0.00256 misc.) + 0 I/O.
+000310472 వివాదాల్లో ఉన్న భూమిని తీసుకోవడం క్రిడాకు సాధ్యం కాదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000310472 is 2.77347 over 126 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.431 seconds taken in nnet3 compilation total (breakdown: 0.29 compilation, 0.0797 optimization, 0 shortcut expansion, 0.058 checking, 5.96e-06 computing indexes, 0.0027 misc.) + 0 I/O.
+000320003 మన రాష్ట్రానికి సంబంధించి వీరిద్దరూ చాలా ముఖ్యమైన వాళ్లు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320003 is 2.66084 over 125 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.464 seconds taken in nnet3 compilation total (breakdown: 0.343 compilation, 0.0878 optimization, 0 shortcut expansion, 0.00211 checking, 5.01e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+000320019 ప్రకాశం జిల్లాలో మొక్కలు నాటే కార్యక్రమాన్ని ఉద్యమంలా చేపడతామన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320019 is 2.66418 over 154 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.376 seconds taken in nnet3 compilation total (breakdown: 0.244 compilation, 0.128 optimization, 0 shortcut expansion, 0.00184 checking, 7.15e-06 computing indexes, 0.00217 misc.) + 0 I/O.
+000320032 శిథిలాల కింద చనిపోయేవారు కాదని ప్రతికూల వారు ఉండవచ్చని సహాయక చర్యలు చేపడుతున్న వారు అంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320032 is 2.47502 over 242 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.404 seconds taken in nnet3 compilation total (breakdown: 0.28 compilation, 0.0954 optimization, 0 shortcut expansion, 0.00178 checking, 5.96e-06 computing indexes, 0.0265 misc.) + 0 I/O.
+000320097 దీక్ష వాయిదా వేసుకున్న ముద్రగడ విద్యార్థులు పరీక్షల నేపథ్యంలో దీక్షను వాయిదా వేసుకున్నట్లు ముద్రగడ పద్మనాభం ప్రకటించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320097 is 1.67271 over 395 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.468 seconds taken in nnet3 compilation total (breakdown: 0.304 compilation, 0.123 optimization, 0 shortcut expansion, 0.00176 checking, 7.15e-06 computing indexes, 0.0384 misc.) + 0 I/O.
+000320104 ప్రయాణికుల రద్దీని దృష్టిలో ఉంచుకుని ఉంచుకుని వివిధ ప్రాంతాల మధ్య ఏడు దీపావళి ప్రత్యేక రైళ్లను ప్రవేశపెట్టినట్లు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320104 is 2.18783 over 319 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.503 seconds taken in nnet3 compilation total (breakdown: 0.366 compilation, 0.104 optimization, 0 shortcut expansion, 0.0299 checking, 6.91e-06 computing indexes, 0.00274 misc.) + 0 I/O.
+000320122 తెలుగు వారు పోయిన తర్వాత తమిళనాడు నుంచి నేర్చుకోవాలని అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320122 is 2.45782 over 152 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.482 seconds taken in nnet3 compilation total (breakdown: 0.348 compilation, 0.129 optimization, 0 shortcut expansion, 0.00188 checking, 5.96e-06 computing indexes, 0.00265 misc.) + 0 I/O.
+000320165 ఇందుకు సంబంధించిన ఓ తెలుగు దినపత్రికలో మరో ఆంగ్ల దినపత్రికలో వార్త కథనాలు ప్రచురించాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320165 is 2.45622 over 207 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.425 seconds taken in nnet3 compilation total (breakdown: 0.29 compilation, 0.104 optimization, 0 shortcut expansion, 0.03 checking, 7.15e-06 computing indexes, 0.00217 misc.) + 0 I/O.
+000320286 అత్యంత ప్రతిష్టాత్మకమైన నిర్వహిస్తున్న ఈ వేడుకకు దేశ విదేశాల నుంచి ప్రముఖులు వస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320286 is 2.18389 over 210 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.441 seconds taken in nnet3 compilation total (breakdown: 0.313 compilation, 0.0669 optimization, 0 shortcut expansion, 0.0299 checking, 5.01e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+000320312 ఉత్తరాఖండ్ ముఖ్యమంత్రి హరీష్ రావత్ పేరు కూడా పరిశీలనలో ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320312 is 2.26997 over 178 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.458 seconds taken in nnet3 compilation total (breakdown: 0.328 compilation, 0.0968 optimization, 0 shortcut expansion, 0.00218 checking, 5.96e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+000320359 దీంతో ఈ ప్రాంత ప్రజలు ఆందోళన చెందుతున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320359 is 2.82494 over 108 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.434 seconds taken in nnet3 compilation total (breakdown: 0.302 compilation, 0.128 optimization, 0 shortcut expansion, 0.00175 checking, 5.96e-06 computing indexes, 0.0023 misc.) + 0 I/O.
+000320382 చంద్రబాబు మంత్రులు దీనిపై మాట్లాడడానికి కూడా వారు తప్పు పట్టని పట్టారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320382 is 2.5067 over 167 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.55 seconds taken in nnet3 compilation total (breakdown: 0.393 compilation, 0.0723 optimization, 0 shortcut expansion, 0.0541 checking, 8.11e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+000320383 నోట్ల రద్దు తర్వాత తన కూతురు పెళ్లి పెళ్లిని అంగరంగ వైభవంగా చేశాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320383 is 2.60988 over 209 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.45 seconds taken in nnet3 compilation total (breakdown: 0.317 compilation, 0.0955 optimization, 0 shortcut expansion, 0.00205 checking, 8.11e-06 computing indexes, 0.0347 misc.) + 0 I/O.
+000320402 మనీ గిరిజనులకు కనీస సౌకర్యాలు కల్పించడంలో చంద్రబాబు సర్కార్ పూర్తిగా విఫలమైందని విమర్శించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000320402 is 2.39338 over 264 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.457 seconds taken in nnet3 compilation total (breakdown: 0.329 compilation, 0.0955 optimization, 0 shortcut expansion, 0.00191 checking, 1.6e-05 computing indexes, 0.0308 misc.) + 0 I/O.
+000330047 వేలాది మంది భక్తులు స్వామి వారికి ఆ షరతులు పెట్టారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330047 is 2.23749 over 135 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.575 seconds taken in nnet3 compilation total (breakdown: 0.398 compilation, 0.0758 optimization, 0 shortcut expansion, 0.0343 checking, 5.72e-06 computing indexes, 0.0674 misc.) + 0 I/O.
+000330048 జగన్ ఓదార్పు యాత్ర కు అనుమతి ఇవ్వలేదని ఆయన చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330048 is 2.37173 over 174 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.403 seconds taken in nnet3 compilation total (breakdown: 0.27 compilation, 0.128 optimization, 0 shortcut expansion, 0.00174 checking, 5.01e-06 computing indexes, 0.00224 misc.) + 0 I/O.
+000330060 మహానాడు మొదటి రోజు ప్రవేశపెట్టిన ఆర్థిక తీర్మానంలో ప్రత్యేక హోదా అంశాన్ని ప్రస్తావించకపోవడంతో విమర్శలు వెల్లువెత్తిన సంగతి తెలిసిందే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330060 is 1.88631 over 339 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.52 seconds taken in nnet3 compilation total (breakdown: 0.362 compilation, 0.0968 optimization, 0 shortcut expansion, 0.03 checking, 7.15e-06 computing indexes, 0.0312 misc.) + 0 I/O.
+000330074 పరిహారం ప్రకటించిన సురేశ్ ప్రభు ప్రమాదం పై కేంద్ర మంత్రి సురేష్ ప్రభు ఆరా తీశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330074 is 2.01621 over 261 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.52 seconds taken in nnet3 compilation total (breakdown: 0.338 compilation, 0.177 optimization, 0 shortcut expansion, 0.002 checking, 7.15e-06 computing indexes, 0.00252 misc.) + 0 I/O.
+000330118 అయితే కులాలు వేరు కావడంతో పెళ్లికి పవన్ కుమార్ నిరాకరించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330118 is 2.11158 over 187 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.277 seconds taken in nnet3 compilation total (breakdown: 0.172 compilation, 0.0381 optimization, 0 shortcut expansion, 0.0291 checking, 4.05e-06 computing indexes, 0.0378 misc.) + 0 I/O.
+000330124 ఈ సమయంలో న్యాయమూర్తి జస్టిస్ భరత్ పరాశర్ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330124 is 1.89184 over 230 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.504 seconds taken in nnet3 compilation total (breakdown: 0.355 compilation, 0.112 optimization, 0 shortcut expansion, 0.00197 checking, 5.72e-06 computing indexes, 0.0351 misc.) + 0 I/O.
+000330157 చిత్ర ప్రదర్శన చంద్రబాబు అధికారంలోకి వచ్చాక ఆయన చేపట్టిన పథకాలు సమావేశాలు చిత్రాలు ప్రదర్శనలో ఉంచారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330157 is 1.90697 over 337 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.558 seconds taken in nnet3 compilation total (breakdown: 0.389 compilation, 0.0716 optimization, 0 shortcut expansion, 0.0342 checking, 1.31e-05 computing indexes, 0.0632 misc.) + 0 I/O.
+000330170 ఒక్క రోడ్డు పక్కన ఆగి ఉన్న లారీని వెనుక వారి వాహనం ఢీకొట్టింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330170 is 1.80388 over 209 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.519 seconds taken in nnet3 compilation total (breakdown: 0.373 compilation, 0.109 optimization, 0 shortcut expansion, 0.00209 checking, 4.77e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+000330213 నడి రోడ్డు పైన మంత్రి కొడుకు యువతి చేయి పట్టుకుని లాగి లేదని ఆయన ప్రశ్నించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330213 is 1.9965 over 177 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.433 seconds taken in nnet3 compilation total (breakdown: 0.297 compilation, 0.103 optimization, 0 shortcut expansion, 0.00176 checking, 2.41e-05 computing indexes, 0.0306 misc.) + 0 I/O.
+000330284 అర్ధరాత్రి దాటిన తర్వాత బాలిక ఇంటికి చేరడంతో అనుమానం వచ్చిన తదితర ఆమెను ప్రశ్నించగా అసలు విషయం చెప్పింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330284 is 1.94888 over 234 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.494 seconds taken in nnet3 compilation total (breakdown: 0.358 compilation, 0.132 optimization, 0 shortcut expansion, 0.00185 checking, 4.77e-06 computing indexes, 0.0027 misc.) + 0 I/O.
+000330298 వెయ్యి కోట్లు మాత్రమే నిధులు వచ్చే అవకాశం ఉందని చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330298 is 2.47411 over 138 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.419 seconds taken in nnet3 compilation total (breakdown: 0.263 compilation, 0.123 optimization, 0 shortcut expansion, 0.00171 checking, 6.2e-06 computing indexes, 0.0304 misc.) + 0 I/O.
+000330321 వీరిలో తెలంగాణవాదిగా పేరు తెచ్చుకున్న తెలంగాణ వ్యతిరేకిగా చిత్రీకరించడానికి ఆమె పని చేస్తున్నారని వినికిడి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330321 is 1.83536 over 424 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.599 seconds taken in nnet3 compilation total (breakdown: 0.401 compilation, 0.072 optimization, 0 shortcut expansion, 0.0944 checking, 6.2e-06 computing indexes, 0.0314 misc.) + 0 I/O.
+000330345 భర్త శ్రీకాంత్ రోజూ మద్యం తాగి వచ్చేవాడని నిన్న వారి మధ్య గొడవ జరిగిందని అంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330345 is 2.18143 over 232 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.496 seconds taken in nnet3 compilation total (breakdown: 0.359 compilation, 0.132 optimization, 0 shortcut expansion, 0.00177 checking, 6.91e-06 computing indexes, 0.00273 misc.) + 0 I/O.
+000330355 వీటిని దృష్టిలో పెట్టుకునే అసెంబ్లీ కౌన్సిల్ సమావేశాలు మంగళవారానికి వాయిదా వేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330355 is 2.51133 over 182 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.497 seconds taken in nnet3 compilation total (breakdown: 0.311 compilation, 0.101 optimization, 0 shortcut expansion, 0.0302 checking, 6.2e-06 computing indexes, 0.0552 misc.) + 0 I/O.
+000330373 ఆంధ్రప్రదేశ్ ప్రజలకు తనకు చేతనైనంత సేవ చేశానని చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330373 is 2.19832 over 199 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.546 seconds taken in nnet3 compilation total (breakdown: 0.339 compilation, 0.073 optimization, 0 shortcut expansion, 0.0865 checking, 6.68e-06 computing indexes, 0.0475 misc.) + 0 I/O.
+000330376 పెద్దనోట్ల రద్దుతో అవినీతి పరుల గుండెల్లో రైళ్లు పరిగెడుతున్నాయని చెప్పిన ముఖ్యమంత్రి ఇప్పుడు ఆందోళన వ్యక్తం చేస్తున్నారని గుర్తు చేసింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330376 is 1.93671 over 372 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.515 seconds taken in nnet3 compilation total (breakdown: 0.373 compilation, 0.105 optimization, 0 shortcut expansion, 0.00192 checking, 5.25e-06 computing indexes, 0.035 misc.) + 0 I/O.
+000330448 ఇటీవల ఈ పథకం కింద <unk> ఇందిరమ్మ పచ్చతోరణం పేర్చారు మొక్కలు పెంచడం పాత భవనాలు పూర్తి చేయడం వంటి పనులు చేస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330448 is 1.63179 over 393 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.419 seconds taken in nnet3 compilation total (breakdown: 0.284 compilation, 0.0714 optimization, 0 shortcut expansion, 0.0338 checking, 1.31e-05 computing indexes, 0.0306 misc.) + 0 I/O.
+000330483 మరోవైపు మంత్రి పదవి దక్కకపోవడంతో అసంతృప్తిగా ఉన్న బుచ్చయ్య చౌదరి మరోసారి ఉద్వేగానికి లోనయ్యారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000330483 is 2.27343 over 285 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.491 seconds taken in nnet3 compilation total (breakdown: 0.347 compilation, 0.14 optimization, 0 shortcut expansion, 0.0018 checking, 7.87e-06 computing indexes, 0.00248 misc.) + 0 I/O.
+000340034 తూర్పుగోదావరి జిల్లాలోని తన సొంత గ్రామమైన కిర్లంపూడిలో బుధవారం ఆయన విలేకరుల సమావేశంలో మాట్లాడారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340034 is 2.65582 over 211 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.45 seconds taken in nnet3 compilation total (breakdown: 0.322 compilation, 0.0958 optimization, 0 shortcut expansion, 0.00177 checking, 6.91e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+000340060 ఇప్పటికే పలుమార్లు గ్రామ కంఠాలను మంత్రి నారాయణ పరిశీలించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340060 is 2.91002 over 126 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.493 seconds taken in nnet3 compilation total (breakdown: 0.359 compilation, 0.0963 optimization, 0 shortcut expansion, 0.00208 checking, 6.91e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+000340089 పులిచింతలలో నీరు నిల్వ చేయడంతో నిర్వాసితులు తీవ్ర ఇబ్బందులు పడుతున్నారని వెల్లడించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340089 is 2.49915 over 167 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.565 seconds taken in nnet3 compilation total (breakdown: 0.406 compilation, 0.121 optimization, 0 shortcut expansion, 0.0341 checking, 5.72e-06 computing indexes, 0.00285 misc.) + 0 I/O.
+000340232 మద్యానికి బానిసలు కావడం వల్ల ఆరోగ్య చెడిపోతున్నాయని కేంద్ర మంత్రి జైరాం రమేష్ అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340232 is 2.58679 over 183 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.522 seconds taken in nnet3 compilation total (breakdown: 0.374 compilation, 0.112 optimization, 0 shortcut expansion, 0.00215 checking, 7.15e-06 computing indexes, 0.0342 misc.) + 0 I/O.
+000340240 అంత్యక్రియల్లో సిపిఎం తెలంగాణ రాష్ట్ర కార్యదర్శి వర్గ సభ్యులు జి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340240 is 2.75405 over 132 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.506 seconds taken in nnet3 compilation total (breakdown: 0.343 compilation, 0.101 optimization, 0 shortcut expansion, 0.0304 checking, 7.15e-06 computing indexes, 0.0312 misc.) + 0 I/O.
+000340262 విశాఖ జిల్లాలో ఓలం జీడిపిక్కల పరిశ్రమల్లో పనిచేస్తున్న కార్మికులకు కార్మికులు విజయం సాధించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340262 is 2.63811 over 220 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.459 seconds taken in nnet3 compilation total (breakdown: 0.314 compilation, 0.0636 optimization, 0 shortcut expansion, 0.0542 checking, 6.2e-06 computing indexes, 0.0275 misc.) + 0 I/O.
+000340264 ఖైరతాబాద్ వినాయకుడి ఊరేగింపు రాత్రి బాగా ఆలస్యంగా ప్రారంభించినందున సోమవారం నిమజ్జనం జరిగే అవకాశం ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340264 is 2.52865 over 213 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.531 seconds taken in nnet3 compilation total (breakdown: 0.388 compilation, 0.0639 optimization, 0 shortcut expansion, 0.00198 checking, 6.91e-06 computing indexes, 0.0766 misc.) + 0 I/O.
+000340266 అయితే ఈ వేడుకలకు ఆదాయ <unk> చంద్రబాబును మర్యాదపూర్వకంగానైనా కలిసే ప్రయత్నం చేయలేదు కొణతాల 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340266 is 2.51429 over 253 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.534 seconds taken in nnet3 compilation total (breakdown: 0.389 compilation, 0.108 optimization, 0 shortcut expansion, 0.034 checking, 5.72e-06 computing indexes, 0.00284 misc.) + 0 I/O.
+000340270 ఆ ఏడు మండలాల ప్రజలు త్యాగంతోనే పోలవరం నిర్మాణం అవుతుందని గుర్తెరిగి ముందు వారి డిమాండ్లను తీర్చాలని కోరారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340270 is 2.41995 over 303 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.528 seconds taken in nnet3 compilation total (breakdown: 0.394 compilation, 0.0722 optimization, 0 shortcut expansion, 0.0303 checking, 5.96e-06 computing indexes, 0.0314 misc.) + 0 I/O.
+000340281 ఈ సందర్భంగా కేటీఆర్ మాట్లాడుతూ ఎవరు అడ్డుపడినా ఎవరేమన్నా గోదావరి జలాలతో ఖనిజ జలాల జిల్లాను సస్యశ్యామలం చేసి తీరుతామని స్పష్టం చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340281 is 2.62309 over 287 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.566 seconds taken in nnet3 compilation total (breakdown: 0.392 compilation, 0.105 optimization, 0 shortcut expansion, 0.00195 checking, 6.2e-06 computing indexes, 0.0672 misc.) + 0 I/O.
+000340289 విభజన చట్టంలో పేర్కొన్న ప్రత్యేక హోదా <unk> కూడా బిజెపి ప్రభుత్వం అడ్డంకులు సృష్టిస్తోందని మండిపడ్డారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340289 is 2.47148 over 234 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.523 seconds taken in nnet3 compilation total (breakdown: 0.381 compilation, 0.137 optimization, 0 shortcut expansion, 0.00192 checking, 6.2e-06 computing indexes, 0.00288 misc.) + 0 I/O.
+000340290 భారత్ యుద్ధానికి దిగి దిగదని యుద్ధం అంటూ జరిగితే ఆ దేశ ఆర్థిక వ్యవస్థపై ప్రతికూల ప్రభావం పడుతుందని చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340290 is 2.51008 over 223 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.453 seconds taken in nnet3 compilation total (breakdown: 0.279 compilation, 0.109 optimization, 0 shortcut expansion, 0.0304 checking, 5.96e-06 computing indexes, 0.0346 misc.) + 0 I/O.
+000340297 అదే సమయంలో ఈ సదస్సులో బాబు తన తనయుడు నారా లోకేష్ రాజకీయ రంగ ప్రవేశానికి నివేదిక ఉపయోగించుకున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340297 is 2.41321 over 236 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.564 seconds taken in nnet3 compilation total (breakdown: 0.386 compilation, 0.105 optimization, 0 shortcut expansion, 0.0341 checking, 7.87e-06 computing indexes, 0.039 misc.) + 0 I/O.
+000340361 చరిత్ర గురించి తెలుసుకోవాలన్న కుతూహలం ప్రతి ఒక్కరిలోనూ ఉంటుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340361 is 2.54675 over 139 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.436 seconds taken in nnet3 compilation total (breakdown: 0.279 compilation, 0.0683 optimization, 0 shortcut expansion, 0.058 checking, 1.5e-05 computing indexes, 0.0309 misc.) + 0 I/O.
+000340445 వ్యవసాయానికి ఆయువుపట్టయిన ఉభయగోదావరి కృష్ణా గుంటూరు జిల్లాల్లోని పంటలు ఎండిపోతున్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000340445 is 2.59025 over 165 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.537 seconds taken in nnet3 compilation total (breakdown: 0.4 compilation, 0.133 optimization, 0 shortcut expansion, 0.00185 checking, 6.91e-06 computing indexes, 0.00257 misc.) + 0 I/O.
+000350011 భూమి మీద ఉన్న విగ్రహాలను అన్నిటిలోనూ అతిపెద్ద ముఖం కలిగిన విగ్రహం ఇదే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000350011 is 2.71592 over 188 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.433 seconds taken in nnet3 compilation total (breakdown: 0.275 compilation, 0.069 optimization, 0 shortcut expansion, 0.0583 checking, 5.72e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+000350235 ఇప్పుడు నెహ్రూకు సొంత నియోజకవర్గంలో శాఖ తగులుతోందని అంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000350235 is 2.67663 over 193 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.478 seconds taken in nnet3 compilation total (breakdown: 0.301 compilation, 0.0761 optimization, 0 shortcut expansion, 0.0339 checking, 6.2e-06 computing indexes, 0.0668 misc.) + 0 I/O.
+000350264 ముఖ్యమంత్రి డాక్టర్ వైఎస్ రాజశేఖరరెడ్డి చాలా బలంగా ఉన్నారని తేల్చి చెప్పింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000350264 is 2.97065 over 179 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.536 seconds taken in nnet3 compilation total (breakdown: 0.37 compilation, 0.0728 optimization, 0 shortcut expansion, 0.0626 checking, 8.11e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+000350271 పరారయ్యే ప్రయత్నాల్లో భాగంగా ఘర్షణకు దిగిన ఉగ్రవాదులపై తమ సిబ్బంది ఆత్మరక్షణ కోసమే కాల్పులు జరిపారని పోలీసులు తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000350271 is 2.90073 over 280 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.502 seconds taken in nnet3 compilation total (breakdown: 0.337 compilation, 0.0681 optimization, 0 shortcut expansion, 0.0302 checking, 7.15e-06 computing indexes, 0.0672 misc.) + 0 I/O.
+000350280 మొహం చాటేస్తున్న బిజెపి నేతలు ఏపీకి ప్రత్యేక హోదా ఇచ్చే పరిస్థితి లేదని కేంద్రం చెప్పిన నేపథ్యంలో ఏపీ బిజెపి నేతలు కొందరు మొహం చాటేస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000350280 is 2.68463 over 329 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.451 seconds taken in nnet3 compilation total (breakdown: 0.314 compilation, 0.132 optimization, 0 shortcut expansion, 0.00184 checking, 6.2e-06 computing indexes, 0.00264 misc.) + 0 I/O.
+000350281 మీ నాన్నకు రాజకీయ భిక్ష పెట్టింది టిడిపియేనని అటు అంటూ మీ నాన్నను ఆదర్శంగా తీసుకోవద్దని సలహా ఇచ్చారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000350281 is 2.44861 over 277 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.48 seconds taken in nnet3 compilation total (breakdown: 0.382 compilation, 0.0615 optimization, 0 shortcut expansion, 0.00217 checking, 6.2e-06 computing indexes, 0.0347 misc.) + 0 I/O.
+000350326 పునర్వ్యవస్థీకరణ చట్టంలో తెలంగాణకు అప్పటి కేంద్ర ప్రభుత్వం ఇచ్చిన హామీలన్నింటినీ అమలు చేయాలని విజ్ఞప్తి చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000350326 is 2.86919 over 259 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.442 seconds taken in nnet3 compilation total (breakdown: 0.276 compilation, 0.1 optimization, 0 shortcut expansion, 0.0342 checking, 5.72e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+000350463 ముఖ్యమంత్రి ఏది చెబితే అదే రామాయణ మహాభారతమని వ్యంగ్యంగా మాట్లాడారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000350463 is 2.6372 over 168 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.611 seconds taken in nnet3 compilation total (breakdown: 0.427 compilation, 0.11 optimization, 0 shortcut expansion, 0.0342 checking, 5.96e-06 computing indexes, 0.0397 misc.) + 0 I/O.
+000360097 రాష్ట్ర రాష్ర్టానికి ప్రత్యేక నిధులు ఇచ్చామని కేంద్రం సిద్ధంగా ఉన్నానని చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000360097 is 2.05779 over 243 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.551 seconds taken in nnet3 compilation total (breakdown: 0.376 compilation, 0.0919 optimization, 0 shortcut expansion, 0.00205 checking, 6.68e-06 computing indexes, 0.0808 misc.) + 0 I/O.
+000360131 పాడేరు మండలం అరకు వాస్తవ సృష్టించిన శుక్రవారం ప్రచారం నిర్వహించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000360131 is 2.35782 over 167 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.551 seconds taken in nnet3 compilation total (breakdown: 0.37 compilation, 0.0759 optimization, 0 shortcut expansion, 0.0341 checking, 7.15e-06 computing indexes, 0.0711 misc.) + 0 I/O.
+000360155 ముందుగా భూమిపూజ చేసిన ముఖ్యమంత్రి అనంతరం రాష్ట్రపతి ఉప ముఖ్యమంత్రితో మంత్రులతో అధికారులతో కలిసి శంకుస్థాపన చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000360155 is 2.50328 over 204 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.273 seconds taken in nnet3 compilation total (breakdown: 0.179 compilation, 0.0343 optimization, 0 shortcut expansion, 0.0291 checking, 4.05e-06 computing indexes, 0.0299 misc.) + 0 I/O.
+000360178 సభాపతి కోడెల శివప్రసాద్ రావు గారు సభను పది నిమిషాల పాటు వాయిదా వేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000360178 is 2.6804 over 143 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.458 seconds taken in nnet3 compilation total (breakdown: 0.361 compilation, 0.0917 optimization, 0 shortcut expansion, 0.0021 checking, 6.91e-06 computing indexes, 0.00275 misc.) + 0 I/O.
+000360208 అతను ఎప్పుడూ మద్యం సేవించడం చలాకీగా తిరిగిన స్థానికులు తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000360208 is 2.64569 over 109 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.485 seconds taken in nnet3 compilation total (breakdown: 0.347 compilation, 0.0722 optimization, 0 shortcut expansion, 0.0343 checking, 5.96e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+000360270 సోమవారం హైదరాబాద్ లోని నిజాం కళాశాల మైదానంలో జరిగిన ఒక తెలుగు ఆత్మగౌరవ సభ సృష్టి లేదా వ్యతిరేకంగా సంకేతాలిచ్చింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000360270 is 2.45077 over 233 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.546 seconds taken in nnet3 compilation total (breakdown: 0.363 compilation, 0.146 optimization, 0 shortcut expansion, 0.00206 checking, 5.96e-06 computing indexes, 0.0354 misc.) + 0 I/O.
+000360273 ఇప్పటిదాకా ముకేష్ అంబానీ తన మనుషులను <unk> లేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000360273 is 2.53322 over 102 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.254 seconds taken in nnet3 compilation total (breakdown: 0.182 compilation, 0.0701 optimization, 0 shortcut expansion, 0.000916 checking, 3.1e-06 computing indexes, 0.00138 misc.) + 0 I/O.
+000360274 దేశంలో <unk> నిర్వహించి కోసం నగదు రహిత లావాదేవీలు ప్రతి ఒక్కరూ ప్రోత్సహించాలసిందిగా శాఖా మంత్రి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000360274 is 2.4369 over 196 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.503 seconds taken in nnet3 compilation total (breakdown: 0.373 compilation, 0.0968 optimization, 0 shortcut expansion, 0.00223 checking, 5.96e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+000360377 వాటిని ఆచరించి మరీ ఫలితాలు సాధించే ముఖ్యమంత్రి నిర్వహించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000360377 is 2.70357 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.248 seconds taken in nnet3 compilation total (breakdown: 0.183 compilation, 0.0341 optimization, 0 shortcut expansion, 0.000879 checking, 3.1e-06 computing indexes, 0.0294 misc.) + 0 I/O.
+000360465 ఇప్పుడు చంద్రబాబు చూపుతున్నట్లు ఆయన నియోజకవర్గం కాదని పూర్తిగా తర్వాత 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000360465 is 2.79747 over 162 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.552 seconds taken in nnet3 compilation total (breakdown: 0.402 compilation, 0.0764 optimization, 0 shortcut expansion, 0.0025 checking, 7.15e-06 computing indexes, 0.0713 misc.) + 0 I/O.
+000370064 కులాలకు అతీతంగా ఐక్యంగా ముందుకు రావాలని పేదలను కోరారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000370064 is 2.76762 over 145 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.52 seconds taken in nnet3 compilation total (breakdown: 0.347 compilation, 0.104 optimization, 0 shortcut expansion, 0.0339 checking, 3.81e-06 computing indexes, 0.035 misc.) + 0 I/O.
+000370080 తాజాగా తూర్పుగోదావరి జిల్లా రామచంద్రాపురంలో మరీ మరో దొంగతనంచేసి చిక్కాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000370080 is 2.8155 over 184 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.514 seconds taken in nnet3 compilation total (breakdown: 0.344 compilation, 0.101 optimization, 0 shortcut expansion, 0.0342 checking, 8.11e-06 computing indexes, 0.0352 misc.) + 0 I/O.
+000370129 రాష్ట్ర ఆర్థిక పరిస్థితిపై మహానాడులో ప్రవేశపెట్టిన తీర్మానంలో ఈ మేరకు పేర్కొంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000370129 is 2.85351 over 175 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.421 seconds taken in nnet3 compilation total (breakdown: 0.288 compilation, 0.105 optimization, 0 shortcut expansion, 0.00182 checking, 6.2e-06 computing indexes, 0.0266 misc.) + 0 I/O.
+000370162 వినతిపత్రం ఇచ్చిన వారు వారిలో సంఘం రాష్ట్ర అధ్యక్ష ప్రధాన కార్యదర్శులు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000370162 is 2.53688 over 187 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.255 seconds taken in nnet3 compilation total (breakdown: 0.186 compilation, 0.0665 optimization, 0 shortcut expansion, 0.00106 checking, 1.1e-05 computing indexes, 0.00158 misc.) + 0 I/O.
+000370169 మహిళల కోసం చిత్తశుద్ధితో పని చేస్తున్న ముఖ్యమంత్రి చంద్రబాబుపై రోజా విమర్శలు చేయడం సరికాదన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000370169 is 3.16822 over 208 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.444 seconds taken in nnet3 compilation total (breakdown: 0.31 compilation, 0.13 optimization, 0 shortcut expansion, 0.00207 checking, 4.77e-06 computing indexes, 0.00267 misc.) + 0 I/O.
+000370183 రాష్ట్ర విభజన తరువాత నవ్యాంధ్ర రాజధాని ప్రాంతంలో కేంద్ర ప్రభుత్వ సంస్థలు ఏర్పాటవుతున్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000370183 is 2.61129 over 215 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.534 seconds taken in nnet3 compilation total (breakdown: 0.389 compilation, 0.108 optimization, 0 shortcut expansion, 0.034 checking, 2.17e-05 computing indexes, 0.0029 misc.) + 0 I/O.
+000370198 చంద్రబాబును చెప్పుతో కొట్టాలని ఆయన అనంతపురం జిల్లా పర్యటనలో చేసిన వ్యాఖ్యలు దుమారం రేపుతోంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000370198 is 2.79243 over 208 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.505 seconds taken in nnet3 compilation total (breakdown: 0.36 compilation, 0.108 optimization, 0 shortcut expansion, 0.00221 checking, 4.77e-06 computing indexes, 0.0348 misc.) + 0 I/O.
+000370261 కడప జిల్లా ఒంటిమిట్ట కోదండరామాలయంలో ప్రభుత్వం తరపున ఆయన పట్టువస్త్రాలు ముత్యాల తలంబ్రాలు సమర్పించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000370261 is 2.56067 over 263 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.476 seconds taken in nnet3 compilation total (breakdown: 0.321 compilation, 0.0971 optimization, 0 shortcut expansion, 0.0547 checking, 5.96e-06 computing indexes, 0.00297 misc.) + 0 I/O.
+000370330 కనకదుర్గమ్మ గుడి సమీపంలో వాహనాల రాకపోకలను దారి మళ్లించాలని దీనికి సంబంధించిన పనులను వేగంగా చేపట్టాలని అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000370330 is 2.63416 over 269 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.515 seconds taken in nnet3 compilation total (breakdown: 0.382 compilation, 0.101 optimization, 0 shortcut expansion, 0.03 checking, 6.68e-06 computing indexes, 0.00292 misc.) + 0 I/O.
+000370390 ఈ భయానక సందేహాలు మనలో చాలా మందిలో మొదలు అవుతూనే ఉన్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000370390 is 2.62533 over 155 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.397 seconds taken in nnet3 compilation total (breakdown: 0.277 compilation, 0.115 optimization, 0 shortcut expansion, 0.00197 checking, 5.96e-06 computing indexes, 0.00237 misc.) + 0 I/O.
+000370465 ఆయన ఇటీవల చేస్తున్న ప్రకటనలు ఆ ప్రశ్నకు ఉదయించడానికి కారణం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000370465 is 2.734 over 145 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.483 seconds taken in nnet3 compilation total (breakdown: 0.347 compilation, 0.132 optimization, 0 shortcut expansion, 0.00173 checking, 5.96e-06 computing indexes, 0.00249 misc.) + 0 I/O.
+000380038 ఆగ్రహానికి గురై తన భార్యపై సలసల మరిగే నీటిని పోశాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000380038 is 3.0637 over 137 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.434 seconds taken in nnet3 compilation total (breakdown: 0.265 compilation, 0.1 optimization, 0 shortcut expansion, 0.0339 checking, 7.87e-06 computing indexes, 0.0348 misc.) + 0 I/O.
+000380057 మరో ఏడు ట్రక్కుల్లో మినరల్ వాటర్ <unk> మందులు పంపించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000380057 is 2.60461 over 138 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.431 seconds taken in nnet3 compilation total (breakdown: 0.274 compilation, 0.125 optimization, 0 shortcut expansion, 0.00188 checking, 5.72e-06 computing indexes, 0.0306 misc.) + 0 I/O.
+000380171 దేశంలో పెద్ద నోట్ల రద్దు నేపథ్యంలో ప్రజలకు ఎదురైన సమస్యలు త్వరలోనే తొలగిపోతాయని ప్రజల ఇబ్బందులను ప్రభుత్వం దృష్టికి తీసుకు వెళ్లామని చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000380171 is 2.80947 over 279 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.437 seconds taken in nnet3 compilation total (breakdown: 0.297 compilation, 0.136 optimization, 0 shortcut expansion, 0.00178 checking, 5.72e-06 computing indexes, 0.00241 misc.) + 0 I/O.
+000380178 వెంటనే ఆయనను చికిత్స నిమిత్తం స్థానిక ఆసుపత్రికి తరలించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000380178 is 3.06168 over 146 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.542 seconds taken in nnet3 compilation total (breakdown: 0.402 compilation, 0.104 optimization, 0 shortcut expansion, 0.00181 checking, 5.01e-06 computing indexes, 0.0346 misc.) + 0 I/O.
+000380232 దాదాపు అన్ని రాష్ట్రాల్లో పలు పాఠశాలలను ప్రభుత్వ కార్యాలయాలను మూసివేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000380232 is 3.13348 over 168 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.468 seconds taken in nnet3 compilation total (breakdown: 0.331 compilation, 0.133 optimization, 0 shortcut expansion, 0.00189 checking, 5.96e-06 computing indexes, 0.00267 misc.) + 0 I/O.
+000380302 తెలుగు పాటలను ఎంత తీయగా పాడగలడో ఇది పాటలు అంతంత మాత్రంగా ఆలాపించలగలడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000380302 is 2.70426 over 173 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.503 seconds taken in nnet3 compilation total (breakdown: 0.309 compilation, 0.125 optimization, 0 shortcut expansion, 0.0341 checking, 5.96e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+000380317 ఆ ఆలోచనే చాలా దూరమైనదని తన అభిప్రాయం అని చెప్పాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000380317 is 2.63858 over 145 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.492 seconds taken in nnet3 compilation total (breakdown: 0.359 compilation, 0.1 optimization, 0 shortcut expansion, 0.0019 checking, 5.96e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+000380386 ఈ సమస్యను చంద్రబాబు ఎలా పరిష్కరించుకుంటారనేది భవిష్యత్తు మాత్రమే తెలుస్తుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000380386 is 3.0019 over 183 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.507 seconds taken in nnet3 compilation total (breakdown: 0.362 compilation, 0.14 optimization, 0 shortcut expansion, 0.00175 checking, 4.77e-06 computing indexes, 0.00289 misc.) + 0 I/O.
+000380467 తెలుగు రాష్ట్రాల నుంచే హజ్ యాత్రకు వెళ్లిన ఇది ఇతరుల క్షేమ సమాచారం తెలుసుకుంటున్నామన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000380467 is 2.66669 over 189 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.367 seconds taken in nnet3 compilation total (breakdown: 0.259 compilation, 0.104 optimization, 0 shortcut expansion, 0.00191 checking, 5.96e-06 computing indexes, 0.00213 misc.) + 0 I/O.
+000380490 అలాగే ప్రత్యేక హోదా కలిగి ఉన్న అన్ని రాష్ట్రాలకు ఒకే రకమైన రాయితీ లేవు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000380490 is 2.91167 over 162 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.469 seconds taken in nnet3 compilation total (breakdown: 0.341 compilation, 0.0957 optimization, 0 shortcut expansion, 0.0299 checking, 6.91e-06 computing indexes, 0.00278 misc.) + 0 I/O.
+000390193 కార్యకర్తల అధిష్టానానికి కూడా స్పష్టమైన సంకేతాలు ఇస్తుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000390193 is 2.55362 over 164 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.514 seconds taken in nnet3 compilation total (breakdown: 0.357 compilation, 0.0679 optimization, 0 shortcut expansion, 0.0301 checking, 6.2e-06 computing indexes, 0.0593 misc.) + 0 I/O.
+000390260 నిజంగానే పనుల కోసమే చేరితే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000390260 is 2.77537 over 138 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.406 seconds taken in nnet3 compilation total (breakdown: 0.302 compilation, 0.0999 optimization, 0 shortcut expansion, 0.0021 checking, 5.96e-06 computing indexes, 0.00213 misc.) + 0 I/O.
+000390291 నిబంధనలను దిగుతున్నారని వ్యాఖ్యానించింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000390291 is 2.36911 over 162 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.468 seconds taken in nnet3 compilation total (breakdown: 0.299 compilation, 0.132 optimization, 0 shortcut expansion, 0.0342 checking, 5.25e-06 computing indexes, 0.0025 misc.) + 0 I/O.
+000390342 గురువారం సమావేశం నిర్వహించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000390342 is 2.6394 over 113 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.466 seconds taken in nnet3 compilation total (breakdown: 0.32 compilation, 0.0733 optimization, 0 shortcut expansion, 0.042 checking, 6.2e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+000390352 ఈ సమావేశంలో అధికారులకు సూచించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000390352 is 2.88642 over 114 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.499 seconds taken in nnet3 compilation total (breakdown: 0.33 compilation, 0.0721 optimization, 0 shortcut expansion, 0.0661 checking, 5.96e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+000390366 అందులోనే తరగతి అక్కడి తెలుగు విభాగం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000390366 is 2.43309 over 121 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.413 seconds taken in nnet3 compilation total (breakdown: 0.251 compilation, 0.0965 optimization, 0 shortcut expansion, 0.0341 checking, 5.96e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+000390480 అదేమంటే మీ ఇష్టం పేదలపై దాడికి దిగారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000390480 is 2.65853 over 137 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.428 seconds taken in nnet3 compilation total (breakdown: 0.283 compilation, 0.0759 optimization, 0 shortcut expansion, 0.00212 checking, 5.01e-06 computing indexes, 0.0668 misc.) + 0 I/O.
+000390488 అయితే గాయాలైన చికిత్స పొందుతున్నారని అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000390488 is 2.56616 over 129 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.446 seconds taken in nnet3 compilation total (breakdown: 0.324 compilation, 0.117 optimization, 0 shortcut expansion, 0.00192 checking, 6.2e-06 computing indexes, 0.00239 misc.) + 0 I/O.
+000400003 కాళోజీ పేరిట ఓ విశ్వవిద్యాలయం ముందు ముందు పెడతామన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000400003 is 2.59571 over 143 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.298 compilation, 0.0711 optimization, 0 shortcut expansion, 0.0299 checking, 5.96e-06 computing indexes, 0.027 misc.) + 0 I/O.
+000400070 ప్రస్తుతం ఇబ్బందులు లేవని అంతా బాగానే ఉందని తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000400070 is 3.04995 over 121 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.425 seconds taken in nnet3 compilation total (breakdown: 0.296 compilation, 0.0721 optimization, 0 shortcut expansion, 0.0303 checking, 6.2e-06 computing indexes, 0.0266 misc.) + 0 I/O.
+000400170 నా తల్లి పార్వతమ్మ సోదరుడు రాజేష్ నాకు ఎప్పుడు అండగా ఉన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000400170 is 2.82229 over 136 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.231 seconds taken in nnet3 compilation total (breakdown: 0.166 compilation, 0.062 optimization, 0 shortcut expansion, 0.000872 checking, 2.86e-06 computing indexes, 0.00128 misc.) + 0 I/O.
+000400195 కాగా తాము బలవంతంగా ఎవరి నుంచి భూములు లాక్కోవట్లేదని తెలంగాణ ప్రభుత్వం స్పష్టం చేసింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000400195 is 3.07941 over 182 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.502 seconds taken in nnet3 compilation total (breakdown: 0.361 compilation, 0.104 optimization, 0 shortcut expansion, 0.0343 checking, 8.11e-06 computing indexes, 0.00279 misc.) + 0 I/O.
+000400225 అయితే కాలక్రమంలో తన ప్రాచుర్యాన్ని కోల్పోతూ వచ్చింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000400225 is 2.86341 over 136 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.281 seconds taken in nnet3 compilation total (breakdown: 0.175 compilation, 0.071 optimization, 0 shortcut expansion, 0.00104 checking, 4.05e-06 computing indexes, 0.034 misc.) + 0 I/O.
+000400339 విజయవాడలోని ప్రభుత్వ అతిథి గృహంలో సోమవారం ఆయన విలేకరుల సమావేశంలో మాట్లాడారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000400339 is 3.06636 over 188 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.41 seconds taken in nnet3 compilation total (breakdown: 0.233 compilation, 0.0765 optimization, 0 shortcut expansion, 0.0665 checking, 6.91e-06 computing indexes, 0.0347 misc.) + 0 I/O.
+000400341 ద్వైపాక్షిక సంబంధాలను మెరుగుపర్చుకునేందుకు గతంలో తీవ్రమైన ప్రయత్నాలు జరిగాయని <unk> చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000400341 is 2.85208 over 215 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.465 seconds taken in nnet3 compilation total (breakdown: 0.335 compilation, 0.125 optimization, 0 shortcut expansion, 0.00191 checking, 1.69e-05 computing indexes, 0.00278 misc.) + 0 I/O.
+000400343 కాగా ఘటనను తీవ్రంగా పరిగణించిన <unk> ప్రభుత్వం చర్యలకు ఆదేశించింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000400343 is 3.04193 over 164 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.496 seconds taken in nnet3 compilation total (breakdown: 0.362 compilation, 0.105 optimization, 0 shortcut expansion, 0.0261 checking, 7.87e-06 computing indexes, 0.0027 misc.) + 0 I/O.
+000400404 రాజు తలుచుకుంటే దెబ్బలకు కొదవా అని ఊరికే అనలేదు కదా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000400404 is 3.04511 over 128 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.455 seconds taken in nnet3 compilation total (breakdown: 0.323 compilation, 0.128 optimization, 0 shortcut expansion, 0.00207 checking, 5.96e-06 computing indexes, 0.00253 misc.) + 0 I/O.
+000400454 రాజకీయ సామాజిక రక్షణ వేదిక ఆధ్వర్యంలో నగరంలో శుక్రవారం ర్యాలీ నిర్వహించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000400454 is 2.84979 over 178 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.457 seconds taken in nnet3 compilation total (breakdown: 0.321 compilation, 0.104 optimization, 0 shortcut expansion, 0.0298 checking, 5.96e-06 computing indexes, 0.00248 misc.) + 0 I/O.
+000400464 వ్యవసాయం పైనే తమ కుటుంబం ఆధారపడి ఉందని తమ భూములను తీసుకుంటే తాము జీవనోపాధి కోల్పోతామనిఆమె అంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000400464 is 3.14355 over 216 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.545 seconds taken in nnet3 compilation total (breakdown: 0.397 compilation, 0.112 optimization, 0 shortcut expansion, 0.00177 checking, 7.15e-06 computing indexes, 0.0347 misc.) + 0 I/O.
+000400488 అయితే ఈ ఘటనలో తీవ్రంగా గాయపడిన పురోహితుడు ఆసుపత్రిలో చికిత్స పొందుతున్నాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000400488 is 2.97571 over 154 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.397 seconds taken in nnet3 compilation total (breakdown: 0.27 compilation, 0.123 optimization, 0 shortcut expansion, 0.00175 checking, 5.96e-06 computing indexes, 0.00203 misc.) + 0 I/O.
+000410008 ఉద్యోగుల బదిలీలపై నిషేధాన్ని సడలిస్తూ ప్రభుత్వం ఉత్తర్వులు జారీ చేసింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410008 is 3.05395 over 168 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.488 seconds taken in nnet3 compilation total (breakdown: 0.352 compilation, 0.0955 optimization, 0 shortcut expansion, 0.0379 checking, 5.96e-06 computing indexes, 0.00263 misc.) + 0 I/O.
+000410030 నేపాల్ ఉన్నతాధికారులతో చర్చల అనంతరం ఆ దేశ ప్రధాని ప్రచండ ఈ నిర్ణయం తీసుకున్నట్టుగా సమాచారం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410030 is 3.08809 over 206 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.404 seconds taken in nnet3 compilation total (breakdown: 0.272 compilation, 0.0998 optimization, 0 shortcut expansion, 0.03 checking, 5.96e-06 computing indexes, 0.00233 misc.) + 0 I/O.
+000410034 నంద్యాల నియోజకవర్గానికి భూమా నాగిరెడ్డి విశేష సేవలందించారని ఈ సందర్భంగా బాలకృష్ణ కొనియాడారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410034 is 2.99651 over 222 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.47 seconds taken in nnet3 compilation total (breakdown: 0.301 compilation, 0.076 optimization, 0 shortcut expansion, 0.034 checking, 5.25e-06 computing indexes, 0.0588 misc.) + 0 I/O.
+000410035 ఇద్దరు ముఖ్యమంత్రులు కూడా వ్యక్తిగత లాభాల కోసమే పాకులాడుతున్నారని అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410035 is 3.02279 over 166 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.54 seconds taken in nnet3 compilation total (breakdown: 0.367 compilation, 0.108 optimization, 0 shortcut expansion, 0.0301 checking, 6.2e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+000410085 ఆసుపత్రిలో చికిత్స పొందుతున్న కుమారస్వామి సోమవారం తెల్లవారుజామున మృతి చెందాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410085 is 3.06139 over 181 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.511 seconds taken in nnet3 compilation total (breakdown: 0.359 compilation, 0.148 optimization, 0 shortcut expansion, 0.00173 checking, 6.2e-06 computing indexes, 0.00247 misc.) + 0 I/O.
+000410164 పుష్కరాలపై వివిధ మార్గాల ద్వారా పర్యవేక్షణ చేపడుతున్నామని అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410164 is 2.95023 over 154 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.393 seconds taken in nnet3 compilation total (breakdown: 0.236 compilation, 0.124 optimization, 0 shortcut expansion, 0.00181 checking, 5.72e-06 computing indexes, 0.0304 misc.) + 0 I/O.
+000410224 ఇవాన్స్ ఆత్మకథలోని ఈ విషయాలను ఒక ఆంగ్ల పత్రిక ప్రచురించింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410224 is 2.69131 over 206 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.448 seconds taken in nnet3 compilation total (breakdown: 0.296 compilation, 0.0835 optimization, 0 shortcut expansion, 0.038 checking, 5.72e-06 computing indexes, 0.0305 misc.) + 0 I/O.
+000410233 మరోవైపు తన వ్యాఖ్యల పైన తప్పుగా ప్రచారం చేశారని చంద్రబాబు చెప్పినట్లుగా కూడా తెలుస్తుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410233 is 2.87807 over 235 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.52 seconds taken in nnet3 compilation total (breakdown: 0.386 compilation, 0.129 optimization, 0 shortcut expansion, 0.00221 checking, 6.2e-06 computing indexes, 0.0028 misc.) + 0 I/O.
+000410286 ఖమ్మం జిల్లాలోని ఏడు మండలాలను గుంజుకున్నది చంద్రబాబు గుంజించినవాడు వెంకయ్య నాయుడు అని ఆయన అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410286 is 2.74596 over 248 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.316 compilation, 0.0957 optimization, 0 shortcut expansion, 0.00209 checking, 7.87e-06 computing indexes, 0.035 misc.) + 0 I/O.
+000410321 గ్రామాల్లో ఉన్న వివక్ష విశ్వ విద్యాలయాలకు చేరితే ప్రజలకు ఇక రక్షణ ఏమిటని ప్రశ్నించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410321 is 2.67567 over 195 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.505 seconds taken in nnet3 compilation total (breakdown: 0.364 compilation, 0.1 optimization, 0 shortcut expansion, 0.00188 checking, 5.96e-06 computing indexes, 0.0387 misc.) + 0 I/O.
+000410369 సమావేశాలు ఎంతో పద్ధతిగా సాగుతున్నాయని నారా లోకేష్ తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410369 is 2.58381 over 148 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.454 seconds taken in nnet3 compilation total (breakdown: 0.3 compilation, 0.149 optimization, 0 shortcut expansion, 0.00196 checking, 7.15e-06 computing indexes, 0.00253 misc.) + 0 I/O.
+000410384 ఖమ్మం జిల్లాకు చెందిన ఓ వ్యక్తి కోడి పందేలు జరిగే చోటుకు వచ్చాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410384 is 3.00191 over 149 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.487 seconds taken in nnet3 compilation total (breakdown: 0.354 compilation, 0.0997 optimization, 0 shortcut expansion, 0.0303 checking, 6.2e-06 computing indexes, 0.00257 misc.) + 0 I/O.
+000410467 బాధ్యతలు స్వీకరించిన సోమిరెడ్డి సోమిరెడ్డి చంద్రమోహన్ రెడ్డి గురువారం మంత్రిగా బాధ్యతలు చేపట్టారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000410467 is 3.05292 over 214 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.47 seconds taken in nnet3 compilation total (breakdown: 0.305 compilation, 0.105 optimization, 0 shortcut expansion, 0.0301 checking, 6.2e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+000420003 అలా వెళ్లిపోయిన భార్యను పెద్దల సమక్షంలో ఒప్పందం చేసుకుని తీసుకుని వచ్చాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420003 is 2.67474 over 193 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.46 seconds taken in nnet3 compilation total (breakdown: 0.308 compilation, 0.148 optimization, 0 shortcut expansion, 0.00165 checking, 5.96e-06 computing indexes, 0.00239 misc.) + 0 I/O.
+000420065 ఈనాటి తరానికి హైదరాబాద్ చరిత్రను తెలేపాల్సి అవసరముందన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420065 is 2.35391 over 160 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.46 seconds taken in nnet3 compilation total (breakdown: 0.3 compilation, 0.0994 optimization, 0 shortcut expansion, 0.026 checking, 6.91e-06 computing indexes, 0.0348 misc.) + 0 I/O.
+000420116 రాజకీయాల్లో మచ్చలేని నేతగా గుర్తింపు పొందిన యడ్లపాటి వెంకట్రావు జన్మదిన వేడుకల్లో పాల్గొని ఆయన ఆశీర్వాదం తీసుకొవడం అదృష్టంగా పేర్కొన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420116 is 2.68465 over 354 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.476 seconds taken in nnet3 compilation total (breakdown: 0.31 compilation, 0.105 optimization, 0 shortcut expansion, 0.00192 checking, 8.11e-06 computing indexes, 0.0594 misc.) + 0 I/O.
+000420187 ఆమె తలపై కర్రలతో బలమైన గాయమైంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420187 is 2.5842 over 231 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.478 seconds taken in nnet3 compilation total (breakdown: 0.309 compilation, 0.1 optimization, 0 shortcut expansion, 0.0379 checking, 7.15e-06 computing indexes, 0.031 misc.) + 0 I/O.
+000420294 రైతులకు రాజధానికి ఇవ్వడం ఇష్టం లేదని వారికి ఇబ్బందులు అని అభిప్రాయపడ్డారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420294 is 2.45586 over 285 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.506 seconds taken in nnet3 compilation total (breakdown: 0.372 compilation, 0.0684 optimization, 0 shortcut expansion, 0.00202 checking, 5.96e-06 computing indexes, 0.0633 misc.) + 0 I/O.
+000420297 వారు ఏ కులం వారు తెలుసుకోవడం కూడా కష్టంగా ఉందని అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420297 is 2.4224 over 149 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.532 seconds taken in nnet3 compilation total (breakdown: 0.358 compilation, 0.137 optimization, 0 shortcut expansion, 0.00187 checking, 6.91e-06 computing indexes, 0.0351 misc.) + 0 I/O.
+000420301 జనసేన అధినేత పవన్ కళ్యాణ్ రాజధాని ప్రాంతంలో పర్యటించి భూ సేకరణ విధానం పై విమర్శలు గుప్పించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420301 is 2.42565 over 345 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.289 compilation, 0.133 optimization, 0 shortcut expansion, 0.00189 checking, 5.96e-06 computing indexes, 0.00238 misc.) + 0 I/O.
+000420343 ప్రణబ్ ముఖర్జీ ఢిల్లీలో ఉన్నత స్థాయి సమావేశం ఏర్పాటు చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420343 is 2.57593 over 156 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.402 seconds taken in nnet3 compilation total (breakdown: 0.269 compilation, 0.0961 optimization, 0 shortcut expansion, 0.0341 checking, 5.96e-06 computing indexes, 0.00228 misc.) + 0 I/O.
+000420345 అతడి ఊహా చిత్రాన్ని విడుదల చేసి పలువురు అనుమానితులను అదుపులోకి తీసుకున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420345 is 2.76651 over 202 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.522 seconds taken in nnet3 compilation total (breakdown: 0.349 compilation, 0.107 optimization, 0 shortcut expansion, 0.0301 checking, 1.6e-05 computing indexes, 0.035 misc.) + 0 I/O.
+000420365 ఏమైనా రాబోవు కాలంలో ఏం జరుగుతుందో జగన్ విషయంలో చెప్పలేని పరిస్థితే ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420365 is 2.43346 over 212 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.289 compilation, 0.0997 optimization, 0 shortcut expansion, 0.0339 checking, 6.91e-06 computing indexes, 0.00265 misc.) + 0 I/O.
+000420400 ఇక మీ వెనుక ఎవరు ఉండాల్సిన పని లేదన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420400 is 2.50952 over 127 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.474 seconds taken in nnet3 compilation total (breakdown: 0.345 compilation, 0.125 optimization, 0 shortcut expansion, 0.00182 checking, 7.15e-06 computing indexes, 0.00256 misc.) + 0 I/O.
+000420434 ఆయన సమయం కోసం వేచి చూస్తున్నారనే అభిప్రాయం కలుగుతోంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420434 is 2.59672 over 177 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.462 seconds taken in nnet3 compilation total (breakdown: 0.321 compilation, 0.137 optimization, 0 shortcut expansion, 0.00185 checking, 6.91e-06 computing indexes, 0.00248 misc.) + 0 I/O.
+000420453 ఆరోపణలు ఎదుర్కొంటున్న స్వామి నిత్యానంద గుర్రపు స్వారీ చేస్తూ గాయపడ్డారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000420453 is 2.49936 over 223 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.39 seconds taken in nnet3 compilation total (breakdown: 0.266 compilation, 0.12 optimization, 0 shortcut expansion, 0.0018 checking, 4.77e-06 computing indexes, 0.00232 misc.) + 0 I/O.
+000430026 అక్కడ నుంచి వేదిక దగ్గర ఏర్పాటు చేసిన సాంస్కృతిక కార్యక్రమాలను తిలకించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000430026 is 2.59858 over 191 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.44 seconds taken in nnet3 compilation total (breakdown: 0.306 compilation, 0.129 optimization, 0 shortcut expansion, 0.00197 checking, 7.63e-06 computing indexes, 0.00269 misc.) + 0 I/O.
+000430065 సంచలన వ్యాఖ్యలు చేసింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000430065 is 2.46215 over 107 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.399 seconds taken in nnet3 compilation total (breakdown: 0.263 compilation, 0.0753 optimization, 0 shortcut expansion, 0.058 checking, 6.91e-06 computing indexes, 0.00247 misc.) + 0 I/O.
+000430105 ఆటగాళ్లను ఎంపిక చేశాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000430105 is 2.52874 over 96 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.43 seconds taken in nnet3 compilation total (breakdown: 0.309 compilation, 0.0919 optimization, 0 shortcut expansion, 0.002 checking, 6.2e-06 computing indexes, 0.0269 misc.) + 0 I/O.
+000430169 సమాలోచనలు జరిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000430169 is 2.22711 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.43 seconds taken in nnet3 compilation total (breakdown: 0.302 compilation, 0.124 optimization, 0 shortcut expansion, 0.00201 checking, 1.41e-05 computing indexes, 0.00235 misc.) + 0 I/O.
+000430236 అధిక ప్రాధాన్యం ఇచ్చిందని విమర్శించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000430236 is 2.3114 over 155 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.401 seconds taken in nnet3 compilation total (breakdown: 0.263 compilation, 0.0682 optimization, 0 shortcut expansion, 0.0382 checking, 8.11e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+000430283 తాగునీరు వంటి ఏర్పాట్లు సక్రమంగా ఉన్నాయన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000430283 is 2.66406 over 166 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.571 seconds taken in nnet3 compilation total (breakdown: 0.405 compilation, 0.129 optimization, 0 shortcut expansion, 0.00189 checking, 7.15e-06 computing indexes, 0.0351 misc.) + 0 I/O.
+000430342 ఇప్పటికే రాష్ట్రంలో వర్షాభావ పరిస్థితులు తీవ్ర రూపం దాల్చడంతో 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000430342 is 2.50413 over 174 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.408 seconds taken in nnet3 compilation total (breakdown: 0.279 compilation, 0.0678 optimization, 0 shortcut expansion, 0.0302 checking, 4.29e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+000430355 చంద్రబాబు రాష్ట్ర ప్రయోజనాలను 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000430355 is 2.6019 over 108 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.393 seconds taken in nnet3 compilation total (breakdown: 0.264 compilation, 0.0998 optimization, 0 shortcut expansion, 0.0019 checking, 1.31e-05 computing indexes, 0.0266 misc.) + 0 I/O.
+000430470 దీంతో ప్రజాభిప్రాయ సేకరణలో పాల్గొన్న రైతులు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000430470 is 2.41636 over 144 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.502 seconds taken in nnet3 compilation total (breakdown: 0.319 compilation, 0.0932 optimization, 0 shortcut expansion, 0.0301 checking, 7.15e-06 computing indexes, 0.0594 misc.) + 0 I/O.
+000440094 స్మృతి ఇరానీ దేశంలో రోజురోజుకు పెరుగుతున్న ఒత్తిడి అని పేర్కొంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440094 is 2.53409 over 184 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.534 seconds taken in nnet3 compilation total (breakdown: 0.376 compilation, 0.125 optimization, 0 shortcut expansion, 0.00189 checking, 7.15e-06 computing indexes, 0.031 misc.) + 0 I/O.
+000440137 అయితే రైతుకు సంబంధించిన అన్ని వివరాలు <unk> అయిందని అధికారులు అంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440137 is 2.51614 over 181 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.493 seconds taken in nnet3 compilation total (breakdown: 0.338 compilation, 0.0971 optimization, 0 shortcut expansion, 0.0264 checking, 7.15e-06 computing indexes, 0.0312 misc.) + 0 I/O.
+000440145 ప్రస్తుత ఆర్థిక సంవత్సరం ముగిసే సరికి ఏకంగా రూ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440145 is 2.36386 over 113 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.482 seconds taken in nnet3 compilation total (breakdown: 0.357 compilation, 0.121 optimization, 0 shortcut expansion, 0.00189 checking, 6.91e-06 computing indexes, 0.00265 misc.) + 0 I/O.
+000440209 అనంతరం రంజీ సీజన్ మొదలు తెలిపాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440209 is 2.48971 over 122 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.421 seconds taken in nnet3 compilation total (breakdown: 0.304 compilation, 0.0876 optimization, 0 shortcut expansion, 0.0021 checking, 6.2e-06 computing indexes, 0.0267 misc.) + 0 I/O.
+000440215 నెల రోజుల్లో ఇద్దరు తెలుగువారు బలి కావడం బాధాకరమన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440215 is 2.45351 over 166 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.469 seconds taken in nnet3 compilation total (breakdown: 0.332 compilation, 0.132 optimization, 0 shortcut expansion, 0.00182 checking, 8.11e-06 computing indexes, 0.00277 misc.) + 0 I/O.
+000440235 అప్పటి హైదరాబాద్ రాష్ట్రం భారత్ లో విలీనం కావడానికి మారు రావాల్సి ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440235 is 2.36409 over 165 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.513 seconds taken in nnet3 compilation total (breakdown: 0.372 compilation, 0.104 optimization, 0 shortcut expansion, 0.00193 checking, 8.11e-06 computing indexes, 0.0348 misc.) + 0 I/O.
+000440236 పిన్ కోతలు వికలాంగులు వృద్ధులు ఇబ్బందులు పడుతున్నారని ఆయన అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440236 is 2.20125 over 196 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.481 seconds taken in nnet3 compilation total (breakdown: 0.345 compilation, 0.132 optimization, 0 shortcut expansion, 0.00179 checking, 5.72e-06 computing indexes, 0.00244 misc.) + 0 I/O.
+000440238 తెలంగాణ రాష్ట్రం ఏర్పాటుకు సుధాకర్ రెడ్డి చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440238 is 2.32762 over 154 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.398 seconds taken in nnet3 compilation total (breakdown: 0.262 compilation, 0.0716 optimization, 0 shortcut expansion, 0.00204 checking, 5.96e-06 computing indexes, 0.0627 misc.) + 0 I/O.
+000440251 అయితే చిరంజీవి మంత్రిపదవి ఉప ఎన్నికలు ప్రారంభమైన అవకాశాలు మరికొందరు అంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440251 is 2.48078 over 217 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.525 seconds taken in nnet3 compilation total (breakdown: 0.339 compilation, 0.112 optimization, 0 shortcut expansion, 0.0339 checking, 5.96e-06 computing indexes, 0.0395 misc.) + 0 I/O.
+000440306 భవిష్యత్తును దృష్టిలో పెట్టుకొని విద్యార్థుల ఆందోళన ఆయన కోరారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440306 is 2.49088 over 143 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.46 seconds taken in nnet3 compilation total (breakdown: 0.302 compilation, 0.0966 optimization, 0 shortcut expansion, 0.00201 checking, 7.15e-06 computing indexes, 0.059 misc.) + 0 I/O.
+000440344 రాజధాని ప్రాంతాల్లో పరిస్థితి మరీ దారుణం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440344 is 2.39279 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.281 seconds taken in nnet3 compilation total (breakdown: 0.212 compilation, 0.0381 optimization, 0 shortcut expansion, 0.00117 checking, 3.1e-06 computing indexes, 0.0297 misc.) + 0 I/O.
+000440361 కృష్ణా రెడ్డి ప్రస్తుతం కొండారెడ్డిపల్లిలో నివసిస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440361 is 2.36038 over 142 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.504 seconds taken in nnet3 compilation total (breakdown: 0.318 compilation, 0.0801 optimization, 0 shortcut expansion, 0.0342 checking, 6.2e-06 computing indexes, 0.0712 misc.) + 0 I/O.
+000440383 తిరిగి విచారణ జరిపించేలా విజ్ఞప్తి చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440383 is 2.64184 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.271 seconds taken in nnet3 compilation total (breakdown: 0.194 compilation, 0.0743 optimization, 0 shortcut expansion, 0.00086 checking, 2.86e-06 computing indexes, 0.00143 misc.) + 0 I/O.
+000440400 రాష్ట్రంలో సమస్యలు ఉండగా వాతావరణ పూర్తిగా మార్చే శక్తి తీసుకోవాలని సూచించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440400 is 2.32433 over 182 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.506 seconds taken in nnet3 compilation total (breakdown: 0.332 compilation, 0.0965 optimization, 0 shortcut expansion, 0.00181 checking, 5.25e-06 computing indexes, 0.0754 misc.) + 0 I/O.
+000440458 వరకు ప్రజలు ఇళ్లలో నుంచి బయటకు రావడానికి హెచ్చరించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000440458 is 2.62786 over 146 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.468 seconds taken in nnet3 compilation total (breakdown: 0.317 compilation, 0.117 optimization, 0 shortcut expansion, 0.00202 checking, 6.91e-06 computing indexes, 0.0312 misc.) + 0 I/O.
+000450004 పేరం నాగిరెడ్డి అంటే తనకు ఎంతో అభిమానం ఉందన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000450004 is 2.78309 over 124 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.498 seconds taken in nnet3 compilation total (breakdown: 0.305 compilation, 0.116 optimization, 0 shortcut expansion, 0.046 checking, 7.87e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+000450016 భారీ వర్షాలు పడితే చెరువుల కట్టలు తెగే ప్రమాదం ఉందని ఆయన హెచ్చరించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000450016 is 2.76714 over 170 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.264 seconds taken in nnet3 compilation total (breakdown: 0.191 compilation, 0.0702 optimization, 0 shortcut expansion, 0.00096 checking, 2.86e-06 computing indexes, 0.00139 misc.) + 0 I/O.
+000450027 ప్రజలకు సేవ చేయాల్సినప్పుడు ఎవరికీ భయపడాల్సిన అవసరం లేదని స్పష్టం చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000450027 is 2.80162 over 169 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.496 seconds taken in nnet3 compilation total (breakdown: 0.357 compilation, 0.134 optimization, 0 shortcut expansion, 0.002 checking, 5.72e-06 computing indexes, 0.00297 misc.) + 0 I/O.
+000450054 అన్ని వర్గాల ప్రజల అవసరాలను తీర్చే విధంగా ఈ కేంద్రాన్ని ఏర్పాటు చేశామని చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000450054 is 2.75273 over 201 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.55 seconds taken in nnet3 compilation total (breakdown: 0.384 compilation, 0.1 optimization, 0 shortcut expansion, 0.00212 checking, 6.2e-06 computing indexes, 0.0632 misc.) + 0 I/O.
+000450062 మరోవైపు వెలగపూడిలో నిర్మిస్తున్న తాత్కాలిక సచివాలయ నిర్మాణానికి ఎంతో ప్రతిష్ఠాత్మకంగా తీసుకున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000450062 is 2.30781 over 282 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.46 seconds taken in nnet3 compilation total (breakdown: 0.315 compilation, 0.14 optimization, 0 shortcut expansion, 0.00177 checking, 5.96e-06 computing indexes, 0.00263 misc.) + 0 I/O.
+000450064 రాత్రి సమయంలో అటవీ సరిహద్దు గ్రామాల్లో పంట పొలాలపై దాడులు చేస్తూ పగటిపూట శేషాచలం అడవుల్లో సేదతీరుతున్నరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000450064 is 2.28491 over 303 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.542 seconds taken in nnet3 compilation total (breakdown: 0.401 compilation, 0.136 optimization, 0 shortcut expansion, 0.00184 checking, 5.96e-06 computing indexes, 0.00254 misc.) + 0 I/O.
+000450161 కడప నగర శివారు ప్రాంతంలో లోంచి చింతకొమ్మదిన్నె మండలం నాయనోరిపల్లిలో ఐదు రోజుల నుండి రాత్రివేళలో ఆకస్మిక నేల మీద గుంతలు ఏర్పడుతున్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000450161 is 2.16356 over 397 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.502 seconds taken in nnet3 compilation total (breakdown: 0.321 compilation, 0.0757 optimization, 0 shortcut expansion, 0.0381 checking, 6.91e-06 computing indexes, 0.0671 misc.) + 0 I/O.
+000450206 గురువారం రాత్రి తన కార్యాలయంలో పుష్కరాల ఏర్పాట్లపై వివిధ ప్రభుత్వ శాఖల అధికారులతో ఆయన సమీక్ష నిర్వహించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000450206 is 2.67696 over 246 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.489 seconds taken in nnet3 compilation total (breakdown: 0.355 compilation, 0.129 optimization, 0 shortcut expansion, 0.00212 checking, 5.96e-06 computing indexes, 0.00278 misc.) + 0 I/O.
+000450251 యాత్రికులు రాష్ట్రానికి సురక్షితంగా తీసుకొచ్చేందుకు అన్ని చర్యలు తీసుకోవాలని ఆంధ్రప్రదేశ్ ముఖ్యమంత్రి నారా చంద్రబాబు నాయుడు శుక్రవారం సాయంత్రం ఢిల్లీలోని ఆంధ్రప్రదేశ్ భవన్ అధికారులను ఆదేశించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000450251 is 2.52422 over 433 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.463 seconds taken in nnet3 compilation total (breakdown: 0.325 compilation, 0.133 optimization, 0 shortcut expansion, 0.00204 checking, 6.68e-06 computing indexes, 0.0029 misc.) + 0 I/O.
+000450472 చంద్రశేఖర రావుపై విమర్శలు చేయడానికి ప్రతిపక్షాలకు అస్త్రంగా పనికి వచ్చింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000450472 is 2.51846 over 211 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.478 seconds taken in nnet3 compilation total (breakdown: 0.349 compilation, 0.124 optimization, 0 shortcut expansion, 0.00211 checking, 7.15e-06 computing indexes, 0.00262 misc.) + 0 I/O.
+000450481 ఇక్కడ నివసించే వారికి అన్ని సౌకర్యాలు అత్యుత్తమంగా ఉన్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000450481 is 2.57418 over 117 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.616 seconds taken in nnet3 compilation total (breakdown: 0.422 compilation, 0.109 optimization, 0 shortcut expansion, 0.0299 checking, 5.96e-06 computing indexes, 0.0554 misc.) + 0 I/O.
+000450492 పంట సంజీవని కుంటల తవ్వకాలలో శ్రీకాకుళం జిల్లా చాలా వెనుకబడి ఉందన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000450492 is 2.37488 over 197 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.525 seconds taken in nnet3 compilation total (breakdown: 0.351 compilation, 0.141 optimization, 0 shortcut expansion, 0.00209 checking, 5.96e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+000460013 ఒకటి దేశాల కారణం బలరాం కూడా వేదిక దీన్ని కార్యకర్తలను అదుపు చేసి అదుపు చేసే ప్రయత్నం చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000460013 is 2.26082 over 321 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.536 seconds taken in nnet3 compilation total (breakdown: 0.391 compilation, 0.141 optimization, 0 shortcut expansion, 0.00186 checking, 5.96e-06 computing indexes, 0.00269 misc.) + 0 I/O.
+000460206 ఈ సందర్భంగా సోమవారం చెన్నకేశ్వర స్వామి వారి ఆలయంలో పూజలు చేసేందుకు వస్తువుల జగన్ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000460206 is 2.23811 over 255 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.299 seconds taken in nnet3 compilation total (breakdown: 0.218 compilation, 0.0785 optimization, 0 shortcut expansion, 0.00105 checking, 4.05e-06 computing indexes, 0.0016 misc.) + 0 I/O.
+000460373 ఈ ఏడాది స్థాయి అద్భుత ప్రదర్శన చేస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000460373 is 1.85534 over 224 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.443 seconds taken in nnet3 compilation total (breakdown: 0.307 compilation, 0.132 optimization, 0 shortcut expansion, 0.00182 checking, 6.2e-06 computing indexes, 0.0023 misc.) + 0 I/O.
+000460398 పులివెందలలో పులివెందలలో వారు హాజరు కాలేరు కాలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000460398 is 2.32249 over 213 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.457 seconds taken in nnet3 compilation total (breakdown: 0.325 compilation, 0.0676 optimization, 0 shortcut expansion, 0.034 checking, 6.68e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+000470008 మఠం లో జరుగుతున్న వ్యవహారాలను త్వరలో బయటపెడతానని ఆయన ఇటీవల పత్రికలకు ఎక్కిన కొన్ని రోజుల్లోనే ఆయన హత్య జరిగింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000470008 is 2.73888 over 270 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.549 seconds taken in nnet3 compilation total (breakdown: 0.359 compilation, 0.0724 optimization, 0 shortcut expansion, 0.034 checking, 5.96e-06 computing indexes, 0.0838 misc.) + 0 I/O.
+000470066 కొందరు ఆరోగ్య పరిస్థితికి చలించిపోయిన <unk> కంటతడి పెట్టుకోవడం గమనార్హం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000470066 is 2.59664 over 176 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.444 seconds taken in nnet3 compilation total (breakdown: 0.303 compilation, 0.136 optimization, 0 shortcut expansion, 0.00174 checking, 4.77e-06 computing indexes, 0.00249 misc.) + 0 I/O.
+000470086 మానసిక ఒత్తిడికి గురైన ఆయన సోమవారం సాయంత్రం ఇంట్లో ఎవరూ లేని సమయంలో ఉరేసుకుని ఆత్మహత్య చేసుకున్నాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000470086 is 2.99597 over 183 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.518 seconds taken in nnet3 compilation total (breakdown: 0.361 compilation, 0.153 optimization, 0 shortcut expansion, 0.00193 checking, 6.91e-06 computing indexes, 0.00268 misc.) + 0 I/O.
+000470160 ఆయనను మంత్రివర్గంలోకి తీసుకుంటారనే ఊహాగానాలు కొద్ది రోజులుగా వినిపిస్తున్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000470160 is 2.80637 over 139 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.462 seconds taken in nnet3 compilation total (breakdown: 0.313 compilation, 0.108 optimization, 0 shortcut expansion, 0.00204 checking, 6.68e-06 computing indexes, 0.0386 misc.) + 0 I/O.
+000470170 ఇంతలో అక్కడికి వచ్చిన గౌస్ అనే వ్యక్తి తమ ఇంట్లోకి నటి ఇంట్లోకి <unk> ఇంటి తలుపులకు గడియ పెట్టినట్లు చెప్పడం కూడా తెలిసిందే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000470170 is 2.34963 over 248 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.443 seconds taken in nnet3 compilation total (breakdown: 0.314 compilation, 0.096 optimization, 0 shortcut expansion, 0.00192 checking, 8.11e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+000470220 ప్రథమ చికిత్స కోసం ప్రాథమిక ఆరోగ్య కేంద్రానికి తరలించగా అప్పటికే మృతి చెందినట్లు వైద్యులు తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000470220 is 2.85332 over 173 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.46 seconds taken in nnet3 compilation total (breakdown: 0.317 compilation, 0.0709 optimization, 0 shortcut expansion, 0.00204 checking, 5.72e-06 computing indexes, 0.0708 misc.) + 0 I/O.
+000470245 గత నెల రోజులుగా వివిధ రూపాల్లో ఆందోళనలు చేస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000470245 is 2.71379 over 110 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.512 seconds taken in nnet3 compilation total (breakdown: 0.365 compilation, 0.142 optimization, 0 shortcut expansion, 0.00226 checking, 5.01e-06 computing indexes, 0.0027 misc.) + 0 I/O.
+000470260 ఈ సమావేశంలో వివిధ రాష్ట్రాలకు చెందిన ముఖ్యమంత్రులు అధికారులు పాల్గొన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000470260 is 2.93556 over 137 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.459 seconds taken in nnet3 compilation total (breakdown: 0.307 compilation, 0.0755 optimization, 0 shortcut expansion, 0.03 checking, 1.31e-05 computing indexes, 0.0465 misc.) + 0 I/O.
+000470280 అనంతరం ఇరు దేశాల ప్రధానులు ఒకరు జట్టుకు మరొకరు సంక్రాంతి శుభాకాంక్షలు చెప్పుకున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000470280 is 2.44927 over 166 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.49 seconds taken in nnet3 compilation total (breakdown: 0.349 compilation, 0.136 optimization, 0 shortcut expansion, 0.00186 checking, 5.96e-06 computing indexes, 0.00266 misc.) + 0 I/O.
+000470290 వాస్తుపై నమ్మకం లేదని జగన్ మొదటి <unk> వాటిని మొదట కొట్టిపారేశారట అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000470290 is 2.51099 over 190 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.431 seconds taken in nnet3 compilation total (breakdown: 0.29 compilation, 0.108 optimization, 0 shortcut expansion, 0.03 checking, 7.87e-06 computing indexes, 0.00244 misc.) + 0 I/O.
+000470364 అధికారంలో ఉన్నా లేకున్నా తమ మాటే తమ మాటే నెల్లూరులో చెల్లుతుందన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000470364 is 2.56527 over 159 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.394 seconds taken in nnet3 compilation total (breakdown: 0.25 compilation, 0.112 optimization, 0 shortcut expansion, 0.03 checking, 4.77e-06 computing indexes, 0.00245 misc.) + 0 I/O.
+000470449 మూడు నాలుగేళ్లుగా విలాసాలకు అలవాటు పడి అప్పులు చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000470449 is 2.76689 over 111 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.505 seconds taken in nnet3 compilation total (breakdown: 0.344 compilation, 0.0762 optimization, 0 shortcut expansion, 0.0824 checking, 6.91e-06 computing indexes, 0.00265 misc.) + 0 I/O.
+000480004 అప్పటి నుండి కిరణ్ కుమార్ రెడ్డి ప్రత్యక్ష రాజకీయాలకు దూరంగా ఉన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480004 is 2.6777 over 169 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.542 seconds taken in nnet3 compilation total (breakdown: 0.371 compilation, 0.134 optimization, 0 shortcut expansion, 0.00202 checking, 5.72e-06 computing indexes, 0.0354 misc.) + 0 I/O.
+000480005 జనసేన అధినేత పవన్ కల్యాణ్ ప్రశ్నించడంతో ఢిల్లీలో కదలిక ప్రారంభమైందని అంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480005 is 2.45808 over 196 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.491 seconds taken in nnet3 compilation total (breakdown: 0.338 compilation, 0.0999 optimization, 0 shortcut expansion, 0.0263 checking, 5.96e-06 computing indexes, 0.0272 misc.) + 0 I/O.
+000480025 చిరంజీవి యాగం నిర్వహించిన విషయం ముఖ్యమంత్రి కిరణ్ కుమార్ రెడ్డి చెవిన పడిందట 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480025 is 2.51675 over 178 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.57 seconds taken in nnet3 compilation total (breakdown: 0.421 compilation, 0.108 optimization, 0 shortcut expansion, 0.00219 checking, 5.01e-06 computing indexes, 0.0391 misc.) + 0 I/O.
+000480057 ఈ సందర్భంగా రామోజీరావు శ్రీశ్రీలకు ముఖ్యమంత్రి చంద్రబాబు సాదర స్వాగతం పలికారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480057 is 2.6564 over 227 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.453 seconds taken in nnet3 compilation total (breakdown: 0.29 compilation, 0.0975 optimization, 0 shortcut expansion, 0.0626 checking, 6.91e-06 computing indexes, 0.00287 misc.) + 0 I/O.
+000480099 మంగళవారం కర్నూలు నగరంలోని ప్రభుత్వ అతిథి గృహంలో ఏర్పాటు చేసిన విలేకర్ల సమావేశంలో ఆయన మాట్లాడారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480099 is 2.76247 over 223 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.278 compilation, 0.101 optimization, 0 shortcut expansion, 0.0021 checking, 6.91e-06 computing indexes, 0.0671 misc.) + 0 I/O.
+000480126 మరింత మెరుగైన సరఫరా కోసం చర్యలు తీసుకోవాలని ముఖ్యమంత్రి చంద్రబాబునాయుడు అధికారులకు సూచించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480126 is 2.89335 over 241 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.407 seconds taken in nnet3 compilation total (breakdown: 0.259 compilation, 0.0955 optimization, 0 shortcut expansion, 0.026 checking, 5.01e-06 computing indexes, 0.0266 misc.) + 0 I/O.
+000480170 తమిళనాడులో ఏం జరుగుతుందో కూడా తాను చూస్తున్నానని తాను రాజకీయాలకు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480170 is 2.36257 over 200 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.456 seconds taken in nnet3 compilation total (breakdown: 0.319 compilation, 0.132 optimization, 0 shortcut expansion, 0.00195 checking, 5.96e-06 computing indexes, 0.00255 misc.) + 0 I/O.
+000480428 ఆ తర్వాత మహేందర్ తన మరదలిని పెళ్లి చేసుకునేందుకు సిద్ధమయ్యాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480428 is 2.32999 over 196 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.429 seconds taken in nnet3 compilation total (breakdown: 0.308 compilation, 0.116 optimization, 0 shortcut expansion, 0.00173 checking, 2.1e-05 computing indexes, 0.0025 misc.) + 0 I/O.
+000480430 కొన్ని పత్రికా యాజమాన్యాలు అమ్ముడు పోయాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480430 is 2.53244 over 135 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.538 seconds taken in nnet3 compilation total (breakdown: 0.397 compilation, 0.0758 optimization, 0 shortcut expansion, 0.0341 checking, 4.77e-06 computing indexes, 0.0313 misc.) + 0 I/O.
+000480443 ఆయన సొంత నియోజకవర్గం అయిన ఈ విషయంపై ప్రజలు పెద్ద ఎత్తున చర్చించుకుంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480443 is 2.38608 over 241 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.455 seconds taken in nnet3 compilation total (breakdown: 0.265 compilation, 0.0684 optimization, 0 shortcut expansion, 0.0623 checking, 4.77e-06 computing indexes, 0.0592 misc.) + 0 I/O.
+000480452 రాజకీయాల కోసం సినిమాలను పక్కన పెట్టి వద్దని అభిమానులను 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480452 is 2.64629 over 143 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.473 seconds taken in nnet3 compilation total (breakdown: 0.34 compilation, 0.0838 optimization, 0 shortcut expansion, 0.0182 checking, 4.77e-06 computing indexes, 0.031 misc.) + 0 I/O.
+000480455 ఈ నేపథ్యంలో కేంద్ర మానవ వనరుల శాఖ పుస్తకాల బరువు తగ్గింపు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480455 is 2.34223 over 195 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.439 seconds taken in nnet3 compilation total (breakdown: 0.289 compilation, 0.0927 optimization, 0 shortcut expansion, 0.03 checking, 5.96e-06 computing indexes, 0.0272 misc.) + 0 I/O.
+000480492 ప్రత్యేక హోదా విషయంలో కేంద్ర ప్రభుత్వ వైఖరిని నిరసిస్తూ రాజమహేంద్రవరంలోని 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000480492 is 2.25552 over 260 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.413 seconds taken in nnet3 compilation total (breakdown: 0.283 compilation, 0.125 optimization, 0 shortcut expansion, 0.00203 checking, 6.91e-06 computing indexes, 0.00259 misc.) + 0 I/O.
+000490081 కాగా నోబెల్ శాంతి బహుమతి విజేతల సమావేశం వయసులో మంగళవారం జరిగిన విషయం తెలిసిందే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000490081 is 2.60647 over 227 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.451 seconds taken in nnet3 compilation total (breakdown: 0.299 compilation, 0.149 optimization, 0 shortcut expansion, 0.00181 checking, 5.01e-06 computing indexes, 0.0023 misc.) + 0 I/O.
+000490121 తీవ్ర రక్తస్రావం కావడంతో ఆ బాలిక ఏడ్చుకుంటూ కుటుంబ సభ్యులకు తెలియజేసింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000490121 is 2.58954 over 198 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.47 seconds taken in nnet3 compilation total (breakdown: 0.345 compilation, 0.0922 optimization, 0 shortcut expansion, 0.0302 checking, 5.96e-06 computing indexes, 0.00255 misc.) + 0 I/O.
+000490186 అనుమానంతో భార్యను అత్యంత కిరాతకంగా సుత్తితో తన చేతిలో ఉన్న సుత్తెతో చంద్రమ్మ తలపై మోదాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000490186 is 2.58145 over 267 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.461 seconds taken in nnet3 compilation total (breakdown: 0.332 compilation, 0.1 optimization, 0 shortcut expansion, 0.00178 checking, 2.62e-05 computing indexes, 0.0268 misc.) + 0 I/O.
+000490188 రాయలసీమ ఉత్తరాంధ్ర కోస్తా రైతులకు ఇచ్చిన హామీలను అమలు చేయాలన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000490188 is 2.45453 over 170 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.333 seconds taken in nnet3 compilation total (breakdown: 0.232 compilation, 0.0378 optimization, 0 shortcut expansion, 0.00103 checking, 2.86e-06 computing indexes, 0.0619 misc.) + 0 I/O.
+000490235 ఎన్నికల సమయంలో అధికారంలోకి వచ్చాక వాటిని మరిచిపోయి మరిచిపోయారన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000490235 is 2.76709 over 195 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.294 compilation, 0.128 optimization, 0 shortcut expansion, 0.0017 checking, 6.2e-06 computing indexes, 0.0026 misc.) + 0 I/O.
+000490255 విమర్శించడం విడ్డూరంగా ఉందన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000490255 is 2.6798 over 96 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.465 seconds taken in nnet3 compilation total (breakdown: 0.331 compilation, 0.129 optimization, 0 shortcut expansion, 0.00192 checking, 1.72e-05 computing indexes, 0.00273 misc.) + 0 I/O.
+000490264 తీవ్ర స్థాయిలో వేధింపులకు గురవుతారని గురవుతున్నారని ఆవేదన వ్యక్తం చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000490264 is 2.5299 over 193 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.467 seconds taken in nnet3 compilation total (breakdown: 0.298 compilation, 0.072 optimization, 0 shortcut expansion, 0.062 checking, 6.91e-06 computing indexes, 0.035 misc.) + 0 I/O.
+000490380 అవసరమైతే తెరాసను విలీనం చేసుకునే ఆలోచనలో కూడా చేస్తోందట 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000490380 is 2.38478 over 168 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.555 seconds taken in nnet3 compilation total (breakdown: 0.401 compilation, 0.1 optimization, 0 shortcut expansion, 0.0261 checking, 6.2e-06 computing indexes, 0.0272 misc.) + 0 I/O.
+000490454 మన రాష్ట్రంలో మాత్రం మహిళలు సాయుధ బలగాలకు దూరంగానే ఉన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000490454 is 2.46289 over 184 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.56 seconds taken in nnet3 compilation total (breakdown: 0.394 compilation, 0.113 optimization, 0 shortcut expansion, 0.026 checking, 6.91e-06 computing indexes, 0.0271 misc.) + 0 I/O.
+000500026 ప్రజాప్రతినిధుల స్వగ్రామం అత్తగారి అత్తగారి ఊర్లను దత్తత తీసుకుని కొండ ధన నిబంధనలు ఉండటంతో అది కార్యరూపం దాల్చలేదన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500026 is 2.37461 over 361 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.479 seconds taken in nnet3 compilation total (breakdown: 0.326 compilation, 0.0802 optimization, 0 shortcut expansion, 0.0704 checking, 4.77e-06 computing indexes, 0.0027 misc.) + 0 I/O.
+000500054 కరువు తట్టుకోలేక రైతుల ఆత్మహత్యలు చేసుకుంటున్న చాలా మంది వలస వెళ్లారని ఆయన చంద్రబాబు పట్టించుకోవడం లేదన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500054 is 2.72266 over 258 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.431 seconds taken in nnet3 compilation total (breakdown: 0.271 compilation, 0.107 optimization, 0 shortcut expansion, 0.00177 checking, 5.96e-06 computing indexes, 0.0504 misc.) + 0 I/O.
+000500061 ఎగువ ప్రాంతాల్లో కురుస్తున్న వర్షాల వల్ల గోదావరి నీటి మట్టం పెరుగుతోంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500061 is 3.10885 over 158 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.452 seconds taken in nnet3 compilation total (breakdown: 0.324 compilation, 0.0957 optimization, 0 shortcut expansion, 0.00189 checking, 6.91e-06 computing indexes, 0.0306 misc.) + 0 I/O.
+000500110 నక్సలైట్ల నుంచి ఉప్పు ఉండటంతో ఆయన తమ జాగ్రత్తలు తీసుకుంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500110 is 2.59461 over 207 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.444 seconds taken in nnet3 compilation total (breakdown: 0.292 compilation, 0.0797 optimization, 0 shortcut expansion, 0.0705 checking, 5.96e-06 computing indexes, 0.00257 misc.) + 0 I/O.
+000500118 తాను తన కొడుకు పేరు మీద మగాడిలా కొన్నానని చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500118 is 3.05809 over 142 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.435 seconds taken in nnet3 compilation total (breakdown: 0.322 compilation, 0.0836 optimization, 0 shortcut expansion, 0.00194 checking, 5.72e-06 computing indexes, 0.0272 misc.) + 0 I/O.
+000500123 జాతి ముందుకు సాగాలంటే వారసత్వ సంపద అవసరమని చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500123 is 2.77409 over 146 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.485 seconds taken in nnet3 compilation total (breakdown: 0.332 compilation, 0.148 optimization, 0 shortcut expansion, 0.00183 checking, 6.91e-06 computing indexes, 0.00251 misc.) + 0 I/O.
+000500223 పోటీ తీవ్రంగా ఉండటంతో ఎన్నికల ప్రచారం కూడా పోటీపోటీగానే జరుగుతోంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500223 is 2.98064 over 157 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.478 seconds taken in nnet3 compilation total (breakdown: 0.338 compilation, 0.0995 optimization, 0 shortcut expansion, 0.00185 checking, 0.036 computing indexes, 0.00257 misc.) + 0 I/O.
+000500262 కాగా బలాబలాలు ఓటర్లు ఓటు వేసే సమయానికి తారుమారు కూడా వచ్చు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500262 is 2.914 over 174 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.473 seconds taken in nnet3 compilation total (breakdown: 0.287 compilation, 0.125 optimization, 0 shortcut expansion, 0.0302 checking, 4.77e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+000500269 రాష్ట్రంలో ప్రజల ఆదాయం పెరగాలని ఆర్థిక అసమానతలు తాగాలని సూచించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500269 is 2.78956 over 155 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.417 seconds taken in nnet3 compilation total (breakdown: 0.281 compilation, 0.132 optimization, 0 shortcut expansion, 0.00191 checking, 5.01e-06 computing indexes, 0.00225 misc.) + 0 I/O.
+000500286 గుంటూరు జిల్లా పొన్నూరులో ఆయన గురువారం మీడియాతో మాట్లాడారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500286 is 3.07079 over 135 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.589 seconds taken in nnet3 compilation total (breakdown: 0.413 compilation, 0.11 optimization, 0 shortcut expansion, 0.0304 checking, 2.41e-05 computing indexes, 0.0355 misc.) + 0 I/O.
+000500318 ఎవరో తప్పు చేస్తే తాము శిక్ష అనుభవించాల్సి వస్తుందని నిందించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500318 is 2.66269 over 146 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.494 seconds taken in nnet3 compilation total (breakdown: 0.324 compilation, 0.0718 optimization, 0 shortcut expansion, 0.0663 checking, 5.72e-06 computing indexes, 0.0312 misc.) + 0 I/O.
+000500408 పొరపాటు చేసినా వారికి మరోసారి అవకాశం ఇచ్చే ప్రయత్నం చేస్తాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500408 is 3.10238 over 135 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.537 seconds taken in nnet3 compilation total (breakdown: 0.37 compilation, 0.101 optimization, 0 shortcut expansion, 0.0342 checking, 5.96e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+000500409 ఈ క్రమంలో బుధవారం శ్రీరామనవమి రోజున కూడా ప్రేమికుల విగ్రహాలకు వివాహం జరిగింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500409 is 2.86137 over 184 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.572 seconds taken in nnet3 compilation total (breakdown: 0.434 compilation, 0.0723 optimization, 0 shortcut expansion, 0.0301 checking, 7.15e-06 computing indexes, 0.0353 misc.) + 0 I/O.
+000500434 కులవృత్తి రహిత సమాజం ఏర్పడకుండా ఆధునిక సమాజ నిర్మాణం పూర్తి కాదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500434 is 2.92094 over 163 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.467 seconds taken in nnet3 compilation total (breakdown: 0.337 compilation, 0.125 optimization, 0 shortcut expansion, 0.00183 checking, 8.11e-06 computing indexes, 0.0028 misc.) + 0 I/O.
+000500480 గతంలో కేంద్రంలో కీలక పాత్ర పోషించిన చంద్రబాబు ప్రస్తుతం వెనకబడిపోయారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000500480 is 3.03281 over 164 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.418 seconds taken in nnet3 compilation total (breakdown: 0.301 compilation, 0.092 optimization, 0 shortcut expansion, 0.022 checking, 6.2e-06 computing indexes, 0.00284 misc.) + 0 I/O.
+000510086 ఆయన రాజధాని నిర్మాణం మన ప్రాంతంలో జరగడం వల్ల అందరికీ మేలు జరుగుతుందనే నమ్మకంతో భూములిచ్చాం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510086 is 2.72665 over 191 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.491 seconds taken in nnet3 compilation total (breakdown: 0.314 compilation, 0.0755 optimization, 0 shortcut expansion, 0.0419 checking, 6.68e-06 computing indexes, 0.0591 misc.) + 0 I/O.
+000510119 అమెరికా అధ్యక్షుడిగా ట్రంప్ బాధ్యతలు స్వీకరించిన తర్వాత టెక్కీలకు గడ్డు కాలం మొదలైంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510119 is 2.68614 over 180 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.468 seconds taken in nnet3 compilation total (breakdown: 0.33 compilation, 0.133 optimization, 0 shortcut expansion, 0.00206 checking, 5.72e-06 computing indexes, 0.00282 misc.) + 0 I/O.
+000510130 తమ పార్టీలోకి వచ్చిన ఎమ్మెల్యేల చేత రాజీనామా చేయించి ఆమోదింప చేసి ఎన్నికలకు వెళ్లాలన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510130 is 2.64431 over 182 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.427 seconds taken in nnet3 compilation total (breakdown: 0.282 compilation, 0.0679 optimization, 0 shortcut expansion, 0.0222 checking, 5.25e-06 computing indexes, 0.0554 misc.) + 0 I/O.
+000510142 తనకు అత్యంత ప్రతిష్టాత్మకమైన మెదక్ లోకసభ స్థానం నుంచి తన కూతురు తెలంగాణ జాగృతి అధ్యక్షురాలు కల్వకుంట్ల కవితను పోటీకి దించాలని ఆయన యోచిస్తున్నట్లు సమాచారం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510142 is 2.78372 over 307 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.438 seconds taken in nnet3 compilation total (breakdown: 0.29 compilation, 0.0798 optimization, 0 shortcut expansion, 0.0661 checking, 6.91e-06 computing indexes, 0.00244 misc.) + 0 I/O.
+000510149 కేంద్రం ప్రత్యేక హోదా ఇస్తుందన్న నమ్మకం ఉందని చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510149 is 2.60834 over 131 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.445 seconds taken in nnet3 compilation total (breakdown: 0.315 compilation, 0.125 optimization, 0 shortcut expansion, 0.00178 checking, 6.2e-06 computing indexes, 0.00264 misc.) + 0 I/O.
+000510155 ఈ దేశంలో తరతరాలుగా మన కర్మ అని భావించే ఓటమిలో దశకంలో కష్టాల్లో సహజీవనం చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510155 is 2.46982 over 205 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.458 seconds taken in nnet3 compilation total (breakdown: 0.316 compilation, 0.138 optimization, 0 shortcut expansion, 0.00226 checking, 5.25e-06 computing indexes, 0.00224 misc.) + 0 I/O.
+000510164 ఓటుకు నోటు వ్యవహారంలో కథ స్క్రీన్ ప్లే దర్శకత్వం చంద్రబాబుదే అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510164 is 2.61713 over 152 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.488 seconds taken in nnet3 compilation total (breakdown: 0.355 compilation, 0.101 optimization, 0 shortcut expansion, 0.03 checking, 6.91e-06 computing indexes, 0.00307 misc.) + 0 I/O.
+000510182 ఈ సందర్భంగా ఆయన మాట్లాడుతూ గత కొన్ని రోజులుగా గోదావరి పుష్కరాలను ఘనంగా నిర్వహిస్తున్నామని తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510182 is 3.13097 over 194 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.427 seconds taken in nnet3 compilation total (breakdown: 0.278 compilation, 0.0438 optimization, 0 shortcut expansion, 0.0541 checking, 6.2e-06 computing indexes, 0.0511 misc.) + 0 I/O.
+000510223 విదేశీయులు చెన్నై <unk> నుంచి తిరుపతికి రావాలంటే రోడ్డుమార్గమే ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510223 is 2.61094 over 141 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.493 seconds taken in nnet3 compilation total (breakdown: 0.348 compilation, 0.141 optimization, 0 shortcut expansion, 0.0019 checking, 5.96e-06 computing indexes, 0.00263 misc.) + 0 I/O.
+000510243 భూ సమీకరణకు ఇవ్వని రైతుల భూముల్లో మినహాయించకుండా నష్టపరచడం అన్యాయమన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510243 is 2.8222 over 189 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.431 seconds taken in nnet3 compilation total (breakdown: 0.27 compilation, 0.0999 optimization, 0 shortcut expansion, 0.0299 checking, 8.82e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+000510257 ఈ ఘటనపై రాష్ట్ర ప్రభుత్వం సిట్ ను ఏర్పాటు చేసింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510257 is 2.71674 over 117 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.489 seconds taken in nnet3 compilation total (breakdown: 0.372 compilation, 0.112 optimization, 0 shortcut expansion, 0.00187 checking, 5.25e-06 computing indexes, 0.00287 misc.) + 0 I/O.
+000510293 వీటితో పాటు విశాఖ నగరంలో ప్రకృతి అందాలు చిత్ర పరిశ్రమకు ఉపయుక్తంగా ఉంటాయన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510293 is 2.76415 over 170 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.281 seconds taken in nnet3 compilation total (breakdown: 0.176 compilation, 0.038 optimization, 0 shortcut expansion, 0.0333 checking, 3.1e-06 computing indexes, 0.0339 misc.) + 0 I/O.
+000510305 ప్రత్యేక హోదా కోసం కేంద్రంపై ఒత్తిడి తీసుకువచ్చేందుకు ఆందోళనలు చేస్తున్నాయని ఆయన వివరించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510305 is 2.82861 over 180 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.51 seconds taken in nnet3 compilation total (breakdown: 0.376 compilation, 0.101 optimization, 0 shortcut expansion, 0.00226 checking, 6.2e-06 computing indexes, 0.031 misc.) + 0 I/O.
+000510349 తండ్రి లోటును భర్తీ చేయడానికి పరిటాల శ్రీరాం రాజకీయాల్లోకి వస్తాడని అంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510349 is 2.75055 over 173 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.279 compilation, 0.105 optimization, 0 shortcut expansion, 0.0299 checking, 6.91e-06 computing indexes, 0.0348 misc.) + 0 I/O.
+000510356 ఎందుకు గిరిజనులను ఆర్థికంగా సహాయ సహకారాలు అందించాలని కోరారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510356 is 2.65083 over 181 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.529 seconds taken in nnet3 compilation total (breakdown: 0.391 compilation, 0.101 optimization, 0 shortcut expansion, 0.0342 checking, 6.91e-06 computing indexes, 0.00302 misc.) + 0 I/O.
+000510374 అది కూడా ఈ విషయంలో న్యాయపరమైన ఇబ్బందులు తలెత్తకుండా ముందుకు వెళ్లే దాకా రవాణా శాఖ నుంచి సలహాలు తీసుకుంటుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510374 is 2.66298 over 203 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.535 seconds taken in nnet3 compilation total (breakdown: 0.37 compilation, 0.16 optimization, 0 shortcut expansion, 0.00198 checking, 5.01e-06 computing indexes, 0.00311 misc.) + 0 I/O.
+000510384 కాగా బాలికలను ముంబైలో విక్రయించేందుకు నిందితులు ప్రయత్నాలు చేసినట్లు సమాచారం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510384 is 2.661 over 158 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.468 seconds taken in nnet3 compilation total (breakdown: 0.33 compilation, 0.101 optimization, 0 shortcut expansion, 0.0342 checking, 6.2e-06 computing indexes, 0.00256 misc.) + 0 I/O.
+000510491 ఈ ఘటనకు సంబంధించి ఆసక్తికరమైన విషయం వెలుగులోకి వచ్చింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000510491 is 2.79364 over 127 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.477 seconds taken in nnet3 compilation total (breakdown: 0.316 compilation, 0.109 optimization, 0 shortcut expansion, 0.022 checking, 6.2e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+000530012 అన్న తేడా లేకుండా చిన్నారులు మహిళలపై లైంగిక దాడులు కొనసాగుతున్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530012 is 2.41362 over 260 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.302 compilation, 0.0632 optimization, 0 shortcut expansion, 0.0339 checking, 5.01e-06 computing indexes, 0.0271 misc.) + 0 I/O.
+000530048 కానీ ఇప్పుడు కిరణ్ కుమార్ రెడ్డి రెండేళ్లలో ఎక్కువే చదివినట్లున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530048 is 2.2556 over 224 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.398 seconds taken in nnet3 compilation total (breakdown: 0.277 compilation, 0.117 optimization, 0 shortcut expansion, 0.00205 checking, 5.96e-06 computing indexes, 0.00243 misc.) + 0 I/O.
+000530057 ఇప్పుడు సోషల్ మీడియాలో ఈ వీడియో వైరల్ అవుతూ నెటిజన్లకు నవ్వులు పంచుతోంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530057 is 2.40914 over 223 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.436 seconds taken in nnet3 compilation total (breakdown: 0.304 compilation, 0.0675 optimization, 0 shortcut expansion, 0.062 checking, 9.06e-06 computing indexes, 0.00248 misc.) + 0 I/O.
+000530075 రెండు రోజుల్లో పార్టీ కార్యకర్తలతో సమావేశమై తదుపరి కార్యాచరణపై చర్చించి నిర్ణయం చేసుకుంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530075 is 2.46998 over 295 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.487 seconds taken in nnet3 compilation total (breakdown: 0.343 compilation, 0.14 optimization, 0 shortcut expansion, 0.00195 checking, 6.2e-06 computing indexes, 0.00249 misc.) + 0 I/O.
+000530087 దూకుడుగా ఆడే ప్రయత్నంలో భారత్ కెప్టెన్ ధోనీ అవుటయ్యాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530087 is 2.38846 over 156 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.434 seconds taken in nnet3 compilation total (breakdown: 0.301 compilation, 0.096 optimization, 0 shortcut expansion, 0.00214 checking, 5.72e-06 computing indexes, 0.0347 misc.) + 0 I/O.
+000530093 వ్యవసాయంలో కొంత నష్టం జరిగినా దాని అనుబంధ రంగాల్లో గణనీయంగా అభివృద్ధి సాధించామన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530093 is 2.28074 over 261 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.472 seconds taken in nnet3 compilation total (breakdown: 0.314 compilation, 0.112 optimization, 0 shortcut expansion, 0.0182 checking, 5.96e-06 computing indexes, 0.0272 misc.) + 0 I/O.
+000530107 అతను చనిపోయినప్పుడు అతని జ్ఞాపకాలు <unk> అస్థికలను లూనార్ వేసవిలో చందమామ వదిలేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530107 is 2.09424 over 309 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.475 seconds taken in nnet3 compilation total (breakdown: 0.308 compilation, 0.134 optimization, 0 shortcut expansion, 0.00211 checking, 5.96e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+000530111 ఫోన్ కేవలం అమెజాన్ ఇండియాలో మాత్రమే సెల్ <unk> అవుతుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530111 is 2.46305 over 146 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.504 seconds taken in nnet3 compilation total (breakdown: 0.366 compilation, 0.133 optimization, 0 shortcut expansion, 0.00232 checking, 6.91e-06 computing indexes, 0.00286 misc.) + 0 I/O.
+000530115 కానీ తాజా పరిస్థితుల నేపథ్యంలో సోమవారమే చేయాలని ఇరు నిర్ణయించుకున్నట్లు సమాచారం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530115 is 2.40741 over 237 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.549 seconds taken in nnet3 compilation total (breakdown: 0.355 compilation, 0.0719 optimization, 0 shortcut expansion, 0.0581 checking, 6.2e-06 computing indexes, 0.0635 misc.) + 0 I/O.
+000530133 బుధవారం మధ్యాహ్నం ఆమె వెళ్లేటప్పటికి లక్ష్మీ ప్రసన్న పాత్రలో రక్తపు మడుగులో పడి ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530133 is 2.40839 over 277 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.45 seconds taken in nnet3 compilation total (breakdown: 0.288 compilation, 0.0968 optimization, 0 shortcut expansion, 0.03 checking, 5.96e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+000530139 వైద్య పరీక్ష ప్రత్యేక హోదా కోసమై జగన్ రెండు రోజులకు చేరుకుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530139 is 2.56151 over 177 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.497 seconds taken in nnet3 compilation total (breakdown: 0.335 compilation, 0.0644 optimization, 0 shortcut expansion, 0.062 checking, 8.11e-06 computing indexes, 0.0351 misc.) + 0 I/O.
+000530141 స్థానిక కార్మిక కర్షక భవనంలో ఏర్పాటు చేసిన సమావేశంలో ఆయన మాట్లాడారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530141 is 2.67715 over 224 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.424 seconds taken in nnet3 compilation total (breakdown: 0.279 compilation, 0.108 optimization, 0 shortcut expansion, 0.0339 checking, 5.96e-06 computing indexes, 0.00233 misc.) + 0 I/O.
+000530143 మైనర్ బాలిక పేరుతో వల వేసి నిందితుడిని పోలీసులు అరెస్ట్ చేశారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530143 is 2.576 over 199 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.5 seconds taken in nnet3 compilation total (breakdown: 0.334 compilation, 0.101 optimization, 0 shortcut expansion, 0.034 checking, 5.96e-06 computing indexes, 0.0313 misc.) + 0 I/O.
+000530146 అలాగే ఏపీకి కేంద్రం ఇచ్చిన హామీలను అన్నింటికి కేంద్రం నెరవేరుస్తుందని చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530146 is 2.5534 over 201 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.459 seconds taken in nnet3 compilation total (breakdown: 0.331 compilation, 0.0956 optimization, 0 shortcut expansion, 0.00176 checking, 7.87e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+000530148 సో మాత్రాన పేద దండోపాయాల్లో ఎమ్మెల్యేలను ఆయన దానోపాయాన్ని ఎంచుకున్నట్లుగా కనిపిస్తోంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530148 is 2.14733 over 254 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.551 seconds taken in nnet3 compilation total (breakdown: 0.413 compilation, 0.133 optimization, 0 shortcut expansion, 0.00217 checking, 5.96e-06 computing indexes, 0.00285 misc.) + 0 I/O.
+000530149 కానీ కొన్ని నెలలు గడిచిన తర్వాత ఈ కడుపునొప్పి రావడం ఆసక్తికరంగా ఉందని సామ్నా సంపాదకీయం పేర్కొంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530149 is 2.40092 over 298 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.432 seconds taken in nnet3 compilation total (breakdown: 0.295 compilation, 0.132 optimization, 0 shortcut expansion, 0.00165 checking, 7.15e-06 computing indexes, 0.00245 misc.) + 0 I/O.
+000530153 అబ్దుల్ కలాం ఉస్మానియా విశ్వవిద్యాలయం ఫోటోను ఆయన మంచి అనుబంధం ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530153 is 2.33128 over 198 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.468 seconds taken in nnet3 compilation total (breakdown: 0.334 compilation, 0.129 optimization, 0 shortcut expansion, 0.00206 checking, 6.2e-06 computing indexes, 0.00272 misc.) + 0 I/O.
+000530164 కానీ ఒక దేశపు టీడీపీ హైకమాండ్ కూడా ఆయన పేరు పరిశీలనలోకి తీసుకుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530164 is 2.25351 over 260 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.448 seconds taken in nnet3 compilation total (breakdown: 0.315 compilation, 0.129 optimization, 0 shortcut expansion, 0.0019 checking, 5.96e-06 computing indexes, 0.00237 misc.) + 0 I/O.
+000530185 సంబంధించిన వ్యవహారాల్లోనే వెంకయ్య పాత్ర కీలకంగానే ఉంటుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530185 is 2.36902 over 208 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.454 seconds taken in nnet3 compilation total (breakdown: 0.313 compilation, 0.109 optimization, 0 shortcut expansion, 0.0293 checking, 5.96e-06 computing indexes, 0.0024 misc.) + 0 I/O.
+000530188 ప్రతి నెలా నిష్ణాతులతో ప్రత్యేక బాలాజీ తరగతులు నిర్వహిస్తామని తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530188 is 2.33316 over 212 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.555 seconds taken in nnet3 compilation total (breakdown: 0.409 compilation, 0.12 optimization, 0 shortcut expansion, 0.00223 checking, 6.91e-06 computing indexes, 0.0229 misc.) + 0 I/O.
+000530191 లక్షలు ఖర్చు చేసి అయినా భూములు కొనుగోలు చేసి ఇస్తామని భరోసా ఇచ్చారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530191 is 2.56544 over 197 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.453 seconds taken in nnet3 compilation total (breakdown: 0.322 compilation, 0.0931 optimization, 0 shortcut expansion, 0.00222 checking, 8.11e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+000530194 పల్లె పుట్టిన ఊరు పల్లెవాడ పల్లి గ్రామంలో ప్రాథమిక పాఠశాల మూతపడింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530194 is 2.38776 over 218 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.547 seconds taken in nnet3 compilation total (breakdown: 0.353 compilation, 0.189 optimization, 0 shortcut expansion, 0.00193 checking, 5.96e-06 computing indexes, 0.00283 misc.) + 0 I/O.
+000530212 రాజకీయ పరిశీలకులు అభిప్రాయపడుతున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530212 is 2.68455 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.244 seconds taken in nnet3 compilation total (breakdown: 0.172 compilation, 0.0339 optimization, 0 shortcut expansion, 0.0369 checking, 4.05e-06 computing indexes, 0.00137 misc.) + 0 I/O.
+000530266 పాత్రల పంపిణీ ఈ నియోజకవర్గంలోనే చేపట్టినట్లు తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530266 is 2.57626 over 156 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.375 seconds taken in nnet3 compilation total (breakdown: 0.257 compilation, 0.113 optimization, 0 shortcut expansion, 0.00218 checking, 6.2e-06 computing indexes, 0.00258 misc.) + 0 I/O.
+000530304 పూర్ణచంద్ర రావు ఆర్టీసీ వైస్ చైర్మన్ మేనేజింగ్ డైరెక్టర్ పూర్ణచంద్ర రావు శనివారం అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530304 is 2.24302 over 233 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.471 seconds taken in nnet3 compilation total (breakdown: 0.339 compilation, 0.0678 optimization, 0 shortcut expansion, 0.0299 checking, 6.2e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+000530349 కాంగ్రెస్ లో ఎప్పుడు ఎవరు మాట్లాడతారు తెలియనంతగా వ్యక్తిగత స్వేచ్ఛ ఉంటుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530349 is 2.62224 over 184 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.501 seconds taken in nnet3 compilation total (breakdown: 0.372 compilation, 0.1 optimization, 0 shortcut expansion, 0.00184 checking, 4.77e-06 computing indexes, 0.0272 misc.) + 0 I/O.
+000530352 చంద్రశేఖర్ రావు ఏ విధమైన చర్యలకు దిగుతారనేది కూడా ఆసక్తికరంగానే ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530352 is 2.78411 over 201 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.486 seconds taken in nnet3 compilation total (breakdown: 0.371 compilation, 0.109 optimization, 0 shortcut expansion, 0.00219 checking, 7.15e-06 computing indexes, 0.003 misc.) + 0 I/O.
+000530423 రాష్ట్రానికి అభివృద్ధి పథకం లక్ష్యమని నదులు సస్యశ్యామలం చేస్తానని అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530423 is 2.44701 over 214 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.387 seconds taken in nnet3 compilation total (breakdown: 0.266 compilation, 0.0882 optimization, 0 shortcut expansion, 0.0298 checking, 5.96e-06 computing indexes, 0.0027 misc.) + 0 I/O.
+000530441 కేసీఆర్ కేటీఆర్ కవిత తప్ప జిల్లాల విభజన పట్ల ఎవరూ సంతోషంగా లేరని ఆమె తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530441 is 2.42145 over 241 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.367 seconds taken in nnet3 compilation total (breakdown: 0.239 compilation, 0.124 optimization, 0 shortcut expansion, 0.00195 checking, 4.05e-06 computing indexes, 0.00221 misc.) + 0 I/O.
+000530442 అయితే బిజెపి వ్యూహాకరంగా రైల్వేశాఖ తెరపైకి తీసుకువచ్చింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530442 is 2.66256 over 151 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.476 seconds taken in nnet3 compilation total (breakdown: 0.367 compilation, 0.081 optimization, 0 shortcut expansion, 0.00188 checking, 6.2e-06 computing indexes, 0.0268 misc.) + 0 I/O.
+000530491 తాను పలుమార్లు చెన్నై వచ్చేయనని తన తల్లితో ఇదే నగరమన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000530491 is 2.27077 over 203 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.57 seconds taken in nnet3 compilation total (breakdown: 0.343 compilation, 0.073 optimization, 0 shortcut expansion, 0.0502 checking, 6.2e-06 computing indexes, 0.104 misc.) + 0 I/O.
+000540063 అయితే ఇక్కడికి వచ్చి ఉద్యోగుల ఉద్యోగుల పిల్లలు స్థానికులను స్థానికులుగా పరిష్కరిస్తామని ప్రభుత్వం చెబుతోంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540063 is 1.9193 over 297 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.433 seconds taken in nnet3 compilation total (breakdown: 0.297 compilation, 0.132 optimization, 0 shortcut expansion, 0.00182 checking, 5.72e-06 computing indexes, 0.00249 misc.) + 0 I/O.
+000540079 ఈ దరిద్రం ఎప్పుడో వదులుతుందా అని ప్రజలు ఎదురు చూస్తున్నానని 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540079 is 1.9481 over 168 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.529 seconds taken in nnet3 compilation total (breakdown: 0.378 compilation, 0.118 optimization, 0 shortcut expansion, 0.00206 checking, 5.96e-06 computing indexes, 0.0313 misc.) + 0 I/O.
+000540111 అనంతరం భువనేశ్వరి గ్రామస్థులతో మాట్లాడి వారి సమస్యలను తెలుసుకున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540111 is 1.97429 over 201 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.494 seconds taken in nnet3 compilation total (breakdown: 0.334 compilation, 0.126 optimization, 0 shortcut expansion, 0.00234 checking, 3.29e-05 computing indexes, 0.0316 misc.) + 0 I/O.
+000540114 వారు చెప్పిన వివరాలు అడుగుతున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540114 is 2.2737 over 133 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.485 seconds taken in nnet3 compilation total (breakdown: 0.327 compilation, 0.0973 optimization, 0 shortcut expansion, 0.00181 checking, 5.96e-06 computing indexes, 0.0595 misc.) + 0 I/O.
+000540128 ప్రత్యేక హోదా పేరు సాయం చేస్తామని చెబుతున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540128 is 2.09388 over 160 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.442 seconds taken in nnet3 compilation total (breakdown: 0.294 compilation, 0.0636 optimization, 0 shortcut expansion, 0.0301 checking, 6.91e-06 computing indexes, 0.0548 misc.) + 0 I/O.
+000540129 మంత్రి తన మంత్రి తనను వేధిస్తున్నారని కన్నీళ్లు పెట్టిన పట్టించుకోరా అని అడిగాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540129 is 1.28033 over 373 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.499 seconds taken in nnet3 compilation total (breakdown: 0.332 compilation, 0.101 optimization, 0 shortcut expansion, 0.00186 checking, 1.79e-05 computing indexes, 0.0639 misc.) + 0 I/O.
+000540141 పదేళ్లు ఏపీకి ప్రత్యేక హోదా కావాలన్న ఎందుకు నోరు మెదపడం లేదని అడిగారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540141 is 1.87482 over 238 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.289 seconds taken in nnet3 compilation total (breakdown: 0.22 compilation, 0.0382 optimization, 0 shortcut expansion, 0.00127 checking, 1.91e-06 computing indexes, 0.0298 misc.) + 0 I/O.
+000540232 ప్రభుత్వం ప్రజల <unk> పరిష్కారం కాదన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540232 is 2.2755 over 129 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.473 seconds taken in nnet3 compilation total (breakdown: 0.342 compilation, 0.126 optimization, 0 shortcut expansion, 0.00274 checking, 6.91e-06 computing indexes, 0.003 misc.) + 0 I/O.
+000540240 వీటి జీవనానికి అనువైన ప్రాంతం కాదని తేల్చి చెప్పింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540240 is 1.87765 over 165 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.462 seconds taken in nnet3 compilation total (breakdown: 0.329 compilation, 0.129 optimization, 0 shortcut expansion, 0.00178 checking, 6.2e-06 computing indexes, 0.00244 misc.) + 0 I/O.
+000540256 పుష్కరాల భక్తుల మృతికి కారకులైన చంద్రబాబుపై కేసు ఎందుకు పెట్టలేదని ప్రశ్నించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540256 is 1.69851 over 231 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.452 seconds taken in nnet3 compilation total (breakdown: 0.323 compilation, 0.125 optimization, 0 shortcut expansion, 0.00192 checking, 6.2e-06 computing indexes, 0.0025 misc.) + 0 I/O.
+000540284 దీంతో జరగనున్న భావన ప్రజల్లో ఉందన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540284 is 1.93086 over 157 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.423 seconds taken in nnet3 compilation total (breakdown: 0.293 compilation, 0.0968 optimization, 0 shortcut expansion, 0.00213 checking, 6.2e-06 computing indexes, 0.0306 misc.) + 0 I/O.
+000540293 కోటి తెచ్చే వాళ్లని <unk> జారీ చేసిన విషయం తెలిసిందే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540293 is 2.07278 over 171 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.384 seconds taken in nnet3 compilation total (breakdown: 0.24 compilation, 0.112 optimization, 0 shortcut expansion, 0.0299 checking, 4.77e-06 computing indexes, 0.00217 misc.) + 0 I/O.
+000540297 తుపాను ప్రాంతాల్లో వాళ్ళే పలు రైల్వే పాలు ఏర్పాట్లు చేసింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540297 is 1.90142 over 163 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.513 seconds taken in nnet3 compilation total (breakdown: 0.372 compilation, 0.108 optimization, 0 shortcut expansion, 0.00206 checking, 5.96e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+000540319 ఇప్పటికే గుంటూరు సేవల మినహా అన్ని విధులను బహిష్కరించిన చూడాలో 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000540319 is 1.91087 over 255 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.215 seconds taken in nnet3 compilation total (breakdown: 0.158 compilation, 0.0542 optimization, 0 shortcut expansion, 0.000843 checking, 1.91e-06 computing indexes, 0.00148 misc.) + 0 I/O.
+000550023 రైతు రుణమాఫీ చేసింది కనబడటం లేదా అని ప్రశ్నించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550023 is 2.5602 over 137 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.409 seconds taken in nnet3 compilation total (breakdown: 0.232 compilation, 0.0928 optimization, 0 shortcut expansion, 0.00201 checking, 5.96e-06 computing indexes, 0.0828 misc.) + 0 I/O.
+000550046 అంతకు ముందు చంద్రబాబు అమరావతిలో వాసిరెడ్డి వెంకటాద్రినాయుడు విగ్రహానికి పూలమాల వేసి నివాళులు అర్పించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550046 is 2.56613 over 219 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.46 seconds taken in nnet3 compilation total (breakdown: 0.343 compilation, 0.0881 optimization, 0 shortcut expansion, 0.026 checking, 8.11e-06 computing indexes, 0.00288 misc.) + 0 I/O.
+000550067 కొంతమంది నేతలు వారి స్వార్థం కోసం ఉద్యమాలు ప్రకటనలు చేస్తున్నారని ఆయన ఆరోపించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550067 is 2.72852 over 176 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.416 seconds taken in nnet3 compilation total (breakdown: 0.291 compilation, 0.0923 optimization, 0 shortcut expansion, 0.00191 checking, 6.2e-06 computing indexes, 0.0303 misc.) + 0 I/O.
+000550111 తక్షణమే రహదారులు ప్రజా చైతన్య కార్యక్రమాలపై దృష్టి పెట్టాలన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550111 is 2.83045 over 136 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.256 seconds taken in nnet3 compilation total (breakdown: 0.163 compilation, 0.063 optimization, 0 shortcut expansion, 0.000902 checking, 2.86e-06 computing indexes, 0.0297 misc.) + 0 I/O.
+000550121 అయితే <unk> తెచ్చుకుని వచ్చిన పొలార్డ్ ఆ తర్వాత కూడా అంపైర్ వినీత్ కులకర్ణితో వాగ్వాదానికి దిగాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550121 is 2.38331 over 192 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.451 seconds taken in nnet3 compilation total (breakdown: 0.281 compilation, 0.113 optimization, 0 shortcut expansion, 0.026 checking, 5.96e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+000550129 ప్రతి పేదవానికీ అన్ని రకాల వైద్య సేవలు అందించేందుకు అవసరమైన వైద్య పరికరాలను అందుబాటులో ఉంచామని తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550129 is 2.69824 over 188 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.396 seconds taken in nnet3 compilation total (breakdown: 0.247 compilation, 0.0602 optimization, 0 shortcut expansion, 0.03 checking, 5.01e-06 computing indexes, 0.0592 misc.) + 0 I/O.
+000550137 మహిళలు బలహీన వర్గాల కోసమే ప్రధాని మోడీ భీమా పథకాలు ప్రవేశపెట్టామన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550137 is 2.81921 over 149 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.485 seconds taken in nnet3 compilation total (breakdown: 0.356 compilation, 0.0966 optimization, 0 shortcut expansion, 0.0301 checking, 6.68e-06 computing indexes, 0.00297 misc.) + 0 I/O.
+000550160 ఈ సందర్భంగా మంగళవారం ఆయన మీడియాతో మాట్లాడుతూ తెలుగు రాష్ట్రాల్లో అసెంబ్లీ సీట్ల పెంపుపై స్పందించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550160 is 2.73587 over 182 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.5 seconds taken in nnet3 compilation total (breakdown: 0.343 compilation, 0.1 optimization, 0 shortcut expansion, 0.0341 checking, 5.96e-06 computing indexes, 0.0232 misc.) + 0 I/O.
+000550182 ఇప్పుడు చంద్రబాబు వచ్చి ఆయన <unk> గ్రామంలో దళితుల భూములు లాక్కుంటున్నారని వైసీపీ అధ్యక్షుడు జగన్ మండిపడ్డారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550182 is 2.43341 over 182 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.462 seconds taken in nnet3 compilation total (breakdown: 0.33 compilation, 0.128 optimization, 0 shortcut expansion, 0.00173 checking, 5.72e-06 computing indexes, 0.00237 misc.) + 0 I/O.
+000550259 దానివల్ల వ్యవసాయం దాని అనుబంధ రంగాల్లో ఉపాధి అవకాశాలు పెరుగుతాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550259 is 2.70876 over 121 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.418 seconds taken in nnet3 compilation total (breakdown: 0.282 compilation, 0.0712 optimization, 0 shortcut expansion, 0.0302 checking, 5.96e-06 computing indexes, 0.0345 misc.) + 0 I/O.
+000550267 రాష్ట్ర విభజన జరిగి రెండేళ్లు గడిచినా రాష్ట్రానికి ప్రత్యేక హోదా విభజన హామీల అమలు చేసిన కేంద్రానికి చిత్తశుద్ధి చూపడం లేదని తెలిసి పేర్కొన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550267 is 2.21054 over 209 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.312 compilation, 0.108 optimization, 0 shortcut expansion, 0.00181 checking, 5.25e-06 computing indexes, 0.0268 misc.) + 0 I/O.
+000550330 <unk> కు గుడ్ బై చెప్పడంతో ఆయన భార్య హెలికాప్టర్ విలపించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550330 is 2.27128 over 131 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.489 seconds taken in nnet3 compilation total (breakdown: 0.316 compilation, 0.0599 optimization, 0 shortcut expansion, 0.0583 checking, 5.96e-06 computing indexes, 0.0552 misc.) + 0 I/O.
+000550423 ఇప్పటి వరకు వరకు చేసిన వ్యాఖ్యలకు చేర్చాలని పిచ్చి ప్రేలాపనలు కట్టిపెట్టాలని గట్టిగా హెచ్చరించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000550423 is 2.22971 over 193 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.43 seconds taken in nnet3 compilation total (breakdown: 0.309 compilation, 0.116 optimization, 0 shortcut expansion, 0.00206 checking, 6.91e-06 computing indexes, 0.00243 misc.) + 0 I/O.
+000560045 రాధాకృష్ణ గొర్రెలు మేకల పెంపకందారుల సంఘం జిల్లా కార్యదర్శి బైరగాని శ్రీనివాసరావు కుల వివక్ష వ్యతిరేక పోరాట సంఘం జిల్లా కార్యదర్శి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560045 is 2.62722 over 245 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.406 seconds taken in nnet3 compilation total (breakdown: 0.274 compilation, 0.0918 optimization, 0 shortcut expansion, 0.038 checking, 5.96e-06 computing indexes, 0.00254 misc.) + 0 I/O.
+000560051 అభివృద్ధి సంక్షేమ కార్యక్రమాలు అప్పటికే అమల్లో తెలంగాణ ముందు వరుసలో నిలుస్తుంది అన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560051 is 2.51139 over 196 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.461 seconds taken in nnet3 compilation total (breakdown: 0.283 compilation, 0.0963 optimization, 0 shortcut expansion, 0.0501 checking, 7.15e-06 computing indexes, 0.0313 misc.) + 0 I/O.
+000560073 ఆలయంలో తలెత్తిన వివాదంపై విచారణకు ఆదేశించామని నివేదిక ఇచ్చిన తర్వాత చర్యలు తీసుకుంటామని మంత్రి తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560073 is 2.67441 over 202 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.483 seconds taken in nnet3 compilation total (breakdown: 0.325 compilation, 0.0879 optimization, 0 shortcut expansion, 0.0384 checking, 6.91e-06 computing indexes, 0.0312 misc.) + 0 I/O.
+000560100 అనంతపురం జిల్లా రైతులకు వాతావరణ బీమా తో సంబంధం లేకుండా ఎకరాకు రూ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560100 is 2.88516 over 137 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.435 seconds taken in nnet3 compilation total (breakdown: 0.302 compilation, 0.105 optimization, 0 shortcut expansion, 0.00193 checking, 5.96e-06 computing indexes, 0.0263 misc.) + 0 I/O.
+000560198 దీని ద్వారా చేతికుల వృత్తుల పనిముట్లు పంపిణీ చేస్తామన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560198 is 2.55303 over 135 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.535 seconds taken in nnet3 compilation total (breakdown: 0.369 compilation, 0.104 optimization, 0 shortcut expansion, 0.0302 checking, 5.01e-06 computing indexes, 0.031 misc.) + 0 I/O.
+000560303 రైతులు ఎవరూ ఆందోళన సర్వత్రా ఆందోళన చెందాల్సిన అవసరం లేదని తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560303 is 2.66442 over 128 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.47 seconds taken in nnet3 compilation total (breakdown: 0.337 compilation, 0.0725 optimization, 0 shortcut expansion, 0.00194 checking, 7.15e-06 computing indexes, 0.059 misc.) + 0 I/O.
+000560320 ఏపీ సీఎం నారా చంద్రబాబు నాయుడు తెలంగాణ సీఎం కేసీఆర్ అపాయింట్ మెంట్ కోరారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560320 is 2.7471 over 138 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.408 seconds taken in nnet3 compilation total (breakdown: 0.242 compilation, 0.0769 optimization, 0 shortcut expansion, 0.0583 checking, 5.01e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+000560321 సంక్రాంతి పెద్ద సంఖ్యలో డంపింగ్ యార్డు వద్దకు చేరుకుని శ్రీనివాస్ మృతదేహాన్ని చూసి చలించిపోయారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560321 is 2.67929 over 188 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.29 compilation, 0.132 optimization, 0 shortcut expansion, 0.00178 checking, 6.91e-06 computing indexes, 0.00215 misc.) + 0 I/O.
+000560327 మంత్రం జపిస్తే ఈసారి ఎన్నికల్లో మరింత ఎదురుదెబ్బ తప్పదని రెండో భాగం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560327 is 2.26232 over 151 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.451 seconds taken in nnet3 compilation total (breakdown: 0.306 compilation, 0.0965 optimization, 0 shortcut expansion, 0.022 checking, 5.25e-06 computing indexes, 0.0271 misc.) + 0 I/O.
+000560328 కేసీఆర్ <unk> విషయంలో ఆయనపై మోపిన సెక్షన్లు చట్ట ఉల్లంఘన కిందకే వస్తాయని వారు చెబుతున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560328 is 2.37766 over 224 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.408 seconds taken in nnet3 compilation total (breakdown: 0.282 compilation, 0.101 optimization, 0 shortcut expansion, 0.022 checking, 5.96e-06 computing indexes, 0.00246 misc.) + 0 I/O.
+000560329 కళాకారుల పరిశీలించిన తర్వాత ఇతర విషయాలు వెల్లడిస్తామని ఇంకా సోదాలు జరుగుతున్నాయని చెప్పారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560329 is 2.71125 over 170 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.285 seconds taken in nnet3 compilation total (breakdown: 0.184 compilation, 0.0382 optimization, 0 shortcut expansion, 0.0332 checking, 3.1e-06 computing indexes, 0.0299 misc.) + 0 I/O.
+000560361 ఈ సందర్భంగా ఆయన మాట్లాడుతూ వ్యవసాయాన్ని లాభసాటిగా చేయాలనే దృఢ నిశ్చయంతో పనిచేస్తామన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560361 is 2.63737 over 184 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.47 seconds taken in nnet3 compilation total (breakdown: 0.344 compilation, 0.0963 optimization, 0 shortcut expansion, 0.00217 checking, 5.96e-06 computing indexes, 0.027 misc.) + 0 I/O.
+000560419 కిడ్నీ వ్యాధి కారణంగా ఇక్కడి యువతకు పెళ్లిళ్లు కూడా అవసరం కాదని తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560419 is 2.65504 over 148 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.46 seconds taken in nnet3 compilation total (breakdown: 0.312 compilation, 0.094 optimization, 0 shortcut expansion, 0.0264 checking, 5.96e-06 computing indexes, 0.0271 misc.) + 0 I/O.
+000560475 ఢిల్లీ పిలుపు నేపథ్యంలో చంద్రబాబు అందుబాటులో ఉన్న మంత్రులు సీనియర్ నేతలు చర్చలు జరుపుతున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560475 is 2.77032 over 158 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.291 compilation, 0.097 optimization, 0 shortcut expansion, 0.0304 checking, 6.2e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+000560482 జిల్లాలో ఉద్రిక్త పరిస్థితులు ఉన్న నేపథ్యంలో ప్రభుత్వం చొరవ తీసుకొని చర్చల ద్వారా సమస్యలను పరిష్కరిస్తుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560482 is 2.68336 over 174 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.414 seconds taken in nnet3 compilation total (breakdown: 0.277 compilation, 0.0963 optimization, 0 shortcut expansion, 0.038 checking, 7.15e-06 computing indexes, 0.00237 misc.) + 0 I/O.
+000560484 ముఖ్యమంత్రి కిరణ్ కుమార్ రెడ్డి ఇతర నేతలు ఢిల్లీ వెళ్లారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000560484 is 2.87657 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.249 seconds taken in nnet3 compilation total (breakdown: 0.164 compilation, 0.0342 optimization, 0 shortcut expansion, 0.0291 checking, 3.1e-06 computing indexes, 0.0217 misc.) + 0 I/O.
+LOG (apply-cmvn-online[5.5.1009~1-e4940]:main():apply-cmvn-online.cc:133) Applied online CMVN to 322 files, or 187242 frames.
+000570019 అయితే ప్రతిపక్ష ప్రతిపక్ష వైసిపి అధినేత జగన్ మాత్రం ఈ విందుకు హాజరు కాలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000570019 is 2.09577 over 275 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.417 seconds taken in nnet3 compilation total (breakdown: 0.256 compilation, 0.0682 optimization, 0 shortcut expansion, 0.0621 checking, 5.01e-06 computing indexes, 0.031 misc.) + 0 I/O.
+000570032 ఇలా అన్ని రంగాల్లోనూ మౌలిక సదుపాయాలు కంపెనీలకు విస్తృత అవకాశాలున్నాయని తెలంగాణ ఐటీ పంచాయతీరాజ్ శాఖ మంత్రి కెటి రామారావు తెలిపారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000570032 is 1.81999 over 391 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.285 seconds taken in nnet3 compilation total (breakdown: 0.188 compilation, 0.0382 optimization, 0 shortcut expansion, 0.0291 checking, 2.86e-06 computing indexes, 0.0299 misc.) + 0 I/O.
+000570064 పవన్ కళ్యాణ్ కూడా పవన్ కళ్యాణ్ పార్టీ నేతలు కూడా పార్టీ ఫిరాయింపులను తప్పుపట్టారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000570064 is 1.91538 over 318 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.437 seconds taken in nnet3 compilation total (breakdown: 0.288 compilation, 0.0883 optimization, 0 shortcut expansion, 0.0299 checking, 5.72e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+000570071 కేసు నమోదు చేసుకుని ఓ వ్యక్తిని అదుపులోకి తీసుకున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000570071 is 2.27969 over 148 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.467 seconds taken in nnet3 compilation total (breakdown: 0.323 compilation, 0.14 optimization, 0 shortcut expansion, 0.0018 checking, 5.96e-06 computing indexes, 0.00272 misc.) + 0 I/O.
+000570075 ప్రజలు ఎక్కువగా ప్రజా రవాణా వినియోగించుకునేలా అభివృద్ధి జరుగుతోంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000570075 is 2.16511 over 210 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.435 seconds taken in nnet3 compilation total (breakdown: 0.273 compilation, 0.104 optimization, 0 shortcut expansion, 0.0301 checking, 8.11e-06 computing indexes, 0.0266 misc.) + 0 I/O.
+000570104 రైతు సమస్యలు బాగా తెలిసి అది అందుకు పరిష్కార మార్గాలు కనుక్కునే నేర్పు చిరంజీవి లేదని అంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 000570104 is 1.92085 over 315 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.437 seconds taken in nnet3 compilation total (breakdown: 0.316 compilation, 0.0922 optimization, 0 shortcut expansion, 0.00194 checking, 5.72e-06 computing indexes, 0.0268 misc.) + 0 I/O.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:main():nnet3-latgen-faster-parallel.cc:264) Time taken 795.098s: real-time factor assuming 100 feature frames/sec is 1.69578
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:main():nnet3-latgen-faster-parallel.cc:268) Done 322 utterances, failed for 0
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:main():nnet3-latgen-faster-parallel.cc:270) Overall log-likelihood per frame is 2.50282 over 62516 frames.
+LOG (lattice-scale[5.5.1009~1-e4940]:main():lattice-scale.cc:107) Done 322 lattices.
+# Accounting: time=796 threads=1
+# Ended (code 0) at Wed Jun 15 16:48:22 UTC 2022, elapsed time 796 seconds

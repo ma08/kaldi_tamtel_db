@@ -1,0 +1,212 @@
+# lattice-align-phones --replace-output-symbols=true telugu_exp/chain_cleaned_1d/tri3_cleaned_train_cleaned_sp_lats/final.mdl "ark:gunzip -c telugu_exp/chain_cleaned_1d/tri3_cleaned_train_cleaned_sp_lats/lat.96.gz |" ark:- | chain-get-supervision --lattice-input=true --frame-subsampling-factor=3 --right-tolerance=5 --left-tolerance=5 --convert-to-pdfs=false telugu_exp/chain_cleaned_1d/tdnn1d_sp/tree telugu_exp/chain_cleaned_1d/tdnn1d_sp/0.trans_mdl ark:- ark:- | nnet3-chain-get-egs --online-ivectors=scp:telugu_exp/nnet3_cleaned_1d/ivectors_train_cleaned_sp_hires/ivector_online.scp --online-ivector-period=10 --srand=$[96+0] --left-context=29 --right-context=29 --num-frames=150,110,100 --frame-subsampling-factor=3 --compress=true --num-frames-overlap=0 --transition-model=telugu_exp/chain_cleaned_1d/tdnn1d_sp/0.trans_mdl "ark,s,cs:utils/filter_scp.pl --exclude telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/valid_uttlist telugu_data/train_cleaned_sp_hires/split100/96/feats.scp | apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/train_cleaned_sp_hires/split100/96/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/global_cmvn.stats scp:- ark:- |" ark,s,cs:- ark:- | nnet3-chain-copy-egs --random=true --srand=$[96+0] ark:- ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.1.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.2.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.3.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.4.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.5.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.6.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.7.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.8.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.9.ark 
+# Started at Wed Jun 15 01:47:36 UTC 2022
+#
+chain-get-supervision --lattice-input=true --frame-subsampling-factor=3 --right-tolerance=5 --left-tolerance=5 --convert-to-pdfs=false telugu_exp/chain_cleaned_1d/tdnn1d_sp/tree telugu_exp/chain_cleaned_1d/tdnn1d_sp/0.trans_mdl ark:- ark:- 
+lattice-align-phones --replace-output-symbols=true telugu_exp/chain_cleaned_1d/tri3_cleaned_train_cleaned_sp_lats/final.mdl 'ark:gunzip -c telugu_exp/chain_cleaned_1d/tri3_cleaned_train_cleaned_sp_lats/lat.96.gz |' ark:- 
+nnet3-chain-get-egs --online-ivectors=scp:telugu_exp/nnet3_cleaned_1d/ivectors_train_cleaned_sp_hires/ivector_online.scp --online-ivector-period=10 --srand=96 --left-context=29 --right-context=29 --num-frames=150,110,100 --frame-subsampling-factor=3 --compress=true --num-frames-overlap=0 --transition-model=telugu_exp/chain_cleaned_1d/tdnn1d_sp/0.trans_mdl 'ark,s,cs:utils/filter_scp.pl --exclude telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/valid_uttlist telugu_data/train_cleaned_sp_hires/split100/96/feats.scp | apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/train_cleaned_sp_hires/split100/96/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/global_cmvn.stats scp:- ark:- |' ark,s,cs:- ark:- 
+LOG (nnet3-chain-get-egs[5.5.1009~1-e4940]:ComputeDerived():nnet-example-utils.cc:346) Rounding up --num-frames=150,110,100 to multiples of --frame-subsampling-factor=3, to: 150,111,102
+nnet3-chain-copy-egs --random=true --srand=96 ark:- ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.1.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.2.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.3.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.4.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.5.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.6.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.7.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.8.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.96.9.ark 
+apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/train_cleaned_sp_hires/split100/96/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/global_cmvn.stats scp:- ark:- 
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4055-TE4056_2-B.172-1 because it is too short: 100 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4058_1-A.062-1 because it is too short: 71 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4058_1-A.064-1 because it is too short: 68 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4058_1-A.206-1 because it is too short: 70 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4058_1-B.087-1 because it is too short: 94 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4058_2-A.181-1 because it is too short: 51 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4058_2-A.227-1 because it is too short: 82 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4058_2-A.272-1 because it is too short: 62 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4058_2-B.019-1 because it is too short: 49 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4058_2-B.078-1 because it is too short: 78 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4058_2-B.126-1 because it is too short: 68 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4059_1-A.186-1 because it is too short: 87 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4059_1-B.042-1 because it is too short: 92 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4059_2-A.068-1 because it is too short: 75 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4059_2-A.080-1 because it is too short: 76 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4059_2-B.156-1 because it is too short: 74 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4057-TE4059_2-B.158-1 because it is too short: 53 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4058-TE4060_1-A.158-1 because it is too short: 76 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4058-TE4060_1-A.192-1 because it is too short: 65 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4058-TE4060_2-B.250-1 because it is too short: 49 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4058-TE4060_2-B.294-1 because it is too short: 100 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-TE4059-TE4060_1-A.043-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4059-TE4060_1-A.043-2 because it is too short: 93 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4059-TE4060_1-A.073-1 because it is too short: 87 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4059-TE4060_2-A.123-1 because it is too short: 76 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4059-TE4060_2-A.215-1 because it is too short: 62 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4059-TE4060_2-B.243-1 because it is too short: 90 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4062_1-A.068-1 because it is too short: 82 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4062_1-A.074-1 because it is too short: 57 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4062_1-A.076-1 because it is too short: 63 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4062_2-A.165-1 because it is too short: 80 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4062_2-A.174-1 because it is too short: 58 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4062_2-B.008-1 because it is too short: 80 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4062_2-B.046-1 because it is too short: 93 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4062_2-B.052-1 because it is too short: 93 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4062_2-B.087-1 because it is too short: 93 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4063_1-A.136-1 because it is too short: 100 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4063_1-B.221-1 because it is too short: 60 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4063_2-A.039-1 because it is too short: 75 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4063_2-B.021-1 because it is too short: 71 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4063_2-B.122-1 because it is too short: 73 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4061-TE4063_2-B.144-1 because it is too short: 62 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4062-TE4064_1-A.116-1 because it is too short: 69 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4062-TE4064_1-B.112-1 because it is too short: 83 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4062-TE4064_2-A.004-1 because it is too short: 76 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4062-TE4064_2-A.077-1 because it is too short: 90 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4062-TE4064_2-B.223-1 because it is too short: 55 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4062-TE4064_2-B.265-1 because it is too short: 71 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4063-TE4064_1-A.135-1 because it is too short: 73 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4063-TE4064_1-B.010-1 because it is too short: 71 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4063-TE4064_1-B.054-1 because it is too short: 99 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4063-TE4064_1-B.130-1 because it is too short: 94 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4063-TE4064_2-A.036-1 because it is too short: 92 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4063-TE4064_2-A.106-1 because it is too short: 62 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4063-TE4064_2-A.110-1 because it is too short: 97 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4063-TE4064_2-A.112-1 because it is too short: 84 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4063-TE4064_2-A.140-1 because it is too short: 68 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4063-TE4064_2-A.196-1 because it is too short: 73 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4410_1-A.048-1 because it is too short: 51 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4410_1-A.080-1 because it is too short: 59 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4410_1-A.104-1 because it is too short: 80 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4410_1-B.091-1 because it is too short: 99 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4410_1-B.117-1 because it is too short: 98 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4410_2-A.188-1 because it is too short: 94 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_1-A.020-1 because it is too short: 80 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_1-A.181-1 because it is too short: 59 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_1-A.254-1 because it is too short: 66 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_1-A.266-1 because it is too short: 63 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_1-B.065-1 because it is too short: 80 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_1-B.101-1 because it is too short: 101 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_1-B.125-1 because it is too short: 83 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_1-B.157-1 because it is too short: 60 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_1-B.250-1 because it is too short: 92 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_1-B.316-1 because it is too short: 80 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_2-A.262-1 because it is too short: 74 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_2-A.272-1 because it is too short: 97 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_2-B.109-1 because it is too short: 62 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_2-B.148-1 because it is too short: 66 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_2-B.172-1 because it is too short: 65 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_2-B.187-1 because it is too short: 53 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_2-B.189-1 because it is too short: 64 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_2-B.267-1 because it is too short: 72 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4409-TE4411_2-B.268-1 because it is too short: 83 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-A.044-1 because it is too short: 72 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-A.056-1 because it is too short: 80 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-A.166-1 because it is too short: 80 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-A.220-1 because it is too short: 55 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-B.016-1 because it is too short: 82 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-B.020-1 because it is too short: 53 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-B.088-1 because it is too short: 83 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-B.104-1 because it is too short: 66 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-B.119-1 because it is too short: 76 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-B.135-1 because it is too short: 87 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-B.168-1 because it is too short: 89 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-B.184-1 because it is too short: 83 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-B.207-1 because it is too short: 97 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4410-TE4412_1-B.210-1 because it is too short: 93 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_1-A.038-1 because it is too short: 50 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_1-A.076-1 because it is too short: 101 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_1-A.079-1 because it is too short: 64 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_1-A.155-1 because it is too short: 73 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_1-A.190-1 because it is too short: 73 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_1-A.280-1 because it is too short: 97 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_1-A.294-1 because it is too short: 93 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_1-A.350-1 because it is too short: 94 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_1-B.006-1 because it is too short: 91 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_1-B.049-1 because it is too short: 75 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_1-B.195-1 because it is too short: 100 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_1-B.211-1 because it is too short: 83 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-A.029-1 because it is too short: 93 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-A.057-1 because it is too short: 84 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-A.067-1 because it is too short: 62 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-A.112-1 because it is too short: 71 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-A.137-1 because it is too short: 70 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-A.145-1 because it is too short: 62 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-A.147-1 because it is too short: 51 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-A.171-1 because it is too short: 74 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-A.214-1 because it is too short: 78 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-A.318-1 because it is too short: 55 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-A.322-1 because it is too short: 58 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-B.081-1 because it is too short: 66 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-B.135-1 because it is too short: 91 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-B.184-1 because it is too short: 99 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-B.272-1 because it is too short: 66 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-B.332-1 because it is too short: 68 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4411-TE4412_2-B.357-1 because it is too short: 49 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_1-A.325-1 because it is too short: 96 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_1-B.086-1 because it is too short: 99 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_1-B.100-1 because it is too short: 81 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_1-B.150-1 because it is too short: 80 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_1-B.325-1 because it is too short: 78 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_1-B.385-1 because it is too short: 73 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_2-A.113-1 because it is too short: 53 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_2-B.141-1 because it is too short: 75 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_2-B.146-1 because it is too short: 75 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_2-B.184-1 because it is too short: 79 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_2-B.217-1 because it is too short: 78 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_2-B.275-1 because it is too short: 90 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_2-B.278-1 because it is too short: 93 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4426_2-B.302-1 because it is too short: 46 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_1-A.003-1 because it is too short: 93 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_1-A.019-1 because it is too short: 75 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_1-A.042-1 because it is too short: 62 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_1-A.205-1 because it is too short: 98 frames.
+WARNING (apply-cmvn-online[5.5.1009~1-e4940]:main():apply-cmvn-online.cc:84) No features for utterance sp1.1-TE4425-TE4427_1-B.034-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_1-B.009-1 because it is too short: 81 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_1-B.076-1 because it is too short: 63 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_1-B.106-1 because it is too short: 58 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_1-B.125-1 because it is too short: 75 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_1-B.196-1 because it is too short: 63 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_1-B.206-1 because it is too short: 66 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_1-B.254-1 because it is too short: 69 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_1-B.277-1 because it is too short: 72 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_2-A.179-1 because it is too short: 82 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_2-A.230-1 because it is too short: 65 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_2-B.068-1 because it is too short: 64 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_2-B.091-1 because it is too short: 55 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_2-B.093-1 because it is too short: 90 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_2-B.099-1 because it is too short: 90 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_2-B.132-1 because it is too short: 55 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_2-B.180-1 because it is too short: 75 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_2-B.189-1 because it is too short: 66 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4425-TE4427_2-B.202-1 because it is too short: 73 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4426-TE4428_1-B.023-1 because it is too short: 60 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4426-TE4428_1-B.037-1 because it is too short: 62 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4426-TE4428_1-B.055-1 because it is too short: 68 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4426-TE4428_2-A.151-1 because it is too short: 55 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4426-TE4428_2-A.170-1 because it is too short: 53 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4426-TE4428_2-A.180-1 because it is too short: 94 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4426-TE4428_2-A.215-1 because it is too short: 66 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4426-TE4428_2-B.036-1 because it is too short: 53 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4426-TE4428_2-B.145-1 because it is too short: 80 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4427-TE4428_1-B.002-1 because it is too short: 71 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4427-TE4428_1-B.025-1 because it is too short: 55 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4427-TE4428_1-B.107-1 because it is too short: 99 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4427-TE4428_1-B.166-1 because it is too short: 96 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4427-TE4428_2-A.153-1 because it is too short: 88 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4427-TE4428_2-A.191-1 because it is too short: 67 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4427-TE4428_2-A.193-1 because it is too short: 83 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4427-TE4428_2-B.047-1 because it is too short: 93 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4427-TE4428_2-B.049-1 because it is too short: 75 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4429-TE4430_1-A.091-1 because it is too short: 95 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4429-TE4430_2-B.099-1 because it is too short: 71 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4429-TE4431_1-B.095-1 because it is too short: 82 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4429-TE4431_2-B.062-1 because it is too short: 74 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4430-TE4432_2-A.216-1 because it is too short: 66 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4431-TE4432_2-A.109-1 because it is too short: 79 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-TE4431-TE4432_2-A.121-1 because it is too short: 73 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-tef_01908_00564720112-2 because it is too short: 91 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-tef_02828_00667187597-1 because it is too short: 91 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-tef_03689_01994116811-1 because it is too short: 100 frames.
+WARNING (apply-cmvn-online[5.5.1009~1-e4940]:main():apply-cmvn-online.cc:84) No features for utterance sp1.1-tef_04261_00636287516-1
+WARNING (apply-cmvn-online[5.5.1009~1-e4940]:main():apply-cmvn-online.cc:84) No features for utterance sp1.1-tef_05181_01502251314-1
+LOG (lattice-align-phones[5.5.1009~1-e4940]:main():lattice-align-phones.cc:105) Successfully aligned 1459 lattices; 0 had errors.
+LOG (chain-get-supervision[5.5.1009~1-e4940]:main():chain-get-supervision.cc:150) Generated chain supervision information for 1459 utterances, errors on 0
+LOG (apply-cmvn-online[5.5.1009~1-e4940]:main():apply-cmvn-online.cc:133) Applied online CMVN to 1457 files, or 366479 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:442) 190 utterances had errors and could not be processed.
+LOG (nnet3-chain-get-egs[5.5.1009~1-e4940]:~UtteranceSplitter():nnet-example-utils.cc:372) Split 1456 utts, with total length 366148 frames (1.01708 hours assuming 100 frames per second) into 2799 chunks.
+LOG (nnet3-chain-get-egs[5.5.1009~1-e4940]:~UtteranceSplitter():nnet-example-utils.cc:382) Average chunk length was 127.939 frames; overlap between adjacent chunks was 2.62926% of input length; length of output was 97.8023% of input length (minus overlap = 95.173%).
+LOG (nnet3-chain-get-egs[5.5.1009~1-e4940]:~UtteranceSplitter():nnet-example-utils.cc:398) Output frames are distributed among chunk-sizes as follows: 102 = 24.72%, 111 = 15.96%, 150 = 59.31%
+LOG (nnet3-chain-copy-egs[5.5.1009~1-e4940]:main():nnet3-chain-copy-egs.cc:395) Read 2799 neural-network training examples, wrote 2799
+# Accounting: time=11 threads=1
+# Ended (code 0) at Wed Jun 15 01:47:47 UTC 2022, elapsed time 11 seconds

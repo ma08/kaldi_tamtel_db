@@ -1,0 +1,9 @@
+# lattice-lmrescore --lm-scale=-1.0 "ark:gunzip -c telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_test/lat.3.gz|" "fstproject --project_output=true telugu_data/lang/G.fst |" ark:- | lattice-lmrescore-const-arpa --lm-scale=1.0 ark:- telugu_data/lang_rescore/G.carpa "ark,t:|gzip -c>telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_test_rescore/lat.3.gz" 
+# Started at Wed Jun 15 16:52:51 UTC 2022
+#
+lattice-lmrescore-const-arpa --lm-scale=1.0 ark:- telugu_data/lang_rescore/G.carpa 'ark,t:|gzip -c>telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_test_rescore/lat.3.gz' 
+lattice-lmrescore --lm-scale=-1.0 'ark:gunzip -c telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_test/lat.3.gz|' 'fstproject --project_output=true telugu_data/lang/G.fst |' ark:- 
+LOG (lattice-lmrescore[5.5.1009~1-e4940]:main():lattice-lmrescore.cc:148) Done 227 lattices, failed for 0
+LOG (lattice-lmrescore-const-arpa[5.5.1009~1-e4940]:main():lattice-lmrescore-const-arpa.cc:117) Done 227 lattices, failed for 0
+# Accounting: time=19 threads=1
+# Ended (code 0) at Wed Jun 15 16:53:10 UTC 2022, elapsed time 19 seconds

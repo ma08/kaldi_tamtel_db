@@ -1,0 +1,1007 @@
+# nnet3-latgen-faster-parallel --num-threads=4 --online-ivectors=scp:telugu_exp/nnet3_cleaned_1d/ivectors_dev_hires/ivector_online.scp --online-ivector-period=10 --frame-subsampling-factor=3 --frames-per-chunk=50 --extra-left-context=0 --extra-right-context=0 --extra-left-context-initial=-1 --extra-right-context-final=-1 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=1.0 --allow-partial=true --word-symbol-table=telugu_exp/chain_cleaned_1d/tdnn1d_sp/graph/words.txt telugu_exp/chain_cleaned_1d/tdnn1d_sp/final.mdl telugu_exp/chain_cleaned_1d/tdnn1d_sp/graph/HCLG.fst "ark,s,cs:apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/dev_hires/split15/10/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/global_cmvn.stats scp:telugu_data/dev_hires/split15/10/feats.scp ark:- |" "ark:|lattice-scale --acoustic-scale=10.0 ark:- ark:- | gzip -c >telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_dev/lat.10.gz" 
+# Started at Wed Jun 15 16:40:45 UTC 2022
+#
+nnet3-latgen-faster-parallel --num-threads=4 --online-ivectors=scp:telugu_exp/nnet3_cleaned_1d/ivectors_dev_hires/ivector_online.scp --online-ivector-period=10 --frame-subsampling-factor=3 --frames-per-chunk=50 --extra-left-context=0 --extra-right-context=0 --extra-left-context-initial=-1 --extra-right-context-final=-1 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=1.0 --allow-partial=true --word-symbol-table=telugu_exp/chain_cleaned_1d/tdnn1d_sp/graph/words.txt telugu_exp/chain_cleaned_1d/tdnn1d_sp/final.mdl telugu_exp/chain_cleaned_1d/tdnn1d_sp/graph/HCLG.fst 'ark,s,cs:apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/dev_hires/split15/10/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/global_cmvn.stats scp:telugu_data/dev_hires/split15/10/feats.scp ark:- |' 'ark:|lattice-scale --acoustic-scale=10.0 ark:- ark:- | gzip -c >telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_dev/lat.10.gz' 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 1 orphan nodes.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 2 orphan components.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:Collapse():nnet-utils.cc:1488) Added 1 components, removed 2
+lattice-scale --acoustic-scale=10.0 ark:- ark:- 
+apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/dev_hires/split15/10/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/global_cmvn.stats scp:telugu_data/dev_hires/split15/10/feats.scp ark:- 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:CheckAndFixConfigs():nnet-am-decodable-simple.cc:294) Increasing --frames-per-chunk from 50 to 51 to make it a multiple of --frame-subsampling-factor=3
+TE0595-TE0596_1-A.048 అందుకని 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0595-TE0596_1-A.048 is 3.05835 over 26 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.454 seconds taken in nnet3 compilation total (breakdown: 0.296 compilation, 0.0682 optimization, 0 shortcut expansion, 0.03 checking, 6.91e-06 computing indexes, 0.0595 misc.) + 0 I/O.
+TE0595-TE0596_1-A.146 నాకైతే మా ఇంట్లో చదివిస్తారని నమ్మకం లేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0595-TE0596_1-A.146 is 2.59735 over 95 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.446 seconds taken in nnet3 compilation total (breakdown: 0.301 compilation, 0.0847 optimization, 0 shortcut expansion, 0.058 checking, 8.82e-06 computing indexes, 0.00279 misc.) + 0 I/O.
+TE0595-TE0596_1-B.014 ప్రభుత్వాలు ప్రభుత్వ చర్య లో కూడా స్త్రీలకు సమాన హక్కులు కల్పిస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0595-TE0596_1-B.014 is 2.50803 over 138 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.418 seconds taken in nnet3 compilation total (breakdown: 0.312 compilation, 0.101 optimization, 0 shortcut expansion, 0.00216 checking, 6.91e-06 computing indexes, 0.00242 misc.) + 0 I/O.
+TE0595-TE0596_1-B.078 ఏం చదువుకున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0595-TE0596_1-B.078 is 2.9262 over 42 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.408 seconds taken in nnet3 compilation total (breakdown: 0.28 compilation, 0.0959 optimization, 0 shortcut expansion, 0.0301 checking, 8.11e-06 computing indexes, 0.00235 misc.) + 0 I/O.
+TE0601-TE0602_1-A.146 ఇంకా అదే ప్రపంచ అయిపోతుంది ఇంకా అలాగా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0601-TE0602_1-A.146 is 2.3112 over 101 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.574 seconds taken in nnet3 compilation total (breakdown: 0.383 compilation, 0.15 optimization, 0 shortcut expansion, 0.0383 checking, 8.11e-06 computing indexes, 0.00282 misc.) + 0 I/O.
+TE0601-TE0602_1-A.285 వేరే వ్యక్తికి ఉపయోగపడుతుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0601-TE0602_1-A.285 is 2.72494 over 76 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.528 seconds taken in nnet3 compilation total (breakdown: 0.366 compilation, 0.157 optimization, 0 shortcut expansion, 0.00207 checking, 7.15e-06 computing indexes, 0.00254 misc.) + 0 I/O.
+TE0601-TE0602_1-B.062 అంతా మనకి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0601-TE0602_1-B.062 is 2.41004 over 55 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.477 seconds taken in nnet3 compilation total (breakdown: 0.328 compilation, 0.101 optimization, 0 shortcut expansion, 0.0181 checking, 8.11e-06 computing indexes, 0.0304 misc.) + 0 I/O.
+TE0601-TE0602_2-B.099 కాగా <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0601-TE0602_2-B.099 is 2.77752 over 28 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.514 seconds taken in nnet3 compilation total (breakdown: 0.378 compilation, 0.104 optimization, 0 shortcut expansion, 0.00191 checking, 1.31e-05 computing indexes, 0.0306 misc.) + 0 I/O.
+TE0601-TE0602_2-B.250 ఇప్పుడు పంపిస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0601-TE0602_2-B.250 is 3.46262 over 36 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.453 seconds taken in nnet3 compilation total (breakdown: 0.295 compilation, 0.082 optimization, 0 shortcut expansion, 0.0341 checking, 4.77e-06 computing indexes, 0.0423 misc.) + 0 I/O.
+TE0601-TE0603_1-A.070 కొంచెం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0601-TE0603_1-A.070 is 2.68307 over 38 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.458 seconds taken in nnet3 compilation total (breakdown: 0.284 compilation, 0.108 optimization, 0 shortcut expansion, 0.0302 checking, 6.91e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+TE0601-TE0603_1-A.137 ఆలోచన ఆ స్త్రీల ఉండటం వల్ల కొంచెం ధైర్యం చేయలేకపోతున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0601-TE0603_1-A.137 is 2.31329 over 136 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.297 seconds taken in nnet3 compilation total (breakdown: 0.225 compilation, 0.0379 optimization, 0 shortcut expansion, 0.00101 checking, 3.1e-06 computing indexes, 0.034 misc.) + 0 I/O.
+TE0601-TE0603_1-B.048 మీ అభిప్రాయం ఏంటో చెప్పండి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0601-TE0603_1-B.048 is 2.85513 over 53 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.412 seconds taken in nnet3 compilation total (breakdown: 0.256 compilation, 0.0961 optimization, 0 shortcut expansion, 0.0301 checking, 8.11e-06 computing indexes, 0.0303 misc.) + 0 I/O.
+TE0601-TE0603_2-B.124 ఎలా బాగుంటది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0601-TE0603_2-B.124 is 2.86368 over 41 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.477 seconds taken in nnet3 compilation total (breakdown: 0.329 compilation, 0.145 optimization, 0 shortcut expansion, 0.00184 checking, 5.96e-06 computing indexes, 0.00238 misc.) + 0 I/O.
+TE0602-TE0604_1-A.489 నేను ఎందుకంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0602-TE0604_1-A.489 is 2.74723 over 46 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.485 seconds taken in nnet3 compilation total (breakdown: 0.344 compilation, 0.136 optimization, 0 shortcut expansion, 0.00187 checking, 5.96e-06 computing indexes, 0.00293 misc.) + 0 I/O.
+TE0602-TE0604_1-B.010 సరే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0602-TE0604_1-B.010 is 2.8029 over 25 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.511 seconds taken in nnet3 compilation total (breakdown: 0.333 compilation, 0.109 optimization, 0 shortcut expansion, 0.0664 checking, 6.68e-06 computing indexes, 0.00279 misc.) + 0 I/O.
+TE0602-TE0604_2-A.026 మంచిది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0602-TE0604_2-A.026 is 3.15212 over 26 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.316 compilation, 0.128 optimization, 0 shortcut expansion, 0.00195 checking, 6.91e-06 computing indexes, 0.00247 misc.) + 0 I/O.
+TE0602-TE0604_2-B.111 సీత 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0602-TE0604_2-B.111 is 2.7156 over 25 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.441 seconds taken in nnet3 compilation total (breakdown: 0.316 compilation, 0.0926 optimization, 0 shortcut expansion, 0.00202 checking, 5.01e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0603-TE0604_1-A.102 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0603-TE0604_1-A.102 is 3.21248 over 25 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.455 seconds taken in nnet3 compilation total (breakdown: 0.323 compilation, 0.0752 optimization, 0 shortcut expansion, 0.0341 checking, 7.63e-06 computing indexes, 0.0229 misc.) + 0 I/O.
+TE0603-TE0604_1-B.070 అది నిజమే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0603-TE0604_1-B.070 is 3.48491 over 33 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.621 seconds taken in nnet3 compilation total (breakdown: 0.477 compilation, 0.0753 optimization, 0 shortcut expansion, 0.0021 checking, 5.96e-06 computing indexes, 0.0672 misc.) + 0 I/O.
+TE0603-TE0604_1-B.179 అది నిజమే అసలు తగ్గిచ్చుకోవాలంటే ఏమి చేయాలి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0603-TE0604_1-B.179 is 2.4836 over 92 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.456 seconds taken in nnet3 compilation total (breakdown: 0.343 compilation, 0.0761 optimization, 0 shortcut expansion, 0.0338 checking, 6.2e-06 computing indexes, 0.0025 misc.) + 0 I/O.
+TE0603-TE0604_2-B.029 కానీ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0603-TE0604_2-B.029 is 2.57867 over 32 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.543 seconds taken in nnet3 compilation total (breakdown: 0.382 compilation, 0.127 optimization, 0 shortcut expansion, 0.00197 checking, 7.15e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0603-TE0604_2-B.053 చేస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0603-TE0604_2-B.053 is 2.86469 over 33 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.566 seconds taken in nnet3 compilation total (breakdown: 0.404 compilation, 0.0963 optimization, 0 shortcut expansion, 0.0342 checking, 1.41e-05 computing indexes, 0.0311 misc.) + 0 I/O.
+TE0603-TE0604_2-B.202 చాలా ఇబ్బందికి గురవుతున్నారు వాళ్ళైతే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0603-TE0604_2-B.202 is 2.276 over 68 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.313 seconds taken in nnet3 compilation total (breakdown: 0.204 compilation, 0.0381 optimization, 0 shortcut expansion, 0.0372 checking, 3.1e-06 computing indexes, 0.034 misc.) + 0 I/O.
+TE0603-TE0604_2-B.243 ఇంకా ఏంటంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0603-TE0604_2-B.243 is 2.61496 over 47 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.516 seconds taken in nnet3 compilation total (breakdown: 0.38 compilation, 0.0715 optimization, 0 shortcut expansion, 0.062 checking, 5.96e-06 computing indexes, 0.0028 misc.) + 0 I/O.
+TE0603-TE0604_2-B.291 అని ఉండాలి అంటే ఒక వ్యక్తి సహాయం చేయాలని ప్రతి ఒక్కరికి ఉండాలి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0603-TE0604_2-B.291 is 2.26884 over 118 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.555 seconds taken in nnet3 compilation total (breakdown: 0.413 compilation, 0.1 optimization, 0 shortcut expansion, 0.00193 checking, 1.22e-05 computing indexes, 0.0393 misc.) + 0 I/O.
+TE0605-TE0606_1-A.029 మొత్తం మీద అప్పుడు ఎలా జరుగుతుంది మీ స్వంత పరిస్థితి ఏంటో 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_1-A.029 is 2.0427 over 116 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.54 seconds taken in nnet3 compilation total (breakdown: 0.362 compilation, 0.109 optimization, 0 shortcut expansion, 0.0342 checking, 7.15e-06 computing indexes, 0.035 misc.) + 0 I/O.
+TE0605-TE0606_1-A.202 మీరు చాలా మంచి ఆలోచన నుండి నేను అలాగే మీరు అనుకున్నది నేను అనుకుంటున్నాను 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_1-A.202 is 2.70443 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.293 seconds taken in nnet3 compilation total (breakdown: 0.187 compilation, 0.0712 optimization, 0 shortcut expansion, 0.000968 checking, 3.1e-06 computing indexes, 0.0339 misc.) + 0 I/O.
+TE0605-TE0606_1-A.349 ఈ యొక్క 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_1-A.349 is 2.38582 over 30 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.492 seconds taken in nnet3 compilation total (breakdown: 0.355 compilation, 0.132 optimization, 0 shortcut expansion, 0.00173 checking, 5.96e-06 computing indexes, 0.00302 misc.) + 0 I/O.
+TE0605-TE0606_1-B.120 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_1-B.120 is 2.84038 over 33 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.496 seconds taken in nnet3 compilation total (breakdown: 0.371 compilation, 0.12 optimization, 0 shortcut expansion, 0.00181 checking, 8.11e-06 computing indexes, 0.00282 misc.) + 0 I/O.
+TE0605-TE0606_1-B.201 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_1-B.201 is 2.89671 over 28 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.619 seconds taken in nnet3 compilation total (breakdown: 0.422 compilation, 0.0799 optimization, 0 shortcut expansion, 0.0383 checking, 6.2e-06 computing indexes, 0.079 misc.) + 0 I/O.
+TE0605-TE0606_2-A.052 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_2-A.052 is 2.9926 over 29 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.671 seconds taken in nnet3 compilation total (breakdown: 0.454 compilation, 0.14 optimization, 0 shortcut expansion, 0.034 checking, 5.96e-06 computing indexes, 0.0431 misc.) + 0 I/O.
+TE0605-TE0606_2-A.106 అవును చెప్పండి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_2-A.106 is 2.96446 over 46 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.429 seconds taken in nnet3 compilation total (breakdown: 0.291 compilation, 0.113 optimization, 0 shortcut expansion, 0.00189 checking, 6.2e-06 computing indexes, 0.023 misc.) + 0 I/O.
+TE0605-TE0606_2-A.475 అవును లెండి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_2-A.475 is 2.68317 over 37 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.447 seconds taken in nnet3 compilation total (breakdown: 0.315 compilation, 0.128 optimization, 0 shortcut expansion, 0.0019 checking, 6.2e-06 computing indexes, 0.00226 misc.) + 0 I/O.
+TE0605-TE0606_2-B.137 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_2-B.137 is 2.90721 over 28 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.515 seconds taken in nnet3 compilation total (breakdown: 0.382 compilation, 0.128 optimization, 0 shortcut expansion, 0.00182 checking, 5.25e-06 computing indexes, 0.0026 misc.) + 0 I/O.
+TE0605-TE0606_2-B.320 అయితే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_2-B.320 is 2.75801 over 30 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.458 seconds taken in nnet3 compilation total (breakdown: 0.328 compilation, 0.125 optimization, 0 shortcut expansion, 0.002 checking, 6.68e-06 computing indexes, 0.0027 misc.) + 0 I/O.
+TE0605-TE0606_2-B.373 అయితే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_2-B.373 is 3.09105 over 30 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.575 seconds taken in nnet3 compilation total (breakdown: 0.396 compilation, 0.109 optimization, 0 shortcut expansion, 0.00222 checking, 5.72e-06 computing indexes, 0.0672 misc.) + 0 I/O.
+TE0605-TE0606_2-B.421 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_2-B.421 is 3.0259 over 25 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.46 seconds taken in nnet3 compilation total (breakdown: 0.311 compilation, 0.145 optimization, 0 shortcut expansion, 0.00177 checking, 6.91e-06 computing indexes, 0.00234 misc.) + 0 I/O.
+TE0605-TE0606_2-B.423 వ్యక్తిగతంగా అంటే ఏముంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0606_2-B.423 is 2.26618 over 77 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.518 seconds taken in nnet3 compilation total (breakdown: 0.373 compilation, 0.108 optimization, 0 shortcut expansion, 0.034 checking, 5.96e-06 computing indexes, 0.00259 misc.) + 0 I/O.
+TE0605-TE0607_1-A.201 ఆ మళ్ళీ వెయ్యి స్తంభాల గుడి అని ఉంటది అది కూడా ఆ వరంగల్ <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0607_1-A.201 is 2.0871 over 143 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.508 seconds taken in nnet3 compilation total (breakdown: 0.375 compilation, 0.0997 optimization, 0 shortcut expansion, 0.00213 checking, 5.96e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0605-TE0607_1-A.202 అంటే ఇది చదవడమే తప్ప ఎప్పుడూ వెళ్ళలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0607_1-A.202 is 2.48559 over 86 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.463 seconds taken in nnet3 compilation total (breakdown: 0.325 compilation, 0.134 optimization, 0 shortcut expansion, 0.00199 checking, 7.87e-06 computing indexes, 0.00247 misc.) + 0 I/O.
+TE0605-TE0607_1-A.287 బాగా జరుగుద్ది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0607_1-A.287 is 2.78601 over 45 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.496 seconds taken in nnet3 compilation total (breakdown: 0.359 compilation, 0.1 optimization, 0 shortcut expansion, 0.0338 checking, 6.2e-06 computing indexes, 0.00279 misc.) + 0 I/O.
+TE0605-TE0607_1-A.319 ఆ అది దాని బట్టి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0607_1-A.319 is 2.25195 over 70 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.389 seconds taken in nnet3 compilation total (breakdown: 0.256 compilation, 0.129 optimization, 0 shortcut expansion, 0.00172 checking, 5.01e-06 computing indexes, 0.00222 misc.) + 0 I/O.
+TE0605-TE0607_1-B.145 చెప్పండి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0607_1-B.145 is 2.55997 over 24 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.534 seconds taken in nnet3 compilation total (breakdown: 0.396 compilation, 0.134 optimization, 0 shortcut expansion, 0.00214 checking, 5.72e-06 computing indexes, 0.00252 misc.) + 0 I/O.
+TE0605-TE0607_1-B.164 విన్నాను హరప్ప 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0607_1-B.164 is 2.45284 over 48 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.575 seconds taken in nnet3 compilation total (breakdown: 0.397 compilation, 0.0765 optimization, 0 shortcut expansion, 0.0665 checking, 6.91e-06 computing indexes, 0.0353 misc.) + 0 I/O.
+TE0605-TE0607_2-B.132 ఇప్పటికీ <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0607_2-B.132 is 2.19509 over 39 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.457 seconds taken in nnet3 compilation total (breakdown: 0.316 compilation, 0.0721 optimization, 0 shortcut expansion, 0.0344 checking, 7.87e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+TE0605-TE0607_2-B.339 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0605-TE0607_2-B.339 is 3.11117 over 28 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.571 seconds taken in nnet3 compilation total (breakdown: 0.386 compilation, 0.076 optimization, 0 shortcut expansion, 0.0344 checking, 5.96e-06 computing indexes, 0.0752 misc.) + 0 I/O.
+TE0606-TE0608_1-B.360 అలాగే అండి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0606-TE0608_1-B.360 is 2.56609 over 31 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.522 seconds taken in nnet3 compilation total (breakdown: 0.353 compilation, 0.108 optimization, 0 shortcut expansion, 0.03 checking, 6.2e-06 computing indexes, 0.0312 misc.) + 0 I/O.
+TE0606-TE0608_1-B.444 ఆహా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0606-TE0608_1-B.444 is 2.99747 over 29 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.581 seconds taken in nnet3 compilation total (breakdown: 0.383 compilation, 0.129 optimization, 0 shortcut expansion, 0.0663 checking, 5.72e-06 computing indexes, 0.00292 misc.) + 0 I/O.
+TE0606-TE0608_1-B.480 చెప్పేది వినండి ఒకసారి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0606-TE0608_1-B.480 is 2.67229 over 55 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.437 seconds taken in nnet3 compilation total (breakdown: 0.298 compilation, 0.136 optimization, 0 shortcut expansion, 0.00181 checking, 7.15e-06 computing indexes, 0.00229 misc.) + 0 I/O.
+TE0606-TE0608_1-B.509 మీ <unk> వచ్చింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0606-TE0608_1-B.509 is 2.77501 over 41 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.501 seconds taken in nnet3 compilation total (breakdown: 0.36 compilation, 0.105 optimization, 0 shortcut expansion, 0.0022 checking, 6.91e-06 computing indexes, 0.0347 misc.) + 0 I/O.
+TE0606-TE0608_2-A.292 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0606-TE0608_2-A.292 is 3.48515 over 17 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.303 seconds taken in nnet3 compilation total (breakdown: 0.238 compilation, 0.0628 optimization, 0 shortcut expansion, 0.000972 checking, 2.86e-06 computing indexes, 0.00161 misc.) + 0 I/O.
+TE0606-TE0608_2-A.325 నాకు తెలుగు రాదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0606-TE0608_2-A.325 is 3.08777 over 35 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.413 seconds taken in nnet3 compilation total (breakdown: 0.281 compilation, 0.128 optimization, 0 shortcut expansion, 0.00191 checking, 6.2e-06 computing indexes, 0.00227 misc.) + 0 I/O.
+TE0606-TE0608_2-A.347 బాగా ఇది చూడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0606-TE0608_2-A.347 is 2.09096 over 47 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.554 seconds taken in nnet3 compilation total (breakdown: 0.413 compilation, 0.104 optimization, 0 shortcut expansion, 0.00191 checking, 5.72e-06 computing indexes, 0.035 misc.) + 0 I/O.
+TE0606-TE0608_2-B.137 మా <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0606-TE0608_2-B.137 is 2.23029 over 33 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.568 seconds taken in nnet3 compilation total (breakdown: 0.422 compilation, 0.141 optimization, 0 shortcut expansion, 0.00185 checking, 5.72e-06 computing indexes, 0.00281 misc.) + 0 I/O.
+TE0606-TE0608_2-B.163 అవునండి నేనే చూసుకోవాలి నేనే చూసుకోవాలి ఎప్పుడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0606-TE0608_2-B.163 is 2.17865 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.418 seconds taken in nnet3 compilation total (breakdown: 0.256 compilation, 0.0967 optimization, 0 shortcut expansion, 0.034 checking, 2.07e-05 computing indexes, 0.0305 misc.) + 0 I/O.
+TE0606-TE0608_2-B.345 ఎందుకు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0606-TE0608_2-B.345 is 3.04477 over 32 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.482 seconds taken in nnet3 compilation total (breakdown: 0.349 compilation, 0.1 optimization, 0 shortcut expansion, 0.00175 checking, 5.25e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+TE0606-TE0608_2-B.461 అది చెయ్యాలి అనిపిస్తుంది నాకు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0606-TE0608_2-B.461 is 2.46214 over 57 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.507 seconds taken in nnet3 compilation total (breakdown: 0.337 compilation, 0.108 optimization, 0 shortcut expansion, 0.0301 checking, 5.01e-06 computing indexes, 0.0314 misc.) + 0 I/O.
+TE0607-TE0608_1-A.100 ఇంకా చెప్పాలంటే మీరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0607-TE0608_1-A.100 is 2.90369 over 37 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.288 compilation, 0.0724 optimization, 0 shortcut expansion, 0.0581 checking, 6.2e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0607-TE0608_1-A.192 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0607-TE0608_1-A.192 is 2.91312 over 16 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.259 seconds taken in nnet3 compilation total (breakdown: 0.178 compilation, 0.0784 optimization, 0 shortcut expansion, 0.00101 checking, 4.05e-06 computing indexes, 0.00138 misc.) + 0 I/O.
+TE0607-TE0608_1-A.202 అవునా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0607-TE0608_1-A.202 is 3.01084 over 22 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.457 seconds taken in nnet3 compilation total (breakdown: 0.317 compilation, 0.0753 optimization, 0 shortcut expansion, 0.034 checking, 6.2e-06 computing indexes, 0.0305 misc.) + 0 I/O.
+TE0607-TE0608_1-A.235 లేదు ఎప్పుడూ అనిపించలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0607-TE0608_1-A.235 is 2.26871 over 57 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.296 compilation, 0.0926 optimization, 0 shortcut expansion, 0.00204 checking, 5.01e-06 computing indexes, 0.0588 misc.) + 0 I/O.
+TE0607-TE0608_1-B.429 ఆహా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0607-TE0608_1-B.429 is 2.68984 over 31 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.498 seconds taken in nnet3 compilation total (breakdown: 0.364 compilation, 0.129 optimization, 0 shortcut expansion, 0.00206 checking, 8.11e-06 computing indexes, 0.003 misc.) + 0 I/O.
+TE0609-TE0610_1-A.090 ఎందుకంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0609-TE0610_1-A.090 is 2.98021 over 41 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.481 seconds taken in nnet3 compilation total (breakdown: 0.302 compilation, 0.142 optimization, 0 shortcut expansion, 0.00194 checking, 5.72e-06 computing indexes, 0.0347 misc.) + 0 I/O.
+TE0609-TE0610_1-A.249 అంటే బాగుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0609-TE0610_1-A.249 is 2.86276 over 49 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.571 seconds taken in nnet3 compilation total (breakdown: 0.385 compilation, 0.104 optimization, 0 shortcut expansion, 0.05 checking, 5.01e-06 computing indexes, 0.0314 misc.) + 0 I/O.
+TE0609-TE0610_1-A.339 ఆ మహిళ బాగుపడాల ఈ విధంగా ఆలోచిస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0609-TE0610_1-A.339 is 2.71287 over 85 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.291 seconds taken in nnet3 compilation total (breakdown: 0.217 compilation, 0.0711 optimization, 0 shortcut expansion, 0.000953 checking, 3.1e-06 computing indexes, 0.00162 misc.) + 0 I/O.
+TE0609-TE0610_1-B.010 చంద్రబాబు నాయుడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0609-TE0610_1-B.010 is 3.04281 over 47 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.515 seconds taken in nnet3 compilation total (breakdown: 0.375 compilation, 0.104 optimization, 0 shortcut expansion, 0.0338 checking, 5.96e-06 computing indexes, 0.00264 misc.) + 0 I/O.
+TE0609-TE0610_2-B.032 తర్వాత మా ఊర్లో పంట పొలాలు కూడా చాలా ఎక్కువ ఉంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0609-TE0610_2-B.032 is 2.54367 over 108 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.502 seconds taken in nnet3 compilation total (breakdown: 0.349 compilation, 0.149 optimization, 0 shortcut expansion, 0.00194 checking, 1e-05 computing indexes, 0.00266 misc.) + 0 I/O.
+TE0609-TE0610_2-B.277 చాలా బాగుంటుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0609-TE0610_2-B.277 is 2.66293 over 36 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.452 seconds taken in nnet3 compilation total (breakdown: 0.291 compilation, 0.0678 optimization, 0 shortcut expansion, 0.00198 checking, 7.15e-06 computing indexes, 0.0908 misc.) + 0 I/O.
+TE0609-TE0610_2-B.458 కాబట్టే అంటే వాళ్ళకి తెలీదు కదా దాని గురించి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0609-TE0610_2-B.458 is 2.23402 over 120 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.46 seconds taken in nnet3 compilation total (breakdown: 0.324 compilation, 0.104 optimization, 0 shortcut expansion, 0.0301 checking, 5.96e-06 computing indexes, 0.00246 misc.) + 0 I/O.
+TE0609-TE0611_1-A.045 కసిగా ఆడతారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0609-TE0611_1-A.045 is 2.62376 over 44 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.51 seconds taken in nnet3 compilation total (breakdown: 0.381 compilation, 0.124 optimization, 0 shortcut expansion, 0.00171 checking, 5.96e-06 computing indexes, 0.00243 misc.) + 0 I/O.
+TE0609-TE0611_1-A.058 మంచి <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0609-TE0611_1-A.058 is 2.56507 over 21 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.418 seconds taken in nnet3 compilation total (breakdown: 0.264 compilation, 0.0925 optimization, 0 shortcut expansion, 0.00204 checking, 6.91e-06 computing indexes, 0.0592 misc.) + 0 I/O.
+TE0609-TE0611_1-A.126 చాలా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0609-TE0611_1-A.126 is 3.25842 over 20 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.444 seconds taken in nnet3 compilation total (breakdown: 0.284 compilation, 0.1 optimization, 0 shortcut expansion, 0.03 checking, 5.96e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0609-TE0611_2-B.203 అలాంటి వాళ్ళు బాగా తన <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0609-TE0611_2-B.203 is 2.85491 over 63 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.533 seconds taken in nnet3 compilation total (breakdown: 0.359 compilation, 0.101 optimization, 0 shortcut expansion, 0.038 checking, 6.2e-06 computing indexes, 0.0353 misc.) + 0 I/O.
+TE0613-TE0614_1-B.230 ఎక్కడ నేర్చుకున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0613-TE0614_1-B.230 is 2.88692 over 35 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.451 seconds taken in nnet3 compilation total (breakdown: 0.283 compilation, 0.0716 optimization, 0 shortcut expansion, 0.0302 checking, 5.96e-06 computing indexes, 0.0666 misc.) + 0 I/O.
+TE0613-TE0614_2-B.025 అన్నీ నేర్చుకున్నాను 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0613-TE0614_2-B.025 is 2.87124 over 38 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.433 seconds taken in nnet3 compilation total (breakdown: 0.289 compilation, 0.112 optimization, 0 shortcut expansion, 0.03 checking, 5.72e-06 computing indexes, 0.00247 misc.) + 0 I/O.
+TE0613-TE0614_2-B.267 కోలాటం జరగడం లేదంటే ఏంటి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0613-TE0614_2-B.267 is 2.01416 over 78 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.528 seconds taken in nnet3 compilation total (breakdown: 0.363 compilation, 0.124 optimization, 0 shortcut expansion, 0.0383 checking, 5.96e-06 computing indexes, 0.0029 misc.) + 0 I/O.
+TE0613-TE0614_2-B.327 అంతలా ఉంటాయి కూడా కారణం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0613-TE0614_2-B.327 is 2.74484 over 57 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.451 seconds taken in nnet3 compilation total (breakdown: 0.319 compilation, 0.0995 optimization, 0 shortcut expansion, 0.0299 checking, 1.31e-05 computing indexes, 0.00258 misc.) + 0 I/O.
+TE0613-TE0615_1-A.007 ప్రభాస్ అంటే నాకు చాలా ఇష్టం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0613-TE0615_1-A.007 is 2.89016 over 45 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.494 seconds taken in nnet3 compilation total (breakdown: 0.357 compilation, 0.132 optimization, 0 shortcut expansion, 0.0019 checking, 6.68e-06 computing indexes, 0.0027 misc.) + 0 I/O.
+TE0613-TE0615_1-A.081 నిన్ను కోరి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0613-TE0615_1-A.081 is 2.80891 over 29 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.497 seconds taken in nnet3 compilation total (breakdown: 0.352 compilation, 0.112 optimization, 0 shortcut expansion, 0.00203 checking, 4.77e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+TE0613-TE0615_1-A.106 ఇది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0613-TE0615_1-A.106 is 3.08465 over 24 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.517 seconds taken in nnet3 compilation total (breakdown: 0.331 compilation, 0.108 optimization, 0 shortcut expansion, 0.0382 checking, 6.91e-06 computing indexes, 0.039 misc.) + 0 I/O.
+TE0613-TE0615_1-A.182 భయపడుతారు ఎందుకంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0613-TE0615_1-A.182 is 2.11269 over 66 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.518 seconds taken in nnet3 compilation total (breakdown: 0.374 compilation, 0.108 optimization, 0 shortcut expansion, 0.00175 checking, 6.2e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+TE0613-TE0615_1-A.185 అప్పుడప్పుడు ఇలాంటి సినిమాలు తీయడం వల్ల జనాలు కూడా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0613-TE0615_1-A.185 is 2.47809 over 91 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.474 seconds taken in nnet3 compilation total (breakdown: 0.306 compilation, 0.0716 optimization, 0 shortcut expansion, 0.0342 checking, 5.72e-06 computing indexes, 0.0628 misc.) + 0 I/O.
+TE0613-TE0615_1-B.046 అంటే అలా చూసి ఎంచుకున్నారు మీరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0613-TE0615_1-B.046 is 2.35274 over 91 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.494 seconds taken in nnet3 compilation total (breakdown: 0.356 compilation, 0.105 optimization, 0 shortcut expansion, 0.00215 checking, 6.2e-06 computing indexes, 0.031 misc.) + 0 I/O.
+TE0613-TE0615_1-B.149 దానివల్ల దానికి మహిళల ఉండి పోతుంది కదా మనకి అందుకే ఎక్కువ భయపడుతున్నాం కదా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0613-TE0615_1-B.149 is 2.39262 over 161 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.514 seconds taken in nnet3 compilation total (breakdown: 0.364 compilation, 0.145 optimization, 0 shortcut expansion, 0.00195 checking, 5.96e-06 computing indexes, 0.00272 misc.) + 0 I/O.
+TE0613-TE0615_2-A.081 కబడ్డీ ఇంకా వాడతారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0613-TE0615_2-A.081 is 2.61874 over 45 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.485 seconds taken in nnet3 compilation total (breakdown: 0.352 compilation, 0.1 optimization, 0 shortcut expansion, 0.0301 checking, 6.68e-06 computing indexes, 0.00278 misc.) + 0 I/O.
+TE0614-TE0616_1-A.006 నా పేరు <unk> ఏమి చేస్తున్నావ్ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_1-A.006 is 2.27208 over 48 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.552 seconds taken in nnet3 compilation total (breakdown: 0.395 compilation, 0.124 optimization, 0 shortcut expansion, 0.03 checking, 7.15e-06 computing indexes, 0.00295 misc.) + 0 I/O.
+TE0614-TE0616_1-A.247 మళ్ళీ అదే కాకుండా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_1-A.247 is 2.84953 over 41 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.441 seconds taken in nnet3 compilation total (breakdown: 0.315 compilation, 0.121 optimization, 0 shortcut expansion, 0.00188 checking, 5.96e-06 computing indexes, 0.00267 misc.) + 0 I/O.
+TE0614-TE0616_1-A.251 చాలా బాగుంటది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_1-A.251 is 2.65377 over 33 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.535 seconds taken in nnet3 compilation total (breakdown: 0.394 compilation, 0.137 optimization, 0 shortcut expansion, 0.00191 checking, 8.11e-06 computing indexes, 0.00306 misc.) + 0 I/O.
+TE0614-TE0616_1-B.003 నీ పేరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_1-B.003 is 2.96658 over 22 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.431 seconds taken in nnet3 compilation total (breakdown: 0.299 compilation, 0.0994 optimization, 0 shortcut expansion, 0.00196 checking, 5.72e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+TE0614-TE0616_1-B.174 ఎంతో కష్టపడి నేర్చుకున్న తర్వాత నేను చేస్తాను అదే నేను చేస్తాను అని నేర్చుకుంటాను అని కూడా అన్నదంటా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_1-B.174 is 2.55551 over 178 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.455 seconds taken in nnet3 compilation total (breakdown: 0.326 compilation, 0.125 optimization, 0 shortcut expansion, 0.00189 checking, 2.12e-05 computing indexes, 0.00253 misc.) + 0 I/O.
+TE0614-TE0616_1-B.193 దేవుడా అందం అది ఎలా అంటే అలాగే అనాలి చెప్పు అలా చెప్పు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_1-B.193 is 2.19029 over 141 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.447 seconds taken in nnet3 compilation total (breakdown: 0.281 compilation, 0.104 optimization, 0 shortcut expansion, 0.0302 checking, 5.01e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0614-TE0616_2-A.135 చాలా వరకు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_2-A.135 is 2.45038 over 24 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.445 seconds taken in nnet3 compilation total (breakdown: 0.298 compilation, 0.143 optimization, 0 shortcut expansion, 0.00189 checking, 5.96e-06 computing indexes, 0.00236 misc.) + 0 I/O.
+TE0614-TE0616_2-A.188 బాజిపేట గోకవరం కోరుకొండ నరసాపురం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_2-A.188 is 2.34893 over 119 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.279 seconds taken in nnet3 compilation total (breakdown: 0.21 compilation, 0.0663 optimization, 0 shortcut expansion, 0.00101 checking, 1.91e-06 computing indexes, 0.00147 misc.) + 0 I/O.
+TE0614-TE0616_2-A.199 సాంప్రదాయ <unk> చేసుకోవడం సాంప్రదాయ <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_2-A.199 is 2.17563 over 78 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.519 seconds taken in nnet3 compilation total (breakdown: 0.341 compilation, 0.0718 optimization, 0 shortcut expansion, 0.07 checking, 7.15e-06 computing indexes, 0.0353 misc.) + 0 I/O.
+TE0614-TE0616_2-B.052 మనదేశంలో కాలుష్యం ఎక్కువ ఉందనుకోండి <unk> కాలుష్యం లేదనుకుంటున్నావా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_2-B.052 is 2.56878 over 138 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.388 seconds taken in nnet3 compilation total (breakdown: 0.235 compilation, 0.0643 optimization, 0 shortcut expansion, 0.03 checking, 7.15e-06 computing indexes, 0.0591 misc.) + 0 I/O.
+TE0614-TE0616_2-B.184 ఇంకేంటి కాదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_2-B.184 is 2.75884 over 37 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.482 seconds taken in nnet3 compilation total (breakdown: 0.333 compilation, 0.0756 optimization, 0 shortcut expansion, 0.00182 checking, 5.72e-06 computing indexes, 0.0708 misc.) + 0 I/O.
+TE0614-TE0616_2-B.197 పులి <unk> స్త్రీలు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_2-B.197 is 2.03587 over 41 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.283 compilation, 0.0684 optimization, 0 shortcut expansion, 0.0347 checking, 5.72e-06 computing indexes, 0.0627 misc.) + 0 I/O.
+TE0614-TE0616_2-B.274 చాలా బాగుంటది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0614-TE0616_2-B.274 is 3.3004 over 39 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.506 seconds taken in nnet3 compilation total (breakdown: 0.354 compilation, 0.0791 optimization, 0 shortcut expansion, 0.00202 checking, 6.2e-06 computing indexes, 0.0707 misc.) + 0 I/O.
+TE0615-TE0616_1-A.134 చిన్నప్పుడే పెళ్లి చేయడం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_1-A.134 is 2.66506 over 58 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.519 seconds taken in nnet3 compilation total (breakdown: 0.373 compilation, 0.142 optimization, 0 shortcut expansion, 0.00193 checking, 6.2e-06 computing indexes, 0.00252 misc.) + 0 I/O.
+TE0615-TE0616_1-A.140 ఇంకా అలాగే వాళ్ల మధ్య ప్రేమ లేకపోవడం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_1-A.140 is 2.22864 over 75 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.422 seconds taken in nnet3 compilation total (breakdown: 0.29 compilation, 0.128 optimization, 0 shortcut expansion, 0.00182 checking, 6.2e-06 computing indexes, 0.00233 misc.) + 0 I/O.
+TE0615-TE0616_1-A.161 మనం ఎక్కడ ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_1-A.161 is 2.50324 over 36 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.438 seconds taken in nnet3 compilation total (breakdown: 0.3 compilation, 0.0721 optimization, 0 shortcut expansion, 0.00223 checking, 7.87e-06 computing indexes, 0.0642 misc.) + 0 I/O.
+TE0615-TE0616_1-A.206 కానీ ఒక్క మాటలో చెప్పాలంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_1-A.206 is 2.76884 over 70 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.441 seconds taken in nnet3 compilation total (breakdown: 0.296 compilation, 0.108 optimization, 0 shortcut expansion, 0.0339 checking, 8.11e-06 computing indexes, 0.00236 misc.) + 0 I/O.
+TE0615-TE0616_1-B.098 అలా ఉండిపోతాం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_1-B.098 is 3.17182 over 30 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.489 seconds taken in nnet3 compilation total (breakdown: 0.344 compilation, 0.105 optimization, 0 shortcut expansion, 0.038 checking, 5.96e-06 computing indexes, 0.00276 misc.) + 0 I/O.
+TE0615-TE0616_1-B.179 అమ్మాయికి అబ్బాయికి ఏంటి తేడా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_1-B.179 is 2.59577 over 65 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.584 seconds taken in nnet3 compilation total (breakdown: 0.346 compilation, 0.0807 optimization, 0 shortcut expansion, 0.0902 checking, 7.87e-06 computing indexes, 0.0674 misc.) + 0 I/O.
+TE0615-TE0616_1-B.197 ఏం చెయ్యాలి అనేది కూడా తెలుస్తుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_1-B.197 is 2.7538 over 75 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.475 seconds taken in nnet3 compilation total (breakdown: 0.334 compilation, 0.0961 optimization, 0 shortcut expansion, 0.0419 checking, 9.06e-06 computing indexes, 0.00242 misc.) + 0 I/O.
+TE0615-TE0616_2-A.034 అందుకే అడిగాను 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_2-A.034 is 3.39782 over 40 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.407 seconds taken in nnet3 compilation total (breakdown: 0.282 compilation, 0.12 optimization, 0 shortcut expansion, 0.00187 checking, 6.2e-06 computing indexes, 0.00247 misc.) + 0 I/O.
+TE0615-TE0616_2-A.084 ఎందుకంటే అలా ఆలోచించలేరు నువ్వు నువ్వు నేను ఉన్నాను కదా ఆలోచించే ఎలా చేయడానికి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_2-A.084 is 2.19586 over 187 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.232 seconds taken in nnet3 compilation total (breakdown: 0.167 compilation, 0.0338 optimization, 0 shortcut expansion, 0.0291 checking, 2.86e-06 computing indexes, 0.00154 misc.) + 0 I/O.
+TE0615-TE0616_2-B.045 అంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_2-B.045 is 3.46159 over 23 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.492 seconds taken in nnet3 compilation total (breakdown: 0.323 compilation, 0.101 optimization, 0 shortcut expansion, 0.034 checking, 7.15e-06 computing indexes, 0.0348 misc.) + 0 I/O.
+TE0615-TE0616_2-B.066 నీ అభిప్రాయం ఏంటి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_2-B.066 is 2.92927 over 43 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.447 seconds taken in nnet3 compilation total (breakdown: 0.317 compilation, 0.125 optimization, 0 shortcut expansion, 0.00217 checking, 7.15e-06 computing indexes, 0.00268 misc.) + 0 I/O.
+TE0615-TE0616_2-B.284 కాబట్టి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_2-B.284 is 3.30877 over 28 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.514 seconds taken in nnet3 compilation total (breakdown: 0.352 compilation, 0.101 optimization, 0 shortcut expansion, 0.00253 checking, 5.96e-06 computing indexes, 0.0592 misc.) + 0 I/O.
+TE0615-TE0616_2-B.299 వీళ్ళ చాలా మంచి జరుగుతుంది అని నా అభిప్రాయం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_2-B.299 is 3.01475 over 82 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.561 seconds taken in nnet3 compilation total (breakdown: 0.387 compilation, 0.108 optimization, 0 shortcut expansion, 0.0341 checking, 7.15e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+TE0615-TE0616_2-B.335 మీరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0615-TE0616_2-B.335 is 3.35671 over 19 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.417 seconds taken in nnet3 compilation total (breakdown: 0.292 compilation, 0.0964 optimization, 0 shortcut expansion, 0.00209 checking, 6.91e-06 computing indexes, 0.0268 misc.) + 0 I/O.
+TE0617-TE0618_1-A.082 సాయి <unk> అంటే ఇప్పుడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.082 is 2.59077 over 65 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.553 seconds taken in nnet3 compilation total (breakdown: 0.418 compilation, 0.0726 optimization, 0 shortcut expansion, 0.0306 checking, 1e-05 computing indexes, 0.0313 misc.) + 0 I/O.
+TE0617-TE0618_1-A.124 మంచి గుణాలు పెరుగుతాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.124 is 2.98062 over 49 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.617 seconds taken in nnet3 compilation total (breakdown: 0.43 compilation, 0.0807 optimization, 0 shortcut expansion, 0.0625 checking, 5.72e-06 computing indexes, 0.0435 misc.) + 0 I/O.
+TE0617-TE0618_1-A.210 అదేంటంటే ఐదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.210 is 2.41944 over 57 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.473 seconds taken in nnet3 compilation total (breakdown: 0.324 compilation, 0.112 optimization, 0 shortcut expansion, 0.0341 checking, 5.96e-06 computing indexes, 0.00287 misc.) + 0 I/O.
+TE0617-TE0618_1-A.337 చేసి వెళ్లి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.337 is 2.83641 over 32 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.491 seconds taken in nnet3 compilation total (breakdown: 0.337 compilation, 0.121 optimization, 0 shortcut expansion, 0.00201 checking, 2.29e-05 computing indexes, 0.0312 misc.) + 0 I/O.
+TE0617-TE0618_1-A.347 మాకు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.347 is 2.74601 over 28 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.498 seconds taken in nnet3 compilation total (breakdown: 0.354 compilation, 0.14 optimization, 0 shortcut expansion, 0.00182 checking, 1.07e-05 computing indexes, 0.00264 misc.) + 0 I/O.
+TE0617-TE0618_1-A.361 అయినా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.361 is 2.85794 over 29 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.549 seconds taken in nnet3 compilation total (breakdown: 0.396 compilation, 0.0803 optimization, 0 shortcut expansion, 0.0343 checking, 5.72e-06 computing indexes, 0.039 misc.) + 0 I/O.
+TE0617-TE0618_1-A.459 ఎక్కడ మార్చిన మార్పులు చేర్పులు చేయడానికి కూడా భయం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.459 is 2.85505 over 88 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.44 seconds taken in nnet3 compilation total (breakdown: 0.279 compilation, 0.129 optimization, 0 shortcut expansion, 0.00185 checking, 4.77e-06 computing indexes, 0.0306 misc.) + 0 I/O.
+TE0617-TE0618_1-A.475 పేద వాళ్లకు ఇవ్వడం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.475 is 2.62578 over 32 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.553 seconds taken in nnet3 compilation total (breakdown: 0.399 compilation, 0.0641 optimization, 0 shortcut expansion, 0.0583 checking, 7.15e-06 computing indexes, 0.0315 misc.) + 0 I/O.
+TE0617-TE0618_1-A.516 మనిషిని చంపడం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.516 is 3.03901 over 29 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.495 seconds taken in nnet3 compilation total (breakdown: 0.355 compilation, 0.104 optimization, 0 shortcut expansion, 0.0338 checking, 7.87e-06 computing indexes, 0.00282 misc.) + 0 I/O.
+TE0617-TE0618_1-A.522 అమానుషంగా ఉంది అది వేరే వాళ్ళు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.522 is 2.81473 over 71 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.409 seconds taken in nnet3 compilation total (breakdown: 0.271 compilation, 0.105 optimization, 0 shortcut expansion, 0.0303 checking, 6.2e-06 computing indexes, 0.00236 misc.) + 0 I/O.
+TE0617-TE0618_1-A.526 ఆ ఇలా కూల్చడానికి ఇలాగే <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.526 is 2.44232 over 73 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.469 seconds taken in nnet3 compilation total (breakdown: 0.328 compilation, 0.0999 optimization, 0 shortcut expansion, 0.0383 checking, 5.96e-06 computing indexes, 0.00257 misc.) + 0 I/O.
+TE0617-TE0618_1-A.559 బక్రీద్ అంటారా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.559 is 3.15525 over 32 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.49 seconds taken in nnet3 compilation total (breakdown: 0.364 compilation, 0.121 optimization, 0 shortcut expansion, 0.00201 checking, 7.15e-06 computing indexes, 0.00298 misc.) + 0 I/O.
+TE0617-TE0618_1-A.562 బక్రీద్ అంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.562 is 2.59034 over 29 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.549 seconds taken in nnet3 compilation total (breakdown: 0.368 compilation, 0.112 optimization, 0 shortcut expansion, 0.0339 checking, 1.19e-05 computing indexes, 0.0348 misc.) + 0 I/O.
+TE0617-TE0618_1-A.705 మేక పోదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_1-A.705 is 2.95681 over 37 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.432 seconds taken in nnet3 compilation total (breakdown: 0.298 compilation, 0.129 optimization, 0 shortcut expansion, 0.00197 checking, 9.06e-06 computing indexes, 0.00243 misc.) + 0 I/O.
+TE0617-TE0618_2-A.195 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_2-A.195 is 3.19083 over 23 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.444 seconds taken in nnet3 compilation total (breakdown: 0.301 compilation, 0.107 optimization, 0 shortcut expansion, 0.00191 checking, 5.96e-06 computing indexes, 0.0346 misc.) + 0 I/O.
+TE0617-TE0618_2-B.061 కృష్ణుడు <unk> తో పాటు సత్యభామ కూడా తన <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_2-B.061 is 1.88331 over 99 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.513 seconds taken in nnet3 compilation total (breakdown: 0.372 compilation, 0.137 optimization, 0 shortcut expansion, 0.00183 checking, 4.77e-06 computing indexes, 0.00265 misc.) + 0 I/O.
+TE0617-TE0618_2-B.209 దేవతలు అందరూ కలిసి చేయగానే ఒక 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_2-B.209 is 2.03607 over 97 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.484 seconds taken in nnet3 compilation total (breakdown: 0.326 compilation, 0.0962 optimization, 0 shortcut expansion, 0.0302 checking, 6.91e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+TE0617-TE0618_2-B.225 వెళ్తారు మళ్లీ వెళ్లగానే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_2-B.225 is 2.03369 over 58 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.46 seconds taken in nnet3 compilation total (breakdown: 0.299 compilation, 0.0683 optimization, 0 shortcut expansion, 0.0583 checking, 5.96e-06 computing indexes, 0.035 misc.) + 0 I/O.
+TE0617-TE0618_2-B.238 వేసి మంత్రాలు అన్నీ చేసి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_2-B.238 is 1.86986 over 77 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.447 seconds taken in nnet3 compilation total (breakdown: 0.299 compilation, 0.144 optimization, 0 shortcut expansion, 0.00172 checking, 6.2e-06 computing indexes, 0.00252 misc.) + 0 I/O.
+TE0617-TE0618_2-B.316 అతను బలం వల్ల 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_2-B.316 is 1.99323 over 71 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.399 seconds taken in nnet3 compilation total (breakdown: 0.259 compilation, 0.104 optimization, 0 shortcut expansion, 0.0341 checking, 6.91e-06 computing indexes, 0.00223 misc.) + 0 I/O.
+TE0617-TE0618_2-B.318 కొంచెం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_2-B.318 is 2.76176 over 31 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.521 seconds taken in nnet3 compilation total (breakdown: 0.393 compilation, 0.124 optimization, 0 shortcut expansion, 0.00198 checking, 8.11e-06 computing indexes, 0.00287 misc.) + 0 I/O.
+TE0617-TE0618_2-B.367 <unk> ఏంటంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_2-B.367 is 2.05672 over 42 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.431 seconds taken in nnet3 compilation total (breakdown: 0.295 compilation, 0.104 optimization, 0 shortcut expansion, 0.0301 checking, 6.2e-06 computing indexes, 0.00278 misc.) + 0 I/O.
+TE0617-TE0618_2-B.383 కొత్త బట్టలు వేసుకొని 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0618_2-B.383 is 2.5476 over 59 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.398 seconds taken in nnet3 compilation total (breakdown: 0.277 compilation, 0.116 optimization, 0 shortcut expansion, 0.00182 checking, 5.96e-06 computing indexes, 0.00265 misc.) + 0 I/O.
+TE0617-TE0619_1-A.620 వచ్చారు ఏంటంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0619_1-A.620 is 2.12925 over 48 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.445 seconds taken in nnet3 compilation total (breakdown: 0.33 compilation, 0.0854 optimization, 0 shortcut expansion, 0.026 checking, 7.15e-06 computing indexes, 0.0029 misc.) + 0 I/O.
+TE0617-TE0619_1-A.622 ఎవరంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0619_1-A.622 is 2.71179 over 26 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.48 seconds taken in nnet3 compilation total (breakdown: 0.355 compilation, 0.0959 optimization, 0 shortcut expansion, 0.026 checking, 8.11e-06 computing indexes, 0.00276 misc.) + 0 I/O.
+TE0617-TE0619_1-B.334 అలాగే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0619_1-B.334 is 3.28272 over 21 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.359 seconds taken in nnet3 compilation total (breakdown: 0.247 compilation, 0.0835 optimization, 0 shortcut expansion, 0.0261 checking, 5.96e-06 computing indexes, 0.00242 misc.) + 0 I/O.
+TE0617-TE0619_1-B.355 మీరు కూడా బాగా <unk> ఇచ్చారా అంటే కదా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0619_1-B.355 is 2.21452 over 81 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.479 seconds taken in nnet3 compilation total (breakdown: 0.318 compilation, 0.0962 optimization, 0 shortcut expansion, 0.0339 checking, 7.15e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0617-TE0619_2-A.275 చెప్పండి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0619_2-A.275 is 3.74359 over 17 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.267 seconds taken in nnet3 compilation total (breakdown: 0.206 compilation, 0.0584 optimization, 0 shortcut expansion, 0.000934 checking, 4.05e-06 computing indexes, 0.00142 misc.) + 0 I/O.
+TE0617-TE0619_2-B.105 తర్వాత 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0619_2-B.105 is 2.97821 over 32 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.476 seconds taken in nnet3 compilation total (breakdown: 0.351 compilation, 0.0964 optimization, 0 shortcut expansion, 0.0263 checking, 1.12e-05 computing indexes, 0.00301 misc.) + 0 I/O.
+TE0617-TE0619_2-B.186 చెప్పండి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0617-TE0619_2-B.186 is 2.88021 over 34 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.266 seconds taken in nnet3 compilation total (breakdown: 0.201 compilation, 0.0341 optimization, 0 shortcut expansion, 0.0291 checking, 3.1e-06 computing indexes, 0.00139 misc.) + 0 I/O.
+TE0618-TE0620_1-B.220 అక్కడ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0618-TE0620_1-B.220 is 3.02756 over 26 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.456 seconds taken in nnet3 compilation total (breakdown: 0.329 compilation, 0.0635 optimization, 0 shortcut expansion, 0.0339 checking, 5.72e-06 computing indexes, 0.0305 misc.) + 0 I/O.
+TE0618-TE0620_1-B.289 ఇంకా తర్వాత 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0618-TE0620_1-B.289 is 2.30384 over 41 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.444 seconds taken in nnet3 compilation total (breakdown: 0.312 compilation, 0.0713 optimization, 0 shortcut expansion, 0.00188 checking, 5.96e-06 computing indexes, 0.0588 misc.) + 0 I/O.
+TE0618-TE0620_2-A.022 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0618-TE0620_2-A.022 is 2.87621 over 27 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.535 seconds taken in nnet3 compilation total (breakdown: 0.341 compilation, 0.0917 optimization, 0 shortcut expansion, 0.0342 checking, 5.96e-06 computing indexes, 0.0671 misc.) + 0 I/O.
+TE0618-TE0620_2-A.091 ఉండదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0618-TE0620_2-A.091 is 2.7296 over 38 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.486 seconds taken in nnet3 compilation total (breakdown: 0.35 compilation, 0.0714 optimization, 0 shortcut expansion, 0.00213 checking, 6.91e-06 computing indexes, 0.0629 misc.) + 0 I/O.
+TE0619-TE0620_1-A.073 చెప్పిన <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0619-TE0620_1-A.073 is 2.33459 over 20 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.49 seconds taken in nnet3 compilation total (breakdown: 0.324 compilation, 0.101 optimization, 0 shortcut expansion, 0.00207 checking, 7.15e-06 computing indexes, 0.0627 misc.) + 0 I/O.
+TE0619-TE0620_1-A.186 ఈ సీజన్ అంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0619-TE0620_1-A.186 is 2.16262 over 41 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.447 seconds taken in nnet3 compilation total (breakdown: 0.312 compilation, 0.104 optimization, 0 shortcut expansion, 0.00186 checking, 8.11e-06 computing indexes, 0.0305 misc.) + 0 I/O.
+TE0619-TE0620_1-A.223 అదే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0619-TE0620_1-A.223 is 3.17542 over 26 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.446 seconds taken in nnet3 compilation total (breakdown: 0.31 compilation, 0.104 optimization, 0 shortcut expansion, 0.00199 checking, 5.96e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0619-TE0620_1-A.313 ఆ రాజమండ్రి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0619-TE0620_1-A.313 is 2.55776 over 42 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.483 seconds taken in nnet3 compilation total (breakdown: 0.313 compilation, 0.104 optimization, 0 shortcut expansion, 0.0344 checking, 4.05e-06 computing indexes, 0.031 misc.) + 0 I/O.
+TE0619-TE0620_2-A.161 <unk> దగ్గర కూడా వెళ్ళడం మానేశాను 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0619-TE0620_2-A.161 is 2.74278 over 74 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.466 seconds taken in nnet3 compilation total (breakdown: 0.296 compilation, 0.133 optimization, 0 shortcut expansion, 0.0341 checking, 5.01e-06 computing indexes, 0.00259 misc.) + 0 I/O.
+TE0619-TE0620_2-B.063 ఇంకోటి ఏంటి అంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0619-TE0620_2-B.063 is 2.20472 over 38 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.419 seconds taken in nnet3 compilation total (breakdown: 0.287 compilation, 0.0716 optimization, 0 shortcut expansion, 0.0302 checking, 6.91e-06 computing indexes, 0.0305 misc.) + 0 I/O.
+TE0619-TE0620_2-B.118 అంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0619-TE0620_2-B.118 is 2.91712 over 32 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.578 seconds taken in nnet3 compilation total (breakdown: 0.424 compilation, 0.129 optimization, 0 shortcut expansion, 0.00218 checking, 5.96e-06 computing indexes, 0.0232 misc.) + 0 I/O.
+TE0619-TE0620_2-B.253 తర్వాత మాట్లాడాలి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0619-TE0620_2-B.253 is 2.49424 over 56 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.526 seconds taken in nnet3 compilation total (breakdown: 0.346 compilation, 0.0758 optimization, 0 shortcut expansion, 0.0381 checking, 5.96e-06 computing indexes, 0.0669 misc.) + 0 I/O.
+TE0619-TE0620_2-B.260 నేనా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0619-TE0620_2-B.260 is 2.76582 over 18 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.367 seconds taken in nnet3 compilation total (breakdown: 0.234 compilation, 0.0967 optimization, 0 shortcut expansion, 0.0341 checking, 6.2e-06 computing indexes, 0.00228 misc.) + 0 I/O.
+TE0621-TE0622_2-B.121 నువ్వు కూడా అదే <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0621-TE0622_2-B.121 is 2.47599 over 36 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.293 compilation, 0.0999 optimization, 0 shortcut expansion, 0.00204 checking, 5.96e-06 computing indexes, 0.0303 misc.) + 0 I/O.
+TE0621-TE0622_2-B.128 ఏంటి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0621-TE0622_2-B.128 is 2.82159 over 28 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.566 seconds taken in nnet3 compilation total (breakdown: 0.363 compilation, 0.077 optimization, 0 shortcut expansion, 0.0341 checking, 7.15e-06 computing indexes, 0.092 misc.) + 0 I/O.
+TE0621-TE0623_2-A.128 సరే మరి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0621-TE0623_2-A.128 is 2.76267 over 26 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.424 seconds taken in nnet3 compilation total (breakdown: 0.295 compilation, 0.125 optimization, 0 shortcut expansion, 0.00187 checking, 6.91e-06 computing indexes, 0.00254 misc.) + 0 I/O.
+TE0622-TE0624_1-B.506 పర్లేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0622-TE0624_1-B.506 is 3.33323 over 23 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.386 seconds taken in nnet3 compilation total (breakdown: 0.257 compilation, 0.0966 optimization, 0 shortcut expansion, 0.0303 checking, 6.2e-06 computing indexes, 0.00245 misc.) + 0 I/O.
+TE0623-TE0624_1-B.028 ఇంకా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0623-TE0624_1-B.028 is 2.68182 over 40 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.438 seconds taken in nnet3 compilation total (breakdown: 0.274 compilation, 0.16 optimization, 0 shortcut expansion, 0.00183 checking, 6.68e-06 computing indexes, 0.00238 misc.) + 0 I/O.
+TE0623-TE0624_2-A.196 ఇంకా మీరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0623-TE0624_2-A.196 is 2.63431 over 37 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.454 seconds taken in nnet3 compilation total (breakdown: 0.298 compilation, 0.152 optimization, 0 shortcut expansion, 0.00194 checking, 7.15e-06 computing indexes, 0.0023 misc.) + 0 I/O.
+TE0623-TE0624_2-A.251 అంతగా వినకపోతే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0623-TE0624_2-A.251 is 2.88513 over 44 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.492 seconds taken in nnet3 compilation total (breakdown: 0.323 compilation, 0.0721 optimization, 0 shortcut expansion, 0.066 checking, 5.96e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0623-TE0624_2-B.122 ఇప్పుడు ఇప్పుడు చూస్తే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0623-TE0624_2-B.122 is 2.40711 over 66 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.555 seconds taken in nnet3 compilation total (breakdown: 0.414 compilation, 0.0756 optimization, 0 shortcut expansion, 0.0341 checking, 7.15e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+TE0623-TE0624_2-B.419 తింటాను 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0623-TE0624_2-B.419 is 3.15875 over 23 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.471 seconds taken in nnet3 compilation total (breakdown: 0.338 compilation, 0.103 optimization, 0 shortcut expansion, 0.00194 checking, 8.11e-06 computing indexes, 0.0285 misc.) + 0 I/O.
+TE0677-TE0678_1-A.289 మా ఊర్లో <unk> నుంచీ ఇలా ఇష్టం లేదు నాకు వెళ్ళడం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0677-TE0678_1-A.289 is 1.98436 over 114 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.509 seconds taken in nnet3 compilation total (breakdown: 0.367 compilation, 0.137 optimization, 0 shortcut expansion, 0.00213 checking, 7.15e-06 computing indexes, 0.0028 misc.) + 0 I/O.
+TE0677-TE0678_1-A.316 నాకు సౌందర్య అంటే చాలా ఇష్టం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0677-TE0678_1-A.316 is 2.66333 over 62 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.486 seconds taken in nnet3 compilation total (breakdown: 0.354 compilation, 0.128 optimization, 0 shortcut expansion, 0.00186 checking, 6.91e-06 computing indexes, 0.0025 misc.) + 0 I/O.
+TE0677-TE0678_1-B.161 నాకు కబడ్డీ అంటే చాలా ఇష్టం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0677-TE0678_1-B.161 is 2.62173 over 77 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.496 seconds taken in nnet3 compilation total (breakdown: 0.356 compilation, 0.104 optimization, 0 shortcut expansion, 0.00183 checking, 4.77e-06 computing indexes, 0.0349 misc.) + 0 I/O.
+TE0677-TE0678_2-B.011 మా ఇంటి దగ్గర పర్యావరణ శుభ్రంగా ఉంటుంది చెట్లను నాటడం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0677-TE0678_2-B.011 is 1.97615 over 143 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.419 seconds taken in nnet3 compilation total (breakdown: 0.29 compilation, 0.0679 optimization, 0 shortcut expansion, 0.0584 checking, 6.91e-06 computing indexes, 0.00267 misc.) + 0 I/O.
+TE0677-TE0678_2-B.238 లేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0677-TE0678_2-B.238 is 2.69319 over 24 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.525 seconds taken in nnet3 compilation total (breakdown: 0.372 compilation, 0.116 optimization, 0 shortcut expansion, 0.0021 checking, 5.25e-06 computing indexes, 0.035 misc.) + 0 I/O.
+TE0677-TE0679_1-A.016 మా నాన్న గారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0677-TE0679_1-A.016 is 2.69082 over 36 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.448 seconds taken in nnet3 compilation total (breakdown: 0.283 compilation, 0.0716 optimization, 0 shortcut expansion, 0.0301 checking, 6.91e-06 computing indexes, 0.0629 misc.) + 0 I/O.
+TE0677-TE0679_2-A.223 మామూలుగా పరిచయం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0677-TE0679_2-A.223 is 2.37002 over 46 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.469 seconds taken in nnet3 compilation total (breakdown: 0.303 compilation, 0.0719 optimization, 0 shortcut expansion, 0.0623 checking, 5.96e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+TE0678-TE0680_1-B.292 మీరు ఉన్నారు కదా తేవడానికి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0678-TE0680_1-B.292 is 2.74992 over 56 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.429 seconds taken in nnet3 compilation total (breakdown: 0.285 compilation, 0.116 optimization, 0 shortcut expansion, 0.026 checking, 5.96e-06 computing indexes, 0.00252 misc.) + 0 I/O.
+TE0679-TE0680_1-B.090 నేనైతే పాడు లేదు పాట 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0679-TE0680_1-B.090 is 2.70564 over 58 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.498 seconds taken in nnet3 compilation total (breakdown: 0.327 compilation, 0.0686 optimization, 0 shortcut expansion, 0.0383 checking, 6.2e-06 computing indexes, 0.0633 misc.) + 0 I/O.
+TE0679-TE0680_1-B.229 అదే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0679-TE0680_1-B.229 is 3.16036 over 23 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.453 seconds taken in nnet3 compilation total (breakdown: 0.298 compilation, 0.101 optimization, 0 shortcut expansion, 0.0263 checking, 3.81e-06 computing indexes, 0.0271 misc.) + 0 I/O.
+TE0679-TE0680_1-B.252 అయితే ఇలా మంగళవారం పెట్టారా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0679-TE0680_1-B.252 is 3.00827 over 66 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.581 seconds taken in nnet3 compilation total (breakdown: 0.391 compilation, 0.116 optimization, 0 shortcut expansion, 0.0343 checking, 5.96e-06 computing indexes, 0.0394 misc.) + 0 I/O.
+TE0679-TE0680_2-B.208 ఎలా మాట్లాడినా పర్లేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0679-TE0680_2-B.208 is 2.8425 over 44 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.476 seconds taken in nnet3 compilation total (breakdown: 0.339 compilation, 0.104 optimization, 0 shortcut expansion, 0.03 checking, 7.87e-06 computing indexes, 0.00297 misc.) + 0 I/O.
+TE0681-TE0682_1-A.279 తులసి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0681-TE0682_1-A.279 is 2.87892 over 26 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.523 seconds taken in nnet3 compilation total (breakdown: 0.357 compilation, 0.0724 optimization, 0 shortcut expansion, 0.0345 checking, 5.01e-06 computing indexes, 0.0595 misc.) + 0 I/O.
+TE0681-TE0683_1-B.094 మా ఊరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0681-TE0683_1-B.094 is 2.38349 over 36 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.462 seconds taken in nnet3 compilation total (breakdown: 0.326 compilation, 0.0718 optimization, 0 shortcut expansion, 0.0621 checking, 9.06e-06 computing indexes, 0.0027 misc.) + 0 I/O.
+TE0681-TE0683_1-B.166 అడిగి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0681-TE0683_1-B.166 is 2.56792 over 35 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.415 seconds taken in nnet3 compilation total (breakdown: 0.234 compilation, 0.0838 optimization, 0 shortcut expansion, 0.0663 checking, 5.01e-06 computing indexes, 0.0306 misc.) + 0 I/O.
+TE0681-TE0683_1-B.169 అలాంటి మంచి పనులు కూడా చేస్తారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0681-TE0683_1-B.169 is 2.53664 over 56 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.459 seconds taken in nnet3 compilation total (breakdown: 0.269 compilation, 0.0684 optimization, 0 shortcut expansion, 0.0623 checking, 7.15e-06 computing indexes, 0.0591 misc.) + 0 I/O.
+TE0681-TE0683_1-B.333 ఆ లేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0681-TE0683_1-B.333 is 2.08337 over 37 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.457 seconds taken in nnet3 compilation total (breakdown: 0.277 compilation, 0.103 optimization, 0 shortcut expansion, 0.03 checking, 1.29e-05 computing indexes, 0.0465 misc.) + 0 I/O.
+TE0681-TE0683_2-A.088 ఏ అనుకోకుండా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0681-TE0683_2-A.088 is 1.84079 over 49 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.506 seconds taken in nnet3 compilation total (breakdown: 0.377 compilation, 0.0959 optimization, 0 shortcut expansion, 0.03 checking, 5.96e-06 computing indexes, 0.00281 misc.) + 0 I/O.
+TE0681-TE0683_2-A.381 ఇంకా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0681-TE0683_2-A.381 is 2.9633 over 18 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.487 seconds taken in nnet3 compilation total (breakdown: 0.353 compilation, 0.101 optimization, 0 shortcut expansion, 0.00189 checking, 6.91e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0681-TE0683_2-B.280 బాగుంటది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0681-TE0683_2-B.280 is 2.71667 over 26 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.483 seconds taken in nnet3 compilation total (breakdown: 0.333 compilation, 0.105 optimization, 0 shortcut expansion, 0.00181 checking, 4.05e-06 computing indexes, 0.0428 misc.) + 0 I/O.
+TE0682-TE0684_1-A.124 అదే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0682-TE0684_1-A.124 is 2.75042 over 27 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.517 seconds taken in nnet3 compilation total (breakdown: 0.338 compilation, 0.141 optimization, 0 shortcut expansion, 0.00212 checking, 7.15e-06 computing indexes, 0.0353 misc.) + 0 I/O.
+TE0682-TE0684_1-B.140 ఇంకా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0682-TE0684_1-B.140 is 2.40941 over 33 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.507 seconds taken in nnet3 compilation total (breakdown: 0.377 compilation, 0.0963 optimization, 0 shortcut expansion, 0.00202 checking, 1.79e-05 computing indexes, 0.0309 misc.) + 0 I/O.
+TE0682-TE0684_1-B.284 రతీష్ రతీష్ మా ఊరి సర్పంచ్ అండి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0682-TE0684_1-B.284 is 2.10241 over 80 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.517 seconds taken in nnet3 compilation total (breakdown: 0.381 compilation, 0.132 optimization, 0 shortcut expansion, 0.00199 checking, 7.15e-06 computing indexes, 0.00252 misc.) + 0 I/O.
+TE0682-TE0684_2-A.052 వ్యవసాయం చేసుకుంటున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0682-TE0684_2-A.052 is 2.35921 over 42 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.43 seconds taken in nnet3 compilation total (breakdown: 0.322 compilation, 0.103 optimization, 0 shortcut expansion, 0.00194 checking, 5.96e-06 computing indexes, 0.0025 misc.) + 0 I/O.
+TE0683-TE0684_1-B.208 అది నేను <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0683-TE0684_1-B.208 is 2.28613 over 35 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.444 seconds taken in nnet3 compilation total (breakdown: 0.303 compilation, 0.0762 optimization, 0 shortcut expansion, 0.0302 checking, 6.68e-06 computing indexes, 0.0345 misc.) + 0 I/O.
+TE0683-TE0684_2-B.074 సంతకం చేసిన తర్వాత అప్పుడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0683-TE0684_2-B.074 is 2.6015 over 71 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.455 seconds taken in nnet3 compilation total (breakdown: 0.322 compilation, 0.128 optimization, 0 shortcut expansion, 0.00182 checking, 6.91e-06 computing indexes, 0.00224 misc.) + 0 I/O.
+TE0683-TE0684_2-B.202 మహేశ్వరి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0683-TE0684_2-B.202 is 2.58115 over 27 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.497 seconds taken in nnet3 compilation total (breakdown: 0.341 compilation, 0.152 optimization, 0 shortcut expansion, 0.00176 checking, 7.15e-06 computing indexes, 0.00258 misc.) + 0 I/O.
+TE0683-TE0684_2-B.205 మహేశ్వరి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0683-TE0684_2-B.205 is 3.14751 over 43 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.507 seconds taken in nnet3 compilation total (breakdown: 0.346 compilation, 0.0677 optimization, 0 shortcut expansion, 0.0342 checking, 6.2e-06 computing indexes, 0.0591 misc.) + 0 I/O.
+TE0683-TE0684_2-B.236 అమ్మ నాన్న <unk> అదే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0683-TE0684_2-B.236 is 1.88559 over 62 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.428 seconds taken in nnet3 compilation total (breakdown: 0.32 compilation, 0.0797 optimization, 0 shortcut expansion, 0.0259 checking, 7.15e-06 computing indexes, 0.0025 misc.) + 0 I/O.
+TE0683-TE0684_2-B.296 పని వచ్చి చెప్పాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0683-TE0684_2-B.296 is 2.32601 over 51 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.271 seconds taken in nnet3 compilation total (breakdown: 0.198 compilation, 0.0707 optimization, 0 shortcut expansion, 0.000919 checking, 3.81e-06 computing indexes, 0.00137 misc.) + 0 I/O.
+TE0683-TE0684_2-B.360 <unk> సహాయ ఒకటి చేసి వచ్చింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0683-TE0684_2-B.360 is 2.20942 over 71 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.391 seconds taken in nnet3 compilation total (breakdown: 0.263 compilation, 0.124 optimization, 0 shortcut expansion, 0.00188 checking, 6.2e-06 computing indexes, 0.00215 misc.) + 0 I/O.
+TE0685-TE0686_1-A.284 నా పేరు మీదే ఉన్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0685-TE0686_1-A.284 is 2.97142 over 42 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.459 seconds taken in nnet3 compilation total (breakdown: 0.325 compilation, 0.0966 optimization, 0 shortcut expansion, 0.00192 checking, 7.87e-06 computing indexes, 0.0347 misc.) + 0 I/O.
+TE0685-TE0686_2-A.105 ఇంకా ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0685-TE0686_2-A.105 is 2.44276 over 42 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.445 seconds taken in nnet3 compilation total (breakdown: 0.313 compilation, 0.0674 optimization, 0 shortcut expansion, 0.0342 checking, 6.91e-06 computing indexes, 0.031 misc.) + 0 I/O.
+TE0685-TE0686_2-B.240 పది వేల <unk> నెలకొన్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0685-TE0686_2-B.240 is 2.16118 over 58 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.462 seconds taken in nnet3 compilation total (breakdown: 0.334 compilation, 0.124 optimization, 0 shortcut expansion, 0.00181 checking, 5.96e-06 computing indexes, 0.00245 misc.) + 0 I/O.
+TE0685-TE0687_1-A.168 అంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0685-TE0687_1-A.168 is 3.31846 over 30 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.488 seconds taken in nnet3 compilation total (breakdown: 0.355 compilation, 0.129 optimization, 0 shortcut expansion, 0.00189 checking, 5.96e-06 computing indexes, 0.00262 misc.) + 0 I/O.
+TE0685-TE0687_1-A.231 నిత్య 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0685-TE0687_1-A.231 is 3.13783 over 19 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.38 seconds taken in nnet3 compilation total (breakdown: 0.255 compilation, 0.12 optimization, 0 shortcut expansion, 0.00203 checking, 6.91e-06 computing indexes, 0.00239 misc.) + 0 I/O.
+TE0685-TE0687_1-B.127 మామయ్య కూతురు చేసుకుంటారా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0685-TE0687_1-B.127 is 2.60902 over 61 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.494 seconds taken in nnet3 compilation total (breakdown: 0.404 compilation, 0.0862 optimization, 0 shortcut expansion, 0.00203 checking, 6.91e-06 computing indexes, 0.00241 misc.) + 0 I/O.
+TE0685-TE0687_1-B.357 ఆ <unk> అలాగే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0685-TE0687_1-B.357 is 2.70634 over 37 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.42 seconds taken in nnet3 compilation total (breakdown: 0.268 compilation, 0.0674 optimization, 0 shortcut expansion, 0.0542 checking, 4.77e-06 computing indexes, 0.0306 misc.) + 0 I/O.
+TE0685-TE0687_2-A.133 అరకు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0685-TE0687_2-A.133 is 2.60774 over 32 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.548 seconds taken in nnet3 compilation total (breakdown: 0.381 compilation, 0.0729 optimization, 0 shortcut expansion, 0.0625 checking, 5.96e-06 computing indexes, 0.0314 misc.) + 0 I/O.
+TE0685-TE0687_2-A.492 మాకైతే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0685-TE0687_2-A.492 is 2.82768 over 29 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.487 seconds taken in nnet3 compilation total (breakdown: 0.354 compilation, 0.101 optimization, 0 shortcut expansion, 0.0302 checking, 7.15e-06 computing indexes, 0.00267 misc.) + 0 I/O.
+TE0685-TE0687_2-B.280 అందరూ కలిసి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0685-TE0687_2-B.280 is 2.20288 over 48 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.473 seconds taken in nnet3 compilation total (breakdown: 0.352 compilation, 0.0963 optimization, 0 shortcut expansion, 0.00208 checking, 8.11e-06 computing indexes, 0.0232 misc.) + 0 I/O.
+TE0685-TE0687_2-B.356 బాబా <unk> అంటే మాటలు సరిగ్గా రాకపోవడం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0685-TE0687_2-B.356 is 2.20712 over 93 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.436 seconds taken in nnet3 compilation total (breakdown: 0.302 compilation, 0.129 optimization, 0 shortcut expansion, 0.00189 checking, 5.01e-06 computing indexes, 0.00241 misc.) + 0 I/O.
+TE0686-TE0688_1-A.101 చాలా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0686-TE0688_1-A.101 is 2.30635 over 33 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.541 seconds taken in nnet3 compilation total (breakdown: 0.378 compilation, 0.125 optimization, 0 shortcut expansion, 0.00188 checking, 7.15e-06 computing indexes, 0.0354 misc.) + 0 I/O.
+TE0686-TE0688_1-B.282 లేదంటే మన <unk> ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0686-TE0688_1-B.282 is 2.58557 over 42 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.465 seconds taken in nnet3 compilation total (breakdown: 0.308 compilation, 0.0883 optimization, 0 shortcut expansion, 0.038 checking, 4.77e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+TE0686-TE0688_2-A.253 ఎన్ని ఉన్నా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0686-TE0688_2-A.253 is 2.49867 over 30 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.519 seconds taken in nnet3 compilation total (breakdown: 0.384 compilation, 0.0732 optimization, 0 shortcut expansion, 0.0343 checking, 5.96e-06 computing indexes, 0.027 misc.) + 0 I/O.
+TE0687-TE0688_1-B.020 మాది విజయవాడ దగ్గర శ్రీకాకుళం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0687-TE0688_1-B.020 is 2.56397 over 66 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.528 seconds taken in nnet3 compilation total (breakdown: 0.346 compilation, 0.084 optimization, 0 shortcut expansion, 0.034 checking, 6.2e-06 computing indexes, 0.0636 misc.) + 0 I/O.
+TE0687-TE0688_1-B.080 ఇంకా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0687-TE0688_1-B.080 is 2.70811 over 25 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.485 seconds taken in nnet3 compilation total (breakdown: 0.349 compilation, 0.0956 optimization, 0 shortcut expansion, 0.00175 checking, 6.91e-06 computing indexes, 0.0388 misc.) + 0 I/O.
+TE0687-TE0688_1-B.227 దూరం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0687-TE0688_1-B.227 is 2.96295 over 21 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.417 seconds taken in nnet3 compilation total (breakdown: 0.255 compilation, 0.104 optimization, 0 shortcut expansion, 0.0263 checking, 5.96e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+TE0687-TE0688_1-B.363 అన్నీ చూశాను 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0687-TE0688_1-B.363 is 2.93001 over 38 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.46 seconds taken in nnet3 compilation total (breakdown: 0.297 compilation, 0.101 optimization, 0 shortcut expansion, 0.0587 checking, 8.11e-06 computing indexes, 0.00316 misc.) + 0 I/O.
+TE0687-TE0688_1-B.442 హైదరాబాద్ వచ్చేస్తాడు హైదరాబాద్ <unk> ఉంచి <unk> చూడటం కుదరదు ఇంక నాకు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0687-TE0688_1-B.442 is 2.17037 over 126 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.467 seconds taken in nnet3 compilation total (breakdown: 0.334 compilation, 0.129 optimization, 0 shortcut expansion, 0.00197 checking, 6.91e-06 computing indexes, 0.00263 misc.) + 0 I/O.
+TE0687-TE0688_2-B.075 కొంచెం సహాయం చేయాలి కొంచెం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0687-TE0688_2-B.075 is 2.40713 over 89 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.462 seconds taken in nnet3 compilation total (breakdown: 0.32 compilation, 0.0725 optimization, 0 shortcut expansion, 0.00196 checking, 5.96e-06 computing indexes, 0.0671 misc.) + 0 I/O.
+TE0687-TE0688_2-B.242 ఇప్పుడు అలాగే ఉండాలి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0687-TE0688_2-B.242 is 3.66901 over 40 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.509 seconds taken in nnet3 compilation total (breakdown: 0.387 compilation, 0.117 optimization, 0 shortcut expansion, 0.00209 checking, 5.01e-06 computing indexes, 0.00251 misc.) + 0 I/O.
+TE0687-TE0688_2-B.314 అంటే వాళ్ళు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0687-TE0688_2-B.314 is 2.86008 over 29 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.5 seconds taken in nnet3 compilation total (breakdown: 0.303 compilation, 0.0675 optimization, 0 shortcut expansion, 0.0622 checking, 4.05e-06 computing indexes, 0.0673 misc.) + 0 I/O.
+TE0689-TE0690_1-A.019 నిర్దిష్టమైన 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_1-A.019 is 2.20981 over 56 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.46 seconds taken in nnet3 compilation total (breakdown: 0.33 compilation, 0.124 optimization, 0 shortcut expansion, 0.00235 checking, 7.15e-06 computing indexes, 0.00244 misc.) + 0 I/O.
+TE0689-TE0690_1-A.117 అది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_1-A.117 is 2.81382 over 25 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.472 seconds taken in nnet3 compilation total (breakdown: 0.339 compilation, 0.129 optimization, 0 shortcut expansion, 0.00191 checking, 6.91e-06 computing indexes, 0.00241 misc.) + 0 I/O.
+TE0689-TE0690_1-A.190 అది దాని వల్ల ఏమవుతుంది అంటే కుటుంబం మీద భారం తగ్గుతుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_1-A.190 is 2.26306 over 118 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.505 seconds taken in nnet3 compilation total (breakdown: 0.375 compilation, 0.0682 optimization, 0 shortcut expansion, 0.0302 checking, 5.96e-06 computing indexes, 0.0313 misc.) + 0 I/O.
+TE0689-TE0690_1-A.234 ఉద్దేశంతోనే ఉన్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_1-A.234 is 2.54431 over 47 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.533 seconds taken in nnet3 compilation total (breakdown: 0.371 compilation, 0.0686 optimization, 0 shortcut expansion, 0.0304 checking, 5.72e-06 computing indexes, 0.0635 misc.) + 0 I/O.
+TE0689-TE0690_1-A.292 ఇప్పుడు టంగుటూరు ప్రకాశం పంతులు గారి <unk> కూడా బాలి వివాహమే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_1-A.292 is 2.57596 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.43 seconds taken in nnet3 compilation total (breakdown: 0.293 compilation, 0.101 optimization, 0 shortcut expansion, 0.0341 checking, 6.91e-06 computing indexes, 0.00255 misc.) + 0 I/O.
+TE0689-TE0690_1-A.304 ఈ బాల్య వివాహాలు అని అప్పట్లో జరిగేవి ఒకప్పట్లో ఉండేవి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_1-A.304 is 2.25127 over 183 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.605 seconds taken in nnet3 compilation total (breakdown: 0.422 compilation, 0.11 optimization, 0 shortcut expansion, 0.00199 checking, 2.03e-05 computing indexes, 0.0716 misc.) + 0 I/O.
+TE0689-TE0690_1-A.325 ఒక కుటుంబాన్ని నడిపించగలం అన్న ఉద్దేశంతో ఉన్నప్పుడు మాత్రమే తనకు వివాహం చేస్తే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_1-A.325 is 2.64735 over 189 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.447 seconds taken in nnet3 compilation total (breakdown: 0.282 compilation, 0.0999 optimization, 0 shortcut expansion, 0.00185 checking, 6.91e-06 computing indexes, 0.063 misc.) + 0 I/O.
+TE0689-TE0690_2-A.047 శ్రేయస్కరం ఎక్కువ లాభం వస్తుందని 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_2-A.047 is 2.26886 over 88 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.469 seconds taken in nnet3 compilation total (breakdown: 0.299 compilation, 0.0764 optimization, 0 shortcut expansion, 0.0623 checking, 8.82e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0689-TE0690_2-A.056 అదే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_2-A.056 is 2.70321 over 22 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.475 seconds taken in nnet3 compilation total (breakdown: 0.339 compilation, 0.0997 optimization, 0 shortcut expansion, 0.00204 checking, 5.72e-06 computing indexes, 0.0345 misc.) + 0 I/O.
+TE0689-TE0690_2-A.112 మరి మీరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_2-A.112 is 3.37746 over 23 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.459 seconds taken in nnet3 compilation total (breakdown: 0.29 compilation, 0.108 optimization, 0 shortcut expansion, 0.0301 checking, 6.2e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0689-TE0690_2-A.149 విద్య అనేది అతనికి అందలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_2-A.149 is 2.79483 over 61 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.495 seconds taken in nnet3 compilation total (breakdown: 0.358 compilation, 0.0717 optimization, 0 shortcut expansion, 0.00197 checking, 6.2e-06 computing indexes, 0.0635 misc.) + 0 I/O.
+TE0689-TE0690_2-A.159 అప్పుడు పని వద్ద పని కాదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_2-A.159 is 2.50445 over 58 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.467 seconds taken in nnet3 compilation total (breakdown: 0.326 compilation, 0.0757 optimization, 0 shortcut expansion, 0.0382 checking, 6.91e-06 computing indexes, 0.0268 misc.) + 0 I/O.
+TE0689-TE0690_2-A.184 ఇప్పుడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_2-A.184 is 2.84539 over 27 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.468 seconds taken in nnet3 compilation total (breakdown: 0.338 compilation, 0.0935 optimization, 0 shortcut expansion, 0.0342 checking, 6.91e-06 computing indexes, 0.00287 misc.) + 0 I/O.
+TE0689-TE0690_2-A.218 అది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_2-A.218 is 3.06201 over 21 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.467 seconds taken in nnet3 compilation total (breakdown: 0.314 compilation, 0.0639 optimization, 0 shortcut expansion, 0.0303 checking, 1.93e-05 computing indexes, 0.059 misc.) + 0 I/O.
+TE0689-TE0690_2-B.039 మొత్తం ఈ రాష్ట్రం మొత్తం రాష్ట్రం గా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_2-B.039 is 2.18914 over 96 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.497 seconds taken in nnet3 compilation total (breakdown: 0.374 compilation, 0.0888 optimization, 0 shortcut expansion, 0.00207 checking, 6.91e-06 computing indexes, 0.0312 misc.) + 0 I/O.
+TE0689-TE0690_2-B.049 రాజకీయ పరంగా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_2-B.049 is 2.73251 over 54 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.376 seconds taken in nnet3 compilation total (breakdown: 0.251 compilation, 0.0676 optimization, 0 shortcut expansion, 0.0539 checking, 2.07e-05 computing indexes, 0.00249 misc.) + 0 I/O.
+TE0689-TE0690_2-B.334 అలా చేయటం వల్ల 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_2-B.334 is 2.95018 over 41 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.483 seconds taken in nnet3 compilation total (breakdown: 0.296 compilation, 0.0689 optimization, 0 shortcut expansion, 0.0545 checking, 5.01e-06 computing indexes, 0.0632 misc.) + 0 I/O.
+TE0689-TE0690_2-B.335 ఈ <unk> మనం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0690_2-B.335 is 2.41518 over 46 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.47 seconds taken in nnet3 compilation total (breakdown: 0.316 compilation, 0.149 optimization, 0 shortcut expansion, 0.00186 checking, 6.2e-06 computing indexes, 0.00277 misc.) + 0 I/O.
+TE0689-TE0691_1-A.105 అంటే ఇప్పుడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0691_1-A.105 is 2.5389 over 33 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.498 seconds taken in nnet3 compilation total (breakdown: 0.348 compilation, 0.064 optimization, 0 shortcut expansion, 0.0262 checking, 8.11e-06 computing indexes, 0.0597 misc.) + 0 I/O.
+TE0689-TE0691_1-A.267 నేను అనేది ఏంటంటే అతను మనం నమ్మొచ్చా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0691_1-A.267 is 2.19104 over 91 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.432 seconds taken in nnet3 compilation total (breakdown: 0.34 compilation, 0.088 optimization, 0 shortcut expansion, 0.00187 checking, 5.96e-06 computing indexes, 0.00239 misc.) + 0 I/O.
+TE0689-TE0691_1-B.044 మీరు వెంటనే ఒక డబ్బాలో 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0689-TE0691_1-B.044 is 2.49012 over 71 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.398 seconds taken in nnet3 compilation total (breakdown: 0.266 compilation, 0.0918 optimization, 0 shortcut expansion, 0.00192 checking, 3.81e-06 computing indexes, 0.0388 misc.) + 0 I/O.
+TE0690-TE0692_1-A.089 ఎక్కువమంది ఆలోచన చేస్తుంటారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0690-TE0692_1-A.089 is 2.65576 over 53 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.395 seconds taken in nnet3 compilation total (breakdown: 0.295 compilation, 0.0954 optimization, 0 shortcut expansion, 0.00192 checking, 5.01e-06 computing indexes, 0.00248 misc.) + 0 I/O.
+TE0690-TE0692_1-A.128 తక్కువ ఎక్కువ చదువు చదువుకున్న వాళ్లు ఉద్యోగం లేక నిరుద్యోగ సమస్య 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0690-TE0692_1-A.128 is 2.49395 over 140 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.265 compilation, 0.123 optimization, 0 shortcut expansion, 0.0301 checking, 7.15e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+TE0690-TE0692_1-B.344 ఉంటారు కదా అలాగే ఆలోచించే ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0690-TE0692_1-B.344 is 2.7163 over 70 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.443 seconds taken in nnet3 compilation total (breakdown: 0.295 compilation, 0.108 optimization, 0 shortcut expansion, 0.0382 checking, 6.2e-06 computing indexes, 0.00223 misc.) + 0 I/O.
+TE0690-TE0692_2-B.098 ఎందుకంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0690-TE0692_2-B.098 is 2.82826 over 40 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.421 seconds taken in nnet3 compilation total (breakdown: 0.296 compilation, 0.0927 optimization, 0 shortcut expansion, 0.00207 checking, 5.01e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+TE0690-TE0692_2-B.233 అంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0690-TE0692_2-B.233 is 2.73176 over 28 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.455 seconds taken in nnet3 compilation total (breakdown: 0.331 compilation, 0.092 optimization, 0 shortcut expansion, 0.00187 checking, 5.01e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+TE0690-TE0692_2-B.240 ప్రజల్లో 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0690-TE0692_2-B.240 is 2.89071 over 29 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.518 seconds taken in nnet3 compilation total (breakdown: 0.342 compilation, 0.172 optimization, 0 shortcut expansion, 0.00184 checking, 7.15e-06 computing indexes, 0.00272 misc.) + 0 I/O.
+TE0690-TE0692_2-B.254 అంతే అని వెళ్ళిపోతారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0690-TE0692_2-B.254 is 2.95526 over 52 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.497 seconds taken in nnet3 compilation total (breakdown: 0.341 compilation, 0.141 optimization, 0 shortcut expansion, 0.0022 checking, 8.11e-06 computing indexes, 0.0122 misc.) + 0 I/O.
+TE0690-TE0692_2-B.300 అలాగే ఉంటుంది కాబట్టి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0690-TE0692_2-B.300 is 3.11928 over 51 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.237 seconds taken in nnet3 compilation total (breakdown: 0.147 compilation, 0.0593 optimization, 0 shortcut expansion, 0.00105 checking, 4.05e-06 computing indexes, 0.03 misc.) + 0 I/O.
+TE0691-TE0692_1-A.041 పట్టించుకోని మూడు కారణాల వల్ల పిల్లల్లో చదువుకునేది ఏకాగ్రత అనేది తగ్గిపోతుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0691-TE0692_1-A.041 is 2.05818 over 160 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.457 seconds taken in nnet3 compilation total (breakdown: 0.312 compilation, 0.14 optimization, 0 shortcut expansion, 0.00184 checking, 8.11e-06 computing indexes, 0.0026 misc.) + 0 I/O.
+TE0691-TE0692_1-A.124 అంతే లెండి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0691-TE0692_1-A.124 is 2.04502 over 46 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.506 seconds taken in nnet3 compilation total (breakdown: 0.373 compilation, 0.0961 optimization, 0 shortcut expansion, 0.0338 checking, 6.2e-06 computing indexes, 0.00282 misc.) + 0 I/O.
+TE0691-TE0692_1-B.152 అంటే పిల్లల్లో వాళ్ళ మానసిక ఎదుగుదల గురించి అలాగే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0691-TE0692_1-B.152 is 2.54053 over 130 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.451 seconds taken in nnet3 compilation total (breakdown: 0.321 compilation, 0.1 optimization, 0 shortcut expansion, 0.00197 checking, 5.72e-06 computing indexes, 0.027 misc.) + 0 I/O.
+TE0691-TE0692_2-A.018 అవునండి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0691-TE0692_2-A.018 is 2.87976 over 21 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.428 seconds taken in nnet3 compilation total (breakdown: 0.292 compilation, 0.104 optimization, 0 shortcut expansion, 0.0299 checking, 6.2e-06 computing indexes, 0.00237 misc.) + 0 I/O.
+TE0691-TE0692_2-B.050 ఉంటుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0691-TE0692_2-B.050 is 3.05992 over 29 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.502 seconds taken in nnet3 compilation total (breakdown: 0.344 compilation, 0.101 optimization, 0 shortcut expansion, 0.0263 checking, 6.2e-06 computing indexes, 0.0311 misc.) + 0 I/O.
+TE0691-TE0692_2-B.309 దయ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0691-TE0692_2-B.309 is 2.71897 over 22 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.492 seconds taken in nnet3 compilation total (breakdown: 0.326 compilation, 0.1 optimization, 0 shortcut expansion, 0.0623 checking, 6.91e-06 computing indexes, 0.00255 misc.) + 0 I/O.
+TE0693-TE0694_1-B.006 అది ఏంటంటే ఇప్పుడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0694_1-B.006 is 2.53512 over 53 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.414 seconds taken in nnet3 compilation total (breakdown: 0.233 compilation, 0.064 optimization, 0 shortcut expansion, 0.0862 checking, 5.96e-06 computing indexes, 0.0307 misc.) + 0 I/O.
+TE0693-TE0694_1-B.011 చనిపోయిన వారిని గాని 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0694_1-B.011 is 2.55409 over 49 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.606 seconds taken in nnet3 compilation total (breakdown: 0.46 compilation, 0.112 optimization, 0 shortcut expansion, 0.00212 checking, 6.2e-06 computing indexes, 0.0314 misc.) + 0 I/O.
+TE0693-TE0694_1-B.014 అది బాగుంటది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0694_1-B.014 is 2.65283 over 51 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.26 seconds taken in nnet3 compilation total (breakdown: 0.167 compilation, 0.0341 optimization, 0 shortcut expansion, 0.029 checking, 3.1e-06 computing indexes, 0.0298 misc.) + 0 I/O.
+TE0693-TE0694_1-B.065 ఇప్పుడు నీకు ఎలా చెప్పాలంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0694_1-B.065 is 2.14452 over 63 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.499 seconds taken in nnet3 compilation total (breakdown: 0.359 compilation, 0.136 optimization, 0 shortcut expansion, 0.00193 checking, 6.91e-06 computing indexes, 0.0025 misc.) + 0 I/O.
+TE0693-TE0694_1-B.072 ఇప్పుడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0694_1-B.072 is 3.64107 over 20 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.416 seconds taken in nnet3 compilation total (breakdown: 0.28 compilation, 0.132 optimization, 0 shortcut expansion, 0.00185 checking, 1.79e-05 computing indexes, 0.00226 misc.) + 0 I/O.
+TE0693-TE0694_2-A.120 తీసుకోవడం లేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0694_2-A.120 is 2.15598 over 52 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.397 seconds taken in nnet3 compilation total (breakdown: 0.273 compilation, 0.12 optimization, 0 shortcut expansion, 0.00173 checking, 6.2e-06 computing indexes, 0.00219 misc.) + 0 I/O.
+TE0693-TE0694_2-A.207 ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0694_2-A.207 is 3.06896 over 24 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.481 seconds taken in nnet3 compilation total (breakdown: 0.337 compilation, 0.0993 optimization, 0 shortcut expansion, 0.0017 checking, 6.91e-06 computing indexes, 0.0426 misc.) + 0 I/O.
+TE0693-TE0694_2-B.091 ఆ <unk> తీసుకోవడం లేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0694_2-B.091 is 1.82261 over 47 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.487 seconds taken in nnet3 compilation total (breakdown: 0.356 compilation, 0.125 optimization, 0 shortcut expansion, 0.00215 checking, 5.96e-06 computing indexes, 0.00314 misc.) + 0 I/O.
+TE0693-TE0694_2-B.149 అంటే నేను 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0694_2-B.149 is 2.3816 over 34 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.277 seconds taken in nnet3 compilation total (breakdown: 0.205 compilation, 0.0458 optimization, 0 shortcut expansion, 0.00112 checking, 4.05e-06 computing indexes, 0.0257 misc.) + 0 I/O.
+TE0693-TE0695_1-A.057 అది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0695_1-A.057 is 2.62341 over 23 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.504 seconds taken in nnet3 compilation total (breakdown: 0.359 compilation, 0.0755 optimization, 0 shortcut expansion, 0.00214 checking, 5.96e-06 computing indexes, 0.0671 misc.) + 0 I/O.
+TE0693-TE0695_1-B.036 అలాగే అలాగే మాట్లాడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0695_1-B.036 is 2.40719 over 64 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.501 seconds taken in nnet3 compilation total (breakdown: 0.352 compilation, 0.116 optimization, 0 shortcut expansion, 0.0299 checking, 5.25e-06 computing indexes, 0.00296 misc.) + 0 I/O.
+TE0693-TE0695_1-B.122 మాకు గౌరవం అనేది లేకుండా పోయిందని వాళ్ళు ఆలోచనతో ఆలోచిస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0695_1-B.122 is 2.35348 over 159 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.486 seconds taken in nnet3 compilation total (breakdown: 0.349 compilation, 0.133 optimization, 0 shortcut expansion, 0.00187 checking, 5.72e-06 computing indexes, 0.00241 misc.) + 0 I/O.
+TE0693-TE0695_1-B.138 తిట్టడం వంటివి చేస్తున్నారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0695_1-B.138 is 2.6569 over 60 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.495 seconds taken in nnet3 compilation total (breakdown: 0.308 compilation, 0.0652 optimization, 0 shortcut expansion, 0.0622 checking, 6.91e-06 computing indexes, 0.0594 misc.) + 0 I/O.
+TE0693-TE0695_2-A.135 చెప్పండి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0695_2-A.135 is 2.58375 over 22 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.423 seconds taken in nnet3 compilation total (breakdown: 0.298 compilation, 0.12 optimization, 0 shortcut expansion, 0.00184 checking, 5.96e-06 computing indexes, 0.0026 misc.) + 0 I/O.
+TE0693-TE0695_2-B.071 ఏలూరు కాని నేను పుట్టింది మాత్రం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0695_2-B.071 is 2.07611 over 85 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.243 seconds taken in nnet3 compilation total (breakdown: 0.179 compilation, 0.0622 optimization, 0 shortcut expansion, 0.000869 checking, 4.05e-06 computing indexes, 0.00156 misc.) + 0 I/O.
+TE0693-TE0695_2-B.123 వాడికి ఆయనకి ఆలోచన ఉండదు లేనోళ్ళకి చెయ్యాలి అంటే రాజకీయ నాయకులు అలాగే ఉండాలి కదా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0695_2-B.123 is 2.51885 over 174 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.399 seconds taken in nnet3 compilation total (breakdown: 0.239 compilation, 0.0715 optimization, 0 shortcut expansion, 0.0219 checking, 6.68e-06 computing indexes, 0.067 misc.) + 0 I/O.
+TE0693-TE0695_2-B.128 అలా ఆలోచించడం <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0693-TE0695_2-B.128 is 2.80149 over 51 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.264 seconds taken in nnet3 compilation total (breakdown: 0.192 compilation, 0.0337 optimization, 0 shortcut expansion, 0.00109 checking, 3.1e-06 computing indexes, 0.0376 misc.) + 0 I/O.
+TE0694-TE0696_1-A.009 దాని వల్ల నీకు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0694-TE0696_1-A.009 is 2.48575 over 41 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.464 seconds taken in nnet3 compilation total (breakdown: 0.29 compilation, 0.109 optimization, 0 shortcut expansion, 0.0299 checking, 6.91e-06 computing indexes, 0.0351 misc.) + 0 I/O.
+TE0694-TE0696_1-A.342 దాంట్లో మీరు ఒక <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0694-TE0696_1-A.342 is 2.41504 over 42 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.481 seconds taken in nnet3 compilation total (breakdown: 0.316 compilation, 0.0958 optimization, 0 shortcut expansion, 0.0341 checking, 6.2e-06 computing indexes, 0.035 misc.) + 0 I/O.
+TE0694-TE0696_2-B.004 మా ఊరు ముడిచెర్ల 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0694-TE0696_2-B.004 is 2.62985 over 51 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.308 seconds taken in nnet3 compilation total (breakdown: 0.2 compilation, 0.0377 optimization, 0 shortcut expansion, 0.0372 checking, 2.86e-06 computing indexes, 0.0336 misc.) + 0 I/O.
+TE0694-TE0696_2-B.009 అయితే ముగ్గురు అమ్మాయిలు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0694-TE0696_2-B.009 is 2.81429 over 62 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.434 seconds taken in nnet3 compilation total (breakdown: 0.301 compilation, 0.129 optimization, 0 shortcut expansion, 0.00181 checking, 5.72e-06 computing indexes, 0.00269 misc.) + 0 I/O.
+TE0694-TE0696_2-B.290 ఇప్పుడు అలా ఉంది కాబట్టి చేసుకోలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0694-TE0696_2-B.290 is 2.57788 over 72 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.427 seconds taken in nnet3 compilation total (breakdown: 0.301 compilation, 0.122 optimization, 0 shortcut expansion, 0.00223 checking, 6.68e-06 computing indexes, 0.00256 misc.) + 0 I/O.
+TE0695-TE0696_1-B.006 మీ అమ్మగారి ఏమి చేస్తారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0695-TE0696_1-B.006 is 2.86736 over 44 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.466 seconds taken in nnet3 compilation total (breakdown: 0.325 compilation, 0.0884 optimization, 0 shortcut expansion, 0.0261 checking, 6.2e-06 computing indexes, 0.0269 misc.) + 0 I/O.
+TE0695-TE0696_1-B.099 స్వచ్చభారత్ అంటారు కానీ దానికి కొంచెం కూడా న్యాయం చేసినట్టు నా <unk> అనిపించడం లేదు ఎందుకంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0695-TE0696_1-B.099 is 2.34846 over 190 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.43 seconds taken in nnet3 compilation total (breakdown: 0.297 compilation, 0.129 optimization, 0 shortcut expansion, 0.00202 checking, 6.2e-06 computing indexes, 0.0022 misc.) + 0 I/O.
+TE0695-TE0696_2-A.063 నేను మా ఇంటి దగ్గర చూసాను చాలా మంది ఇల్లు లేని వాళ్ళు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0695-TE0696_2-A.063 is 2.46683 over 111 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.479 seconds taken in nnet3 compilation total (breakdown: 0.346 compilation, 0.1 optimization, 0 shortcut expansion, 0.00211 checking, 7.15e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0695-TE0696_2-B.216 అమ్మాయిలు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0695-TE0696_2-B.216 is 2.52093 over 30 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.482 seconds taken in nnet3 compilation total (breakdown: 0.324 compilation, 0.068 optimization, 0 shortcut expansion, 0.0262 checking, 7.15e-06 computing indexes, 0.0632 misc.) + 0 I/O.
+TE0697-TE0698_1-A.143 త్వరలో వస్తే చాలా వరకు ఇంకా ఎక్కువ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0698_1-A.143 is 2.68384 over 92 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.526 seconds taken in nnet3 compilation total (breakdown: 0.349 compilation, 0.108 optimization, 0 shortcut expansion, 0.00202 checking, 4.77e-06 computing indexes, 0.0671 misc.) + 0 I/O.
+TE0697-TE0698_1-B.279 ఈ పరిజ్ఞానం తెలియక చాలామందికి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0698_1-B.279 is 2.45007 over 82 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.575 seconds taken in nnet3 compilation total (breakdown: 0.395 compilation, 0.11 optimization, 0 shortcut expansion, 0.0344 checking, 5.96e-06 computing indexes, 0.0353 misc.) + 0 I/O.
+TE0697-TE0698_2-A.149 అట్లా కైలాసగిరి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0698_2-A.149 is 2.26556 over 46 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.521 seconds taken in nnet3 compilation total (breakdown: 0.377 compilation, 0.108 optimization, 0 shortcut expansion, 0.0338 checking, 5.01e-06 computing indexes, 0.00284 misc.) + 0 I/O.
+TE0697-TE0698_2-A.166 ఇక చాలా పోకుండా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0698_2-A.166 is 2.51557 over 55 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.406 seconds taken in nnet3 compilation total (breakdown: 0.257 compilation, 0.0922 optimization, 0 shortcut expansion, 0.0261 checking, 5.96e-06 computing indexes, 0.0305 misc.) + 0 I/O.
+TE0697-TE0698_2-A.264 చాలా మంది చెప్పారు అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0698_2-A.264 is 2.71846 over 55 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.375 seconds taken in nnet3 compilation total (breakdown: 0.251 compilation, 0.0956 optimization, 0 shortcut expansion, 0.00188 checking, 4.77e-06 computing indexes, 0.0263 misc.) + 0 I/O.
+TE0697-TE0698_2-A.322 నేను వెళ్లి మమ్మల్ని కుదరడం లేదు చాలా వరకు <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0698_2-A.322 is 2.16055 over 81 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.49 seconds taken in nnet3 compilation total (breakdown: 0.365 compilation, 0.121 optimization, 0 shortcut expansion, 0.00196 checking, 6.2e-06 computing indexes, 0.0026 misc.) + 0 I/O.
+TE0697-TE0698_2-B.230 గోదావరి <unk> ప్రదేశం ఆ గోదావరి పుట్టిన ప్రదేశం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0698_2-B.230 is 2.35385 over 104 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.425 seconds taken in nnet3 compilation total (breakdown: 0.273 compilation, 0.108 optimization, 0 shortcut expansion, 0.0421 checking, 6.2e-06 computing indexes, 0.00231 misc.) + 0 I/O.
+TE0697-TE0699_1-B.196 ఈ మధ్యనే మాత్రం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0699_1-B.196 is 2.87816 over 37 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.387 seconds taken in nnet3 compilation total (breakdown: 0.263 compilation, 0.0914 optimization, 0 shortcut expansion, 0.03 checking, 6.91e-06 computing indexes, 0.00223 misc.) + 0 I/O.
+TE0697-TE0699_1-B.248 హైదరాబాదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0699_1-B.248 is 3.2376 over 31 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.525 seconds taken in nnet3 compilation total (breakdown: 0.369 compilation, 0.0636 optimization, 0 shortcut expansion, 0.00209 checking, 5.96e-06 computing indexes, 0.0911 misc.) + 0 I/O.
+TE0697-TE0699_2-A.104 భోజనం చేయడానికి కాదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0699_2-A.104 is 2.50934 over 45 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.485 seconds taken in nnet3 compilation total (breakdown: 0.344 compilation, 0.0959 optimization, 0 shortcut expansion, 0.042 checking, 6.91e-06 computing indexes, 0.00263 misc.) + 0 I/O.
+TE0697-TE0699_2-A.368 చాలా వాకిట్లో జరుగుతుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0699_2-A.368 is 2.20804 over 44 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.451 seconds taken in nnet3 compilation total (breakdown: 0.287 compilation, 0.104 optimization, 0 shortcut expansion, 0.0341 checking, 5.96e-06 computing indexes, 0.0268 misc.) + 0 I/O.
+TE0697-TE0699_2-A.391 ఇక పెరుగుతున్నాయి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0699_2-A.391 is 3.03564 over 33 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.513 seconds taken in nnet3 compilation total (breakdown: 0.376 compilation, 0.0678 optimization, 0 shortcut expansion, 0.0341 checking, 5.96e-06 computing indexes, 0.0352 misc.) + 0 I/O.
+TE0697-TE0699_2-B.114 ఎక్కువగా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0699_2-B.114 is 3.36475 over 35 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.35 seconds taken in nnet3 compilation total (breakdown: 0.222 compilation, 0.096 optimization, 0 shortcut expansion, 0.03 checking, 4.77e-06 computing indexes, 0.00224 misc.) + 0 I/O.
+TE0697-TE0699_2-B.176 వంట అవన్నీ చేసుకోవాలి కదా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0699_2-B.176 is 2.46069 over 65 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.453 seconds taken in nnet3 compilation total (breakdown: 0.329 compilation, 0.12 optimization, 0 shortcut expansion, 0.0018 checking, 6.91e-06 computing indexes, 0.0027 misc.) + 0 I/O.
+TE0697-TE0699_2-B.227 ఒకప్పుడు మాత్రం ఇంకా పదకొండు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0699_2-B.227 is 2.82999 over 69 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.412 seconds taken in nnet3 compilation total (breakdown: 0.256 compilation, 0.0919 optimization, 0 shortcut expansion, 0.00181 checking, 5.01e-06 computing indexes, 0.0624 misc.) + 0 I/O.
+TE0697-TE0699_2-B.298 అది మీరు వెళ్ళడం కాబట్టి పర్వాలేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0697-TE0699_2-B.298 is 2.669 over 70 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.414 seconds taken in nnet3 compilation total (breakdown: 0.273 compilation, 0.0838 optimization, 0 shortcut expansion, 0.03 checking, 5.01e-06 computing indexes, 0.0265 misc.) + 0 I/O.
+TE0698-TE0700_1-A.172 అవును నేను విన్నాను 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0698-TE0700_1-A.172 is 2.95111 over 43 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.476 seconds taken in nnet3 compilation total (breakdown: 0.358 compilation, 0.113 optimization, 0 shortcut expansion, 0.00232 checking, 7.15e-06 computing indexes, 0.00266 misc.) + 0 I/O.
+TE0698-TE0700_1-A.225 మీకు ఒక తమ్ముడు ఏం చేస్తాడు తమ్ముడు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0698-TE0700_1-A.225 is 2.31222 over 66 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.506 seconds taken in nnet3 compilation total (breakdown: 0.353 compilation, 0.0921 optimization, 0 shortcut expansion, 0.0301 checking, 5.72e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+TE0698-TE0700_1-A.270 సినిమాలు చాలా తక్కువగా చూస్తాను కాకపోతే ఏదైనా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0698-TE0700_1-A.270 is 2.52428 over 111 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.457 seconds taken in nnet3 compilation total (breakdown: 0.3 compilation, 0.0959 optimization, 0 shortcut expansion, 0.0299 checking, 5.01e-06 computing indexes, 0.0309 misc.) + 0 I/O.
+TE0698-TE0700_1-A.434 అది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0698-TE0700_1-A.434 is 3.26624 over 23 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.415 seconds taken in nnet3 compilation total (breakdown: 0.294 compilation, 0.117 optimization, 0 shortcut expansion, 0.00179 checking, 6.91e-06 computing indexes, 0.00253 misc.) + 0 I/O.
+TE0698-TE0700_1-A.468 ఏడిపించారు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0698-TE0700_1-A.468 is 2.81698 over 38 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.448 seconds taken in nnet3 compilation total (breakdown: 0.29 compilation, 0.0689 optimization, 0 shortcut expansion, 0.00201 checking, 5.01e-06 computing indexes, 0.087 misc.) + 0 I/O.
+TE0698-TE0700_2-A.083 ఇక ఈ రోజుల్లో కూడా బాల్య వివాహాలు జరుగుతుంది అంటారా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0698-TE0700_2-A.083 is 2.67005 over 76 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.487 seconds taken in nnet3 compilation total (breakdown: 0.346 compilation, 0.0681 optimization, 0 shortcut expansion, 0.0301 checking, 2.19e-05 computing indexes, 0.0431 misc.) + 0 I/O.
+TE0698-TE0700_2-A.098 వరకట్నాలు గురించి ఏవైనా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0698-TE0700_2-A.098 is 2.49391 over 43 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.384 seconds taken in nnet3 compilation total (breakdown: 0.263 compilation, 0.117 optimization, 0 shortcut expansion, 0.00182 checking, 6.2e-06 computing indexes, 0.00255 misc.) + 0 I/O.
+TE0698-TE0700_2-A.186 కచ్చితంగా <unk> 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0698-TE0700_2-A.186 is 2.59073 over 30 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.447 seconds taken in nnet3 compilation total (breakdown: 0.319 compilation, 0.096 optimization, 0 shortcut expansion, 0.03 checking, 5.96e-06 computing indexes, 0.00263 misc.) + 0 I/O.
+TE0698-TE0700_2-A.321 దాని గురించి లాక్ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0698-TE0700_2-A.321 is 2.61535 over 33 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.491 seconds taken in nnet3 compilation total (breakdown: 0.362 compilation, 0.125 optimization, 0 shortcut expansion, 0.0019 checking, 6.2e-06 computing indexes, 0.0029 misc.) + 0 I/O.
+TE0698-TE0700_2-A.384 ఎప్పుడైతే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0698-TE0700_2-A.384 is 2.41834 over 51 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.215 seconds taken in nnet3 compilation total (breakdown: 0.155 compilation, 0.058 optimization, 0 shortcut expansion, 0.000914 checking, 2.15e-06 computing indexes, 0.00135 misc.) + 0 I/O.
+TE0698-TE0700_2-B.199 మార్చేశారు కదా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0698-TE0700_2-B.199 is 2.8665 over 40 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.429 seconds taken in nnet3 compilation total (breakdown: 0.305 compilation, 0.12 optimization, 0 shortcut expansion, 0.00192 checking, 6.91e-06 computing indexes, 0.00243 misc.) + 0 I/O.
+TE0699-TE0700_1-A.005 ఎలా ఉన్నావు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0699-TE0700_1-A.005 is 3.13088 over 39 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.288 compilation, 0.109 optimization, 0 shortcut expansion, 0.0262 checking, 1.6e-05 computing indexes, 0.00259 misc.) + 0 I/O.
+TE0699-TE0700_1-A.017 ఎలా ఉన్నారు అందరు బాగున్నారా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0699-TE0700_1-A.017 is 2.94932 over 69 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.415 seconds taken in nnet3 compilation total (breakdown: 0.254 compilation, 0.101 optimization, 0 shortcut expansion, 0.0301 checking, 6.68e-06 computing indexes, 0.0306 misc.) + 0 I/O.
+TE0699-TE0700_1-A.134 బాగా ఒత్తిడి కలుగుతుంది వాళ్లకి ఏం చెయ్యాలో తెలియని పక్షాన వాళ్ళ చేత తిట్లు తినాల్సి వస్తుంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0699-TE0700_1-A.134 is 2.34008 over 217 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.438 seconds taken in nnet3 compilation total (breakdown: 0.315 compilation, 0.118 optimization, 0 shortcut expansion, 0.00188 checking, 5.96e-06 computing indexes, 0.00297 misc.) + 0 I/O.
+TE0699-TE0700_1-A.253 పల్లెటూరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0699-TE0700_1-A.253 is 3.42534 over 33 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.532 seconds taken in nnet3 compilation total (breakdown: 0.357 compilation, 0.0932 optimization, 0 shortcut expansion, 0.0259 checking, 5.72e-06 computing indexes, 0.0553 misc.) + 0 I/O.
+TE0699-TE0700_1-A.287 అలా చేస్తారు పల్లెటూరులో 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0699-TE0700_1-A.287 is 2.91626 over 49 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.574 seconds taken in nnet3 compilation total (breakdown: 0.428 compilation, 0.113 optimization, 0 shortcut expansion, 0.00216 checking, 6.2e-06 computing indexes, 0.0312 misc.) + 0 I/O.
+TE0699-TE0700_1-A.352 వెళ్ళలేదు తర్వాత ఏమి అనేస్తారో ఏంటో అని భయం వేసింది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0699-TE0700_1-A.352 is 2.14239 over 130 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.485 seconds taken in nnet3 compilation total (breakdown: 0.352 compilation, 0.096 optimization, 0 shortcut expansion, 0.00183 checking, 6.91e-06 computing indexes, 0.0348 misc.) + 0 I/O.
+TE0699-TE0700_2-A.009 పవన్ కళ్యాణ్ ఇష్టం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0699-TE0700_2-A.009 is 2.8763 over 53 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.431 seconds taken in nnet3 compilation total (breakdown: 0.274 compilation, 0.101 optimization, 0 shortcut expansion, 0.00184 checking, 7.15e-06 computing indexes, 0.0542 misc.) + 0 I/O.
+TE0699-TE0700_2-A.182 సంబంధాలు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0699-TE0700_2-A.182 is 2.87969 over 26 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.459 seconds taken in nnet3 compilation total (breakdown: 0.334 compilation, 0.0966 optimization, 0 shortcut expansion, 0.00205 checking, 3e-05 computing indexes, 0.0268 misc.) + 0 I/O.
+TE0699-TE0700_2-A.305 అక్క ఉంది 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0699-TE0700_2-A.305 is 3.10995 over 29 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.511 seconds taken in nnet3 compilation total (breakdown: 0.35 compilation, 0.1 optimization, 0 shortcut expansion, 0.0301 checking, 5.96e-06 computing indexes, 0.031 misc.) + 0 I/O.
+TE0699-TE0700_2-B.002 ప్రభాస్ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0699-TE0700_2-B.002 is 2.64961 over 22 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.429 seconds taken in nnet3 compilation total (breakdown: 0.293 compilation, 0.132 optimization, 0 shortcut expansion, 0.00189 checking, 1.19e-05 computing indexes, 0.00254 misc.) + 0 I/O.
+TE0701-TE0702_1-B.216 కాబట్టి నువ్వు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0701-TE0702_1-B.216 is 2.39601 over 36 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.448 seconds taken in nnet3 compilation total (breakdown: 0.298 compilation, 0.093 optimization, 0 shortcut expansion, 0.0302 checking, 5.25e-06 computing indexes, 0.0264 misc.) + 0 I/O.
+TE0701-TE0702_2-A.053 అదే చాలా 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0701-TE0702_2-A.053 is 2.04446 over 64 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.53 seconds taken in nnet3 compilation total (breakdown: 0.375 compilation, 0.0896 optimization, 0 shortcut expansion, 0.0341 checking, 6.91e-06 computing indexes, 0.0314 misc.) + 0 I/O.
+TE0701-TE0702_2-B.221 ఏముంది ఇక్కడ 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0701-TE0702_2-B.221 is 1.92204 over 68 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.253 seconds taken in nnet3 compilation total (breakdown: 0.189 compilation, 0.038 optimization, 0 shortcut expansion, 0.00107 checking, 2.86e-06 computing indexes, 0.0257 misc.) + 0 I/O.
+TE0701-TE0702_2-B.427 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0701-TE0702_2-B.427 is 3.49854 over 21 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.417 seconds taken in nnet3 compilation total (breakdown: 0.261 compilation, 0.0958 optimization, 0 shortcut expansion, 0.03 checking, 7.15e-06 computing indexes, 0.0305 misc.) + 0 I/O.
+TE0701-TE0703_1-B.006 మీ పేరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0701-TE0703_1-B.006 is 3.35121 over 26 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.474 seconds taken in nnet3 compilation total (breakdown: 0.297 compilation, 0.104 optimization, 0 shortcut expansion, 0.0342 checking, 5.25e-06 computing indexes, 0.0389 misc.) + 0 I/O.
+TE0701-TE0703_2-A.034 ఎలా ఉండాలో సమాజంలో 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0701-TE0703_2-A.034 is 2.57162 over 59 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.461 seconds taken in nnet3 compilation total (breakdown: 0.336 compilation, 0.0637 optimization, 0 shortcut expansion, 0.03 checking, 5.01e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0701-TE0703_2-B.014 ఏంటి 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0701-TE0703_2-B.014 is 3.18527 over 26 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.433 seconds taken in nnet3 compilation total (breakdown: 0.288 compilation, 0.116 optimization, 0 shortcut expansion, 0.0258 checking, 7.87e-06 computing indexes, 0.00256 misc.) + 0 I/O.
+TE0701-TE0703_2-B.212 మరి ఎక్కువ ఇబ్బంది ఏమి లేదు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0701-TE0703_2-B.212 is 2.53771 over 61 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.437 seconds taken in nnet3 compilation total (breakdown: 0.316 compilation, 0.0919 optimization, 0 shortcut expansion, 0.00174 checking, 5.96e-06 computing indexes, 0.0268 misc.) + 0 I/O.
+LOG (apply-cmvn-online[5.5.1009~1-e4940]:main():apply-cmvn-online.cc:133) Applied online CMVN to 330 files, or 53961 frames.
+TE0702-TE0704_1-A.314 ఎంతకాలం చదివేస్తాం చదివి <unk> సాయం చేస్తాం 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0702-TE0704_1-A.314 is 2.45143 over 76 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.428 seconds taken in nnet3 compilation total (breakdown: 0.279 compilation, 0.117 optimization, 0 shortcut expansion, 0.0302 checking, 7.87e-06 computing indexes, 0.00287 misc.) + 0 I/O.
+TE0702-TE0704_1-A.358 ఎందుకంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0702-TE0704_1-A.358 is 2.61205 over 37 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.446 seconds taken in nnet3 compilation total (breakdown: 0.313 compilation, 0.108 optimization, 0 shortcut expansion, 0.0022 checking, 6.91e-06 computing indexes, 0.0227 misc.) + 0 I/O.
+TE0702-TE0704_1-B.150 అవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0702-TE0704_1-B.150 is 2.77304 over 31 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.47 seconds taken in nnet3 compilation total (breakdown: 0.313 compilation, 0.0966 optimization, 0 shortcut expansion, 0.00179 checking, 6.91e-06 computing indexes, 0.0591 misc.) + 0 I/O.
+TE0702-TE0704_1-B.235 చూడలేరు 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0702-TE0704_1-B.235 is 2.75476 over 33 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.531 seconds taken in nnet3 compilation total (breakdown: 0.382 compilation, 0.0636 optimization, 0 shortcut expansion, 0.0302 checking, 4.77e-06 computing indexes, 0.0553 misc.) + 0 I/O.
+TE0702-TE0704_2-A.040 అవును నిజమే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0702-TE0704_2-A.040 is 2.91367 over 41 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.431 seconds taken in nnet3 compilation total (breakdown: 0.286 compilation, 0.0878 optimization, 0 shortcut expansion, 0.026 checking, 5.01e-06 computing indexes, 0.0308 misc.) + 0 I/O.
+TE0702-TE0704_2-A.090 అవునవును 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0702-TE0704_2-A.090 is 2.56911 over 26 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.431 seconds taken in nnet3 compilation total (breakdown: 0.31 compilation, 0.116 optimization, 0 shortcut expansion, 0.0021 checking, 2.29e-05 computing indexes, 0.0028 misc.) + 0 I/O.
+TE0702-TE0704_2-A.153 అవునవును అసఫ్ జాహీ లేని చేస్తున్నారంటే 
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance TE0702-TE0704_2-A.153 is 2.05384 over 105 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.376 seconds taken in nnet3 compilation total (breakdown: 0.24 compilation, 0.0592 optimization, 0 shortcut expansion, 0.05 checking, 5.96e-06 computing indexes, 0.0268 misc.) + 0 I/O.
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:main():nnet3-latgen-faster-parallel.cc:264) Time taken 336.293s: real-time factor assuming 100 feature frames/sec is 2.47689
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:main():nnet3-latgen-faster-parallel.cc:268) Done 330 utterances, failed for 0
+LOG (nnet3-latgen-faster-parallel[5.5.1009~1-e4940]:main():nnet3-latgen-faster-parallel.cc:270) Overall log-likelihood per frame is 2.53718 over 18103 frames.
+LOG (lattice-scale[5.5.1009~1-e4940]:main():lattice-scale.cc:107) Done 330 lattices.
+# Accounting: time=340 threads=1
+# Ended (code 0) at Wed Jun 15 16:46:25 UTC 2022, elapsed time 340 seconds

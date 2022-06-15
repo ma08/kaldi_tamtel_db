@@ -1,0 +1,18 @@
+# gmm-global-get-post --n=5 --min-post=0.025 telugu_exp/nnet3_cleaned_1d/extractor/final.dubm "ark,s,cs:apply-cmvn-online --config=telugu_exp/nnet3_cleaned_1d/extractor/online_cmvn.conf --spk2utt=ark:telugu_data/train_cleaned_sp_hires/split30/4/spk2utt telugu_exp/nnet3_cleaned_1d/extractor/global_cmvn.stats scp:telugu_data/train_cleaned_sp_hires/split30/4/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats telugu_exp/nnet3_cleaned_1d/extractor/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |" ark:- | scale-post ark:- 0.2 "ark:|gzip -c >telugu_exp/nnet3_cleaned_1d/extractor/post.4.gz" 
+# Started at Tue Jun 14 21:23:22 UTC 2022
+#
+scale-post ark:- 0.2 'ark:|gzip -c >telugu_exp/nnet3_cleaned_1d/extractor/post.4.gz' 
+gmm-global-get-post --n=5 --min-post=0.025 telugu_exp/nnet3_cleaned_1d/extractor/final.dubm 'ark,s,cs:apply-cmvn-online --config=telugu_exp/nnet3_cleaned_1d/extractor/online_cmvn.conf --spk2utt=ark:telugu_data/train_cleaned_sp_hires/split30/4/spk2utt telugu_exp/nnet3_cleaned_1d/extractor/global_cmvn.stats scp:telugu_data/train_cleaned_sp_hires/split30/4/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats telugu_exp/nnet3_cleaned_1d/extractor/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' ark:- 
+apply-cmvn-online --config=telugu_exp/nnet3_cleaned_1d/extractor/online_cmvn.conf --spk2utt=ark:telugu_data/train_cleaned_sp_hires/split30/4/spk2utt telugu_exp/nnet3_cleaned_1d/extractor/global_cmvn.stats scp:telugu_data/train_cleaned_sp_hires/split30/4/feats.scp ark:- 
+transform-feats telugu_exp/nnet3_cleaned_1d/extractor/final.mat ark:- ark:- 
+subsample-feats --n=2 ark:- ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+LOG (apply-cmvn-online[5.5.1009~1-e4940]:main():apply-cmvn-online.cc:133) Applied online CMVN to 4323 files, or 1226674 frames.
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -127.761 over 1.22667e+06 frames.
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:161) Applied transform to 4323 utterances; 0 had errors.
+LOG (subsample-feats[5.5.1009~1-e4940]:main():subsample-feats.cc:115) Processed 4323 feature matrices; 0 with errors.
+LOG (subsample-feats[5.5.1009~1-e4940]:main():subsample-feats.cc:117) Processed 1226674 input frames and 614420 output frames.
+LOG (gmm-global-get-post[5.5.1009~1-e4940]:main():gmm-global-get-post.cc:115) Done 4323 files, 0 with errors, average UBM log-likelihood is -51.7237 over 614420 frames.
+LOG (scale-post[5.5.1009~1-e4940]:main():scale-post.cc:79) Done 4323 posteriors;  0 had no scales.
+# Accounting: time=15 threads=1
+# Ended (code 0) at Tue Jun 14 21:23:37 UTC 2022, elapsed time 15 seconds

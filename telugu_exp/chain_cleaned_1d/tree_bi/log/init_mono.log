@@ -1,0 +1,12 @@
+# gmm-init-mono --shared-phones=telugu_data/lang_chain/phones/sets.int "--train-feats=ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_cleaned_sp/split15/1/utt2spk scp:telugu_data/train_cleaned_sp/split15/1/cmvn.scp scp:telugu_data/train_cleaned_sp/split15/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats telugu_exp/tri3_cleaned_ali_train_cleaned_sp/final.mat ark:- ark:- | transform-feats --utt2spk=ark:telugu_data/train_cleaned_sp/split15/1/utt2spk ark,s,cs:telugu_exp/tri3_cleaned_ali_train_cleaned_sp/trans.1 ark:- ark:- | subsample-feats --n=3 ark:- ark:- | subset-feats --n=10 ark:- ark:-|" telugu_data/lang_chain/topo 40 telugu_exp/chain_cleaned_1d/tree_bi/mono.mdl telugu_exp/chain_cleaned_1d/tree_bi/mono.tree 
+# Started at Tue Jun 14 23:22:10 UTC 2022
+#
+gmm-init-mono --shared-phones=telugu_data/lang_chain/phones/sets.int '--train-feats=ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_cleaned_sp/split15/1/utt2spk scp:telugu_data/train_cleaned_sp/split15/1/cmvn.scp scp:telugu_data/train_cleaned_sp/split15/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats telugu_exp/tri3_cleaned_ali_train_cleaned_sp/final.mat ark:- ark:- | transform-feats --utt2spk=ark:telugu_data/train_cleaned_sp/split15/1/utt2spk ark,s,cs:telugu_exp/tri3_cleaned_ali_train_cleaned_sp/trans.1 ark:- ark:- | subsample-feats --n=3 ark:- ark:- | subset-feats --n=10 ark:- ark:-|' telugu_data/lang_chain/topo 40 telugu_exp/chain_cleaned_1d/tree_bi/mono.mdl telugu_exp/chain_cleaned_1d/tree_bi/mono.tree 
+apply-cmvn --utt2spk=ark:telugu_data/train_cleaned_sp/split15/1/utt2spk scp:telugu_data/train_cleaned_sp/split15/1/cmvn.scp scp:telugu_data/train_cleaned_sp/split15/1/feats.scp ark:- 
+splice-feats ark:- ark:- 
+subsample-feats --n=3 ark:- ark:- 
+transform-feats telugu_exp/tri3_cleaned_ali_train_cleaned_sp/final.mat ark:- ark:- 
+transform-feats --utt2spk=ark:telugu_data/train_cleaned_sp/split15/1/utt2spk ark,s,cs:telugu_exp/tri3_cleaned_ali_train_cleaned_sp/trans.1 ark:- ark:- 
+subset-feats --n=10 ark:- ark:- 
+# Accounting: time=1 threads=1
+# Ended (code 0) at Tue Jun 14 23:22:11 UTC 2022, elapsed time 1 seconds

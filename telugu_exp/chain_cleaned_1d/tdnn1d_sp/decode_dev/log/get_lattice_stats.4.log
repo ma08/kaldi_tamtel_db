@@ -1,0 +1,9 @@
+# ali-to-phones --write-lengths=true telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_dev/../final.mdl "ark:gunzip -c telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_dev/ali_tmp.4.gz|" ark,t:- | perl -ne 'chomp;s/^\S+\s*//;@a=split /\s;\s/, $_;$count{"begin ".$a[$0]."\n"}++;
+  if(@a>1){$count{"end ".$a[-1]."\n"}++;}for($i=0;$i<@a;$i++){$count{"all ".$a[$i]."\n"}++;}
+  END{for $k (sort keys %count){print "$count{$k} $k"}}' | gzip -c > telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_dev/phone_stats.4.gz 
+# Started at Wed Jun 15 16:52:28 UTC 2022
+#
+ali-to-phones --write-lengths=true telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_dev/../final.mdl 'ark:gunzip -c telugu_exp/chain_cleaned_1d/tdnn1d_sp/decode_dev/ali_tmp.4.gz|' ark,t:- 
+LOG (ali-to-phones[5.5.1009~1-e4940]:main():ali-to-phones.cc:134) Done 324 utterances.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Jun 15 16:52:28 UTC 2022, elapsed time 0 seconds
