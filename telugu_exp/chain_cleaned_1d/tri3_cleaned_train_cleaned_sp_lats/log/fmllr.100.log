@@ -1,0 +1,144 @@
+# ali-to-post "ark:gunzip -c telugu_exp/chain_cleaned_1d/tri3_cleaned_train_cleaned_sp_lats/pre_ali.100.gz|" ark:- | weight-silence-post 0.0 1:2:3:4:5:6:7:8:9:10 telugu_exp/tri3_cleaned/final.alimdl ark:- ark:- | gmm-post-to-gpost telugu_exp/tri3_cleaned/final.alimdl "ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_cleaned_sp/split100/100/utt2spk scp:telugu_data/train_cleaned_sp/split100/100/cmvn.scp scp:telugu_data/train_cleaned_sp/split100/100/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats telugu_exp/tri3_cleaned/final.mat ark:- ark:- |" ark:- ark:- | gmm-est-fmllr-gpost --fmllr-update-type=full --spk2utt=ark:telugu_data/train_cleaned_sp/split100/100/spk2utt telugu_exp/tri3_cleaned/final.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_cleaned_sp/split100/100/utt2spk scp:telugu_data/train_cleaned_sp/split100/100/cmvn.scp scp:telugu_data/train_cleaned_sp/split100/100/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats telugu_exp/tri3_cleaned/final.mat ark:- ark:- |" ark,s,cs:- ark:telugu_exp/chain_cleaned_1d/tri3_cleaned_train_cleaned_sp_lats/trans.100 
+# Started at Tue Jun 14 22:56:06 UTC 2022
+#
+ali-to-post 'ark:gunzip -c telugu_exp/chain_cleaned_1d/tri3_cleaned_train_cleaned_sp_lats/pre_ali.100.gz|' ark:- 
+gmm-est-fmllr-gpost --fmllr-update-type=full --spk2utt=ark:telugu_data/train_cleaned_sp/split100/100/spk2utt telugu_exp/tri3_cleaned/final.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_cleaned_sp/split100/100/utt2spk scp:telugu_data/train_cleaned_sp/split100/100/cmvn.scp scp:telugu_data/train_cleaned_sp/split100/100/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats telugu_exp/tri3_cleaned/final.mat ark:- ark:- |' ark,s,cs:- ark:telugu_exp/chain_cleaned_1d/tri3_cleaned_train_cleaned_sp_lats/trans.100 
+gmm-post-to-gpost telugu_exp/tri3_cleaned/final.alimdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_cleaned_sp/split100/100/utt2spk scp:telugu_data/train_cleaned_sp/split100/100/cmvn.scp scp:telugu_data/train_cleaned_sp/split100/100/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats telugu_exp/tri3_cleaned/final.mat ark:- ark:- |' ark:- ark:- 
+weight-silence-post 0.0 1:2:3:4:5:6:7:8:9:10 telugu_exp/tri3_cleaned/final.alimdl ark:- ark:- 
+apply-cmvn --utt2spk=ark:telugu_data/train_cleaned_sp/split100/100/utt2spk scp:telugu_data/train_cleaned_sp/split100/100/cmvn.scp scp:telugu_data/train_cleaned_sp/split100/100/feats.scp ark:- 
+splice-feats ark:- ark:- 
+transform-feats telugu_exp/tri3_cleaned/final.mat ark:- ark:- 
+apply-cmvn --utt2spk=ark:telugu_data/train_cleaned_sp/split100/100/utt2spk scp:telugu_data/train_cleaned_sp/split100/100/cmvn.scp scp:telugu_data/train_cleaned_sp/split100/100/feats.scp ark:- 
+splice-feats ark:- ark:- 
+transform-feats telugu_exp/tri3_cleaned/final.mat ark:- ark:- 
+LOG (ali-to-post[5.5.1009~1-e4940]:main():ali-to-post.cc:73) Converted 1652 alignments.
+LOG (weight-silence-post[5.5.1009~1-e4940]:main():weight-silence-post.cc:95) Done 1652 posteriors.
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_00682_01061375880-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_00682_01163944771-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_00682_01206526551-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_00682_01211106085-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_00682_01211106085-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_00682_01500932293-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_00682_01576883968-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_00682_01576883968-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_00682_01738844091-1
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 24.3752 per frame over 55763 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_00682, auxf-impr from fMLLR is 24.3752, over 55763 frames.
+
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 26.8067 per frame over 17845 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_00974, auxf-impr from fMLLR is 26.8067, over 17845 frames.
+
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 19.3567 per frame over 1101 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_02477, auxf-impr from fMLLR is 19.3567, over 1101 frames.
+
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_02769_00703465658-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_02769_01278686462-1
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 25.3715 per frame over 27382 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_02769, auxf-impr from fMLLR is 25.3715, over 27382 frames.
+
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_02812_00000441813-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_02812_02063703025-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_02812_02128598993-1
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 13.3715 per frame over 33338 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_02812, auxf-impr from fMLLR is 13.3715, over 33338 frames.
+
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_03338_00149013602-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_03338_00242203933-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_03338_00368896747-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_03338_00598429542-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_03338_00755146676-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_03338_01375629143-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_03338_01604291040-1
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 22.2629 per frame over 36597 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_03338, auxf-impr from fMLLR is 22.2629, over 36597 frames.
+
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_04272_00288589227-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_04272_00288589227-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_04272_00849168583-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_04272_01090245032-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_04272_01128060257-2
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 18.18 per frame over 43297 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_04272, auxf-impr from fMLLR is 18.18, over 43297 frames.
+
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_04771_00312142564-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_04771_01074817735-1
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 42.3767 per frame over 10336 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_04771, auxf-impr from fMLLR is 42.3767, over 10336 frames.
+
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_05425_00681386731-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_05425_01030728048-1
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 19.7346 per frame over 21438 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_05425, auxf-impr from fMLLR is 19.7346, over 21438 frames.
+
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 17.7609 per frame over 16265 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_05479, auxf-impr from fMLLR is 17.7609, over 16265 frames.
+
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_06359_00922492021-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_06359_00922492021-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_06359_01310622577-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_06359_02125756845-2
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 24.4517 per frame over 24763 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_06359, auxf-impr from fMLLR is 24.4517, over 24763 frames.
+
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 20.2845 per frame over 3964 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_06582, auxf-impr from fMLLR is 20.2845, over 3964 frames.
+
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 24.1538 per frame over 2740 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_06885, auxf-impr from fMLLR is 24.1538, over 2740 frames.
+
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_06917_02028893316-1
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 23.2989 per frame over 9541 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_06917, auxf-impr from fMLLR is 23.2989, over 9541 frames.
+
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_07220_00389807574-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_07220_01393642713-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_07220_01444819216-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_07220_01859657888-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_07220_02142685524-1
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 23.7162 per frame over 19024 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_07220, auxf-impr from fMLLR is 23.7162, over 19024 frames.
+
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 36.3371 per frame over 1061 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_07486, auxf-impr from fMLLR is 36.3371, over 1061 frames.
+
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 15.3339 per frame over 11413 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_08377, auxf-impr from fMLLR is 15.3339, over 11413 frames.
+
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_08680_01073139273-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_08680_01506668263-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_08680_01896176369-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_08680_02051709478-2
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 11.0102 per frame over 30865 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_08680, auxf-impr from fMLLR is 11.0102, over 30865 frames.
+
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_09015_00675150581-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_09015_00675150581-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_09015_01044647020-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_09015_01179487207-1
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_09015_01179487207-2
+WARNING (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:116) Did not find posteriors for utterance tem_09015_02024169177-1
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 27.2574 per frame over 25656 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_09015, auxf-impr from fMLLR is 27.2574, over 25656 frames.
+
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 14.4262 per frame over 16522 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_09222, auxf-impr from fMLLR is 14.4262, over 16522 frames.
+
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 19.2504 per frame over 11803 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_09525, auxf-impr from fMLLR is 19.2504, over 11803 frames.
+
+LOG (apply-cmvn[5.5.1009~1-e4940]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1702 utterances, errors on 0
+LOG (apply-cmvn[5.5.1009~1-e4940]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1702 utterances, errors on 0
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -98.9864 over 611387 frames.
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:161) Applied transform to 1702 utterances; 0 had errors.
+LOG (gmm-post-to-gpost[5.5.1009~1-e4940]:main():gmm-post-to-gpost.cc:124) Done 1652 files, 50 with no posteriors, 0 with other errors.
+LOG (gmm-post-to-gpost[5.5.1009~1-e4940]:main():gmm-post-to-gpost.cc:128) Overall avg like per frame (Gaussian only) = -56.9368 over 425509 frames.
+LOG (gmm-post-to-gpost[5.5.1009~1-e4940]:main():gmm-post-to-gpost.cc:131) Done converting post to gpost
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -98.9864 over 611387 frames.
+LOG (transform-feats[5.5.1009~1-e4940]:main():transform-feats.cc:161) Applied transform to 1702 utterances; 0 had errors.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 40.728 per frame over 4795 frames.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:141) For speaker tem_09584, auxf-impr from fMLLR is 40.728, over 4795 frames.
+
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:186) Done 1652 files, 50 with no gposts, 0 with other errors.
+LOG (gmm-est-fmllr-gpost[5.5.1009~1-e4940]:main():gmm-est-fmllr-gpost.cc:188) Overall fMLLR auxf impr per frame is 21.3636 over 425509 frames.
+# Accounting: time=16 threads=1
+# Ended (code 0) at Tue Jun 14 22:56:22 UTC 2022, elapsed time 16 seconds

@@ -1,0 +1,59 @@
+# lattice-align-phones --replace-output-symbols=true telugu_exp/chain_cleaned_1d/tri3_cleaned_train_cleaned_sp_lats/final.mdl "ark:gunzip -c telugu_exp/chain_cleaned_1d/tri3_cleaned_train_cleaned_sp_lats/lat.76.gz |" ark:- | chain-get-supervision --lattice-input=true --frame-subsampling-factor=3 --right-tolerance=5 --left-tolerance=5 --convert-to-pdfs=false telugu_exp/chain_cleaned_1d/tdnn1d_sp/tree telugu_exp/chain_cleaned_1d/tdnn1d_sp/0.trans_mdl ark:- ark:- | nnet3-chain-get-egs --online-ivectors=scp:telugu_exp/nnet3_cleaned_1d/ivectors_train_cleaned_sp_hires/ivector_online.scp --online-ivector-period=10 --srand=$[76+0] --left-context=29 --right-context=29 --num-frames=150,110,100 --frame-subsampling-factor=3 --compress=true --num-frames-overlap=0 --transition-model=telugu_exp/chain_cleaned_1d/tdnn1d_sp/0.trans_mdl "ark,s,cs:utils/filter_scp.pl --exclude telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/valid_uttlist telugu_data/train_cleaned_sp_hires/split100/76/feats.scp | apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/train_cleaned_sp_hires/split100/76/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/global_cmvn.stats scp:- ark:- |" ark,s,cs:- ark:- | nnet3-chain-copy-egs --random=true --srand=$[76+0] ark:- ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.1.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.2.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.3.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.4.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.5.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.6.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.7.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.8.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.9.ark 
+# Started at Wed Jun 15 01:47:07 UTC 2022
+#
+chain-get-supervision --lattice-input=true --frame-subsampling-factor=3 --right-tolerance=5 --left-tolerance=5 --convert-to-pdfs=false telugu_exp/chain_cleaned_1d/tdnn1d_sp/tree telugu_exp/chain_cleaned_1d/tdnn1d_sp/0.trans_mdl ark:- ark:- 
+lattice-align-phones --replace-output-symbols=true telugu_exp/chain_cleaned_1d/tri3_cleaned_train_cleaned_sp_lats/final.mdl 'ark:gunzip -c telugu_exp/chain_cleaned_1d/tri3_cleaned_train_cleaned_sp_lats/lat.76.gz |' ark:- 
+nnet3-chain-copy-egs --random=true --srand=76 ark:- ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.1.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.2.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.3.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.4.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.5.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.6.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.7.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.8.ark ark:telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/cegs_orig.76.9.ark 
+nnet3-chain-get-egs --online-ivectors=scp:telugu_exp/nnet3_cleaned_1d/ivectors_train_cleaned_sp_hires/ivector_online.scp --online-ivector-period=10 --srand=76 --left-context=29 --right-context=29 --num-frames=150,110,100 --frame-subsampling-factor=3 --compress=true --num-frames-overlap=0 --transition-model=telugu_exp/chain_cleaned_1d/tdnn1d_sp/0.trans_mdl 'ark,s,cs:utils/filter_scp.pl --exclude telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/valid_uttlist telugu_data/train_cleaned_sp_hires/split100/76/feats.scp | apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/train_cleaned_sp_hires/split100/76/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/global_cmvn.stats scp:- ark:- |' ark,s,cs:- ark:- 
+LOG (nnet3-chain-get-egs[5.5.1009~1-e4940]:ComputeDerived():nnet-example-utils.cc:346) Rounding up --num-frames=150,110,100 to multiples of --frame-subsampling-factor=3, to: 150,111,102
+apply-cmvn-online --config=conf/online_cmvn.conf --spk2utt=ark:telugu_data/train_cleaned_sp_hires/split100/76/spk2utt telugu_exp/chain_cleaned_1d/tdnn1d_sp/egs/global_cmvn.stats scp:- ark:- 
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001860151-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001860211-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001870019-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-001870321-1 because it is too short: 96 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001870324-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001870331-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001870453-1
+WARNING (apply-cmvn-online[5.5.1009~1-e4940]:main():apply-cmvn-online.cc:84) No features for utterance sp1.1-001870459-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001870496-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001880153-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001880288-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001880461-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001890007-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001890081-1
+WARNING (apply-cmvn-online[5.5.1009~1-e4940]:main():apply-cmvn-online.cc:84) No features for utterance sp1.1-001890436-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001920152-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-001920209-1 because it is too short: 43 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001920212-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001920229-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-001920241-2 because it is too short: 98 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001920275-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001950215-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001960250-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001960336-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001960483-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001970394-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001970455-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001980115-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001980130-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001980404-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001980461-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001990236-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001990265-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001990267-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001990416-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-001990447-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:ProcessFile():nnet3-chain-get-egs.cc:134) Not producing egs for utterance sp1.1-002000150-1 because it is too short: 99 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-002000248-1
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:393) No pdf-level posterior for key sp1.1-002000324-1
+WARNING (apply-cmvn-online[5.5.1009~1-e4940]:main():apply-cmvn-online.cc:84) No features for utterance sp1.1-002010017-1
+LOG (lattice-align-phones[5.5.1009~1-e4940]:main():lattice-align-phones.cc:105) Successfully aligned 1407 lattices; 0 had errors.
+LOG (chain-get-supervision[5.5.1009~1-e4940]:main():chain-get-supervision.cc:150) Generated chain supervision information for 1407 utterances, errors on 0
+LOG (apply-cmvn-online[5.5.1009~1-e4940]:main():apply-cmvn-online.cc:133) Applied online CMVN to 1437 files, or 825111 frames.
+WARNING (nnet3-chain-get-egs[5.5.1009~1-e4940]:main():nnet3-chain-get-egs.cc:442) 37 utterances had errors and could not be processed.
+LOG (nnet3-chain-get-egs[5.5.1009~1-e4940]:~UtteranceSplitter():nnet-example-utils.cc:372) Split 1404 utts, with total length 808567 frames (2.24602 hours assuming 100 frames per second) into 5943 chunks.
+LOG (nnet3-chain-get-egs[5.5.1009~1-e4940]:~UtteranceSplitter():nnet-example-utils.cc:382) Average chunk length was 137.372 frames; overlap between adjacent chunks was 1.27819% of input length; length of output was 100.969% of input length (minus overlap = 99.6904%).
+LOG (nnet3-chain-get-egs[5.5.1009~1-e4940]:~UtteranceSplitter():nnet-example-utils.cc:398) Output frames are distributed among chunk-sizes as follows: 102 = 13.39%, 111 = 8.226%, 150 = 78.38%
+LOG (nnet3-chain-copy-egs[5.5.1009~1-e4940]:main():nnet3-chain-copy-egs.cc:395) Read 5943 neural-network training examples, wrote 5943
+# Accounting: time=34 threads=1
+# Ended (code 0) at Wed Jun 15 01:47:41 UTC 2022, elapsed time 34 seconds

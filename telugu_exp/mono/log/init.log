@@ -1,0 +1,82 @@
+# gmm-init-mono --shared-phones=telugu_data/lang_nosp/phones/sets.int "--train-feats=ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_10kshort_nodup/split20/1/utt2spk scp:telugu_data/train_10kshort_nodup/split20/1/cmvn.scp scp:telugu_data/train_10kshort_nodup/split20/1/feats.scp ark:- | add-deltas  ark:- ark:- | subset-feats --n=10 ark:- ark:-|" telugu_data/lang_nosp/topo 39 telugu_exp/mono/0.mdl telugu_exp/mono/tree 
+# Started at Mon Jun 13 17:55:21 UTC 2022
+#
+gmm-init-mono --shared-phones=telugu_data/lang_nosp/phones/sets.int '--train-feats=ark,s,cs:apply-cmvn  --utt2spk=ark:telugu_data/train_10kshort_nodup/split20/1/utt2spk scp:telugu_data/train_10kshort_nodup/split20/1/cmvn.scp scp:telugu_data/train_10kshort_nodup/split20/1/feats.scp ark:- | add-deltas  ark:- ark:- | subset-feats --n=10 ark:- ark:-|' telugu_data/lang_nosp/topo 39 telugu_exp/mono/0.mdl telugu_exp/mono/tree 
+apply-cmvn --utt2spk=ark:telugu_data/train_10kshort_nodup/split20/1/utt2spk scp:telugu_data/train_10kshort_nodup/split20/1/cmvn.scp scp:telugu_data/train_10kshort_nodup/split20/1/feats.scp ark:- 
+add-deltas ark:- ark:- 
+subset-feats --n=10 ark:- ark:- 
+ERROR (add-deltas[5.5.1009~1-e4940]:Write():kaldi-matrix.cc:1384) Failed to write matrix to stream: stream not good
+
+[ Stack-Trace: ]
+add-deltas(kaldi::MessageLogger::LogMessage() const+0xb61) [0x55bd5e59b4b1]
+add-deltas(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x21) [0x55bd5e5170fb]
+add-deltas(kaldi::MatrixBase<float>::Write(std::ostream&, bool) const+0x154) [0x55bd5e5603ce]
+add-deltas(kaldi::TableWriterArchiveImpl<kaldi::KaldiObjectHolder<kaldi::MatrixBase<float> > >::Write(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, kaldi::MatrixBase<float> const&)+0x242) [0x55bd5e518d8c]
+add-deltas(main+0x431) [0x55bd5e5163e1]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7fa44de3bc87]
+add-deltas(_start+0x2a) [0x55bd5e515eaa]
+
+WARNING (add-deltas[5.5.1009~1-e4940]:Write():util/kaldi-holder-inl.h:57) Exception caught writing Table object. kaldi::KaldiFatalError
+WARNING (add-deltas[5.5.1009~1-e4940]:Write():util/kaldi-table-inl.h:1057) Write failure to standard output
+ERROR (add-deltas[5.5.1009~1-e4940]:Write():util/kaldi-table-inl.h:1515) Error in TableWriter::Write
+
+[ Stack-Trace: ]
+add-deltas(kaldi::MessageLogger::LogMessage() const+0xb61) [0x55bd5e59b4b1]
+add-deltas(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x21) [0x55bd5e5170fb]
+add-deltas(main+0x4a6) [0x55bd5e516456]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7fa44de3bc87]
+add-deltas(_start+0x2a) [0x55bd5e515eaa]
+
+WARNING (add-deltas[5.5.1009~1-e4940]:Close():util/kaldi-table-inl.h:1089) Error closing stream: wspecifier is ark:-
+ERROR (add-deltas[5.5.1009~1-e4940]:~TableWriter():util/kaldi-table-inl.h:1539) Error closing TableWriter [in destructor].
+
+[ Stack-Trace: ]
+add-deltas(kaldi::MessageLogger::LogMessage() const+0xb61) [0x55bd5e59b4b1]
+add-deltas(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x21) [0x55bd5e5170fb]
+add-deltas(kaldi::TableWriter<kaldi::KaldiObjectHolder<kaldi::MatrixBase<float> > >::~TableWriter()+0x89) [0x55bd5e51c5f5]
+add-deltas(main+0x5f8) [0x55bd5e5165a8]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7fa44de3bc87]
+add-deltas(_start+0x2a) [0x55bd5e515eaa]
+
+terminate called after throwing an instance of 'kaldi::KaldiFatalError'
+  what():  kaldi::KaldiFatalError
+Aborted (core dumped)
+ERROR (apply-cmvn[5.5.1009~1-e4940]:Write():kaldi-matrix.cc:1407) Failed to write matrix to stream
+
+[ Stack-Trace: ]
+apply-cmvn(kaldi::MessageLogger::LogMessage() const+0xb61) [0x55e509015c0d]
+apply-cmvn(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x21) [0x55e508f8632b]
+apply-cmvn(kaldi::MatrixBase<float>::Write(std::ostream&, bool) const+0x2d3) [0x55e508fdaca9]
+apply-cmvn(kaldi::KaldiObjectHolder<kaldi::MatrixBase<float> >::Write(std::ostream&, bool, kaldi::MatrixBase<float> const&)+0x54) [0x55e508f919e6]
+apply-cmvn(kaldi::TableWriterArchiveImpl<kaldi::KaldiObjectHolder<kaldi::MatrixBase<float> > >::Write(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, kaldi::MatrixBase<float> const&)+0x162) [0x55e508f91c38]
+apply-cmvn(main+0xa8c) [0x55e508f83f7c]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7f746cd84c87]
+apply-cmvn(_start+0x2a) [0x55e508f833ea]
+
+WARNING (apply-cmvn[5.5.1009~1-e4940]:Write():util/kaldi-holder-inl.h:57) Exception caught writing Table object. kaldi::KaldiFatalError
+WARNING (apply-cmvn[5.5.1009~1-e4940]:Write():util/kaldi-table-inl.h:1057) Write failure to standard output
+ERROR (apply-cmvn[5.5.1009~1-e4940]:Write():util/kaldi-table-inl.h:1515) Error in TableWriter::Write
+
+[ Stack-Trace: ]
+apply-cmvn(kaldi::MessageLogger::LogMessage() const+0xb61) [0x55e509015c0d]
+apply-cmvn(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x21) [0x55e508f8632b]
+apply-cmvn(main+0xaec) [0x55e508f83fdc]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7f746cd84c87]
+apply-cmvn(_start+0x2a) [0x55e508f833ea]
+
+WARNING (apply-cmvn[5.5.1009~1-e4940]:Close():util/kaldi-table-inl.h:1089) Error closing stream: wspecifier is ark:-
+ERROR (apply-cmvn[5.5.1009~1-e4940]:~TableWriter():util/kaldi-table-inl.h:1539) Error closing TableWriter [in destructor].
+
+[ Stack-Trace: ]
+apply-cmvn(kaldi::MessageLogger::LogMessage() const+0xb61) [0x55e509015c0d]
+apply-cmvn(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x21) [0x55e508f8632b]
+apply-cmvn(kaldi::TableWriter<kaldi::KaldiObjectHolder<kaldi::MatrixBase<float> > >::~TableWriter()+0x89) [0x55e508f8d513]
+apply-cmvn(main+0xc1d) [0x55e508f8410d]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7f746cd84c87]
+apply-cmvn(_start+0x2a) [0x55e508f833ea]
+
+terminate called after throwing an instance of 'kaldi::KaldiFatalError'
+  what():  kaldi::KaldiFatalError
+Aborted (core dumped)
+# Accounting: time=0 threads=1
+# Ended (code 0) at Mon Jun 13 17:55:21 UTC 2022, elapsed time 0 seconds

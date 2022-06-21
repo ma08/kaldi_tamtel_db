@@ -1,0 +1,11 @@
+# linear-to-nbest "ark:gunzip -c telugu_exp/tri2/ali.3.gz|" "ark:sym2int.pl --map-oov 1 -f 2- telugu_data/lang_nosp/words.txt <telugu_data/train/split8/3/text |" "" "" ark:- | lattice-align-words telugu_data/lang_nosp/phones/word_boundary.int telugu_exp/tri2/final.mdl ark:- ark:- | nbest-to-prons telugu_exp/tri2/final.mdl ark:- "|gzip -c >telugu_exp/tri2/prons.3.gz" 
+# Started at Tue Jun 14 00:39:40 UTC 2022
+#
+linear-to-nbest 'ark:gunzip -c telugu_exp/tri2/ali.3.gz|' 'ark:sym2int.pl --map-oov 1 -f 2- telugu_data/lang_nosp/words.txt <telugu_data/train/split8/3/text |' '' '' ark:- 
+lattice-align-words telugu_data/lang_nosp/phones/word_boundary.int telugu_exp/tri2/final.mdl ark:- ark:- 
+nbest-to-prons telugu_exp/tri2/final.mdl ark:- '|gzip -c >telugu_exp/tri2/prons.3.gz' 
+LOG (linear-to-nbest[5.5.1009~1-e4940]:main():linear-to-nbest.cc:130) Done 5488 n-best entries ,0 had errors.
+LOG (lattice-align-words[5.5.1009~1-e4940]:main():lattice-align-words.cc:126) Successfully aligned 5488 lattices; 0 had errors.
+LOG (nbest-to-prons[5.5.1009~1-e4940]:main():nbest-to-prons.cc:121) Printed prons for 5488 linear lattices; 0 had errors.
+# Accounting: time=2 threads=1
+# Ended (code 0) at Tue Jun 14 00:39:42 UTC 2022, elapsed time 2 seconds
